@@ -6,3 +6,13 @@
 * [Going deeper with convolutions](201608.md#going-deeper-with-convolutions)
 * [Network In Network](201608.md#network-in-network)
 * [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](201609.md#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks)
+* [Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning](201609.md#hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning)
+
+# Dataset list
+
+## Video Description
+
+* [Microsoft Video Description Corpus (MSVD)](201609.md#microsoft-video-description-corpus-msvd)
+* [Montreal Video Annotation Dataset (M-VAD)](201609.md#montreal-video-annotation-dataset-m-vad)
+* [Youtube2Text](201609.md#youtube2text)
+* [Tumblr GIF (TGIF)]()
