@@ -7,6 +7,7 @@
 * [Network In Network](201608.md#network-in-network)
 * [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](201609.md#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks)
 * [Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning](201609.md#hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning)
+* [Describing Videos by Exploiting Temporal Structure](201609.md#describing-videos-by-exploiting-temporal-structure)
 
 # Dataset list
 
@@ -15,4 +16,4 @@
 * [Microsoft Video Description Corpus (MSVD)](201609.md#microsoft-video-description-corpus-msvd)
 * [Montreal Video Annotation Dataset (M-VAD)](201609.md#montreal-video-annotation-dataset-m-vad)
 * [Youtube2Text](201609.md#youtube2text)
-* [Tumblr GIF (TGIF)]()
+* [Tumblr GIF (TGIF)](201609.md#tumblr-gif-tgif)
