@@ -19,3 +19,4 @@
 * [Montreal Video Annotation Dataset (M-VAD)](201609.md#montreal-video-annotation-dataset-m-vad)
 * [Youtube2Text](201609.md#youtube2text)
 * [Tumblr GIF (TGIF)](201609.md#tumblr-gif-tgif)
+* [Microsoft Research - Video to Text (MSR-VTT)](201609.md#microsoft-research-video-to-text-msr-vtt)
