@@ -2,14 +2,13 @@
 
 * [checkers](http://zh.wikihow.com/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%A5%BF%E6%B4%8B%E8%B7%B3%E6%A3%8B)
 * [A. H. Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon)
-* []
 
 ## History of AI
 [reference](https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-core-concepts/)
 
 * Winter
 * Rapid development from 80s
-	+ [genetic algorithm]()
+	+ genetic algorithm
 	+ Neural network
 * 90s second winter
 	+ Neural network performs bad
@@ -34,3 +33,15 @@
 
 ### NLP
 * Speech synthesis (text-to-speech)
+	+ [Phoneme](https://en.wikipedia.org/wiki/Phoneme), sentence
+	+ Well studied
+	+ Rich expression
+	+ Individuation
+* Speech recognition
+	+ Difficulties: large vocabulary, no specific person, continuous speech (*eg: tian an men*)
+	+ Dialect
+	+ Product: Google, Microsoft, Baidu, [iflytek](http://www.iflytek.com/)
+* Understanding
+	+ Word processing
+	+ Paragraph processing
+		- Pronoun replace
