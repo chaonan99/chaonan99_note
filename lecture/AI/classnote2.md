@@ -14,7 +14,9 @@
 	+ Eg: Missionary and wild man
 * Search in state space
 	+ [Breadth first search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search)
-	![BFS](https://upload.wikimedia.org/wikipedia/commons/3/33/Breadth-first-tree.svg "BFS")
+
 	![2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd](http://oa5omjl18.bkt.clouddn.com/2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd.png "BFS for shortest path")
 	+ [Depth first search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search)
-	![DFS](https://upload.wikimedia.org/wikipedia/commons/1/1f/Depth-first-tree.svg "DFS")
+
+	![2016_09_14_39c8ece6634d7f5e527217be12886139](http://oa5omjl18.bkt.clouddn.com/2016_09_14_39c8ece6634d7f5e527217be12886139.png "DFS shortest path")
+	+ [Uniform cost search (Dijkstra's algorithm)](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
