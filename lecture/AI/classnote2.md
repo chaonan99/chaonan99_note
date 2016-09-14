@@ -26,10 +26,18 @@
 	* Search for the node who has **the smallest L^1 norm** (greedy algorithm) to the target.
 
 ### Heuristic search
+
 > Project 1!!!
-* Heuristic function ![equation](http://latex.codecogs.com/svg.latex?h%28n%29), which takes a node *n* and returns a non-negative real number that is an estimate of the path cost from node *n* to a goal node. [ref](http://artint.info/html/ArtInt_56.html)
-* ![equation](http://latex.codecogs.com/svg.latex?A%5E%2A) algorithm
+
+* For every node, define a cost function:
+	![equation](http://latex.codecogs.com/svg.latex?f%28n%29%20%3D%20g%28n%29%2Bh%28n%29)
+* [Heuristic function](http://artint.info/html/ArtInt_56.html)
+![equation](http://latex.codecogs.com/svg.latex?h%28n%29), which takes a node *n* and returns a non-negative real number that is an estimate of the path cost from node *n* to a goal node.
+* [![equation](http://latex.codecogs.com/svg.latex?A%5E%2A) algorithm](http://artint.info/html/ArtInt_57.html)
 ![2016_09_14_c6f7fe4c9b349749bce3263214821e39](http://oa5omjl18.bkt.clouddn.com/2016_09_14_c6f7fe4c9b349749bce3263214821e39.png "A^* algorithm")
+* Algorithms above
+	+ BFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%200%2C%20g%28n%29%20%3D%20d%28n%29)
+	+ DFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%20%5Cinf%2C%20g%28n%29%20%3D%200%2C%20f%28n%29%20%3D%20h%28n%29)
 
 ### Property of algorithm
 * Completeness
