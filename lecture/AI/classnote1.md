@@ -1,4 +1,5 @@
-# 12th, Sept.
+# Introduction
+12th, Sept.
 
 * [checkers](http://zh.wikihow.com/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%A5%BF%E6%B4%8B%E8%B7%B3%E6%A3%8B)
 * [A. H. Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon)

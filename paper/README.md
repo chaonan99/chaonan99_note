@@ -10,6 +10,7 @@
 * [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](201609.md#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks)
 * [Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning](201609.md#hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning)
 * [Describing Videos by Exploiting Temporal Structure](201609.md#describing-videos-by-exploiting-temporal-structure)
+* [Memory Networks](201609.md#memory-networks)
 
 # Dataset list
 
