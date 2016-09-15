@@ -1,6 +1,5 @@
 # Works and beyond
 
-The Intuition of this project
-
-## TODOs
-* 
+## Wiki
+* [Knowledge organization](201609/0915.md#knowledge-organization)
+* [Pomodoro](201609/0915.md#pomodoro)
