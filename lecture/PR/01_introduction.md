@@ -1,4 +1,5 @@
-# 12th, Sept.
+# Introduction
+12th, Sept.
 
 ## Contents of this lecture
 * Concepts
@@ -7,12 +8,6 @@
 * Theory and method
 * Typical algorithm
 * Newest problem
-
-## Requirements
-* Attendance, read textbook, assignments
-
-## Exam
-* Final exam at 16th week (26/12), open-book.
 
 ## Introduction
 * observation -> decision
