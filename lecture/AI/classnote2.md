@@ -1,8 +1,7 @@
 # Graph search strategy
 14th, Sept.
 
-## Problem solving
-### State space
+## State space
 + From initial state to objective through medium states
 + Eg: Sentence parsing
 	* Input string (initial state)
@@ -13,7 +12,7 @@
 	* Can be formalized with string
 + Eg: Missionary and wild man
 
-### Basic graph search algorithm
+## Basic graph search algorithm
 + [Breadth first search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search)
 ![2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd](http://oa5omjl18.bkt.clouddn.com/2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd.png "BFS for shortest path")
 + [Depth first search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search)
@@ -25,7 +24,7 @@
 	* [Manhattan distance](https://en.wiktionary.org/wiki/Manhattan_distance) or [L^1 norm](http://mathworld.wolfram.com/L1-Norm.html)
 	* Search for the node who has **the smallest L^1 norm** (greedy algorithm) to the target.
 
-### Heuristic search
+## Heuristic search
 
 > Project 1!!!
 
@@ -39,10 +38,10 @@
 	+ BFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%200%2C%20g%28n%29%20%3D%20d%28n%29)
 	+ DFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%20%5Cinf%2C%20g%28n%29%20%3D%200%2C%20f%28n%29%20%3D%20h%28n%29)
 
-### Influencial factors of speed of A*
+## Influencial factors of speed of A*
 * Extended node number
 * Computation cost of h(x)
 
-### Property of algorithm
+## Property of algorithm
 * Completeness
 * Admissibility
