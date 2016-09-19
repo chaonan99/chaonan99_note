@@ -39,6 +39,10 @@
 	+ BFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%200%2C%20g%28n%29%20%3D%20d%28n%29)
 	+ DFS: ![equation](http://latex.codecogs.com/svg.latex?h%28n%29%20%3D%20%5Cinf%2C%20g%28n%29%20%3D%200%2C%20f%28n%29%20%3D%20h%28n%29)
 
+### Influencial factors of speed of A*
+* Extended node number
+* Computation cost of h(x)
+
 ### Property of algorithm
 * Completeness
 * Admissibility
