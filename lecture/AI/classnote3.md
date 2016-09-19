@@ -13,6 +13,8 @@
 * Reference: [UCI lecture](https://www.ics.uci.edu/~eppstein/161/960312.html)
 
 ### Classification of problems
+![picture](https://upload.wikimedia.org/wikipedia/commons/a/a0/P_np_np-complete_np-hard.svg)
+
 * P: Problems that can be solved in polynomial time
 * NP: This stands for "nondeterministic polynomial time" where nondeterministic is just a fancy way of talking about **guessing** a solution
 	* Does not stand for "non-polynomial"!!!
