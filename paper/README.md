@@ -22,3 +22,6 @@
 * [Youtube2Text](201609.md#youtube2text)
 * [Tumblr GIF (TGIF)](201609.md#tumblr-gif-tgif)
 * [Microsoft Research - Video to Text (MSR-VTT)](201609.md#microsoft-research-video-to-text-msr-vtt)
+
+## Person Re-identification
+* [Market-1501](201609.md#market-1501)
