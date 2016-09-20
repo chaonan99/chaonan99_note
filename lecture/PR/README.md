@@ -2,7 +2,7 @@
 
 ## Homework and project
 * 4 assignments: sex prediction with height and weight (50%+)
-	* Data collection, Bias classification, probability estimation
+	* Data collection, Bayes classification, probability estimation
 	* FLD, SVM, MLP, NN
 	* Feature selection, feature extraction
 	* Unsupervised learning
