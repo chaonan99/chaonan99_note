@@ -8,20 +8,4 @@ Welcome to lectures's documentation!
 
 Contents:
 
-.. toctree::
-   :maxdepth: 2
-
-	Bayes </test>
-	note1 </PR/01_introduction>
-
-:doc:`Bayes </PR/01_introduction>`
-------------------------------------------
-Start here.
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+[test](test.md)
