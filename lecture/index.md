@@ -11,7 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-
+Bayes </test>
+note1 </PR/01_introduction>
 
 Indices and tables
 ==================

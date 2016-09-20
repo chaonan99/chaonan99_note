@@ -18,12 +18,12 @@ Bayes Decision Theory
 Reference: [Corso's lecture at Buffalo](https://www.cse.buffalo.edu/~jcorso/t/CSE555/files/lecture_bayesiandecision.pdf)
 
 Assumptions
-===================
+--------------------
 * Decision problem is posed in probabilistic terms
 * All relevant probability values are known
 
 Priori and posterior
-====================
+--------------------
 * Define a (probabilistic) variable ![equation](http://latex.codecogs.com/svg.latex?%5Comega) ranging from ![equation](http://latex.codecogs.com/svg.latex?%5Comega_i%2C%20i%3D1%2C%5Cdots%2Cc),
 ![equation](http://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D1%7D%5EcP%28%5Comega%3D%5Comega_i%29%3D1)
 
@@ -45,7 +45,7 @@ given our observables
 * Use Bayes Formula to make decision.
 
 Probability of error
-====================
+--------------------
 * Decision governed by posterior
 ![equation](http://latex.codecogs.com/svg.latex?%5Comega%5E%2A%3D%5Carg%5Cmax_iP%28%5Comega_i%7C%5Cmathbf%7Bx%7D%29)
 * Probability of error
