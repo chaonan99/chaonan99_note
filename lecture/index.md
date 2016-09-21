@@ -8,6 +8,3 @@ Welcome to lectures's documentation!
 
 Contents:
 
-[test](/test.md)
-[test](#test.md)
-[test](/PR/01_introduction.md)
