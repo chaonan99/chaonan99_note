@@ -12,5 +12,5 @@ Contents:
     :maxdepth: 2
     :glob:
 
-    AI/README
-    PR/README
+    AI/index
+    PR/index
