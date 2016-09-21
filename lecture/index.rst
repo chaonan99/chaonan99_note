@@ -8,3 +8,9 @@ Welcome to lectures's documentation!
 
 Contents:
 
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    AI/README
+    PR/README
