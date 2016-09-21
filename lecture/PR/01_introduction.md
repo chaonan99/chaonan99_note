@@ -9,7 +9,7 @@
 * Typical algorithm
 * Newest problem
 
-## Introduction
+## Concepts
 * observation -> decision
 * Pattern: a physical arrangement of elements
 * Recognition: an awareness that something perceived has been perceived before
