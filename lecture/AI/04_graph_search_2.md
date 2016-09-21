@@ -27,21 +27,22 @@ Example of solution graph
 ![2016_09_21_a04b208a3653209ee3bf3ef25111b76](http://oa5omjl18.bkt.clouddn.com/2016_09_21_a04b208a3653209ee3bf3ef25111b76.png "Add Description")
 
 ### Solved-labeling
-```Python
+
+```python
 # Input: G. A finite, acyclic AND-OR graph.
 #        n. A node in G.
 #        successors(n). Returns the successors of node n.
-#        ?(n). Predicate that is True if n is a goal node.
+#        goal(n). Predicate that is True if n is a goal node.
 # Output: The symbol True if a solution exists, False otherwise.
 
-def solved-labeling(G, n, successors, ?):
+def solved-labeling(G, n, successors, goal):
   if |successors(n)|==0:
     if ?(n):
       return True
     else:
       return False
   for n' in successors(n):
-    if solved-labeling(G, n', successors, ?):
+    if solved-labeling(G, n', successors, goal):
       if OR_node(n):
         return True # One success is enough
     else:
