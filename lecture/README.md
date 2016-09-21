@@ -1,4 +1,4 @@
 # Lecture
 
-AI: Artificial Intelligence
-PR: Pattern Recognition
+* AI: Artificial Intelligence
+* PR: Pattern Recognition
