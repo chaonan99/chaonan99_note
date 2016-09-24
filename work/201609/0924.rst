@@ -1,0 +1,9 @@
+24rd September, Saturday
+========================
+
+Works
+-----
+
+#. Learn JSON and Pickle. `Use JSON rather than Pickle <http://www.benfrederickson.com/dont-pickle-your-data/>`_.
+#. Prepare Toefl test.
+#. Learn `yandex API <https://tech.yandex.com/disk/api/reference/public-docpage/>`_ to download file from published folders.
