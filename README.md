@@ -1,6 +1,15 @@
 # chaonan99 Note
 A notebook for my work, lecture note and paper reading note. This is just a continuation of my previous LabNotebook, and has been developing into a [knowledge organization](https://en.wikipedia.org/wiki/Knowledge_organization) project. See [intuition](#intuition) for more details.
 
+## Meeting
+Meeting and work stuff.
+
+## Work
+Every day work note. Currently knowledge database is also hold here.
+
+## Lecture
+Lecture note is also hold on [Readthdocs](http://chaonan99-note.readthedocs.io/en/latest/).
+
 ## Paper
 
 > Please feel free to bring up your opinions for better solution or organization method, or directly make contributions to this section! (Actually they are still not well-organized to my point of view...)
