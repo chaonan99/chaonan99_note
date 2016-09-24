@@ -12,4 +12,4 @@ Randoms
 -------
 
 #. Transfer to reStructuredText! (Also learn some basic rst)
-#. Install OmniMarkupPreview... Done!
+#. Install OmniMarkupPreview... Done! (Amazingly that's real time preview!)
