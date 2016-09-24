@@ -1,6 +1,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Temporal Segment Networks: Towards Good Practices for Deep Action Recognition](201609.md#temporal-segment-networks-towards-good-practices-for-deep-action-recognition)
 * [Recurrent Convolutional Network for Video-based Person Re-Identification (Need picture)](201609.md#recurrent-convolutional-network-for-video-based-person-re-identification)
 * [End-to-End Comparative Attention Networks for Person Re-identification](201609.md#end-to-end-comparative-attention-networks-for-person-re-identification)
 * [Recurrent Models of Visual Attention](201608.md#recurrent-models-of-visual-attention)
