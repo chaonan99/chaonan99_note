@@ -1,7 +1,7 @@
 Game Tree
 =====
 
-`Ref <http://www.uni-weimar.de/medien/webis/teaching/lecturenotes/search/unit-en-game-playing-basics.pdf>`_
+`Reference <http://www.uni-weimar.de/medien/webis/teaching/lecturenotes/search/unit-en-game-playing-basics.pdf>`_
 
 Basic concept
 -----
@@ -36,5 +36,5 @@ Example: `Tic-tac-toe <https://en.wikipedia.org/wiki/Tic-tac-toe>`_
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/9/91/AB_pruning.svg
 	:scale: 50 %
-Monte Carlo Tree Search
+`Monte Carlo Tree Search <https://en.wikipedia.org/wiki/Monte_Carlo_tree_search>`_
 -----
