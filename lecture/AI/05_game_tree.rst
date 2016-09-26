@@ -21,6 +21,7 @@ Game Tree
 * Graphic notation and summary:
 	* □ = player 1 = Max  player = own view = Max node = OR node
 	* O = player 2 = Min  player = adversarial view = Min node = AND node
+* Players play optimum.
 * Use `minimax algorithm <https://en.wikipedia.org/wiki/Minimax>`_ to search.
 
 Example: `Tic-tac-toe <https://en.wikipedia.org/wiki/Tic-tac-toe>`_

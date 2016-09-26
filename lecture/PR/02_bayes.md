@@ -33,7 +33,7 @@ given our observables
 
 * Use Bayes Formula to make decision.
 
-## Probability of error
+## Probability of Error
 * Decision governed by posterior
 
 ![equation](http://latex.codecogs.com/svg.latex?%5Comega%5E%2A%3D%5Carg%5Cmax_iP%28%5Comega_i%7C%5Cmathbf%7Bx%7D%29)
