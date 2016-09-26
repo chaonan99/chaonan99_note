@@ -28,3 +28,4 @@ Overall risk
 ^^^^^
 * Define *a decision rule* :math:`\alpha(x)`, a mapping from the input feature
 space to an action :math:`\mathbf{R}\mapsto{\alpha_1,\dots,\alpha_a}`
+

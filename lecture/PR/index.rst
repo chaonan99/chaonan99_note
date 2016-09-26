@@ -7,3 +7,4 @@ Pattern Recognition
 
     01_introduction
     02_bayes
+    03_bayes
