@@ -344,4 +344,4 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 # Support math equation
-mathjax_path = https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"
