@@ -20,3 +20,4 @@ What is Computer Vision
 	* Computer see grid of number
 	* 2D appearance can change radically with viewpoint (ill-posed problem)
 	* Data is corrupted by noise and distortions
+	* Contextual informatino is important

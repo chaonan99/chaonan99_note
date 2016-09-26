@@ -94,6 +94,3 @@ def solved-labeling(G, n, successors, goal):
 > Solved-labeling algorithm above doesn't check cycles and may entail cyclic synthesized even if there exists an acyclic solution graph.
 
 ## Hypergraphs
-
-## Game Tree
-[Ref](http://www.uni-weimar.de/medien/webis/teaching/lecturenotes/search/unit-en-game-playing-basics.pdf)
