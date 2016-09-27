@@ -1,0 +1,21 @@
+27th September, Tuesday
+=====
+
+Works
+-----
+#. Update system
+#. Whole day trying to make the model converge, failed
+
+TODOs
+-----
+#. Evaluation
+
+Possible problem?
+-----
+#. CNN, pre-train maybe useless?
+#. Resize? Kelei says it may not be influential
+#. Program bug?
+
+Lessons
+-----
+#. In torch, :getParameters() and :cuda() will reshuffle memory around. Clones should be done after these two functions.
