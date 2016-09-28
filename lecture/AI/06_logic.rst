@@ -28,12 +28,12 @@ Logic equivalent and identities
 * Important identities:
 
 .. math::
-	P \rightarrow Q&\equiv \neg P \vee Q (implication)\\
-	P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) (distributivity)\\
+	P \rightarrow Q&\equiv \neg P \vee Q \;\;\;\;\text{(implication)}\\
+	P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) \;\;\text{(distributivity)}\\
 	P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) \\
-	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q (DeMorgan's law)\\
+	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q \;\;\;\;\text{(DeMorgan's law)}\\
 	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q \\
-	P ∨ (P ∧ Q) &≡ P (absorption) \\
+	P ∨ (P ∧ Q) &≡ P \;\;\;\;\;\;\text{(absorption)} \\
 	P ∧ (P ∨ Q) &≡ P
 
 Defination of Predicate Logic
