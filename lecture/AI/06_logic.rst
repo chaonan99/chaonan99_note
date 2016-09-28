@@ -18,9 +18,9 @@ Logic operations (connectives)
 * :math:`\neg` denotes **not**
 * :math:`\vee` denotes **or**
 * :math:`\wedge` denotes **and**
-* :math:`\rightarrow` For propositions P and Q, the **implication** or **conditional statement** :math:`P\rightarrow Q` is false when P is true and Q is false, and is true otherwise. P is called the premise or hypothesis, and Q is called the conclusion.
+* :math:`\rightarrow` For propositions :math:`P` and :math:`Q`, the **implication** or **conditional statement** :math:`P\rightarrow Q` is false when :math:`P` is true and :math:`Q` is false, and is true otherwise. :math:`P` is called the premise or hypothesis, and :math:`Q` is called the conclusion.
 
-* :math:`\leftrightarrow` The biconditional of statements P and Q, denoted P ↔ Q, is read "P if and only if Q" (or "P is necessary and sufficient for Q"), and is true if P and Q have the same truth values, and false otherwise.
+* :math:`\leftrightarrow` The **biconditional** of statements :math:`P` and :math:`Q`, denoted :math:`P \leftrightarrow Q`, is read ":math:`P` if and only if :math:`Q`" (or ":math:`P` is necessary and sufficient for :math:`Q`"), and is true if :math:`P` and :math:`Q` have the same truth values, and false otherwise.
 
 Logic equivalent and identities
 ^^^^^
