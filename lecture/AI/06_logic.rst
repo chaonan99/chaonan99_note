@@ -33,8 +33,8 @@ Logic equivalent and identities
 	P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) \\
 	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q (DeMorgan's law)\\
 	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q \\
-	P ∨ (P ∧ Q) ≡ P (absorption)
-	P ∧ (P ∨ Q) ≡ P
+	P ∨ (P ∧ Q) &≡ P (absorption) \\
+	P ∧ (P ∨ Q) &≡ P
 
 Defination of Predicate Logic
 -----
@@ -52,6 +52,6 @@ Quantifier
 
 .. math::
 	\forall x(P(x)\vee Q(x))\equiv\forall xP(x)\vee \forall xQ(x)\\
-	\exists x(P(x)\wedge Q(x))\rightarrow \exists xP(x)\wedge \exists xQ(x)\\
 	\exists x(P(x)\vee Q(x))\equiv\exists xP(x)\vee \exists xQ(x)\\
-	\forall x(P(x)\vee Q(x))\rightarrow\forall xP(x)\vee \forall xQ(x)
+	\forall x(P(x)\vee Q(x))\rightarrow\forall xP(x)\vee \forall xQ(x) \\
+	\exists x(P(x)\wedge Q(x))\rightarrow \exists xP(x)\wedge \exists xQ(x)
