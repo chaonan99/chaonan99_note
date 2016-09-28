@@ -10,3 +10,4 @@ Artificial Intelligence
     03_complexity
     04_graph_search_2
     05_game_tree
+    06_logic
