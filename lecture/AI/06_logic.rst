@@ -28,14 +28,16 @@ Logic equivalent and identities
 * Important identities:
 
 .. math::
-	P \rightarrow Q&\equiv \neg P \vee Q \;\;\;\;\text{(implication)}\\
-	P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) \;\;\text{(distributivity)}\\
-	P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) \\
-	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q \;\;\;\;\text{(DeMorgan's law)}\\
-	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q \\
-	P ∨ (P ∧ Q) &≡ P \;\;\;\;\;\;\text{(absorption)} \\
-	P ∧ (P ∨ Q) &≡ P
-	:label: iden
+:nowrap:
+\begin{eqnarray}
+P \rightarrow Q&\equiv \neg P \vee Q &\text{(implication)}\\
+P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) &\text{(distributivity)}\\
+P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) &\text{} \\
+\neg(P \vee Q) &\equiv \neg P \wedge \neg Q &\text{(DeMorgan's law)}\\
+\neg (P \wedge Q) &\equiv \neg P \vee \neg Q &\text{} \\
+P ∨ (P ∧ Q) &≡ P &\text{(absorption)} \\
+P ∧ (P ∨ Q) &≡ P &\text{}
+\end{eqnarray}
 
 Defination of Predicate Logic
 -----
