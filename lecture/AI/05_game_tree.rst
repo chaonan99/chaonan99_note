@@ -40,7 +40,7 @@ Game Playing Introduction
 	* Important property
 
 .. math::
-	\min\limits_{T^-}  \max\limits_{T^+}status(T^+ \spcap T^-) = status(s) =  \max\limits_{T^+} \min\limits_{T^-}status(T^+ \spcap T^-)
+	\min\limits_{T^-}  \max\limits_{T^+}status(T^+ \cap T^-) = status(s) =  \max\limits_{T^+} \min\limits_{T^-}status(T^+ \cap T^-)
 
 .. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_26_968785f92ea2cd53bc79db54621f03.png
 	:alt: :math:`T^+` and :math:`T^-` tree

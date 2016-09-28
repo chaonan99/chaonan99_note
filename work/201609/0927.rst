@@ -19,3 +19,9 @@ Possible problem?
 Lessons
 -----
 #. In torch, :getParameters() and :cuda() will reshuffle memory around. Clones should be done after these two functions.
+
+Minesweeper
+-----
+`paper <http://cs229.stanford.edu/proj2015/372_report.pdf>`_
+`project <https://github.com/skolotienko/minesweeper_nn>`_
+`lesson <http://www.minesweeper.info/articles/MinesweeperOnGraphs(Golan).pdf>`_
