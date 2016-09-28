@@ -35,6 +35,7 @@ Logic equivalent and identities
 	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q \\
 	P ∨ (P ∧ Q) &≡ P \;\;\;\;\;\;\text{(absorption)} \\
 	P ∧ (P ∨ Q) &≡ P
+	:label: iden
 
 Defination of Predicate Logic
 -----
@@ -48,6 +49,8 @@ Quantifier
 ^^^^^
 * **Universal quantifier** :math:`\forall`, **existential quantifier** :math:`\exists`
 * Quantifier truns a predicate into a proposition
+* The **scope** if a quantifier is the part of a statement in which variables are bound by the quantifier.
+	* Eg: :math:`R ∨ \exists(P(x) ∨ Q(x))`, scope of :math:`\exists`: :math:` P(x) ∨ Q(x)`
 * Distribution equation
 
 .. math::
