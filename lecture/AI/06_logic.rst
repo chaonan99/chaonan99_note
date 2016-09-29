@@ -78,5 +78,5 @@ where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the
 	#. The prenex normal form can now be obtained by moving all quantifiers to the front of the formula
 		..image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_d543964ddf96a1b4e5f3b46c4d8f1.png
 * Example:
-
+.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_29_209dfc97bf5097cfb62d28b76de7bf.png
 
