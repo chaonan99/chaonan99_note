@@ -2,6 +2,8 @@ Predicate Logic
 =====
 Sept. 28th, 2016
 
+Reference on this topic origin from `UTexas CS301k Logic <http://www.cs.utexas.edu/~eberlein/cs301k/cs301ktopics.html>`_.
+
 `Propositional Logic <https://en.wikipedia.org/wiki/Propositional_calculus>`_
 -----
 * `Reference <http://www.cs.utexas.edu/~eberlein/cs301k/propLogic.pdf>`_
@@ -28,16 +30,14 @@ Logic equivalent and identities
 * Important identities:
 
 .. math::
-	:nowrap:
-	\begin{eqnarray}
-		P \rightarrow Q&\equiv \neg P \vee Q &\text{(implication)}\\
-		P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) &\text{(distributivity)}\\
-		P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) &\text{} \\
-		\neg(P \vee Q) &\equiv \neg P \wedge \neg Q &\text{(DeMorgan's law)}\\
-		\neg (P \wedge Q) &\equiv \neg P \vee \neg Q &\text{} \\
-		P ∨ (P ∧ Q) &≡ P &\text{(absorption)} \\
-		P ∧ (P ∨ Q) &≡ P &\text{}
-	\end{eqnarray}
+
+	P \rightarrow Q&\equiv \neg P \vee Q &\text{(implication)}\\
+	P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) &\text{(distributivity)}\\
+	P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) &\text{} \\
+	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q &\text{(DeMorgan's law)}\\
+	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q &\text{} \\
+	P \vee (P \wedge Q) &\equiv P &\text{(absorption)} \\
+	P \wedge (P \vee Q) &\equiv P &\text{}
 
 Defination of Predicate Logic
 -----
@@ -52,11 +52,31 @@ Quantifier
 * **Universal quantifier** :math:`\forall`, **existential quantifier** :math:`\exists`
 * Quantifier truns a predicate into a proposition
 * The **scope** if a quantifier is the part of a statement in which variables are bound by the quantifier.
-	* Eg: :math:`R ∨ \exists(P(x) ∨ Q(x))`, scope of :math:`\exists`: :math:` P(x) ∨ Q(x)`
+	* Eg: :math:`R \vee \exists(P(x) \vee Q(x))`, scope of :math:`\exists`: :math:` P(x) \vee Q(x)`
 * Distribution equation
 
+.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_a024d27e17fccf08ad134615e5e9d1.png
+
+Prenex Normal Form
+-----
+* `Reference <http://www.csd.uwo.ca/~lila/prenex.pdf>`_
+* Defination: A formula is in **prenex normal form** if it is of the form
+
 .. math::
-	\forall x(P(x)\vee Q(x))\equiv\forall xP(x)\vee \forall xQ(x)\\
-	\exists x(P(x)\vee Q(x))\equiv\exists xP(x)\vee \exists xQ(x)\\
-	\forall x(P(x)\vee Q(x))\rightarrow\forall xP(x)\vee \forall xQ(x) \\
-	\exists x(P(x)\wedge Q(x))\rightarrow \exists xP(x)\wedge \exists xQ(x)
+	Q_1x_1 Q_2x_2 \dots Q_nx_nB
+
+where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the formula :math:`B` is quantifier free.
+
+* Any expression can be converted into prenex normal form. (How to!!!!)
+	#. Eliminate all occurrences of → and ↔ from the formula in question
+		* :math:`A \rightarrow B \equiv \neg A \vee B`
+		* :math:`A \leftrightarrow B \equiv (A \wedge B) \vee (\neg A \wedge \neg B)`
+	#. Move all negations inward such that, in the end, negations only appear as part of literals
+		* De Morgan’s Laws
+	#. Standardize the variables apart (when necessary)
+		.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_89ad976190c6f562aeef42f32522712.png
+	#. The prenex normal form can now be obtained by moving all quantifiers to the front of the formula
+		..image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_d543964ddf96a1b4e5f3b46c4d8f1.png
+* Example:
+
+
