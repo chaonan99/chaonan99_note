@@ -42,6 +42,7 @@ Logic equivalent and identities
 Defination of Predicate Logic
 -----
 * `Reference <http://www.cs.utexas.edu/~eberlein/cs301k/predLogic.pdf>`_
+* `First-order logic <http://mathworld.wolfram.com/First-OrderLogic.html>`_
 * A **predicate** is a **property** that a variable or a finite collection of variables can have.
 * A predicate becomes a **proposition** when specific values are assigned to the variables.
 * :math:`P(x_1, x_2, ..., x_n)` is called a predicate of n variables or n arguments.
