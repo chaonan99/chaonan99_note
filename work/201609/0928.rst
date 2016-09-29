@@ -1,0 +1,12 @@
+27th September, Tuesday
+=====
+
+Works
+-----
+#. Finally converge...
+#. Attend AI class, learn propositional logic and predicate logic
+
+Thoughts
+-----
+#. Evaluation code
+#. RNN stuff

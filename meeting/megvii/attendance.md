@@ -8,3 +8,4 @@
 | Sept. 22nd | Thursday    | 8:00~16:30  | W          |
 | Sept. 23rd | Friday      | 9:00~18:40  | W          |
 | Sept. 27th | Tuesday     | 8:15~17:40  | W          |
+| Sept. 28th | Wednesday   | 9:00~14:40  | H          |

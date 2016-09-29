@@ -21,3 +21,5 @@ What is Computer Vision
 	* 2D appearance can change radically with viewpoint (ill-posed problem)
 	* Data is corrupted by noise and distortions
 	* Contextual informatino is important
+* Contrain the context will help with solution
+
