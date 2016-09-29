@@ -1,0 +1,15 @@
+29th September, Thursday
+=====
+
+Works
+-----
+#. 
+
+GNMT
+-----
+* To improve parallelism and therefore decrease training time, our attention mechanism connects the bottom layer of the decoder to the top layer of the encoder
+* To improve handling of rare words, we divide words into a limited set of common sub-word units (“wordpieces”)
+* Our beam search technique employs a length-normalization procedure and uses a coverage penalty, which encourages generation of an output sentence that is most likely to cover all the words in the source sentence
+* we found that the improvement in the BLEU scores did not reflect in the human evaluation (They only use BLEU?)
+* Three inherent weaknesses of Neural Machine Translation are responsible for this gap: its slower training and inference speed, ineffectiveness in dealing with rare words, and sometimes failure to translate all words in the source sentence.
+* Our LSTM RNNs have 8 layers, with residual connections between layers to encourage gradient flow

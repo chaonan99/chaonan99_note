@@ -1,4 +1,4 @@
-27th September, Tuesday
+28th September, Wednesday
 =====
 
 Works
@@ -10,3 +10,4 @@ Thoughts
 -----
 #. Evaluation code
 #. RNN stuff
+#. C environment setup
