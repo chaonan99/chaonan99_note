@@ -22,4 +22,5 @@ What is Computer Vision
 	* Data is corrupted by noise and distortions
 	* Contextual informatino is important
 * Contrain the context will help with solution
-
+* OpenCV structure
+.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_29_855d9df9c63e21399cbfff5e8f1d26.png

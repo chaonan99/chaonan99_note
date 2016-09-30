@@ -3,7 +3,9 @@
 
 Works
 -----
-#. 
+#. Make the basic ReID model work.
+#. Finish evaluation code.
+#. Learn OpenCV. Make VS2015 work!!!
 
 GNMT
 -----
