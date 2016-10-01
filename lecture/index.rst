@@ -11,3 +11,4 @@ Contents:
 
     AI/index
     PR/index
+    CV/index

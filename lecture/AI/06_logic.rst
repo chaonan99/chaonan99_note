@@ -90,7 +90,7 @@ Clausal form
 * A `literal <https://en.wikipedia.org/wiki/Literal_(mathematical_logic)>`_ is either an atomic sentence or a negation of an atomic sentence.
 * A clausal sentence is either a literal or a `disjunction <https://en.wikipedia.org/wiki/Logical_disjunction>`_(connected by OR operation) of literals.
 * A `clause <https://en.wikipedia.org/wiki/Clause_(logic)>`_ is the set of literals in a clausal sentence.
-	* Empty set {} is also a clause. It is `equivalent to <https://en.wikipedia.org/wiki/Logical_equivalence>`_ an empty disjunction and is `unsatisfiable <https://en.wikipedia.org/wiki/Satisfiability>`_(cannot be true).
+	* Empty set {} is also a clause. It is `equivalent to <https://en.wikipedia.org/wiki/Logical_equivalence>`_ an empty disjunction and is `unsatisfiable <https://en.wikipedia.org/wiki/Satisfiability>`_ (cannot be true).
 * An arbitrary set of Propositional Logic sentences can be deducted to an equivalent set of clauses.
 
 Rule of inference (Resolution principle)
@@ -104,4 +104,4 @@ Rule of inference (Resolution principle)
 .. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_01_e43d2c58ecc5298c21341b250bffa9f.png
 
 * Resolution is not generatively complete, i.e. it is not possible to find resolution derivations for all clauses that are logically entailed by a set of premise clauses.
-* If a set :math:`\Delta` of clauses is unsatisfiable, then there is guaranteed to be a resolution derivation of the empty clause from :math:`\Delta`.
+* (`Herbrand's Theorem <https://en.wikipedia.org/wiki/Herbrand%27s_theorem>`_) If a set :math:`\Delta` of clauses is unsatisfiable, then there is guaranteed to be a resolution derivation of the empty clause from :math:`\Delta`.
