@@ -72,7 +72,7 @@ where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the
 	#. Eliminate all occurrences of → and ↔ from the formula in question
 		* :math:`A \rightarrow B \equiv \neg A \vee B`
 		* :math:`A \leftrightarrow B \equiv (A \wedge B) \vee (\neg A \wedge \neg B)`
-	#. Move all negations inward such that, in the end, negations only appear as part of literals
+	#. Move all negations inward such that, in the end, negations only appear as part of `literals <https://en.wikipedia.org/wiki/Literal_(mathematical_logic)>`_
 		* De Morgan’s Laws
 	#. Standardize the variables apart (when necessary)
 		.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_89ad976190c6f562aeef42f32522712.png
@@ -81,3 +81,27 @@ where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the
 * Example:
 	.. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_29_209dfc97bf5097cfb62d28b76de7bf.png
 
+Resolution Principle
+-----
+* `Reference <http://logic.stanford.edu/intrologic/notes/chapter_05.html>`_
+
+Clausal form
+^^^^^
+* A `literal <https://en.wikipedia.org/wiki/Literal_(mathematical_logic)>`_ is either an atomic sentence or a negation of an atomic sentence.
+* A clausal sentence is either a literal or a `disjunction <https://en.wikipedia.org/wiki/Logical_disjunction>`_(connected by OR operation) of literals.
+* A `clause <https://en.wikipedia.org/wiki/Clause_(logic)>`_ is the set of literals in a clausal sentence.
+	* Empty set {} is also a clause. It is `equivalent to <https://en.wikipedia.org/wiki/Logical_equivalence>`_ an empty disjunction and is `unsatisfiable <https://en.wikipedia.org/wiki/Satisfiability>`_(cannot be true).
+* An arbitrary set of Propositional Logic sentences can be deducted to an equivalent set of clauses.
+
+Rule of inference (Resolution principle)
+^^^^^
+* Intuition
+	* :math:`{p, q}`:  p is true or q is true.
+	* :math:`{\neg q, r}`: q is false or r is true.
+	* q is either true or false: either p is true or r is true.
+	* :math:`{p, r}`
+* Principle:
+.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_01_e43d2c58ecc5298c21341b250bffa9f.png
+
+* Resolution is not generatively complete, i.e. it is not possible to find resolution derivations for all clauses that are logically entailed by a set of premise clauses.
+* If a set :math:`\Delta` of clauses is unsatisfiable, then there is guaranteed to be a resolution derivation of the empty clause from :math:`\Delta`.

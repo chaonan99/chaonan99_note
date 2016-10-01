@@ -1,6 +1,9 @@
 Oct. 1st, Saturday
 =====
 
+Works
+-----
+
 Countably Infinite
 -----
 * `Defination <http://mathinsight.org/definition/countably_infinite>`_: A set is countably infinite if its elements can be put in one-to-one correspondence with the set of natural numbers.
@@ -9,5 +12,6 @@ Countably Infinite
 	* Using infinite binary sequence
 	* If :math:`s1 ... sn ...` is any enumeration of elements from :math:`T`, then there is always an element :math:`s` of :math:`T` which corresponds to no :math:`sn` in the enumeration
 	* `Constructive proof <https://en.wikipedia.org/wiki/Constructive_proof>`_: construct a sequence by inverting the diagnal of :math:`s1 ... sn ...` sequence array
-	* `Proof by contradiction <https://en.wikipedia.org/wiki/Proof_by_contradiction>`_: assuming :math:`T` was countable. Then all its elements could be written as an enumeration s1, :math:`s1 ... sn ...`. Applying the previous theorem to this enumeration would produce a sequence s not belonging to the enumeration. However, :math:`s` was an element of :math:`T` and should therefore be in the enumeration.
+	* `Refutation proof <https://en.wikipedia.org/wiki/Proof_by_contradiction>`_: assuming :math:`T` was countable. Then all its elements could be written as an enumeration s1, :math:`s1 ... sn ...`. Applying the previous theorem to this enumeration would produce a sequence s not belonging to the enumeration. However, :math:`s` was an element of :math:`T` and should therefore be in the enumeration.
 * Also `Cantor's theorem <https://en.wikipedia.org/wiki/Cantor%27s_theorem>`_
+
