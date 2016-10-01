@@ -26,9 +26,11 @@
 	* **Gray** discovered but not done
 
 ## Basic Graph Search Algorithm
-+ [Breadth first search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search)
+### [Breadth first search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search)
+* Illustration
 ![2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd](http://oa5omjl18.bkt.clouddn.com/2016_09_14_e6e5114f2ea8255bddfa6a037d4a4fd.png "BFS for shortest path")
 
+* Pseudocode
 ```
 // let s be the source node
 frontier = new Queue()
@@ -45,9 +47,13 @@ while frontier not empty {
 }
 ```
 
-+ [Depth first search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search)
+* [Application](http://www.geeksforgeeks.org/applications-of-breadth-first-traversal/)
+
+### [Depth first search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search)
+* Illustration
 ![2016_09_14_39c8ece6634d7f5e527217be12886139](http://oa5omjl18.bkt.clouddn.com/2016_09_14_39c8ece6634d7f5e527217be12886139.png "DFS shortest path")
 
+* Pseudocode
 ```
 DFS(Vertex v) {
     mark v visited
@@ -61,17 +67,19 @@ DFS(Vertex v) {
 }
 ```
 
-+ [Uniform cost search (Dijkstra's algorithm)](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+* [Application](http://www.geeksforgeeks.org/applications-of-depth-first-search/)
+
+### [Uniform cost search (Dijkstra's algorithm)](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
 ![Dijkstra](https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif "Dijkstra's algorithm")
-+ Hill-climbing method
-	* [Manhattan distance](https://en.wiktionary.org/wiki/Manhattan_distance) or [L^1 norm](http://mathworld.wolfram.com/L1-Norm.html)
-	* Search for the node who has **the smallest L^1 norm** (greedy algorithm) to the target.
+
+### [Hill-climbing method](https://en.wikibooks.org/wiki/Artificial_Intelligence/Search/Iterative_Improvement/Hill_Climbing)
+* [Manhattan distance](https://en.wiktionary.org/wiki/Manhattan_distance) or [L^1 norm](http://mathworld.wolfram.com/L1-Norm.html)
+* Search for the node who has **the smallest L^1 norm** (greedy algorithm) to the target.
+* Can be applied to any problem where the current state allows for an accurate evaluation function.
+* [Application](http://www.psychicorigami.com/2007/05/12/tackling-the-travelling-salesman-problem-hill-climbing/) on [TSP](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
 ## Heuristic Search
-
-> Project 1!!!
-
 * For every node, define a cost function:
 	![equation](http://latex.codecogs.com/svg.latex?f%28n%29%20%3D%20g%28n%29%2Bh%28n%29)
 * [Heuristic function](http://artint.info/html/ArtInt_56.html)
