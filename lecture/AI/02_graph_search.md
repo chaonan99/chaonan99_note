@@ -97,8 +97,6 @@ DFS(Vertex v) {
 	+ arc costs are greater than some ![equation](http://latex.codecogs.com/svg.latex?%5Cepsilon%20%3E%200), and
 	+ ![equation](http://latex.codecogs.com/svg.latex?h%28n%29) is a lower bound on the actual minimum cost of the lowest-cost path from n to a goal node.
 
-
-
 ## Influencial Factors of Speed of A*
 * Extended node number
 * Computation cost of h(x)
