@@ -13,14 +13,13 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 	* HC (hill climbing): hill climbing can be applied to any problem where the current state allows for an accurate evaluation function, such as the travelling salesman problem. Solution: http://www.psychicorigami.com/2007/05/12/tackling-the-travelling-salesman-problem-hill-climbing/
 4. Use case of and-or graph
 	* Most two-player game can be described with and-or graph. For example,
-5. Compare the performance w/ & w/o :math:`\alpha-\beta` prune
-	* Without :math:`\alpha-\beta` prune: DFS algorithm will search the whole tree.
-	* With :math:`\alpha-\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
+5. Compare the performance w/ & w/o :math:`\alpha`-:math:`\beta` prune
+	* Without :math:`\alpha`-:math:`\beta` prune: DFS algorithm will search the whole tree.
+	* With :math:`\alpha`-:math:`\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
 6. Proof the optimality of :math:`A*` algorithm.
-	:math:`A*` is implemented by treating the frontier as a priority queue ordered by f(p) = cost(p) + h(p), where p is the path found, cost(p) is the cost of path p and h(p) is the heuristic function estimating the path cost from the end of p to the goal.
-	In :math:`A*` algorithm, the element with minimum f-value is chosen at each time step. As h(p) is an underestimation of the actual cost, if there exists an optimal solution with finite cost, the f-value of nodes on the any solution path will be less than or equal to the f-value of the solution path itself. Thus, the f-value of nodes on an optimal solution path will be less than or equal to any non-optimal path. That is to say, if there exists a node on the frontier that leads to an optimal solution (?????)
-
-	Admisibility: :math:`h(n)<h'(n)` where :math:`h'(n)` is the actual cost from node :math:`n` to the optimal goal.
+	#. Assuming that there exists a node :math:`n` that is expanded under algorithm :math:`A_2`, we will prove that this node will be expanded by algorithm :math:`A_1`.
+	#. According to admisibility of :math:`A*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by :math:`f(G) = g(n)+h^*(n)`, where :math:`G` is the goal. Thus, given :math:`h_1(n)<h_2(n)<h^*(n)`, we can get :math:`h_1(n)+g(n)<h_2(n)+g(n)<h^*(n)+g(n)`, that is, :math:`f_1(n)<f_2(n)<f(G)`.
+	#. :math:`A*` is implemented by treating the frontier as a priority queue ordered by :math:`f(n) = g(n) + h(n)`, so before getting the goal state :math:`G`, node :math:`n` will be given priority access. This is true for all the node in the close list of :math:`A_2`. So the nodes expanded by :math:`A_1` will be no less than :math:`A_2`.
 7. Eight-puzzle
 	#. Using BFS and DFS to find a path from initial state to goal state
 		* BFS (eliminate repetition)
