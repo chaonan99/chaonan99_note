@@ -19,7 +19,8 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 6. Proof the optimality of :math:`A*` algorithm.
 	:math:`A*` is implemented by treating the frontier as a priority queue ordered by f(p) = cost(p) + h(p), where p is the path found, cost(p) is the cost of path p and h(p) is the heuristic function estimating the path cost from the end of p to the goal.
 	In :math:`A*` algorithm, the element with minimum f-value is chosen at each time step. As h(p) is an underestimation of the actual cost, if there exists an optimal solution with finite cost, the f-value of nodes on the any solution path will be less than or equal to the f-value of the solution path itself. Thus, the f-value of nodes on an optimal solution path will be less than or equal to any non-optimal path. That is to say, if there exists a node on the frontier that leads to an optimal solution (?????)
-	Admisibility: :math:`h(n)<h'(n)` where :math:`h'(n)` is the actual cost from node :math:`n` to the optimal goal
+
+	Admisibility: :math:`h(n)<h'(n)` where :math:`h'(n)` is the actual cost from node :math:`n` to the optimal goal.
 7. Eight-puzzle
 	#. Using BFS and DFS to find a path from initial state to goal state
 		* BFS (eliminate repetition)

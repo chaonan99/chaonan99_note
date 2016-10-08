@@ -1,0 +1,7 @@
+30th September, Friday
+=====
+
+Works
+-----
+#. Debugging ReID RNN model...
+#. MapTable always failed in the second module ...
