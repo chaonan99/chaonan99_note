@@ -16,9 +16,20 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 5. Compare the performance w/ & w/o :math:`\alpha`-:math:`\beta` prune
 	* Without :math:`\alpha`-:math:`\beta` prune: DFS algorithm will search the whole tree.
 	* With :math:`\alpha`-:math:`\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
-6. Proof the optimality of :math:`A*` algorithm.
+6. Proof the optimality of :math:`A^*` algorithm.
 	#. Assuming that there exists a node :math:`n` that is expanded under algorithm :math:`A_2`, we will prove that this node will be expanded by algorithm :math:`A_1`.
-	#. According to admisibility of :math:`A*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by :math:`f(G) = g(n)+h^*(n)`, where :math:`G` is the goal. Thus, given :math:`h_1(n)<h_2(n)<h^*(n)`, we can get :math:`h_1(n)+g(n)<h_2(n)+g(n)<h^*(n)+g(n)`, that is, :math:`f_1(n)<f_2(n)<f(G)`.
+	#. According to admisibility of :math:`A^*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by
+	.. math::
+	f(G) = g(n)+h^*(n)
+
+	where :math:`G` is the goal. Thus, given :math:`h_1(n)<h_2(n)<h^*(n)`, we can get
+	.. math::
+	h_1(n)+g(n)<h_2(n)+g(n)<h^*(n)+g(n)
+
+	That is to say
+	.. math::
+	f_1(n)<f_2(n)<f(G)
+
 	#. :math:`A*` is implemented by treating the frontier as a priority queue ordered by :math:`f(n) = g(n) + h(n)`, so before getting the goal state :math:`G`, node :math:`n` will be given priority access. This is true for all the node in the close list of :math:`A_2`. So the nodes expanded by :math:`A_1` will be no less than :math:`A_2`.
 7. Eight-puzzle
 	#. Using BFS and DFS to find a path from initial state to goal state
@@ -28,7 +39,8 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 			.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_07_dfs.png
 	#. Compare BFS and DFS
 		In this problem, BFS can always be sure to find a path with minimal moves, but the complexity increases exponentially with the depth of search tree. DFS can't be sure to find the optimal solution. In this problem, we should limit the depth of the search tree to avoid cycle. So DFS can't always find a solution in a limited time for eight-puzzle problem. But sometimes it will happen to find a solution at a lower cost as is shown in the graph above.
-	#. A* search
-		g: depth of the search tree
-		h: Manhattan Distance
+	#. :math:`A^*` search
+		:math:`g(n)`: depth of the search tree.
+		:math:`h(n)`: Sum of Manhattan Distance for every block from its current position to the goal position.
+
 
