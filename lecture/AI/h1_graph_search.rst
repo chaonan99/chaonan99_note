@@ -17,15 +17,20 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 	* Without :math:`\alpha`-:math:`\beta` prune: DFS algorithm will search the whole tree.
 	* With :math:`\alpha`-:math:`\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
 6. Proof the optimality of :math:`A^*` algorithm.
-	#. Assuming that there exists a node :math:`n` that is expanded under algorithm :math:`A_2`, we will prove that this node will be expanded by algorithm :math:`A_1`.
-	#. According to admisibility of :math:`A^*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by
-	.. math:: f(G) = g(n)+h^*(n)
-	where :math:`G` is the goal. Thus, given :math:`h_1(n)<h_2(n)<h^*(n)`, we can get
-	.. math:: h_1(n)+g(n)<h_2(n)+g(n)<h^*(n)+g(n)
-	That is to say
-	.. math:: f_1(n)<f_2(n)<f(G)
+Assuming that there exists a node :math:`n` that is expanded under algorithm :math:`A_2`, we will prove that this node will be expanded by algorithm :math:`A_1`.
+According to admisibility of :math:`A^*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by
 
-	#. :math:`A*` is implemented by treating the frontier as a priority queue ordered by :math:`f(n) = g(n) + h(n)`, so before getting the goal state :math:`G`, node :math:`n` will be given priority access. This is true for all the node in the close list of :math:`A_2`. So the nodes expanded by :math:`A_1` will be no less than :math:`A_2`.
+.. math:: f(G) = g(n)+h^*(n)
+
+where :math:`G` is the goal. Thus, given :math:`h_1(n)<h_2(n)<h^*(n)`, we can get
+
+.. math:: h_1(n)+g(n)<h_2(n)+g(n)<h^*(n)+g(n)
+
+That is to say
+
+.. math:: f_1(n)<f_2(n)<f(G)
+
+:math:`A*` is implemented by treating the frontier as a priority queue ordered by :math:`f(n) = g(n) + h(n)`, so before getting the goal state :math:`G`, node :math:`n` will be given priority access. This is true for all the node in the close list of :math:`A_2`. So the nodes expanded by :math:`A_1` will be no less than :math:`A_2`.
 7. Eight-puzzle
 	#. Using BFS and DFS to find a path from initial state to goal state
 		* BFS (eliminate repetition)
