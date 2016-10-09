@@ -45,7 +45,7 @@ That is to say
 		* :math:`g(n)`: depth of the search tree.
 		* :math:`h(n)`: Sum of Manhattan Distance for every block from its current position to the goal position.
 		* Search tree:
-			.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_08_a-star.png
+			.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_09_a-star.png
 
 8. **May the knight catch up with the pawn?**
 
