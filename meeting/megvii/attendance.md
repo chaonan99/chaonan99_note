@@ -12,3 +12,4 @@
 | Sept. 29th | Thursday    | 9:10~15:30  | H          |
 | Sept. 30th | Friday      | 9:30~18:30  | W          |
 | Oct. 08th  | Saturday    | 8:30~18:30  | W          |
+| Oct. 09th  | Sunday      | 8:45~12:30  | H          |

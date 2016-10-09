@@ -3,4 +3,14 @@ Oct. 8th, Saturday
 
 Works
 -----
-#. 
+#. Run serval experiments for Re-id
+	* RNN successfully work with a lower learning rate (1e-4).
+	* Try different CNN models. Get pre-trained ResNet model.
+#. Continue doing AI homework
+
+Thoughts
+-----
+#. Data augmentation for Re-id
+#. Change different optimizer
+#. Data parallel!
+#. Use all data training on classification task
