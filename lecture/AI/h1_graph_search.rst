@@ -12,7 +12,7 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 	* UCS (uniform cost search): also called Dijkstra's algorithm, can be used to find the shortest path in a route graph
 	* HC (hill climbing): hill climbing can be applied to any problem where the current state allows for an accurate evaluation function, such as the travelling salesman problem. Solution: http://www.psychicorigami.com/2007/05/12/tackling-the-travelling-salesman-problem-hill-climbing/
 4. Use case of and-or graph
-	* Most two-player game can be described with and-or graph. For example,
+	.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_09_c8f21b3673b85658a3876e99e68440.png
 5. Compare the performance w/ & w/o :math:`\alpha`-:math:`\beta` prune
 	* Without :math:`\alpha`-:math:`\beta` prune: DFS algorithm will search the whole tree.
 	* With :math:`\alpha`-:math:`\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
@@ -32,6 +32,7 @@ That is to say
 .. math:: f_1(n)<f_2(n)<f(G)
 
 :math:`A*` is implemented by treating the frontier as a priority queue ordered by :math:`f(n) = g(n) + h(n)`, so before getting the goal state :math:`G`, node :math:`n` will be given priority access. This is true for all the node in the close list of :math:`A_2`. So the nodes expanded by :math:`A_1` will be no less than :math:`A_2`.
+
 7. Eight-puzzle
 	#. Using BFS and DFS to find a path from initial state to goal state
 		* BFS (eliminate repetition)
@@ -41,7 +42,30 @@ That is to say
 	#. Compare BFS and DFS
 		In this problem, BFS can always be sure to find a path with minimal moves, but the complexity increases exponentially with the depth of search tree. DFS can't be sure to find the optimal solution. In this problem, we should limit the depth of the search tree to avoid cycle. So DFS can't always find a solution in a limited time for eight-puzzle problem. But sometimes it will happen to find a solution at a lower cost as is shown in the graph above.
 	#. :math:`A^*` search
-		:math:`g(n)`: depth of the search tree.
-		:math:`h(n)`: Sum of Manhattan Distance for every block from its current position to the goal position.
+		* :math:`g(n)`: depth of the search tree.
+		* :math:`h(n)`: Sum of Manhattan Distance for every block from its current position to the goal position.
+		* Search tree:
+			.. image:: http://oa5omjl18.bkt.clouddn.com/2016_10_08_a-star.png
 
+8. May the knight catch up with the pawn?
+
+No. Because in odd steps, the knight can only appear on positions assigned by 1 and in even steps only 2 on the board below. On the other hand, the pawn won't appear on 1 in odd steps and 2 in even steps, so the knight will never catch the pawn.
+
++-+-+-+-+-+-+-+-+
+|1|2|1|2|1|2|1|2|
++-+-+-+-+-+-+-+-+
+|2|1|2|1|2|1|2|1|
++-+-+-+-+-+-+-+-+
+|1|2|1|2|1|2|1|2|
++-+-+-+-+-+-+-+-+
+|2|1|2|1|2|1|2|1|
++-+-+-+-+-+-+-+-+
+|1|2|1|2|1|2|1|2|
++-+-+-+-+-+-+-+-+
+|2|1|2|1|2|1|2|1|
++-+-+-+-+-+-+-+-+
+|1|2|1|2|1|2|1|2|
++-+-+-+-+-+-+-+-+
+|2|1|2|1|2|1|2|1|
++-+-+-+-+-+-+-+-+
 
