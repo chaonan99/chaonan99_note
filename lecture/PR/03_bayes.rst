@@ -25,17 +25,16 @@ Expected loss
 
 Overall risk
 ^^^^^
-* Define *a decision rule* :math:`\alpha(x)`, a mapping from the input feature
-space to an action :math:`\mathbb{R}^d\mapsto\{\alpha_1,\dots,\alpha_a\}`
-* The *overall risk* is the expected loss associated with a given decision
+* Define **a decision rule** :math:`\alpha(x)`, a mapping from the input feature space to an action :math:`\mathbb{R}^d\mapsto\{\alpha_1,\dots,\alpha_a\}`
+* The **overall risk** is the expected loss associated with a given decision
 rule.
 .. math:: R=\ointR(\alpha(\mathbf{x}|\mathbf{x}))p(\mathbf{x})d\mathbf{x}
 * Bayes decision rule gives us a method for minimizing the overall risk.
-* The *Bayes Risk* is the best we can do.
+* The **Bayes Risk** is the best we can do.
 
 Bayes discrimnant
 ^^^^^
-* :math:`g_i(\mathbf{x})` is a *discriminant function* for the i-th class.
+* :math:`g_i(\mathbf{x})` is a **discriminant function** for the i-th class.
 * This classifier will assign a class :math:`\omega_i` to the feature vector :math:`\mathbf{x}` if
 .. math:: g_i(\mathbf{x}) > g_j(\mathbf{x}) \forall j \not= i
 * The minimum conditional risk corresponds to the maximum discriminant.
@@ -46,6 +45,10 @@ Bayes decision under normal density
 ^^^^^
 * Multivariate Gaussian in d dimensions
 .. math:: p(\mathbf{x})=\frac{1}{(2\pi)^{d/2}|\mathbf{\Sigma}|^{1/2}}\exp[-\frac{1}{2}(\mathbf{x}-\mathbf{\mu})^T\mathbf{\Sigma}^{-1}(\mathbf{x}-\mathbf{\mu})]
-* If we assume normal densities, i.e., if p(x|ωi) ∼ N(µi
-, Σi), then the
-general discriminant is of the form
+* If we assume normal densities, i.e., if :math:`p(\mathbf{x}|\omega_i) ∼ N(\mu_i, \Sigma_i)`, then the general discriminant is of the form
+.. math:: g_i(\mathbf{x}) = −\frac{1}{2}(\mathbf{x} − \mu_i)^\mathbf{T}\Sigma^{−1}_i(\mathbf{x} − \mu_i) −\frac{d}{2}\ln 2\pi −\frac{1}{2}\ln|\Sigma_i| + \ln P(\omega_i)
+* Special cases
+	* :math:`\Sigma_i=\sigma^2\mathbf{I}`, covariance matrixes of all classes are equal, each feature is indepentant and their variance are equal. Then the discriminant function takes on the form:
+	.. math:: g_i(\mathbf{x}) = -\frac{||\mathbf{x} − \mu_i||^2}{2\sigma^2} + \ln P(\omega_i)
+	This means that 
+	*
