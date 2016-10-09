@@ -16,7 +16,7 @@ Class 32, Haonan Chen (陈昊楠), 2013011449
 5. Compare the performance w/ & w/o :math:`\alpha`-:math:`\beta` prune
 	* Without :math:`\alpha`-:math:`\beta` prune: DFS algorithm will search the whole tree.
 	* With :math:`\alpha`-:math:`\beta` prune: first search subtree in the left and the maximizer gets value -2. When searching subtree in the right, the minimizer will get -2 for the second succeeding leaf node. As -2 is not larger than -2, the right subtree will be pruned and the last leaf node won’t be visited.
-6. Proof the optimality of A^* algorithm.
+6. Proof the optimality of :math:`A^*` algorithm.
 	Assuming that there exists a node :math:`n` that is expanded under algorithm :math:`A_2`, we will prove that this node will be expanded by algorithm :math:`A_1`.
 	According to admisibility of :math:`A^*`, :math:`h(n)` is an underestimation of the actual cost :math:`h^*(n)`, and note that the cost of the goal state is given by
 
