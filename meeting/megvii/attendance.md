@@ -13,5 +13,6 @@
 | Sept. 30th | Friday      | 9:30~18:30  | W          |
 | Oct. 08th  | Saturday    | 8:30~18:30  | W          |
 | Oct. 09th  | Sunday      | 8:45~12:30  | H          |
-| Oct. 10th  | Tuesday     | 9:00~19:30  | W          |
-| Oct. 11th  | Wednesday   | 9:15~14:30  | H          |
+| Oct. 11th  | Tuesday     | 9:00~19:30  | W          |
+| Oct. 12th  | Wednesday   | 9:15~14:30  | H          |
+| Oct. 13th  | Thursday    | 8:40~17:00  | W          |
