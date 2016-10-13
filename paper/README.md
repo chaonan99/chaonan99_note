@@ -1,6 +1,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Joint Learning of Single-image and Cross-image Representations for Person Re-identification](201610.md#joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification)
 * [Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification](201610.md#gated-siamese-convolutional-neural-network-architecture-for-human-re-identification) [paper](https://arxiv.org/pdf/1607.08378v2.pdf)
 * [Temporal Segment Networks: Towards Good Practices for Deep Action Recognition](201609.md#temporal-segment-networks-towards-good-practices-for-deep-action-recognition)
 * [Recurrent Convolutional Network for Video-based Person Re-Identification (Need picture)](201609.md#recurrent-convolutional-network-for-video-based-person-re-identification)
