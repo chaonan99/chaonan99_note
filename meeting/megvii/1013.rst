@@ -25,12 +25,11 @@ Attributes
 * Add skeleton for attributes
 * AI:
 	* P0:
-		* Bag parsing (sjq:algorithm, zgy:data)
-		* Backpack parsing (sjq)
+		* (sjq:algorithm, zgy:data) Bag parsing, backpack parsing
+		* (sjq, zyw) Umbrella parsing
 	* P1:
-		* Upper clothes style
-		* Lower clothes style
-		* Umbrella parsing
+		* (zgy, zjh) Upper clothes style
+		* (zgy) Lower clothes style
 
 ReID
 -----
@@ -79,3 +78,15 @@ Carrier | Y/N
 Suit case | Y/N
 Suit case color | RGB
 Hair | Long/Short/No hair
+
+Patent
+-----
+* (wjn) Tracking by Re-id
+* (zjh) Generate a template from one image for SOT/ReID
+* (zgy) GAN to generate Re-id
+* (xqq) Infrared ReID
+* (zc ) Group tracking & group ReID
+* (yht) <need discussion> Video structuralization
+* (cyb) Skeleton/parsing for attributes * 2
+* (ckl, chn) Skeleton/parsing for ReID * 2
+* (sjq) Teacher - student framework
