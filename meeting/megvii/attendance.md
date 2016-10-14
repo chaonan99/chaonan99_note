@@ -16,4 +16,4 @@
 | Oct. 11th  | Tuesday     | 9:00~19:30  | W          |
 | Oct. 12th  | Wednesday   | 9:15~14:30  | H          |
 | Oct. 13th  | Thursday    | 8:40~16:00  | H          |
-| Oct. 14th  | Friday      | 9:00~16:00  | H          |
+| Oct. 14th  | Friday      | 9:00~14:00  | H          |
