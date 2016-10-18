@@ -1,0 +1,35 @@
+Oct. 18th, Thursday
+=====
+
+Works
+-----
+
+
+ECCV re-id
+-----
+`Person Re-Identification via Recurrent Feature Aggregation <https://drive.google.com/file/d/0ByS8YXR7ycXHU1ZwSXNPWUNtNFU/view>`_
+^^^^^
+* `Poster <http://www.eccv2016.org/files/posters/P-4A-22.pdf>`_
+* Shanghai Jiao Tong University
+* Video re-id
+* No CNN, use LBP and color feature
+* LSTM
+* Classification output????????
+* Datasets: iLIDS-VID (49.3%), PRID 2011 (58.2%)
+
+`Deep Attributes Driven Person Re-identification <http://www.eccv2016.org/files/posters/P-1B-34.pdf>`_
+^^^^^
+* Attribute + deep network based
+	* Train on attribute
+	* Finetune on attribute triplet loss
+	* Final finetuning with re-id dataset
+* Datasets: VIPeR (43.5%), PRID image (22.6%), Market (Single: 39.4%, multiple: 49.0%)
+
+`A Siamese Long Short-Term Memory
+Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
+^^^^^
+* Divide image into several horizontal stripes, represent as a sequence.
+* LSTM progressively take each horizontal stripes as inputs (first siamese architecture with LSTM)
+* 
+* Datasets: Market-1501 (), CUHK03 (), VIPeR ()
+

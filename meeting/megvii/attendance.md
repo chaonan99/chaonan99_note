@@ -18,3 +18,4 @@
 | Oct. 13th  | Thursday    | 8:40~16:00  | H          |
 | Oct. 14th  | Friday      | 9:00~14:00  | H          |
 | Oct. 15th  | Saturday    | 8:30~15:00  | H          |
+| Oct. 17th  | Tuesday     | 9:00~20:00  | W          |
