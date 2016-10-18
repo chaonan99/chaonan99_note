@@ -25,11 +25,82 @@ ECCV re-id
 	* Final finetuning with re-id dataset
 * Datasets: VIPeR (43.5%), PRID image (22.6%), Market (Single: 39.4%, multiple: 49.0%)
 
-`A Siamese Long Short-Term Memory
-Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
+`A Siamese Long Short-Term Memory Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
 ^^^^^
-* Divide image into several horizontal stripes, represent as a sequence.
+* Divide image into several horizontal stripes (6 rows in the experiment), represent as a sequence.
+* Handcrafted feature: LOMO, color names
 * LSTM progressively take each horizontal stripes as inputs (first siamese architecture with LSTM)
-* 
-* Datasets: Market-1501 (), CUHK03 (), VIPeR ()
+* A learned mapping (fc) after LSTM outputs.
+* Datasets: Market-1501 (61.6%), CUHK03 (57.3%), VIPeR (42.4%)
+* Settings:
+	* Hidden state dimension = 25 (Market), 50 (VIPeR, CUHK03)
+	* Margin = 0.5
 
+`Embedding Deep Metric for Person Re-identification: A Study Against Large Variation <http://www.cbsr.ia.ac.cn/users/hailinshi/papers/2016-eccv/0236.pdf>`_
+^^^^^
+* `Poster <http://www.eccv2016.org/files/posters/P-1A-44.pdf>`_
+
+
+`MARS： A Video Benchmark for Video-based Person Re-identification <http://www.liangzheng.com.cn/1320.pdf>`_
+^^^^^
+* `Dataset page <http://www.liangzheng.com.cn/Project/project_mars.html>`_
+* New video re-id dataset
+* `Poster <http://www.eccv2016.org/files/posters/P-4A-32.pdf>`_
+
+`Human-In-The-Loop Person Re-Identification <http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf>`_
+^^^^^
+
+Other re-id
+-----
+`Person Re-identification: Past, Present and Future <https://arxiv.org/pdf/1610.02984v1.pdf>`_
+^^^^^
+* Current review on person re-id
+* Image-based/video-based; hand-crafted/deep learning system.
+* New task: end-to-end re-id, fast re-id in very large galleries.
+* Re-id system: person detection, person tracking and person retrieval (re-id literals).
+* Hand crafted system metric learning: Mahalanobis distance, ...
+* Siamese vs. classification/identification network
+	* Siamese does not make full use of re-id annotation
+	* Current state-of-the-art use classification network (Res-50)
+* Datasets: GRID (underground station), iLIDS (airport hall), CUHK01,2,3 (campus)
+	* Larger scale
+	* Using pedestrian detectors
+	* More cameras are used
+	* `Website <http://robustsystems.coe.neu.edu/sites/robustsystems.coe.neu.edu/files/systems/projectpages/reiddataset.html>`_
+* Video based
+	* Multi-match strategy or single match strategy after video pooling
+* Datasets
+	* PRID-2011: 200 #ID, 400 #track, 40k #bbox, 2 #camera, 77.3% R-1
+	* iLIDS-VID: 300 #ID, 600 #track, 44k #bbox, 2 #camera, 58% R-1
+	* MARS: 1261 #ID, 20715 #track, 1M #bbox, 6 #camera, 68.3% R-1, 49.3% mAP
+* Recent dataset on person search
+	* PRW
+	* CUHK-SYSU (LSPS)
+* Future issues
+	* How to evaluate detection/tracking performance in the scenario of person re-ID
+	* Temporal information use
+
+`Similarity Learning with Spatial Constraints for Person Re-identification <http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Chen_Similarity_Learning_With_CVPR_2016_paper.pdf>`_
+^^^^^
+* CVPR 2016
+
+`Personnet: Person reidentification with deep convolutional neural networks <https://arxiv.org/pdf/1601.07255.pdf>`_
+^^^^^
+* Further reading
+
+`A Siamese Long Short-Term Memory Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
+^^^^^
+* The same author as Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification. Posted before that paper.
+
+`Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification <https://arxiv.org/pdf/1604.07528v1.pdf>`_
+^^^^^
+
+
+`Recurrent convolutional network for video-based person re-identification <http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/McLaughlin_Recurrent_Convolutional_Network_CVPR_2016_paper.pdf>`_
+* CVPR 2016, video re-id
+
+`Modeling spatial-temporal clues in a hybrid deep learning framework for video classification <https://arxiv.org/pdf/1504.01561v1.pdf>`_
+
+`End-to-End Deep Learning for Person Search <https://arxiv.org/pdf/1604.01850v1.pdf>`_
+^^^^^
+* `CUHK-SYSU dataset <http://www.ee.cuhk.edu.hk/~xgwang/PS/dataset.html>`_
