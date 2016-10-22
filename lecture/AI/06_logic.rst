@@ -28,20 +28,22 @@ Logic equivalent and identities
 ^^^^^
 * **Logically equivalent**: :math:`R\equiv S`.
 * Important identities:
-
 .. math::
-
 	P \rightarrow Q&\equiv \neg P \vee Q &\text{(implication)}\\
-	P \vee (Q \wedge R) &\equiv (P \vee R) \wedge (Q \vee R) &\text{(distributivity)}\\
+	P \vee (Q \wedge R) &\equiv (P \vee Q) \wedge (P \vee R) &\text{(distributivity)}\\
 	P \wedge (Q \vee R) &\equiv (P \wedge Q) \vee (P \wedge R) &\text{} \\
 	\neg(P \vee Q) &\equiv \neg P \wedge \neg Q &\text{(DeMorgan's law)}\\
 	\neg (P \wedge Q) &\equiv \neg P \vee \neg Q &\text{} \\
 	P \vee (P \wedge Q) &\equiv P &\text{(absorption)} \\
 	P \wedge (P \vee Q) &\equiv P &\text{}
 
+Normal form
+^^^^^
+
+
 Defination of Predicate Logic
 -----
-* `Reference <http://www.cs.utexas.edu/~eberlein/cs301k/predLogic.pdf>`_
+* `Reference (link failure) <http://www.cs.utexas.edu/~eberlein/cs301k/predLogic.pdf>`_
 * `First-order logic <http://mathworld.wolfram.com/First-OrderLogic.html>`_
 * A **predicate** is a **property** that a variable or a finite collection of variables can have.
 * A predicate becomes a **proposition** when specific values are assigned to the variables.
@@ -52,8 +54,8 @@ Quantifier
 ^^^^^
 * **Universal quantifier** :math:`\forall`, **existential quantifier** :math:`\exists`
 * Quantifier truns a predicate into a proposition
-* The **scope** if a quantifier is the part of a statement in which variables are bound by the quantifier.
-	* Eg: :math:`R \vee \exists(P(x) \vee Q(x))`, scope of :math:`\exists`: :math:` P(x) \vee Q(x)`
+* The **scope**: if a quantifier is the part of a statement in which variables are bound by the quantifier.
+	* Eg: :math:`R \vee \exists(P(x) \vee Q(x))`, scope of :math:`\exists` is :math:`P(x) \vee Q(x)`
 * Distribution equation
 
 .. image:: http://oa5omjl18.bkt.clouddn.com/2016_09_28_a024d27e17fccf08ad134615e5e9d1.png
@@ -62,10 +64,8 @@ Prenex Normal Form
 -----
 * `Reference <http://www.csd.uwo.ca/~lila/prenex.pdf>`_
 * Defination: A formula is in **prenex normal form** if it is of the form
-
 .. math::
 	Q_1x_1 Q_2x_2 \dots Q_nx_nB
-
 where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the formula :math:`B` is quantifier free.
 
 * Any expression can be converted into prenex normal form. (How to!!!!)
