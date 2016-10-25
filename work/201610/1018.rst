@@ -17,6 +17,7 @@ ECCV re-id
 * Classification output????????
 * Datasets: iLIDS-VID (49.3%), PRID 2011 (58.2%)
 
+
 `Deep Attributes Driven Person Re-identification <http://www.eccv2016.org/files/posters/P-1B-34.pdf>`_
 ^^^^^
 * Attribute + deep network based
@@ -24,6 +25,7 @@ ECCV re-id
 	* Finetune on attribute triplet loss
 	* Final finetuning with re-id dataset
 * Datasets: VIPeR (43.5%), PRID image (22.6%), Market (Single: 39.4%, multiple: 49.0%)
+
 
 `A Siamese Long Short-Term Memory Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
 ^^^^^
@@ -36,9 +38,32 @@ ECCV re-id
 	* Hidden state dimension = 25 (Market), 50 (VIPeR, CUHK03)
 	* Margin = 0.5
 
+
 `Embedding Deep Metric for Person Re-identification: A Study Against Large Variation <http://www.cbsr.ia.ac.cn/users/hailinshi/papers/2016-eccv/0236.pdf>`_
 ^^^^^
-* `Poster <http://www.eccv2016.org/files/posters/P-1A-44.pdf>`_
+* Merged to paper note and csdn blog.
+
+`Human Re-identification in Crowd Videos using Personal, Social and Environmental (PSE) Constraints <http://crcv.ucf.edu/papers/eccv2016/AssariIdreesShah_ECCV16_ReIdCrowds.pdf>`_
+^^^^^
+* `Poster <http://www.eccv2016.org/files/posters/P-1B-12.pdf>`_
+* Re-identification in crowded scenes
+* Model person, social, environment constraints.
+	* Person: appearance and speed
+	* Social: grouping, collision avoidance
+	* Environment: transition probabilities between gates
+* Not a typical re-id paper. At the edge of human re-id in videos, dense crowd analysis and social force models.
+
+
+`Person Re-identification by Unsupervised L1 Graph Learning <http://www.eecs.qmul.ac.uk/~sgg/papers/KodirovEtAl_ECCV2016.pdf>`_
+^^^^^
+* `Poster <http://www.eccv2016.org/files/posters/P-1B-20.pdf>`_
+
+
+`Human-In-The-Loop Person Re-Identification <http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf>`_
+^^^^^
+* `Poster <http://www.eccv2016.org/files/posters/P-2B-41.pdf>`_
+* Author: Hanxiao Wang, Shaogang Gong, Xiatian Zhu, Tao Xiang
+* Do not need pre-labelled training data to learn a model
 
 
 `MARS： A Video Benchmark for Video-based Person Re-identification <http://www.liangzheng.com.cn/1320.pdf>`_
@@ -47,8 +72,6 @@ ECCV re-id
 * New video re-id dataset
 * `Poster <http://www.eccv2016.org/files/posters/P-4A-32.pdf>`_
 
-`Human-In-The-Loop Person Re-Identification <http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf>`_
-^^^^^
 
 Other re-id
 -----
@@ -79,6 +102,7 @@ Other re-id
 * Future issues
 	* How to evaluate detection/tracking performance in the scenario of person re-ID
 	* Temporal information use
+	* Using clustering algorithms to filter out inconsistent frames
 
 `Similarity Learning with Spatial Constraints for Person Re-identification <http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Chen_Similarity_Learning_With_CVPR_2016_paper.pdf>`_
 ^^^^^
