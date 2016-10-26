@@ -21,4 +21,6 @@
 | Oct. 18th  | Tuesday     | 9:00~20:00  | W          |
 | Oct. 19th  | Wednesday   | 8:30~15:00  | W          |
 | Oct. 20th  | Thursday    | 9:00~15:30  | W          |
-| Oct. 21th  | Friday      | 8:00~16:30  | W          |
+| Oct. 21st  | Friday      | 9:00~15:30  | W          |
+| Oct. 25th  | Tuesday     | 8:30~17:30  | W          |
+| Oct. 26th  | Wednesday   | 10:30~15:00 | H          |

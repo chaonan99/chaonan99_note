@@ -64,6 +64,9 @@ ECCV re-id
 * `Poster <http://www.eccv2016.org/files/posters/P-2B-41.pdf>`_
 * Author: Hanxiao Wang, Shaogang Gong, Xiatian Zhu, Tao Xiang
 * Do not need pre-labelled training data to learn a model
+* Supervised learning based wrong assumptions:
+	* A manually pre-labelled pairwise training data set is assumed available for every camera pair.
+	* The size of the training dataset is assumed either significantly greater or no less than that of test gallery population on which the learned model will be deployed.
 
 
 `MARS： A Video Benchmark for Video-based Person Re-identification <http://www.liangzheng.com.cn/1320.pdf>`_
