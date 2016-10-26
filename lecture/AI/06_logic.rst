@@ -39,7 +39,9 @@ Logic equivalent and identities
 
 Normal form
 ^^^^^
-
+* `Disjuctive normal form (DNF) <https://en.wikipedia.org/wiki/Disjunctive_normal_form>`_: OR of ANDs
+* `Conjuctive normal form (DNF) <https://en.wikipedia.org/wiki/Disjunctive_normal_form>`_: AND of ORs
+* `Conversion <http://math.stackexchange.com/questions/214338/how-to-convert-to-conjunctive-normal-form>`_ of disjuctive and conjuctive normal form.
 
 Defination of Predicate Logic
 -----
@@ -53,7 +55,7 @@ Defination of Predicate Logic
 Quantifier
 ^^^^^
 * **Universal quantifier** :math:`\forall`, **existential quantifier** :math:`\exists`
-* Quantifier truns a predicate into a proposition
+* Quantifier truns a predicate into a proposition.
 * The **scope**: if a quantifier is the part of a statement in which variables are bound by the quantifier.
 	* Eg: :math:`R \vee \exists(P(x) \vee Q(x))`, scope of :math:`\exists` is :math:`P(x) \vee Q(x)`
 * Distribution equation
@@ -84,6 +86,8 @@ where :math:`Q_i(i = 1, \dots, n)` is :math:`\forall` or :math:`\exists` and the
 Resolution Principle
 -----
 * `Reference <http://logic.stanford.edu/intrologic/notes/chapter_05.html>`_
+* First occurred in 1965, published by Alan Robinson.
+* Refutation-complete: if you write any set of sentences in first order logic which are unsatisfiable (i.e., taken together they are false, in that they have no models), then the resolution method will eventually derive the False symbol, indicating that the sentences somehow contradict each other.
 
 Clausal form
 ^^^^^
