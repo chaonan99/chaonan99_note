@@ -1,6 +1,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Human-In-The-Loop Person Re-Identification](201610.md#human-in-the-loop-person-re-identification)\[[paper](http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf)\]\[[poster](http://www.eccv2016.org/files/posters/P-2B-41.pdf)\]
 * [Embedding Deep Metric for Person Re-identification: A Study Against Large Variation](201610.md#embedding-deep-metric-for-person-re-identification-a-study-against-large-variation)
 \[[paper](http://www.cbsr.ia.ac.cn/users/hailinshi/papers/2016-eccv/0236.pdf)\]\[[poster](http://www.eccv2016.org/files/posters/P-1A-44.pdf)\]
 * [Learning by tracking: Siamese CNN for robust target association](201610.md#learning-by-tracking-siamese-cnn-for-robust-target-association) \[[**paper**](https://arxiv.org/pdf/1604.07866v3.pdf)\]
