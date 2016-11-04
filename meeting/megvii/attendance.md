@@ -28,3 +28,6 @@
 | Oct. 28th  | Friday      | 10:30~16:00 | W          |
 | Oct. 29th  | Saturday    | 13:30~16:00 | H          |
 | Nov. 1st   | Tuesday     | 10:30~21:30 | W          |
+| Nov. 2nd   | Wednesday   | 9:30~15:00  | W          |
+| Nov. 3rd   | Thursday    | 10:30~16:30 | W          |
+| Nov. 3rd   | Friday      | 9:00~19:00  | W          |
