@@ -24,3 +24,7 @@
 | Oct. 21st  | Friday      | 9:00~15:30  | W          |
 | Oct. 25th  | Tuesday     | 8:30~17:30  | W          |
 | Oct. 26th  | Wednesday   | 10:30~15:00 | H          |
+| Oct. 27th  | Thursday    | 9:30~16:00  | W          |
+| Oct. 28th  | Friday      | 10:30~16:00 | W          |
+| Oct. 29th  | Saturday    | 13:30~16:00 | H          |
+| Nov. 1st   | Tuesday     | 10:30~21:30 | W          |

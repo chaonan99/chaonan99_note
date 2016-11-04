@@ -20,12 +20,7 @@ ECCV re-id
 
 `Deep Attributes Driven Person Re-identification <http://www.eccv2016.org/files/posters/P-1B-34.pdf>`_
 ^^^^^
-* Attribute + deep network based
-	* Train on attribute
-	* Finetune on attribute triplet loss
-	* Final finetuning with re-id dataset
-* Datasets: VIPeR (43.5%), PRID image (22.6%), Market (Single: 39.4%, multiple: 49.0%)
-
+* Merged to paper note
 
 `A Siamese Long Short-Term Memory Architecture for Human Re-Identification <https://arxiv.org/pdf/1607.08381v1.pdf>`_
 ^^^^^

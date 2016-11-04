@@ -1,0 +1,41 @@
+Meeting 1027
+=====
+
+Huawei, Haikang, Dahua, Shangtang
+
+ROI
+
+Video structural: all
+	* Q4
+
+Re-id: Huawei
+
+Detection
+-----
+* Competition
+	* mAP: 0.69 (SenseTime 0.69)
+* SenseTime detection
+	* MOTA: 63.5%
+* Tracking by detection
+	* Due: 11/1
+* SOT
+	* Template matching on OpenCV v.s. xqq's model
+		* Speed compare
+
+Attributes
+-----
+* Umbrella almost ready
+* Lower clothes (pants/shorts): nearly 100%
+* pants/skirt: 92%
+* Pants/jeans/skirt: 87%
+
+ReID (ckl)
+-----
+* Color histrogram: no improvement
+
+Parsing
+-----
+* Better bag parsing
+
+MegVideo
+-----

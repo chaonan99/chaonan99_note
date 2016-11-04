@@ -1,0 +1,80 @@
+Meeting 1027
+=====
+
+Huawei, Haikang, Dahua, Shangtang
+
+ROI
+
+Video structural: all
+	* Q4
+
+Re-id: Huawei
+
+Detection
+-----
+* Competition
+	* mAP: 0.69 (SenseTime 0.69)
+* SenseTime detection
+	* MOTA: 67.2%, test: 68%
+	* FN better, FN worse, IDSW better
+* Tracking in MegVideo 3.0
+	* First ready
+	* 11.8
+* SOT
+	* Tracking length: half of OpenCV
+
+
+Attributes
+-----
+* Umbrella: 3000 finished (only 30% have umbrella)
+* Skeleton + parsing approach: New benchmark (zjh)
+	* short sleeve: 69%
+	* long sleeve: 83%
+	* long clothes: 28%
+	* short clothes: 95%
+	* short pants: 52%
+	* long pants: 90%
+* RNN based, new benchmark
+	* pants/skirt: 87%
+	* pants/jean/skirt: 6?%
+	* Multi-task on BPA, without WIDER
+		* Gender: 75%: 95%
+		* Long/short hair: 81%: 92.4%
+		* Long sleeve: 76%: 94.3%
+		* Shorts: 95.8%: 95.4%
+		* Glass: 85%: 89.3%
+		* Jeans: 94%: 92.1%
+		* T-shirt: 87%: 79.1%
+		* Hat: 88%: 95.8%
+		* Long pants: 94%: 99%
+
+ReID (ckl)
+-----
+* Market-1501 classification, no attention LSTM
+	* Rank-1: 70%
+
+GAN
+-----
+* Cloth-GAN on megbrain
+* GAN for gender on megvideo
+
+MegVideo 3.0
+-----
+* Going to ready
+* Windows still long
+
+Next Q
+-----
+* xqq gone
+* Rename: Video team
+* Gang yu and Da tou combined to General Object Detection team
+* Strategy of MegVii Inc.
+	* Face ID, finance
+		* Monopoly
+	* Security
+		* Lose to Yitu
+		* Dynamic and static
+		* All in Face?
+		* Focus on re-id to provide tracking in multi camera (due Feb./Mar. 2017)
+	* Commercial
+	* Face++ and MegCloud
