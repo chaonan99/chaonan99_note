@@ -46,3 +46,6 @@
 	+ Word processing
 	+ Paragraph processing
 		- Pronoun replace
+
+## Useful resources
+[Online AI book](http://artint.info/html/ArtInt.html)

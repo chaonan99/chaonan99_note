@@ -46,7 +46,7 @@ Attributes
 		* Jeans: 94%: 92.1%
 		* T-shirt: 87%: 79.1%
 		* Hat: 88%: 95.8%
-		* Long pants: 94%: 99%
+		* Long pants: 94%: 99%[]
 
 ReID (ckl)
 -----

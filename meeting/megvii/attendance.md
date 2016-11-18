@@ -30,4 +30,7 @@
 | Nov. 1st   | Tuesday     | 10:30~21:30 | W          |
 | Nov. 2nd   | Wednesday   | 9:30~15:00  | W          |
 | Nov. 3rd   | Thursday    | 10:30~16:30 | W          |
-| Nov. 3rd   | Friday      | 9:00~19:00  | W          |
+| Nov. 4th   | Friday      | 9:00~19:00  | W          |
+| Nov. 8th   | Tuesday     | 8:50~19:00  | W          |
+| Nov. 9th   | Wednesday   | 8:50~19:00  | W          |
+| Nov. 10th  | Thursday    | 8:50~19:00  | W          |
