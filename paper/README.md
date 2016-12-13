@@ -1,13 +1,14 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
-* [Deep Attributes Driven Person Re-identification](201610.md#deep-attributes-driven-person-re-identification)\[[paper](https://arxiv.org/pdf/1605.03259v2.pdf)\]\[[poster](http://www.eccv2016.org/files/posters/P-1B-34.pdf)\]
-* [Human-In-The-Loop Person Re-Identification](201610.md#human-in-the-loop-person-re-identification)\[[paper](http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf)\]\[[poster](http://www.eccv2016.org/files/posters/P-2B-41.pdf)\]
+* [Human Attribute Recognition by Deep Hierarchical Contexts](201612.md#human-attribute-recognition-by-deep-hierarchical-contexts) \[[paper](http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_human.pdf)\] \[[webpage](http://mmlab.ie.cuhk.edu.hk/projects/WIDERAttribute.html)\]
+* [Deep Attributes Driven Person Re-identification](201610.md#deep-attributes-driven-person-re-identification) \[[paper](https://arxiv.org/pdf/1605.03259v2.pdf)\] \[[poster](http://www.eccv2016.org/files/posters/P-1B-34.pdf)\]
+* [Human-In-The-Loop Person Re-Identification](201610.md#human-in-the-loop-person-re-identification) \[[paper](http://www.eecs.qmul.ac.uk/~xz303/papers/ECCV16/WangEtAl_ECCV2016.pdf)\] \[[poster](http://www.eccv2016.org/files/posters/P-2B-41.pdf)\]
 * [Embedding Deep Metric for Person Re-identification: A Study Against Large Variation](201610.md#embedding-deep-metric-for-person-re-identification-a-study-against-large-variation)
-\[[paper](http://www.cbsr.ia.ac.cn/users/hailinshi/papers/2016-eccv/0236.pdf)\]\[[poster](http://www.eccv2016.org/files/posters/P-1A-44.pdf)\]
-* [Learning by tracking: Siamese CNN for robust target association](201610.md#learning-by-tracking-siamese-cnn-for-robust-target-association) \[[**paper**](https://arxiv.org/pdf/1604.07866v3.pdf)\]
-* [Joint Learning of Single-image and Cross-image Representations for Person Re-identification](201610.md#joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification) \[[**paper**](http://ss.sysu.edu.cn/~ll/files/CVPR2016_PersonReID.pdf)\]
-* [Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification](201610.md#gated-siamese-convolutional-neural-network-architecture-for-human-re-identification) \[[**paper**](https://arxiv.org/pdf/1607.08378v2.pdf)\]
+ \[[paper](http://www.cbsr.ia.ac.cn/users/hailinshi/papers/2016-eccv/0236.pdf)\] \[[poster](http://www.eccv2016.org/files/posters/P-1A-44.pdf)\]
+* [Learning by tracking: Siamese CNN for robust target association](201610.md#learning-by-tracking-siamese-cnn-for-robust-target-association) \[[paper](https://arxiv.org/pdf/1604.07866v3.pdf)\]
+* [Joint Learning of Single-image and Cross-image Representations for Person Re-identification](201610.md#joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification) \[[paper](http://ss.sysu.edu.cn/~ll/files/CVPR2016_PersonReID.pdf)\]
+* [Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification](201610.md#gated-siamese-convolutional-neural-network-architecture-for-human-re-identification) \[[paper](https://arxiv.org/pdf/1607.08378v2.pdf)\]
 * [Temporal Segment Networks: Towards Good Practices for Deep Action Recognition](201609.md#temporal-segment-networks-towards-good-practices-for-deep-action-recognition)
 * [Recurrent Convolutional Network for Video-based Person Re-Identification (Need picture)](201609.md#recurrent-convolutional-network-for-video-based-person-re-identification)
 * [End-to-End Comparative Attention Networks for Person Re-identification](201609.md#end-to-end-comparative-attention-networks-for-person-re-identification)
