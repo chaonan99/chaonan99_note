@@ -1,6 +1,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Pyramid Scene Parsing Network](201612.md#pyramid-scene-parsing-network) \[[paper](https://arxiv.org/pdf/1612.01105.pdf)\]
 * [PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection](201612.md#pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection) \[[paper](http://cn.arxiv.org/pdf/1608.08021v3)\]
 * [Aggregated Residual Transformations for Deep Neural Networks](201612.md#aggregated-residual-transformations-for-deep-neural-networks) \[[paper](http://cn.arxiv.org/pdf/1611.05431v1)\]
 * [Xception: Deep Learning with Depthwise Separable Convolutions](201612.md#xception-deep-learning-with-depthwise-separable-convolutions) \[[paper](http://cn.arxiv.org/pdf/1610.02357v2)\]
