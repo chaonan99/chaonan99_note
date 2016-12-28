@@ -1,6 +1,8 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Feature Pyramid Networks for Object Detection](201612.md#feature-pyramid-networks-for-object-detection) \[[paper](http://arxiv.org/pdf/1612.03144v1)\]
+* [RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation](201612.md#refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation) \[[paper](http://arxiv.org/pdf/1611.06612v3.pdf)\]
 * [Pyramid Scene Parsing Network](201612.md#pyramid-scene-parsing-network) \[[paper](https://arxiv.org/pdf/1612.01105.pdf)\]
 * [PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection](201612.md#pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection) \[[paper](http://cn.arxiv.org/pdf/1608.08021v3)\]
 * [Aggregated Residual Transformations for Deep Neural Networks](201612.md#aggregated-residual-transformations-for-deep-neural-networks) \[[paper](http://cn.arxiv.org/pdf/1611.05431v1)\]
