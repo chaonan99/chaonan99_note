@@ -1,6 +1,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 # Paper list
+* [Video-based Person Re-identification with Accumulative Motion Context](201701.md#video-based-person-re-identification-withaccumulative-motion-context) \[[paper](https://arxiv.org/pdf/1701.00193.pdf)\]
 * [Language Modeling with Gated Convolutional Networks](201612.md#language-modeling-with-gated-convolutional-networks) \[[paper](http://arxiv.org/pdf/1612.08083v1)\]
 * [Learning from Simulated and Unsupervised Images through Adversarial Training](201612.md#learning-from-simulated-and-unsupervised-images-through-adversarial-training) \[[paper](http://arxiv.org/pdf/1612.07828v1.pdf)\]
 * [Feature Pyramid Networks for Object Detection](201612.md#feature-pyramid-networks-for-object-detection) \[[paper](http://arxiv.org/pdf/1612.03144v1)\]
