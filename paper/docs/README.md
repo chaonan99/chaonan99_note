@@ -6,18 +6,24 @@ To install and build this note:
 
 * Install MkDocs
 
-    pip install mkdocs
+```
+pip install mkdocs
+```
 
 * Install Python-Markdown. To correctly render this note, please install [my fork](https://github.com/chaonan99/python-markdown-math) of this extension (I am used to `$$` for inline math and `$$$$` for stand alone).
 
-    git clone https://github.com/chaonan99/python-markdown-math.git
-    cd python-markdown-math
-    python setup.py build
-    python setup.py install
+```
+git clone https://github.com/chaonan99/python-markdown-math.git
+cd python-markdown-math
+python setup.py build
+python setup.py install
+```
 
 * Use mkdocs' server to view the note (in paper dir)
 
-    mkdocs serve
+```
+mkdocs serve
+```
 
 Here are some useful mkdocs command.
 
@@ -67,6 +73,7 @@ Here are some useful mkdocs command.
 * [Visualizing and Understanding Convolutional Networks](201608/visualizing-and-understanding-convolutional-networks.md)
 
 ## Benchmark
+* [MARS: A Video Benchmark for Large-Scale Person Re-identification](201701/mars-a-video-benchmark-for-large-scale-person-re-identification.md) \[[paper](http://liangzheng.org/1320.pdf)\] \[[code](https://github.com/liangzheng06/MARS-evaluation)\]
 * [Human Attribute Recognition by Deep Hierarchical Contexts (WIDER)](201612/human-attribute-recognition-by-deep-hierarchical-contexts.md) \[[paper](http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_human.pdf)\] \[[webpage](http://mmlab.ie.cuhk.edu.hk/projects/WIDERAttribute.html)\]
 * [Microsoft Video Description Corpus (MSVD)](201609/microsoft-video-description-corpus-msvd.md)
 * [Tumblr GIF (TGIF)](201609/tumblr-gif-tgif.md)

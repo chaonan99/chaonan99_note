@@ -1,7 +1,7 @@
 site_name: Paper Notes
 repo_url: https://github.com/chaonan99/chaonan99_note/tree/master/paper
 pages:
-    - Home: index.md
+    - Home: README.md
     - ReID:
         - Video-based Person Re-identification with Accumulative Motion Context:
             201701/video-based-person-re-identification-withaccumulative-motion-context.md
@@ -51,6 +51,8 @@ pages:
         - Describing Videos by Exploiting Temporal Structure:
             201609/describing-videos-by-exploiting-temporal-structure.md
     - Bench:
+        - MARS A Video Benchmark for Large-Scale Person Re-identification:
+            201701/mars-a-video-benchmark-for-large-scale-person-re-identification.md
         - Human Attribute Recognition by Deep Hierarchical Contexts (WIDER):
             201612/human-attribute-recognition-by-deep-hierarchical-contexts.md
         - Market-1501:
