@@ -1,8 +1,3 @@
-## 
-
-## MARS: A Video Benchmark for Large-Scale Person Re-identification
-* 
-
 ## Video-based Person Re-identification with Accumulative Motion Context
 * [paper](https://arxiv.org/pdf/1701.00193.pdf)
 
@@ -41,9 +36,3 @@
     * Motion information: compare LK & Epic OF, use OF as direct input or pre-train and train end-to-end. End-to-end training with Epic OF performs best.
     * Spatial fusion method and location: concatenate and fuse @Max-pooling2 performs better.
 * Compare with state-of-the-art: new state-of-the-art on PRID-2011.
-
-
-## DenseBox: Unifying Landmark Localization with End to End Object Detection
-* [paper](http://arxiv.org/pdf/1509.04874v3)
-
-### 
