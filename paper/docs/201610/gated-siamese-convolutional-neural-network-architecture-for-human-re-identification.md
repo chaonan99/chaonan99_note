@@ -5,7 +5,7 @@
 
 ![2016_10_14_cebff7ce866e92a1c89e96dfc777d19](http://oa5omjl18.bkt.clouddn.com/2016_10_14_cebff7ce866e92a1c89e96dfc777d19.png "Add Description")
 
-* Current state-of-the-art on [Market-1501](201609.md#market-1501).
+* Current state-of-the-art on [Market-1501](../201609/market-1501.md).
 
 ### Contribution
 1. Architecture of baseline siamese network for person re-id.

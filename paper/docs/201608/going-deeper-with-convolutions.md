@@ -1,7 +1,7 @@
 ## Going deeper with convolutions
 [paper link](http://arxiv.org/pdf/1409.4842.pdf)
 
-> Famous paper of **GoogLeNet**. Partly inspired by [Network In Network](201608.md#network-in-network). Related blog post [here](http://wikicoursenote.com/wiki/GoingDeeperWithConvolutions).
+> Famous paper of **GoogLeNet**. Partly inspired by [Network In Network](network-in-network.md). Related blog post [here](http://wikicoursenote.com/wiki/GoingDeeperWithConvolutions).
 
 ### Motivation
 

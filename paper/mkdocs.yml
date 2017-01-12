@@ -1,12 +1,14 @@
 site_name: Paper Notes
 repo_url: https://github.com/chaonan99/chaonan99_note/tree/master/paper
 pages:
-    - Home: README.md
+    - Home: index.md
     - ReID:
         - Video-based Person Re-identification with Accumulative Motion Context:
             201701/video-based-person-re-identification-withaccumulative-motion-context.md
         - Deep Attributes Driven Person Re-identification:
             201610/deep-attributes-driven-person-re-identification.md
+        - Human-In-The-Loop Person Re-Identification:
+            201610/human-in-the-loop-person-re-identification.md
         - Embedding Deep Metric for Person Re-identification A Study Against Large Variation:
             201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation.md
         - Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification:
@@ -18,6 +20,8 @@ pages:
         - Recurrent Convolutional Network for Video-based Person Re-Identification:
             201609/recurrent-convolutional-network-for-video-based-person-re-identification.md
     - NLP:
+        - LSTM A Search Space Odyssey:
+            201701/lstm-a-search-space-odyssey.md
         - Language Modeling with Gated Convolutional Networks:
             201612/language-modeling-with-gated-convolutional-networks.md
         - Memory Networks:
@@ -28,6 +32,8 @@ pages:
         - Pyramid Scene Parsing Network:
             201612/pyramid-scene-parsing-network.md
     - Det:
+        - Feature Pyramid Networks for Object Detection:
+            201612/feature-pyramid-networks-for-object-detection.md
         - PVANET Deep but Lightweight Neural Networks for Real-time Object Detection:
             201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection.md
         - Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks:
@@ -64,6 +70,8 @@ pages:
         - Microsoft Research - Video to Text (MSR-VTT):
             201609/microsoft-research-video-to-text-msr-vtt.md
     - Other:
+        - Learning from Simulated and Unsupervised Images through Adversarial Training:
+            201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training.md
         - FlowNet Learning Optical Flow with Convolutional Networks:
             201701/flownet-learning-optical-flow-with-convolutional-networks.md
         - Temporal Segment Networks Towards Good Practices for Deep Action Recognition:

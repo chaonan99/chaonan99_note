@@ -30,5 +30,5 @@ Usually less than 10 seconds.
     + [A man is playing pat-a-cake with a small black dog.](https://youtu.be/eyhzdC936uk?t=15s)
 
 ### Papers using the dataset
-* [Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning](201609.md#hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning)
-* [Describing Videos by Exploiting Temporal Structure](201609.md#describing-videos-by-exploiting-temporal-structure)
+* [Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning](hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning.md)
+* [Describing Videos by Exploiting Temporal Structure](describing-videos-by-exploiting-temporal-structure.md)
