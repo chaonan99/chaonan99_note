@@ -49,7 +49,7 @@ Here are some useful mkdocs command.
 * [Recurrent Models of Visual Attention](201608/recurrent-models-of-visual-attention.md)
 
 ## Language
-* [LSTM: A Search Space Odyssey]()
+* [LSTM: A Search Space Odyssey](201701/lstm-a-search-space-odyssey.md) \[[paper](http://cn.arxiv.org/pdf/1503.04069v1)\]
 * [Language Modeling with Gated Convolutional Networks](201612/language-modeling-with-gated-convolutional-networks.md) \[[paper](http://arxiv.org/pdf/1612.08083v1)\]
 * [Memory Networks](201609/memory-networks.md)
 
