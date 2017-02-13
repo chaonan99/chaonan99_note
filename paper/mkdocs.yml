@@ -2,23 +2,58 @@ site_name: Paper Notes
 repo_url: https://github.com/chaonan99/chaonan99_note/tree/master/paper
 pages:
     - Home: index.md
-    - ReID:
-        - Video-based Person Re-identification with Accumulative Motion Context:
-            201701/video-based-person-re-identification-withaccumulative-motion-context.md
-        - Deep Attributes Driven Person Re-identification:
-            201610/deep-attributes-driven-person-re-identification.md
-        - Human-In-The-Loop Person Re-Identification:
-            201610/human-in-the-loop-person-re-identification.md
-        - Embedding Deep Metric for Person Re-identification A Study Against Large Variation:
-            201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation.md
-        - Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification:
-            201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification.md
-        - Joint Learning of Single-image and Cross-image Representations for Person Re-identification:
-            201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification.md
-        - End-to-End Comparative Attention Networks for Person Re-identification:
-            201609/end-to-end-comparative-attention-networks-for-person-re-identification.md
-        - Recurrent Convolutional Network for Video-based Person Re-Identification:
-            201609/recurrent-convolutional-network-for-video-based-person-re-identification.md
+    - CV:
+        - ReID:
+            - Video-based Person Re-identification with Accumulative Motion Context:
+                201701/video-based-person-re-identification-withaccumulative-motion-context.md
+            - Deep Attributes Driven Person Re-identification:
+                201610/deep-attributes-driven-person-re-identification.md
+            - Human-In-The-Loop Person Re-Identification:
+                201610/human-in-the-loop-person-re-identification.md
+            - Embedding Deep Metric for Person Re-identification A Study Against Large Variation:
+                201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation.md
+            - Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification:
+                201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification.md
+            - Joint Learning of Single-image and Cross-image Representations for Person Re-identification:
+                201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification.md
+            - End-to-End Comparative Attention Networks for Person Re-identification:
+                201609/end-to-end-comparative-attention-networks-for-person-re-identification.md
+            - Recurrent Convolutional Network for Video-based Person Re-Identification:
+                201609/recurrent-convolutional-network-for-video-based-person-re-identification.md
+        - Parsing/Segmentation:
+            - RefineNet Multi-Path Refinement Networks for High-Resolution Semantic Segmentation:
+                201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation.md
+            - Pyramid Scene Parsing Network:
+                201612/pyramid-scene-parsing-network.md
+        - Detection:
+            - Feature Pyramid Networks for Object Detection:
+                201612/feature-pyramid-networks-for-object-detection.md
+            - PVANET Deep but Lightweight Neural Networks for Real-time Object Detection:
+                201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection.md
+            - Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks:
+                201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.md
+        - Captioning:
+            - Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning:
+                201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning.md
+            - Describing Videos by Exploiting Temporal Structure:
+                201609/describing-videos-by-exploiting-temporal-structure.md
+        - GAN:
+            - NIPS 2016 Tutorial Generative Adversarial Networks:
+                201702/nips-2016-tutorial-gan.md
+        - CNN:
+            - Aggregated Residual Transformations for Deep Neural Networks (ResNeXt):
+                201612/aggregated-residual-transformations-for-deep-neural-networks.md
+            - Xception Deep Learning with Depthwise Separable Convolutions:
+                201612/xception-deep-learning-with-depthwise-separable-convolutions.md
+            - Densely Connected Convolutional Networks:
+                201612/densely-connected-convolutional-networks.md
+            - Visualizing and Understanding Convolutional Networks:
+                201608/visualizing-and-understanding-convolutional-networks.md
+            - Going deeper with convolutions (GoogleNet):
+                201608/going-deeper-with-convolutions.md
+            - Network in Network:
+                201608/network-in-network.md
+
     - NLP:
         - LSTM A Search Space Odyssey:
             201701/lstm-a-search-space-odyssey.md
@@ -26,36 +61,7 @@ pages:
             201612/language-modeling-with-gated-convolutional-networks.md
         - Memory Networks:
             201609/memory-networks.md
-    - P/S:
-        - RefineNet Multi-Path Refinement Networks for High-Resolution Semantic Segmentation:
-            201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation.md
-        - Pyramid Scene Parsing Network:
-            201612/pyramid-scene-parsing-network.md
-    - Det:
-        - Feature Pyramid Networks for Object Detection:
-            201612/feature-pyramid-networks-for-object-detection.md
-        - PVANET Deep but Lightweight Neural Networks for Real-time Object Detection:
-            201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection.md
-        - Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks:
-            201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.md
-    - CNN:
-        - Aggregated Residual Transformations for Deep Neural Networks (ResNeXt):
-            201612/aggregated-residual-transformations-for-deep-neural-networks.md
-        - Xception Deep Learning with Depthwise Separable Convolutions:
-            201612/xception-deep-learning-with-depthwise-separable-convolutions.md
-        - Densely Connected Convolutional Networks:
-            201612/densely-connected-convolutional-networks.md
-        - Visualizing and Understanding Convolutional Networks:
-            201608/visualizing-and-understanding-convolutional-networks.md
-        - Going deeper with convolutions (GoogleNet):
-            201608/going-deeper-with-convolutions.md
-        - Network in Network:
-            201608/network-in-network.md
-    - Cap:
-        - Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning:
-            201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning.md
-        - Describing Videos by Exploiting Temporal Structure:
-            201609/describing-videos-by-exploiting-temporal-structure.md
+
     - Bench:
         - MARS A Video Benchmark for Large-Scale Person Re-identification:
             201701/mars-a-video-benchmark-for-large-scale-person-re-identification.md

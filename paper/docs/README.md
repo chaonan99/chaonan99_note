@@ -6,13 +6,13 @@ To install and build this note:
 
 * Install MkDocs
 
-```
+```shell
 pip install mkdocs
 ```
 
 * Install Python-Markdown. To correctly render this note, please install [my fork](https://github.com/chaonan99/python-markdown-math) of this extension (I am used to `$$` for inline math and `$$$$` for stand alone).
 
-```
+```shell
 git clone https://github.com/chaonan99/python-markdown-math.git
 cd python-markdown-math
 python setup.py build
@@ -21,7 +21,7 @@ python setup.py install
 
 * Use mkdocs' server to view the note (in paper dir)
 
-```
+```shell
 mkdocs serve
 ```
 

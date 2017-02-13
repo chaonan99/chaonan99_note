@@ -55,3 +55,7 @@
 ### Experiments
 * To reduce redundancy, we adopt non-maximum suppression (NMS) on the proposal regions based on their *cls* scores
 * TODO ...
+* Pre-region classifier
+    * GoogleNet is better than VGG-16
+    * 3fc classifier is better than 1fc classifier
+    * Stride
