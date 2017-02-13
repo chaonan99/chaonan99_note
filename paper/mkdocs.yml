@@ -69,6 +69,15 @@ pages:
             201609/tumblr-gif-tgif.md
         - Microsoft Research - Video to Text (MSR-VTT):
             201609/microsoft-research-video-to-text-msr-vtt.md
+        - Action Recognition:
+            - Overview:
+                201701/action-recognition-overview.md
+            - UCF101:
+                201701/UCF101.md
+            - Olympic Sports:
+                201701/olympic-sports.md
+            - HMDB51:
+                201701/HMDB.md
     - Other:
         - Learning from Simulated and Unsupervised Images through Adversarial Training:
             201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training.md
