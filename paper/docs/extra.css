@@ -2,6 +2,11 @@
     color: red;
 }*/
 
+body {
+    /* font-family: "DejaVu Sans Mono"; */
+    font-family: Georgia;
+}
+
 p {
     font-size: 100%;
 }
