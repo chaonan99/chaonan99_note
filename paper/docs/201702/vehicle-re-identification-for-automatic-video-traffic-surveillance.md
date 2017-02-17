@@ -1,6 +1,7 @@
 ## Vehicle Re-Identification for Automatic Video Traffic Surveillance
 * [paper](http://www.cv-foundation.org/openaccess/content_cvpr_2016_workshops/w25/papers/Zapletal_Vehicle_Re-Identification_for_CVPR_2016_paper.pdf)
 * [dataset](https://medusa.fit.vutbr.cz/traffic/research-topics/detection-of-vehicles-and-datasets/vehicle-re-identification-for-automatic-video-traffic-surveillance-ats-cvpr-2016/)
+* Tasks: vehicle re-identification
 
 ### Approach
 * 3D bounding box
