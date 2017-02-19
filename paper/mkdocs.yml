@@ -53,7 +53,11 @@ pages:
                 201608/going-deeper-with-convolutions.md
             - Network in Network:
                 201608/network-in-network.md
-
+        - Vehicle:
+            - Deep Relative Distance Learning Tell the Difference Between Similar Vehicles:
+                201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles.md
+            - Vehicle Re-Identification for Automatic Video Traffic Surveillance:
+                201702/vehicle-re-identification-for-automatic-video-traffic-surveillance.md
     - NLP:
         - LSTM A Search Space Odyssey:
             201701/lstm-a-search-space-odyssey.md
@@ -75,6 +79,8 @@ pages:
             201609/tumblr-gif-tgif.md
         - Microsoft Research - Video to Text (MSR-VTT):
             201609/microsoft-research-video-to-text-msr-vtt.md
+        - VehReID:
+            201702/vehicle-re-identification-for-automatic-video-traffic-surveillance.md
         - Action Recognition:
             - Overview:
                 201701/action-recognition-overview.md
