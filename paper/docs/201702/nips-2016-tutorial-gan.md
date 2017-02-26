@@ -73,3 +73,10 @@
     * $$J^{(D)}(\theta^{(D)}, \theta^{(G)})=-\frac12 \mathbb{E}_{x\sim p_{data}}\log D(x) -\\ \frac12 \mathbb{E}_z\log(1 - D(G(z)))$$
     * Cross entropy, training sample from both real data and generator.
 * GANs make approximations based on using supervised learning to estimate a ratio of two densities: $\frac{p_{data}(x)}{p_{model}(x)}$
+* Cost function for generator: minmax game version
+    * $J^{(G)} = -J^{(D)}$
+    * Problem: when the discriminator successfully rejects generator samples with high confidence, the generator's gradient vanishes.
+* Cost function for generator: non zeros-sum
+    * $J^{(G)} = -\frac12 \mathbb{E}_z\log D(G(z))$
+* Cost function for generator: max likelyhood game
+    * $J^{(G)}=-\frac12\mathbb{E}_z\exp\big(\sigma^{-1}(D(G(z)))\big)$
