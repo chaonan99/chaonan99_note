@@ -1,5 +1,6 @@
 # Neupeak Introduction
 
+<<<<<<< HEAD
 * `npk-model-manip some-model shell`
 * `load_dataset('dataset.py:train:remote')`
 * `O.grad`

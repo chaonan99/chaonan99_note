@@ -98,5 +98,13 @@
     - Front wheel has an added degree of freedom.
     - (The two assumptions makes the car unable to  lateral displacement without simultaneously moving forward)
 * Math formulation
+    - $\delta$ is a small angle
     - The motion of the points $p_r$ and $p_f$ must be collinear with the wheel operation (no-slip assumption)
-    - \[\]
+    - Rear wheel: $$\dot{p_r}\cdot\hat{e_y}\cos(\theta)-(\dot{p_r}\cdot\hat{e_x})\sin(\theta) = 0$$
+    - Front wheel: $$\dot{p_f}\cdot\hat{e_y}\cos(\theta+\delta)-(\dot{p_f}\cdot\hat{e_x})\sin(\theta+\delta) = 0$$
+* Another form:
+    - $\dot{x_r} = v_r\cos \theta$
+    - $\dot{y_r} = v_r\sin \theta$
+    - $\dot{\theta} = \frac{v_r}{l}\tan{\delta}$
+    - 
+
