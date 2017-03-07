@@ -48,7 +48,7 @@
 
 ### Components of the hierarchical structure
 * Figure II.1 in this paper
-    + ![decision making hierarchy](../../imgs/a-survey-of-motion-planning-and-control-techniques-for-self-driving-urban-vehicles-figure-II-1.png)
+    - ![decision making hierarchy](http://img.blog.csdn.net/20170225104014143?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2huMTM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 * Route Planning
     - Road network as a directed graph (with weighted edges)
@@ -75,4 +75,28 @@
         + change-lane
         + turn-right/left
     - Translate the selected behavior into a path or trajectory that can be tracked by the low-level feedback controller
-    - Requirement of 
+    - Requirement of motion planning
+        + Dynamically feasible for the vehicle
+        + Comfortable for the passenger
+        + Avoid collisions with obstacles detected by the on-board sensors
+    - Exact solution to the motion planning problem are mostly computationally intractable: numerical approximation methods
+        + Variational methods
+        + Graph-search
+        + Incremental tree-based approaches
+* Vehicle control
+    - Feedback controller
+
+### Models of mobility of car-like vehicles
+* Begin: vehicle configuration (pose and position in the world)
+    - Determain the coordinate system for the configuration space (e.g. the planar coordinate of a point on the car together with the car’s heading)
+    - Planar rigid-body motions (represented by the Special Euclidean group in two dimensions, SE(2))
+
+#### The Kinematic Single-Track Model
+* ![kinematic single-track model](http://img.blog.csdn.net/20170225112044453?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2huMTM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+* Assumptions (nonholonomic constraint)
+    - No slip between the wheels and the ground. Wheels can rotate freely.
+    - Front wheel has an added degree of freedom.
+    - (The two assumptions makes the car unable to  lateral displacement without simultaneously moving forward)
+* Math formulation
+    - The motion of the points $p_r$ and $p_f$ must be collinear with the wheel operation (no-slip assumption)
+    - \[\]
