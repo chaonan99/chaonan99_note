@@ -18,9 +18,6 @@
 * Gauss, $y=\hat{y}-WX$
 * Too much channel, bottle neck use identity
 
-## Backpropagation
-* 
-
 ## CNN
 * Convolution is linear
     * Equivalent to matrix multiply
@@ -68,3 +65,32 @@
 ## Parameter Sharing
 * By `NetworkVisitor`
     * `iter_dep_opr`
+
+## Check List
+* Data **must** be shuffled (expectation of SGD must represent GD)
+    * Repeat data, label is harmful
+* Color image are not in BGR
+    * Human face should not be blue
+* Read the work log if there is one
+* Check #OP and learnable params in your model
+    * Do not use too much learnable params
+
+## Model Death
+* Tweak learning rate
+* May add BN
+* May try branch supervisions
+* Try value range of parameters
+* Lower dropout
+* Try wider & deeper model
+* Channel x2 /2
+* Initing  from a working model
+    * Can steal some layers
+* Curriculum learning
+    * Initiating a model o harder data with a model that works **on easier data**
+
+## Good practice
+* 100 class to 1000 class
+* Multitask learning
+    * Class + heat map
+* Hard example mining
+* Feature map should be gradually smaller

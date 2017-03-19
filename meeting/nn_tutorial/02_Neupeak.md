@@ -25,3 +25,20 @@
 ## Distillation (Teacher- student framework)
 * Teacher freeze parameter, do not train
 * `O.utils.add_name_prefix_to_subgraph`
+
+## Don't write your own layer!
+
+## Debug
+* `reshape`
+* `callback_injector`
+    ```python
+    def cb(x, value):
+        print(value.eval())
+        embed()
+    x = O.callback_injector(x, cb)
+    ```
+
+## Loop
+
+## Column FC/RNN co-training
+
