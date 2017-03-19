@@ -1,0 +1,1099 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "README.md", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/201701/video-based-person-re-identification-withaccumulative-motion-context/", 
+            "text": "Video-based Person Re-identification with Accumulative Motion Context\n\n\n\n\npaper\n\n\n\n\nHighlight\n\n\n\n\nTwo stream: spatial + temporal (optical flow).\n\n\nUse a motion network pre-trained on optical flow to predict OF and also learn end-to-end in training phase.\n\n\nFusion of motion and spatial features\n\n\nMultiloss: siamese reid and classification loss.\n\n\n\n\nModel\n\n\n\n\nStructure of the whole model:\n    \n\n\nStructure of motion network (pre-trained on LK or Epic optical flow):\n    \n\n\nStructure of spatial network:\n    \n\n\nDifferent spatial fusion method: concatenate, sum, max\n\n\nDifferent spatial fusion position: @ any layer in spatial network\n\n\nMotion context accumulation: via RNN (not LSTM in this paper)\n\n\nMultiloss: siamese (distance) loss + classification (softmax)\n\n\nPre-train motion network on optical flow: smoothed L-1 loss (\nl=1,2,3\n representing optical flow estimation with different resolutions)\n\n\n\n\n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nDatasets:\n\n\niLIDS-VID: 300 IDs, 2 camera views, sequence length 23~192\n\n\nPRID-2011: 749 IDs, 2 camera views, sequence length 5~675\n\n\n\n\n\n\nSettings\n\n\nInput of spatial net: 64 x 32; Input of motion net: 128 x 64\n\n\nData augmentation as both training and test phase\n\n\n10 times experiment on different training/test split\n\n\nSub-sequence 16 frames\n\n\nSequence length 128 for testing\n\n\n\n\n\n\nAblation study\n\n\nMotion information: compare LK \n Epic OF, use OF as direct input or pre-train and train end-to-end. End-to-end training with Epic OF performs best.\n\n\nSpatial fusion method and location: concatenate and fuse @Max-pooling2 performs better.\n\n\n\n\n\n\nCompare with state-of-the-art: new state-of-the-art on PRID-2011.", 
+            "title": "Video-based Person Re-identification with Accumulative Motion Context"
+        }, 
+        {
+            "location": "/201701/video-based-person-re-identification-withaccumulative-motion-context/#video-based-person-re-identification-with-accumulative-motion-context", 
+            "text": "paper", 
+            "title": "Video-based Person Re-identification with Accumulative Motion Context"
+        }, 
+        {
+            "location": "/201701/video-based-person-re-identification-withaccumulative-motion-context/#highlight", 
+            "text": "Two stream: spatial + temporal (optical flow).  Use a motion network pre-trained on optical flow to predict OF and also learn end-to-end in training phase.  Fusion of motion and spatial features  Multiloss: siamese reid and classification loss.", 
+            "title": "Highlight"
+        }, 
+        {
+            "location": "/201701/video-based-person-re-identification-withaccumulative-motion-context/#model", 
+            "text": "Structure of the whole model:\n      Structure of motion network (pre-trained on LK or Epic optical flow):\n      Structure of spatial network:\n      Different spatial fusion method: concatenate, sum, max  Different spatial fusion position: @ any layer in spatial network  Motion context accumulation: via RNN (not LSTM in this paper)  Multiloss: siamese (distance) loss + classification (softmax)  Pre-train motion network on optical flow: smoothed L-1 loss ( l=1,2,3  representing optical flow estimation with different resolutions)", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201701/video-based-person-re-identification-withaccumulative-motion-context/#experiment", 
+            "text": "Datasets:  iLIDS-VID: 300 IDs, 2 camera views, sequence length 23~192  PRID-2011: 749 IDs, 2 camera views, sequence length 5~675    Settings  Input of spatial net: 64 x 32; Input of motion net: 128 x 64  Data augmentation as both training and test phase  10 times experiment on different training/test split  Sub-sequence 16 frames  Sequence length 128 for testing    Ablation study  Motion information: compare LK   Epic OF, use OF as direct input or pre-train and train end-to-end. End-to-end training with Epic OF performs best.  Spatial fusion method and location: concatenate and fuse @Max-pooling2 performs better.    Compare with state-of-the-art: new state-of-the-art on PRID-2011.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201610/deep-attributes-driven-person-re-identification/", 
+            "text": "Deep Attributes Driven Person Re-identification\n\n\n\n\nECCV 2016\n\n\npaper\n\n\nposter\n\n\nAuthor: Chi Su, \nShiliang Zhang\n, Junliang Xing, Wen Gao1, and \nQi Tian\n\n\n\n\nIntuition\n\n\n\n\nLow level feature sensitive to viewpoint, body poses, etc., and have different character corresponding to different metric learning methods.\n\n\nAttribute is mid-level feature.\n\n\nProblem:  it is difficult to acquire enough training data for a large set of attributes.\n\n\nRelated work: deep attribute learning works.\n\n\n\n\nThree stage model\n\n\n\n\n\n\nGoal: learn an attribute predict model for person ReID through dCNN training\n    \n\n\nFirst stage: train on attribute dataset\n\n\nAlexNet\n\n\nDataset \n labeled with a binary attribute.\n\n\nGet trained model \n, which could predict attribute for any test sample but lack discriminative power.\n\n\n\n\n\n\nSecond stage: fine-tuning on person ID dataset\n\n\nDataset \n has person ID label.\n\n\nOnly set attributes with top \n highest confidence score as 1, others as 0.\n\n\nTriplet loss\n    \n\n    \n\n    where \n, \n in the experiment setting.\n\n\nGet model \n\n\n\n\n\n\nThird stage: fine-tuning on the Combined Dataset\n\n\nFirst predict attributes for dataset \n using \n, act as ground truth attributes.\n\n\nCombine \n and \n as a big attribute dataset, training to get final \ndeep attribute\n extractor \n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nAttribute dataset in first stage: PETA, split multi-class attribute into binary attributes.\n\n\nTracking dataset in second stage: MOT challenge\n\n\nAttribute accuracy\n    \n\n\nEvaluate: VIPeR, PRID, GRID, Market-1501 (VIPeR, GRID and PRID are included in the PETA dataset, they will be excluded from PETA during training)\n\n\nXQDA metric learning method, further improvement\n\n\nDatasets: VIPeR (43.5%, \nsor\n-\n63.9%), PRID 450S (22.6%, \nsor\n-\n60%+), Market (Single: 39.4%, multiple: 49.0%, \nsor\n-\n78%)\n\n\nsor\n denotes state-of-the-art\n\n\nThe model does not use these three dataset for training, thus it cannot compare directly with supervised re-id model.\n\n\n\n\n\n\nAdditional experiments\n\n\nCombine hand-crafted feature with \ndeep attribute\n, improve about 8% on VIPeR.\n\n\nDirectly fine-tune FC7 feature of AlexNet, \ndeep attribute\n performs better.", 
+            "title": "Deep Attributes Driven Person Re-identification"
+        }, 
+        {
+            "location": "/201610/deep-attributes-driven-person-re-identification/#deep-attributes-driven-person-re-identification", 
+            "text": "ECCV 2016  paper  poster  Author: Chi Su,  Shiliang Zhang , Junliang Xing, Wen Gao1, and  Qi Tian", 
+            "title": "Deep Attributes Driven Person Re-identification"
+        }, 
+        {
+            "location": "/201610/deep-attributes-driven-person-re-identification/#intuition", 
+            "text": "Low level feature sensitive to viewpoint, body poses, etc., and have different character corresponding to different metric learning methods.  Attribute is mid-level feature.  Problem:  it is difficult to acquire enough training data for a large set of attributes.  Related work: deep attribute learning works.", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201610/deep-attributes-driven-person-re-identification/#three-stage-model", 
+            "text": "Goal: learn an attribute predict model for person ReID through dCNN training\n      First stage: train on attribute dataset  AlexNet  Dataset   labeled with a binary attribute.  Get trained model  , which could predict attribute for any test sample but lack discriminative power.    Second stage: fine-tuning on person ID dataset  Dataset   has person ID label.  Only set attributes with top   highest confidence score as 1, others as 0.  Triplet loss\n     \n     \n    where  ,   in the experiment setting.  Get model     Third stage: fine-tuning on the Combined Dataset  First predict attributes for dataset   using  , act as ground truth attributes.  Combine   and   as a big attribute dataset, training to get final  deep attribute  extractor", 
+            "title": "Three stage model"
+        }, 
+        {
+            "location": "/201610/deep-attributes-driven-person-re-identification/#experiment", 
+            "text": "Attribute dataset in first stage: PETA, split multi-class attribute into binary attributes.  Tracking dataset in second stage: MOT challenge  Attribute accuracy\n      Evaluate: VIPeR, PRID, GRID, Market-1501 (VIPeR, GRID and PRID are included in the PETA dataset, they will be excluded from PETA during training)  XQDA metric learning method, further improvement  Datasets: VIPeR (43.5%,  sor - 63.9%), PRID 450S (22.6%,  sor - 60%+), Market (Single: 39.4%, multiple: 49.0%,  sor - 78%)  sor  denotes state-of-the-art  The model does not use these three dataset for training, thus it cannot compare directly with supervised re-id model.    Additional experiments  Combine hand-crafted feature with  deep attribute , improve about 8% on VIPeR.  Directly fine-tune FC7 feature of AlexNet,  deep attribute  performs better.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/", 
+            "text": "Human-In-The-Loop Person Re-Identification\n\n\n\n\nECCV 2016\n\n\nPaper\n\n\nPoster\n\n\nAuthor: \nHanxiao Wang\n, \nShaogang Gong\n, Xiatian Zhu, \nTao (Tony) Xiang\n\n\n\n\n\n\nProfessor Shaogang Gong from \nQueen Mary, University of London\n, who works closely with Dr. Tony Xiang, is an expert in person re-id field. He wrote a book naming \nPerson Re-Identification\n. Since this book has been published, supervised learning method with CNN feature extractor has gradually dominate this field (person re-id). However, prof. Gong and his group are seeking for novel ways to resolve re-id problem. They have two papers about person re-id in ECCV 2016, together with \nPerson Re-identification by Unsupervised L1 Graph Learning\n, both do not follow the supervised learning scheme.\n\n\n\n\n\n\nHighlight\n\n\n\n\nPropose Human Verification Incremental Learning (HVIL), an \nonline learning\n approach for person re-id.\n\n\nDo not need labeled data. Human participates in the training procedure, to give a pair of probe-gallery image a feedback as \ntrue, similar(but not true), dissimilar\n.\n\n\nSmall training set, large test set.\n\n\nThey show some other works attempting to relax the need of labeling, with semi-supervised, unsupervised and transfer learning approches, in Related Work part.\n\n\n\n\nModeling human feedback as a loss function\n\n\n\n\nIncrementally optimised ranking function\n    \n\n    where \n is the distanse of pair \n, which is defined as negative \nMahalanobis Distance\n. \n denotes the feedback, that is, \n {true-match, strong-negative, week-negative} ({m,s,w}). \n is just an int number denotes the rank of a gallery image.\n\n\nRe-id ranking loss \n is defined as\n    \n\n    with \n\n\n\n\nReal-time Model Update for Instant Feedback Reward\n\n\n\n\nNegative Mahalanobis Distance:\n    \n\n    \n represents semi-definate matrix.\n\n\nKnowledge cumulation by online learning\n    \n\n    This equation with \n indicate that the matrix \n in M-distance is learned in stages (knowledge cumulation). \n is the loss of human feed back in \n stage. \n is \nBurg matrix divergence\n??\n    \n\n\n\n\nMetric ensemble learning\n\n\n\n\nWhen no human feedback is avilable.\n\n\nIdea: re-using pairs already verified by human\n    \n\n\nIdeal ranking: \n for \n and \n for \n.\n\n\n\n\nExperiment\n\n\n\n\nSettings\n\n\nFor human feedback, 300 people/image probe; 1000 people/image gallery. Return top-50 in the rank list for feedback.\n\n\nMax 3 rounds for each probe, result in 300-900 indicative verification.\n\n\n\n\n\n\nClaim that suer input will be 10-fold less.\n\n\nBetter than other human-in-the-loop methods. Less feedback and search time.\n\n\n56.1% on CUHK-03, 78% on Market-1501.\n\n\nEvaluate automated person re-id\n\n\n168 pairs on CUHK-03, 234 pairs on Market-1501; supervised model trained with 300 ground truth data for comparison.\n\n\nAlso compared with unensembled matrix after \n (\n) and average matrix \n for all time \n (\n)\n\n\nEnsembled performs best.", 
+            "title": "Human-In-The-Loop Person Re-Identification"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#human-in-the-loop-person-re-identification", 
+            "text": "ECCV 2016  Paper  Poster  Author:  Hanxiao Wang ,  Shaogang Gong , Xiatian Zhu,  Tao (Tony) Xiang    Professor Shaogang Gong from  Queen Mary, University of London , who works closely with Dr. Tony Xiang, is an expert in person re-id field. He wrote a book naming  Person Re-Identification . Since this book has been published, supervised learning method with CNN feature extractor has gradually dominate this field (person re-id). However, prof. Gong and his group are seeking for novel ways to resolve re-id problem. They have two papers about person re-id in ECCV 2016, together with  Person Re-identification by Unsupervised L1 Graph Learning , both do not follow the supervised learning scheme.", 
+            "title": "Human-In-The-Loop Person Re-Identification"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#highlight", 
+            "text": "Propose Human Verification Incremental Learning (HVIL), an  online learning  approach for person re-id.  Do not need labeled data. Human participates in the training procedure, to give a pair of probe-gallery image a feedback as  true, similar(but not true), dissimilar .  Small training set, large test set.  They show some other works attempting to relax the need of labeling, with semi-supervised, unsupervised and transfer learning approches, in Related Work part.", 
+            "title": "Highlight"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#modeling-human-feedback-as-a-loss-function", 
+            "text": "Incrementally optimised ranking function\n     \n    where   is the distanse of pair  , which is defined as negative  Mahalanobis Distance .   denotes the feedback, that is,   {true-match, strong-negative, week-negative} ({m,s,w}).   is just an int number denotes the rank of a gallery image.  Re-id ranking loss   is defined as\n     \n    with", 
+            "title": "Modeling human feedback as a loss function"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#real-time-model-update-for-instant-feedback-reward", 
+            "text": "Negative Mahalanobis Distance:\n     \n      represents semi-definate matrix.  Knowledge cumulation by online learning\n     \n    This equation with   indicate that the matrix   in M-distance is learned in stages (knowledge cumulation).   is the loss of human feed back in   stage.   is  Burg matrix divergence ??", 
+            "title": "Real-time Model Update for Instant Feedback Reward"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#metric-ensemble-learning", 
+            "text": "When no human feedback is avilable.  Idea: re-using pairs already verified by human\n      Ideal ranking:   for   and   for  .", 
+            "title": "Metric ensemble learning"
+        }, 
+        {
+            "location": "/201610/human-in-the-loop-person-re-identification/#experiment", 
+            "text": "Settings  For human feedback, 300 people/image probe; 1000 people/image gallery. Return top-50 in the rank list for feedback.  Max 3 rounds for each probe, result in 300-900 indicative verification.    Claim that suer input will be 10-fold less.  Better than other human-in-the-loop methods. Less feedback and search time.  56.1% on CUHK-03, 78% on Market-1501.  Evaluate automated person re-id  168 pairs on CUHK-03, 234 pairs on Market-1501; supervised model trained with 300 ground truth data for comparison.  Also compared with unensembled matrix after   ( ) and average matrix   for all time   ( )  Ensembled performs best.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/", 
+            "text": "Embedding Deep Metric for Person Re-identification: A Study Against Large Variation\n\n\n\n\nECCV 2016\n\n\nAuthor: \nHailin Shi\n, Yang Yang, Xiangyu Zhu, Shengcai Liao, Zhen Lei, Weishi Zheng, \nStan Z. Li\n\n\n\n\nOverview\n\n\n\n\nRe-id research topics:\n\n\nImproving discriminative features.\n\n\nGood metric for comparison.\n\n\nThis paper mainly focus on learning good metrics.\n\n\n\n\n\n\nInfluenced by face recognition method (the author also works on face recognition).\n\n\nContributions:\n\n\nModerate Positive Mining\n, a novel positive sample selection strategy for training CNN while the data has large intra-class variations.\n\n\nMetric weight constraint\n (combine Euclidean distance with Mahalanobis distance).\n\n\n\n\n\n\n\n\nModerate positive mining\n\n\n\n\nIntuitions\n\n\nPositive samples with large distance is harmful.\n\n\nPositive samples with too little distance have little contribution to convergance.\n\n\nWhat to do: reduce the intra-class variance while preserving the intrinsic graphical structure of pedestrian data via mining the moderate positive pairs in the local range (picture).\n\n\n\n\n\n\n\nAlgorithm of choosing moderate positive sample (picture)\n\n\nCompute the distances of 1-all positive\nnegative samples\n\n\nMine the hardest negative sample (min distance negative), \n\n\nSubset of positive samples where distance is larger than \n\n\nIn this subset, find positive pair with min distance -- moderate positive\n\n\n\n\n\n\n\n\n\nMetric weight constraint\n\n\n\n\nEuclidean distance shortcomings:\n\n\nSensitive to the scale?\n\n\nBlind to the correlation across dimensions\n\n\nUsing the Mahalanobis distance is a better choice for multivariate metric, argued by other work\n\n\n\n\n\n\nAnother FC after distance between features is calculated to gain Mahalanobis distance.\n\n\nGet Mahalanobis distance\n\n\n\n\n (ensure \n is semi-definate matrix)\n\n\n\n\n\n\n\n\nThis can be implemented by an FC layer\n    \n\n\n\n\n\n\nWeight constraint\n\n\nEuclidean better generalization ability, less discriminability.\n\n\nBalance between Euclidean and Mahalanobis distance.\n\n\n should have large values at the diagonal (Euclidean) and small values elsewhere, by giving constraint:\n\n\n\n\n\n\n\n\nFurther combine the constraint into the loss function as a regularization term:\n\n\nTriplet loss: \n (margin set to 2 in the experiment)\n\n\nRegularization: \n (tune \n to get the best trade-off)\n\n\nGradient w.r.t \n is computed by \n\n\n\n\n\n\n\n\n\n\n\n\nCNN architecture\n\n\n\n\n\n\n\n\n3 branches CNN\n\n\nOriginal image 128x64 =\n 3x64x64 (with overlap)\n\n\nUntied (unshared) filter between CNN branches to learn specific features from the different human body parts of pedestrian image.\n\n\n\n\n\n\n\n\nExperiments\n\n\n\n\nTheir baseline is very weak (worse than CUHK-03 baseline)\n\n\nThree parts are analyzed\n\n\nModerate positive and hard negative (improve 10%+)\n\n\nWeight constraint, tune on \n (\n around \n gets good trade-off)\n\n\nTied or untied filters between branches (Untied a little better)\n\n\n\n\n\n\nAugmentation\n\n\nRandom translation\n\n\nRandomly cropped (0-5 pixels) in horizon and vertical, and stretched to recover the size\n\n\n\n\n\n\nDatasets\n\n\nCUHK03 (Rank-1: 61.32% with hand-crafted bbox, 52.09% with detected bbox)\n\n\nCUHK01 + Market-1501 in training (Rank-1: 86.59%)\n\n\nVIPeR (Rank-1: 43.39%)", 
+            "title": "Embedding Deep Metric for Person Re-identification A Study Against Large Variation"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#embedding-deep-metric-for-person-re-identification-a-study-against-large-variation", 
+            "text": "ECCV 2016  Author:  Hailin Shi , Yang Yang, Xiangyu Zhu, Shengcai Liao, Zhen Lei, Weishi Zheng,  Stan Z. Li", 
+            "title": "Embedding Deep Metric for Person Re-identification: A Study Against Large Variation"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#overview", 
+            "text": "Re-id research topics:  Improving discriminative features.  Good metric for comparison.  This paper mainly focus on learning good metrics.    Influenced by face recognition method (the author also works on face recognition).  Contributions:  Moderate Positive Mining , a novel positive sample selection strategy for training CNN while the data has large intra-class variations.  Metric weight constraint  (combine Euclidean distance with Mahalanobis distance).", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#moderate-positive-mining", 
+            "text": "Intuitions  Positive samples with large distance is harmful.  Positive samples with too little distance have little contribution to convergance.  What to do: reduce the intra-class variance while preserving the intrinsic graphical structure of pedestrian data via mining the moderate positive pairs in the local range (picture).    Algorithm of choosing moderate positive sample (picture)  Compute the distances of 1-all positive negative samples  Mine the hardest negative sample (min distance negative),   Subset of positive samples where distance is larger than   In this subset, find positive pair with min distance -- moderate positive", 
+            "title": "Moderate positive mining"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#metric-weight-constraint", 
+            "text": "Euclidean distance shortcomings:  Sensitive to the scale?  Blind to the correlation across dimensions  Using the Mahalanobis distance is a better choice for multivariate metric, argued by other work    Another FC after distance between features is calculated to gain Mahalanobis distance.  Get Mahalanobis distance    (ensure   is semi-definate matrix)     This can be implemented by an FC layer\n        Weight constraint  Euclidean better generalization ability, less discriminability.  Balance between Euclidean and Mahalanobis distance.   should have large values at the diagonal (Euclidean) and small values elsewhere, by giving constraint:     Further combine the constraint into the loss function as a regularization term:  Triplet loss:   (margin set to 2 in the experiment)  Regularization:   (tune   to get the best trade-off)  Gradient w.r.t   is computed by", 
+            "title": "Metric weight constraint"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#cnn-architecture", 
+            "text": "3 branches CNN  Original image 128x64 =  3x64x64 (with overlap)  Untied (unshared) filter between CNN branches to learn specific features from the different human body parts of pedestrian image.", 
+            "title": "CNN architecture"
+        }, 
+        {
+            "location": "/201610/embedding-deep-metric-for-person-re-identification-a-study-against-large-variation/#experiments", 
+            "text": "Their baseline is very weak (worse than CUHK-03 baseline)  Three parts are analyzed  Moderate positive and hard negative (improve 10%+)  Weight constraint, tune on   (  around   gets good trade-off)  Tied or untied filters between branches (Untied a little better)    Augmentation  Random translation  Randomly cropped (0-5 pixels) in horizon and vertical, and stretched to recover the size    Datasets  CUHK03 (Rank-1: 61.32% with hand-crafted bbox, 52.09% with detected bbox)  CUHK01 + Market-1501 in training (Rank-1: 86.59%)  VIPeR (Rank-1: 43.39%)", 
+            "title": "Experiments"
+        }, 
+        {
+            "location": "/201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/", 
+            "text": "Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification\n\n\n\n\nAuthor: Rahul Rama Varior, NTU Singapore; Mrinal Haloi, Nanyang technological Universi; \nGang Wang\n\n\nPicutre of the model\n\n\n\n\n\n\n\n\nCurrent state-of-the-art on \nMarket-1501\n.\n\n\n\n\nContribution\n\n\n\n\nArchitecture of baseline siamese network for person re-id.\n\n\nMatching gate between convolutional blocks.\n\n\n\n\nMatching gate (MG) structure\n\n\n\n\nFeature summarization\n\n\nAggregates the local feature along a horizontal stripe.\n\n\nDeal with problem of changed view point (view point change in re-id typically in the horizontal direction, same parts are very likely to be along the same horizontal region).\n\n\nEquation and dimention:\n    \n; \n\n    where \n is the \n row of feature map. \n (maybe \n) and \n (maybe \n).\n\n\n\n\n\n\nFeature similarity\n\n\nEuclidean distance of \n and \n\n    \n\n    where \n\n\n decides the variance of the Gaussian function, learnable, should set a higher initial value.\n\n\n\n\n\n\nFiltering and boosting the features\n\n\nRepeat \n c times horizontally to obtain \n.\n\n\nAdd filtered feature to original feature.\n    \n\n    \n\n\nPerform L2 normalization across channels after this\n\n\n\n\n\n\n\n\nResult\n\n\n\n\nDataset: Market-1501, CUHK-03, VIPeR.\n\n\nBaseline S-CNN outperform most CNN approaches. With MG gaining further improvement.\n\n\nVisualization of gate. Low gate activation means low similarity.", 
+            "title": "Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification"
+        }, 
+        {
+            "location": "/201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/#gated-siamese-convolutional-neural-network-architecture-for-human-re-identification", 
+            "text": "Author: Rahul Rama Varior, NTU Singapore; Mrinal Haloi, Nanyang technological Universi;  Gang Wang  Picutre of the model     Current state-of-the-art on  Market-1501 .", 
+            "title": "Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification"
+        }, 
+        {
+            "location": "/201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/#contribution", 
+            "text": "Architecture of baseline siamese network for person re-id.  Matching gate between convolutional blocks.", 
+            "title": "Contribution"
+        }, 
+        {
+            "location": "/201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/#matching-gate-mg-structure", 
+            "text": "Feature summarization  Aggregates the local feature along a horizontal stripe.  Deal with problem of changed view point (view point change in re-id typically in the horizontal direction, same parts are very likely to be along the same horizontal region).  Equation and dimention:\n     ;  \n    where   is the   row of feature map.   (maybe  ) and   (maybe  ).    Feature similarity  Euclidean distance of   and  \n     \n    where    decides the variance of the Gaussian function, learnable, should set a higher initial value.    Filtering and boosting the features  Repeat   c times horizontally to obtain  .  Add filtered feature to original feature.\n     \n      Perform L2 normalization across channels after this", 
+            "title": "Matching gate (MG) structure"
+        }, 
+        {
+            "location": "/201610/gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/#result", 
+            "text": "Dataset: Market-1501, CUHK-03, VIPeR.  Baseline S-CNN outperform most CNN approaches. With MG gaining further improvement.  Visualization of gate. Low gate activation means low similarity.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/", 
+            "text": "Joint Learning of Single-image and Cross-image Representations for Person Re-identification\n\n\n\n\n\n\nIntuition\n\n\n\n\nRe-id method: single-image representation (SIR) and cross-image representation (CIR).\n\n\nCombine them together!\n\n\n\n\nMethod\n\n\n\n\nSIR measurements are special cases of CIR-based classification.\n\n\nSIR(Euclidean distance): \n\n\nCIR: \n\n\n\n\n\n\nAlso combine pairwise loss and triplet loss.\n\n\nPairwise\n\n\n\n\n\n\nwhere \n is the distance threshold (margin), \n is the trade-off parameter, which is set to 0.0005 in the experiments\n\n\nCombine: \n\n\n\n\n\n\nTriplet\n\n\n\n\n\nCombine: \n\n\n\n\n\n\n\n\n\n\nCompute cross-image feature map\n    \n\n\n\n\nResult\n\n\n\n\nDataset: CUHK-01/03, VIPeR.\n\n\n52.17% on CUHK03.\n\n\nInvestigation on sensitivity of trade-off parameter.\n\n\n71.8% on CUHK01 (pretrain on CUHK03).\n\n\n35.76% on VIPeR.", 
+            "title": "Joint Learning of Single-image and Cross-image Representations for Person Re-identification"
+        }, 
+        {
+            "location": "/201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/#joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification", 
+            "text": "", 
+            "title": "Joint Learning of Single-image and Cross-image Representations for Person Re-identification"
+        }, 
+        {
+            "location": "/201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/#intuition", 
+            "text": "Re-id method: single-image representation (SIR) and cross-image representation (CIR).  Combine them together!", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/#method", 
+            "text": "SIR measurements are special cases of CIR-based classification.  SIR(Euclidean distance):   CIR:     Also combine pairwise loss and triplet loss.  Pairwise    where   is the distance threshold (margin),   is the trade-off parameter, which is set to 0.0005 in the experiments  Combine:     Triplet   \nCombine:       Compute cross-image feature map", 
+            "title": "Method"
+        }, 
+        {
+            "location": "/201610/joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/#result", 
+            "text": "Dataset: CUHK-01/03, VIPeR.  52.17% on CUHK03.  Investigation on sensitivity of trade-off parameter.  71.8% on CUHK01 (pretrain on CUHK03).  35.76% on VIPeR.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201609/end-to-end-comparative-attention-networks-for-person-re-identification/", 
+            "text": "End-to-End Comparative Attention Networks for Person Re-identification\n\n\n\n\npaper link\n\n\n\n\nModel structure\n\n\n\n\n\n\n\n\nUse AlexNet Max-5 feature (6 * 6 * 256)\n\n\nLSTM with attention\n\n\nSame image feature\n at every time step (total time steps T=8)\n\n\nAttention only conditioned on previous time step\n\n\nExtract (2nd, 4th, 8th)/all/last hidden state and concatenated as the final features passed to the normalization layer (2,4,8 being the best)\n\n\n\n\n\n\nRe-id triplet method\n\n\nAnchor I, positive I+, negative I-\n\n\nLoss: \n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nDataset: CUHK01, CUHK03, Market-1501\n\n\nSettings: see Sec.IV-B\n\n\nResult: Great improvements on all three datasets", 
+            "title": "End-to-End Comparative Attention Networks for Person Re-identification"
+        }, 
+        {
+            "location": "/201609/end-to-end-comparative-attention-networks-for-person-re-identification/#end-to-end-comparative-attention-networks-for-person-re-identification", 
+            "text": "paper link", 
+            "title": "End-to-End Comparative Attention Networks for Person Re-identification"
+        }, 
+        {
+            "location": "/201609/end-to-end-comparative-attention-networks-for-person-re-identification/#model-structure", 
+            "text": "Use AlexNet Max-5 feature (6 * 6 * 256)  LSTM with attention  Same image feature  at every time step (total time steps T=8)  Attention only conditioned on previous time step  Extract (2nd, 4th, 8th)/all/last hidden state and concatenated as the final features passed to the normalization layer (2,4,8 being the best)    Re-id triplet method  Anchor I, positive I+, negative I-  Loss:", 
+            "title": "Model structure"
+        }, 
+        {
+            "location": "/201609/end-to-end-comparative-attention-networks-for-person-re-identification/#experiment", 
+            "text": "Dataset: CUHK01, CUHK03, Market-1501  Settings: see Sec.IV-B  Result: Great improvements on all three datasets", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201609/recurrent-convolutional-network-for-video-based-person-re-identification/", 
+            "text": "Recurrent Convolutional Network for Video-based Person Re-Identification\n\n\n\n\npaper link\n\n\n\n\n\n\nModel structure\n\n\n\n\nCNN and RNN as shown above\n\n\nTemporal pooling through RNN outputs\n\n\nAverage pooling\n\n\nMax pooling (worse than baseline, one-shot)\n\n\nCan try attention\n\n\n\n\n\n\nSiamese network\n\n\nPair input\n\n\nCan try triplet\n\n\n\n\n\n\n\n\nJoint verification and identification\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nDatasets: \niLIDS-VID\n and \nPRID-2011\n\n\nCNN pre-trained on Viper\n\n\nSettings\n\n\nmargin = 2\n\n\nCNN encoding size = 128\n\n\nlearning rate = 1e-3\n\n\nbatch size = 1\n\n\nepoch = 500 (one epoch = all positive pairs and the same number of negative pairs)\n\n\n\n\n\n\nBest setting: (RNN) Color+OF, mean pooling\n\n\nCross dataset testing\n\n\nCurrently state-of-the-art on iLIDS-VID and PRID-2011", 
+            "title": "Recurrent Convolutional Network for Video-based Person Re-Identification"
+        }, 
+        {
+            "location": "/201609/recurrent-convolutional-network-for-video-based-person-re-identification/#recurrent-convolutional-network-for-video-based-person-re-identification", 
+            "text": "paper link", 
+            "title": "Recurrent Convolutional Network for Video-based Person Re-Identification"
+        }, 
+        {
+            "location": "/201609/recurrent-convolutional-network-for-video-based-person-re-identification/#model-structure", 
+            "text": "CNN and RNN as shown above  Temporal pooling through RNN outputs  Average pooling  Max pooling (worse than baseline, one-shot)  Can try attention    Siamese network  Pair input  Can try triplet     Joint verification and identification", 
+            "title": "Model structure"
+        }, 
+        {
+            "location": "/201609/recurrent-convolutional-network-for-video-based-person-re-identification/#experiment", 
+            "text": "Datasets:  iLIDS-VID  and  PRID-2011  CNN pre-trained on Viper  Settings  margin = 2  CNN encoding size = 128  learning rate = 1e-3  batch size = 1  epoch = 500 (one epoch = all positive pairs and the same number of negative pairs)    Best setting: (RNN) Color+OF, mean pooling  Cross dataset testing  Currently state-of-the-art on iLIDS-VID and PRID-2011", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/", 
+            "text": "RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation\n\n\n\n\npaper\n\n\ncode\n\n\n\n\nIntuition\n\n\n\n\nConv and pooling result in the lost of finer image structure, producing low resolution segmentation.\n\n\nDeepLab solve this by  atrous (or dilated) convolutions to account for larger receptive fields without downscaling the image.\n\n\nFCN and Hypercolumns exploits features from intermediate layers for generating high-resolution prediction.\n\n\n\n\n\n\nFeature from all levels help to generate semantic segmentation.\n\n\n\n\nModel\n\n\n\n\nCompare with standard CNN and Dilated convolutions\n    \n\n\nSingle RefineNet structure\n    \n\n\nPurpose of different components in RefineNet\n\n\nRCU: finetune feature map for fusion task\n\n\nMulti-resolution fusion: scale to the same resolution and sum\n\n\nChained residual pooling: capture background context from a large image region\n\n\nOutput convolutions: another RCU. There are 3 RCU between two RefineNet blocks (2 path). The whole net also adds 2 RCU before dense softmax classifier.\n\n\n\n\n\n\nResidual connection: in RefineNet unit and \nbetween RefineNet blocks\n\n\n\n\nExperiment\n\n\n\n\nDatasets\n\n\nPerson-Part\n 1717 training and 1818 testing, human parsing\n\n\nNYUDv2\n 795 training, 654 testing, RGB-D images showing interior scenes\n\n\nPASCAL VOC 2012\n training/validation/test -- 1464/1449/1456 (usually trained with MS COCO dataset)\n\n\nCityscapes\n training/validation** 2975/500, 19 classes\n\n\nPASCAL-Context\n segmentation labels of the whole scene for PASCAL VOC images\n\n\nSUN-RGBD\n around 10,000 RGB-D indoor images, 37 classes\n\n\nADE20K MIT\n 150 classes, more than 20K scene images\n\n\n\n\n\n\nMeasurement: IoU, pixel accuracy, mean accuracy\n\n\nAugmentation: random scaling, random cropping and horizontal flipping\n\n\nThe result on PASCAL VOC 2012 is not better than \nPSPNet\n (see the following paper note)\n\n\nVariant of model\n\n\n\n\n4-cascaded performs best but need more time", 
+            "title": "RefineNet Multi-Path Refinement Networks for High-Resolution Semantic Segmentation"
+        }, 
+        {
+            "location": "/201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/#refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation", 
+            "text": "paper  code", 
+            "title": "RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation"
+        }, 
+        {
+            "location": "/201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/#intuition", 
+            "text": "Conv and pooling result in the lost of finer image structure, producing low resolution segmentation.  DeepLab solve this by  atrous (or dilated) convolutions to account for larger receptive fields without downscaling the image.  FCN and Hypercolumns exploits features from intermediate layers for generating high-resolution prediction.    Feature from all levels help to generate semantic segmentation.", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/#model", 
+            "text": "Compare with standard CNN and Dilated convolutions\n      Single RefineNet structure\n      Purpose of different components in RefineNet  RCU: finetune feature map for fusion task  Multi-resolution fusion: scale to the same resolution and sum  Chained residual pooling: capture background context from a large image region  Output convolutions: another RCU. There are 3 RCU between two RefineNet blocks (2 path). The whole net also adds 2 RCU before dense softmax classifier.    Residual connection: in RefineNet unit and  between RefineNet blocks", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/#experiment", 
+            "text": "Datasets  Person-Part  1717 training and 1818 testing, human parsing  NYUDv2  795 training, 654 testing, RGB-D images showing interior scenes  PASCAL VOC 2012  training/validation/test -- 1464/1449/1456 (usually trained with MS COCO dataset)  Cityscapes  training/validation** 2975/500, 19 classes  PASCAL-Context  segmentation labels of the whole scene for PASCAL VOC images  SUN-RGBD  around 10,000 RGB-D indoor images, 37 classes  ADE20K MIT  150 classes, more than 20K scene images    Measurement: IoU, pixel accuracy, mean accuracy  Augmentation: random scaling, random cropping and horizontal flipping  The result on PASCAL VOC 2012 is not better than  PSPNet  (see the following paper note)  Variant of model   4-cascaded performs best but need more time", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/", 
+            "text": "Pyramid Scene Parsing Network\n\n\n\n\npaper\n\n\nproject page\n\n\ncode\n\n\n1-st place on ImageNet scene parsing challenge 2016\n\n\n\n\nParsing overview\n\n\n\n\nDatasets\n\n\nLMO\n\n\nPASCAL VOC\n\n\nADE20K dataset\n\n\nCityscapes\n\n\n\n\n\n\nFCN is the baseline model for deep learning based parsing\n\n\nResearch line 1: multi-scale feature ensembling\n\n\nResearch line 2: structure prediction\n\n\nFCN has also been used in depth estimation, image restoration, image super-resolution.\n\n\n\n\n\n\nSome prior works use global image-level information for scene understanding\n\n\n\n\nIntuition\n\n\n\n\nFCN method suffers from mismatched relationship, confusion categories and inconspicuous classes\n\n\nGlobal average pooling fuses different stuff in a single vector and may lose the spatial relation. Global context information along with sub-region context may be more helpful.\n\n\n\n\nModel\n\n\n\n\n\n\nPyramid pooling: bin size of 1x1, 2x2, 3x3, 6x6, both max and average pooling\n\n\nAuxiliary loss in ResNet-101\n\n\n\n\nExperiment\n\n\n\n\nDatasets: ImageNet scene parsing (ADE20K), PASCAL VOC 2012, Cityscapes\n\n\nSettings: poly learning rate, augmentation, momentum = 0.9 and weight decay = 0.0001.\n\n\nLarge cropsize can get good performance (consistant with our experiment in ResNet)\n\n\nBatch size in batch normalization layer is important.\n\n\nAblation study of settings\n\n\nAverage pooling is better than max\n\n\nPyramid is better than global pooling\n\n\nDimension reduction after pooling and concatenate is helpful\n\n\n\n\n\n\nAblation study of auxiliary loss\n\n\n\\alpha = 0.4\n yields best performance\n\n\n\n\n\n\nAblation study for ResNet depth\n\n\nThe deep the better\n\n\nAll ResNet is pre-trained on ImageNet\n\n\n\n\n\n\nExperiment on PASCAL VOC 2012\n\n\n10,582, 1,449 and 1,456 images for training, validation and testing\n\n\nTop accuracy on all classes w/o MS COCO pre-training, top on most classes w/ MS COCO pre-training.\n\n\n85.4% mIoU.\n\n\n\n\n\n\nCityscapes\n\n\n2,975, 500, and 1,525 for training, validation and testing, 19 categories containing both stuff and objects.\n\n\n20,000 coarsely annotated images, can be used for training.\n\n\nOut-performs other methods with notable advantage (See project page for statistics)", 
+            "title": "Pyramid Scene Parsing Network"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/#pyramid-scene-parsing-network", 
+            "text": "paper  project page  code  1-st place on ImageNet scene parsing challenge 2016", 
+            "title": "Pyramid Scene Parsing Network"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/#parsing-overview", 
+            "text": "Datasets  LMO  PASCAL VOC  ADE20K dataset  Cityscapes    FCN is the baseline model for deep learning based parsing  Research line 1: multi-scale feature ensembling  Research line 2: structure prediction  FCN has also been used in depth estimation, image restoration, image super-resolution.    Some prior works use global image-level information for scene understanding", 
+            "title": "Parsing overview"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/#intuition", 
+            "text": "FCN method suffers from mismatched relationship, confusion categories and inconspicuous classes  Global average pooling fuses different stuff in a single vector and may lose the spatial relation. Global context information along with sub-region context may be more helpful.", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/#model", 
+            "text": "Pyramid pooling: bin size of 1x1, 2x2, 3x3, 6x6, both max and average pooling  Auxiliary loss in ResNet-101", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/pyramid-scene-parsing-network/#experiment", 
+            "text": "Datasets: ImageNet scene parsing (ADE20K), PASCAL VOC 2012, Cityscapes  Settings: poly learning rate, augmentation, momentum = 0.9 and weight decay = 0.0001.  Large cropsize can get good performance (consistant with our experiment in ResNet)  Batch size in batch normalization layer is important.  Ablation study of settings  Average pooling is better than max  Pyramid is better than global pooling  Dimension reduction after pooling and concatenate is helpful    Ablation study of auxiliary loss  \\alpha = 0.4  yields best performance    Ablation study for ResNet depth  The deep the better  All ResNet is pre-trained on ImageNet    Experiment on PASCAL VOC 2012  10,582, 1,449 and 1,456 images for training, validation and testing  Top accuracy on all classes w/o MS COCO pre-training, top on most classes w/ MS COCO pre-training.  85.4% mIoU.    Cityscapes  2,975, 500, and 1,525 for training, validation and testing, 19 categories containing both stuff and objects.  20,000 coarsely annotated images, can be used for training.  Out-performs other methods with notable advantage (See project page for statistics)", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/feature-pyramid-networks-for-object-detection/", 
+            "text": "Feature Pyramid Networks for Object Detection\n\n\n\n\npaper\n\n\n\n\nIntuition\n\n\n\n\nMulti-scale is important in traditional methods\n\n\nCurrent detection system use single shot CNN to save time and memory (Faster R-CNN)\n\n\nCNN is capable of representing higher-level semantics, but not all levels are semantically strong\n\n\nSingle Shot Detector (SSD) is one of the first attempts at using ConvNet's pyramidal feature, but they add new layers after high up layer, which may lose information in high-resolution feature map\n\n\nMain contribution: perform multi-scale in the network\n\n\n\n\nModel\n\n\n\n\nFeature Pyramid Network (FPN) building block\n\n\n\n\nThe feature maps in the picture above are from the last layer of each \nstage\n in ConvNet\n\n\nNearest neighbor upsampling\n\n\nDenotes final set of feature maps as \n\\{P_2, P_3, P_4, P_5\\}\n, corresponding to \n\\{C_2, C_3, C_4, C_5\\}\n\n\n\n\n\n\n\n\nFPN in Region Proposal Network (RPN)\n\n\nReplacing single-scale feature map with FPN\n\n\nAnchors with different aspect ratios: 1:2, 1:1, 2:1\n\n\n15 anchors over the pyramid\n\n\n\n\n\n\nFPN in Fast R-CNN\n\n\n\n\nExperiment\n\n\n\n\nEvaluate on COCO \nminival\n set\n\n\nSurpass 2016 COCO winner\n\n\nLateral and top-down connection is helpful", 
+            "title": "Feature Pyramid Networks for Object Detection"
+        }, 
+        {
+            "location": "/201612/feature-pyramid-networks-for-object-detection/#feature-pyramid-networks-for-object-detection", 
+            "text": "paper", 
+            "title": "Feature Pyramid Networks for Object Detection"
+        }, 
+        {
+            "location": "/201612/feature-pyramid-networks-for-object-detection/#intuition", 
+            "text": "Multi-scale is important in traditional methods  Current detection system use single shot CNN to save time and memory (Faster R-CNN)  CNN is capable of representing higher-level semantics, but not all levels are semantically strong  Single Shot Detector (SSD) is one of the first attempts at using ConvNet's pyramidal feature, but they add new layers after high up layer, which may lose information in high-resolution feature map  Main contribution: perform multi-scale in the network", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201612/feature-pyramid-networks-for-object-detection/#model", 
+            "text": "Feature Pyramid Network (FPN) building block   The feature maps in the picture above are from the last layer of each  stage  in ConvNet  Nearest neighbor upsampling  Denotes final set of feature maps as  \\{P_2, P_3, P_4, P_5\\} , corresponding to  \\{C_2, C_3, C_4, C_5\\}     FPN in Region Proposal Network (RPN)  Replacing single-scale feature map with FPN  Anchors with different aspect ratios: 1:2, 1:1, 2:1  15 anchors over the pyramid    FPN in Fast R-CNN", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/feature-pyramid-networks-for-object-detection/#experiment", 
+            "text": "Evaluate on COCO  minival  set  Surpass 2016 COCO winner  Lateral and top-down connection is helpful", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/", 
+            "text": "PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection\n\n\n\n\npaper\n\n\nAuthor: Kye-Hyeon Kim, Sanghoon Hong, Byungseok Roh, Yeongjae Cheon, and Minje Park\n\n\nIntel Imaging and Camera Technology\n\n\n\n\nHighlight\n\n\n\n\nSpeed up (real-time) detection process with a more efficient feature extraction CNN, without lossing too much accuracy.\n\n\nThis network is smaller and more efficient than ResNet and can be a substitution of the latter.\n\n\n\n\nMain structure\n\n\n\n\nC.ReLU: Concatenated ReLU in early stage of CNN to reduce the number of computation.\n\n\nIn early stages, output nodes tend to be paired, i.e. one node's activation is the opposite of another's.\n\n\nC.ReLU reduce the output channels by half and concatenate with negation.\n\n\n\n\n\n\nInception\n\n\nNot yet been widely applied.\n\n\nCost-efficient building block for multi-scale representation.\n\n\n1x1 Conv can preserve the receptive field of the previous layer.\n\n\n\n\n\n\nMulti-scale representation like HyperNet\n\n\nConcatenate the output of the last layer and two intermediate layers, whose size are 2x and 4x of the last layer.\n\n\nSet 2x layer as reference scale, down-scaling (pooing) 4x layer, up-scaling (interpolation) the last layer.\n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nTraining details\n\n\nAdd Batch normalization layers before all ReLU.\n\n\nPlateau detection based learning rate policy.\n\n\nMeasure the moving average of loss\n\n\nDecide as \non-plateau\n if its improvement is below a threshold.\n\n\nDecrease the learning rate by a constant factor when \non-plateau\n.\n\n\n\n\n\n\nNumber of proposals = 200\n\n\n\n\n\n\nVOC2007 \n VOC2012 performance", 
+            "title": "PVANET Deep but Lightweight Neural Networks for Real-time Object Detection"
+        }, 
+        {
+            "location": "/201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/#pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection", 
+            "text": "paper  Author: Kye-Hyeon Kim, Sanghoon Hong, Byungseok Roh, Yeongjae Cheon, and Minje Park  Intel Imaging and Camera Technology", 
+            "title": "PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection"
+        }, 
+        {
+            "location": "/201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/#highlight", 
+            "text": "Speed up (real-time) detection process with a more efficient feature extraction CNN, without lossing too much accuracy.  This network is smaller and more efficient than ResNet and can be a substitution of the latter.", 
+            "title": "Highlight"
+        }, 
+        {
+            "location": "/201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/#main-structure", 
+            "text": "C.ReLU: Concatenated ReLU in early stage of CNN to reduce the number of computation.  In early stages, output nodes tend to be paired, i.e. one node's activation is the opposite of another's.  C.ReLU reduce the output channels by half and concatenate with negation.    Inception  Not yet been widely applied.  Cost-efficient building block for multi-scale representation.  1x1 Conv can preserve the receptive field of the previous layer.    Multi-scale representation like HyperNet  Concatenate the output of the last layer and two intermediate layers, whose size are 2x and 4x of the last layer.  Set 2x layer as reference scale, down-scaling (pooing) 4x layer, up-scaling (interpolation) the last layer.", 
+            "title": "Main structure"
+        }, 
+        {
+            "location": "/201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/#experiment", 
+            "text": "Training details  Add Batch normalization layers before all ReLU.  Plateau detection based learning rate policy.  Measure the moving average of loss  Decide as  on-plateau  if its improvement is below a threshold.  Decrease the learning rate by a constant factor when  on-plateau .    Number of proposals = 200    VOC2007   VOC2012 performance", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/", 
+            "text": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks\n\n\n\n\nPaper\n\n\nAuthor: Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun\n\n\n\n\nOverview\n\n\n\n\nComponents of object detection system\n\n\nObject proposals\n\n\nUsing Region Proposal Networks (RPN)\n\n\n\n\n\n\nDeep network for classification\n\n\nR-CNN mainly plays as a classifier, and it does not predict object bounds (except for refining by bounding box regression)\n\n\n\n\n\n\n\n\n\n\nFaster R-CNN combine RPN and object detection network (share computation)\n\n\n\n\nFaster R-CNN Architecture\n\n\nRPN\n\n\n\n\nRPN of FRCNN\n    \n\n\nUse dCNN (Visualizing, VGG-16) to get feature map\n\n\nSliding windows with size \nn * n\n(\nn = 3\n)\n\n\nAnchor is centered at the sliding window in question, and is associated with a scale and aspect ratio. \nk = 9\n anchors for each sliding window\n\n\n\n\nLoss function\n\n\n\n\nPositive label for two kinds of anchors\n\n\nThe anchor/anchors with the highest Intersection-overUnion (IoU) overlap with a ground-truth box\n\n\nAn anchor that has an IoU overlap higher than 0.7 with any ground-truth box.\n\n\n\n\n\n\nNegative label\n\n\nAn anchor that has an IoU ratio lower than 0.3 for all ground-truth boxes.\n\n\n\n\n\n\nOther anchors do not contribute to the training objective.\n\n\nMulti-task loss function\n    \nL({p_i}, {t_i}) = \\frac{1}{N_{cls}}\\sum_iL_{cls} (p_i, p^\u2217_i)+\\lambda\\frac{1}{N_{reg}}\\sum_ip^\u2217_i L_{reg} (t_i, t^\u2217_i).\n\n\n\n\n\n\np_i\n probability of an ancor being an object.\n\n\n\n\np^*_i\n ground truth (1-\nobject, 0-\nnon-object).\n\n\n\n\nL_{cls}\n classification loss (cross entropy).\n\n\n\n\nt_i\n vector representing the 4 parameterized coordinates of the predicted bounding box.\n\n\n\n\nt^*_i\n ground-truth box associated with a positive anchor.\n\n\n\n\nL_{reg} (t_i, t^\u2217_i) = R(t_i - t^\u2217_i)\n, \nR\n being the robust loss function (\nsmooth \nL_1\n).\n\n\n\n\n\n\nSettings\n\n\n\n\nN_{cls}\n normalize classification loss by mini-batch size (256)\n\n\n\n\nN_{reg}\n normalize \nreg\n term by the number of anchor locations (about 2400)\n\n\n\n\n\\lambda\n balancing parameter (10)\n\n\n\n\n\n\nRegression parameterizations method\n    \n\n\nNote that the set of \nk\n anchors do not share weights as regressor in the formula.\n\n\n\n\n\n\n\n\nShared RPN and Fast R-CNN training\n\n\n\n\nAlternating training\n: RPN \n-\n Fast R-CNN iterated.\n\n\nTrain RPN with ImageNet pre-trained\n\n\nTrain a separate FRCNN detector using the bbox in the first step\n\n\nUse detector network to initialize RPN training, shared conv layers fixed, only finetune RPN unique layers\n\n\nKeep the shared network fixed, only finetune the FRCNN unique layers\n\n\n\n\n\n\nApproximate joint training\n: RPN and FRCNN forward sequentially, backward combine their loss functions.\n\n\nProduces close results while reduces the training time by about 25-50% comparing with \nAlternating\n\n\n\n\n\n\nNon-approximate joint training\n\n\nFRCNN uses bounding box as input, but the \nApproximate joint training\n solution ignore the gradient w.r.t bounding box.\n\n\nNeed a differentiable RoI pooling layer w.r.t. bounding box coordinates -- \nRoI warping\n layer\n\n\n\n\n\n\n\n\nExperiments\n\n\n\n\nTo reduce redundancy, we adopt non-maximum suppression (NMS) on the proposal regions based on their \ncls\n scores\n\n\nTODO ...\n\n\nPre-region classifier\n\n\nGoogleNet is better than VGG-16\n\n\n3fc classifier is better than 1fc classifier\n\n\nStride", 
+            "title": "Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks", 
+            "text": "Paper  Author: Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun", 
+            "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#overview", 
+            "text": "Components of object detection system  Object proposals  Using Region Proposal Networks (RPN)    Deep network for classification  R-CNN mainly plays as a classifier, and it does not predict object bounds (except for refining by bounding box regression)      Faster R-CNN combine RPN and object detection network (share computation)", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#faster-r-cnn-architecture", 
+            "text": "", 
+            "title": "Faster R-CNN Architecture"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#rpn", 
+            "text": "RPN of FRCNN\n      Use dCNN (Visualizing, VGG-16) to get feature map  Sliding windows with size  n * n ( n = 3 )  Anchor is centered at the sliding window in question, and is associated with a scale and aspect ratio.  k = 9  anchors for each sliding window", 
+            "title": "RPN"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#loss-function", 
+            "text": "Positive label for two kinds of anchors  The anchor/anchors with the highest Intersection-overUnion (IoU) overlap with a ground-truth box  An anchor that has an IoU overlap higher than 0.7 with any ground-truth box.    Negative label  An anchor that has an IoU ratio lower than 0.3 for all ground-truth boxes.    Other anchors do not contribute to the training objective.  Multi-task loss function\n     L({p_i}, {t_i}) = \\frac{1}{N_{cls}}\\sum_iL_{cls} (p_i, p^\u2217_i)+\\lambda\\frac{1}{N_{reg}}\\sum_ip^\u2217_i L_{reg} (t_i, t^\u2217_i).    p_i  probability of an ancor being an object.   p^*_i  ground truth (1- object, 0- non-object).   L_{cls}  classification loss (cross entropy).   t_i  vector representing the 4 parameterized coordinates of the predicted bounding box.   t^*_i  ground-truth box associated with a positive anchor.   L_{reg} (t_i, t^\u2217_i) = R(t_i - t^\u2217_i) ,  R  being the robust loss function ( smooth  L_1 ).    Settings   N_{cls}  normalize classification loss by mini-batch size (256)   N_{reg}  normalize  reg  term by the number of anchor locations (about 2400)   \\lambda  balancing parameter (10)    Regression parameterizations method\n      Note that the set of  k  anchors do not share weights as regressor in the formula.", 
+            "title": "Loss function"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#shared-rpn-and-fast-r-cnn-training", 
+            "text": "Alternating training : RPN  -  Fast R-CNN iterated.  Train RPN with ImageNet pre-trained  Train a separate FRCNN detector using the bbox in the first step  Use detector network to initialize RPN training, shared conv layers fixed, only finetune RPN unique layers  Keep the shared network fixed, only finetune the FRCNN unique layers    Approximate joint training : RPN and FRCNN forward sequentially, backward combine their loss functions.  Produces close results while reduces the training time by about 25-50% comparing with  Alternating    Non-approximate joint training  FRCNN uses bounding box as input, but the  Approximate joint training  solution ignore the gradient w.r.t bounding box.  Need a differentiable RoI pooling layer w.r.t. bounding box coordinates --  RoI warping  layer", 
+            "title": "Shared RPN and Fast R-CNN training"
+        }, 
+        {
+            "location": "/201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/#experiments", 
+            "text": "To reduce redundancy, we adopt non-maximum suppression (NMS) on the proposal regions based on their  cls  scores  TODO ...  Pre-region classifier  GoogleNet is better than VGG-16  3fc classifier is better than 1fc classifier  Stride", 
+            "title": "Experiments"
+        }, 
+        {
+            "location": "/201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/", 
+            "text": "Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning\n\n\npaper link\n\n\n\n\n\n\n\n\nRe-read this to get the intuition of current working model.\n\n\n\n\nIntuitions\n\n\n\n\nThe author argue that the following solutions to extract temporal information are lack of long term temporal dependency. We need to model video temporal structure with multiple granularities.\n\n\nTwo-stream (optical flow is expensive and only short duration feature)\n\n\n3D Convnet ([Should have a link after reading this])\n\n\nVLAD (know nothing)\n\n\n\n\n\n\nLSTM can deal with long video, but the \nfavorable length is 30~80 frames\n.\n\n\nAdditional non-linearity is helpful, so we can stack LSTMs.\n\n\n\n\nModel\n\n\n\n\nPicture one, using stride (= 8) with attention as the input to the first layer lstm (number of steps set to 8).\n\n\nEvery next layer, use stride to divide previous output into several groups, and use attention on the group to make input.\n\n\nWhole model has 2 layers.\n\n\n\n\nResult\n\n\nCompare with FGM, Meanpool, SA, S2VT, LSTM-E, p-RNN. The performance is similar with p-RNN on MSVD.", 
+            "title": "Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning"
+        }, 
+        {
+            "location": "/201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/#hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning", 
+            "text": "paper link     Re-read this to get the intuition of current working model.", 
+            "title": "Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning"
+        }, 
+        {
+            "location": "/201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/#intuitions", 
+            "text": "The author argue that the following solutions to extract temporal information are lack of long term temporal dependency. We need to model video temporal structure with multiple granularities.  Two-stream (optical flow is expensive and only short duration feature)  3D Convnet ([Should have a link after reading this])  VLAD (know nothing)    LSTM can deal with long video, but the  favorable length is 30~80 frames .  Additional non-linearity is helpful, so we can stack LSTMs.", 
+            "title": "Intuitions"
+        }, 
+        {
+            "location": "/201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/#model", 
+            "text": "Picture one, using stride (= 8) with attention as the input to the first layer lstm (number of steps set to 8).  Every next layer, use stride to divide previous output into several groups, and use attention on the group to make input.  Whole model has 2 layers.", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/#result", 
+            "text": "Compare with FGM, Meanpool, SA, S2VT, LSTM-E, p-RNN. The performance is similar with p-RNN on MSVD.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201609/describing-videos-by-exploiting-temporal-structure/", 
+            "text": "Describing Videos by Exploiting Temporal Structure\n\n\n\n\npaper link\n\n\n\n\nThe first paper using attention on video caption task.\n\n\n\n\nModel\n\n\n\n\nGoogLeNet\n to extract frame feature.\n\n\nExtract temporal information in a video. Attention-\nglobal, 3D-CNN-\nlocal. Concatenate 3D-CNN and GoogLeNet feature together.\n\n\n3D-CNN is pre-trained on activity recognition datasets.\n\n\n\n\nResult\n\n\n\n\nDo experiments w,w/o attention/3-D CNN, found that the improvements brought by exploiting global and local temporal information are complimentary.", 
+            "title": "Describing Videos by Exploiting Temporal Structure"
+        }, 
+        {
+            "location": "/201609/describing-videos-by-exploiting-temporal-structure/#describing-videos-by-exploiting-temporal-structure", 
+            "text": "paper link   The first paper using attention on video caption task.", 
+            "title": "Describing Videos by Exploiting Temporal Structure"
+        }, 
+        {
+            "location": "/201609/describing-videos-by-exploiting-temporal-structure/#model", 
+            "text": "GoogLeNet  to extract frame feature.  Extract temporal information in a video. Attention- global, 3D-CNN- local. Concatenate 3D-CNN and GoogLeNet feature together.  3D-CNN is pre-trained on activity recognition datasets.", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201609/describing-videos-by-exploiting-temporal-structure/#result", 
+            "text": "Do experiments w,w/o attention/3-D CNN, found that the improvements brought by exploiting global and local temporal information are complimentary.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/", 
+            "text": "NIPS 2016 Tutorial: Generative Adversarial Networks\n\n\n\n\npaper\n\n\nslide\n\n\n\n\nWhy studying Generative Modeling?\n\n\n\n\nRepresent and manipulate high dimensional probability distribution\n\n\nIncorporated with reinforcement learning\n\n\nA connection between generative adversarial networks, inverse reinforcement learning, and energy-based models. \npaper\n\n\n\n\n\n\nCan be trained with missing data, \nsemi-supervised leaning\n\n\nEnable machine learning to work with multi-modal outputs\n\n\nMany tasks intrinsically require realistic generation of samples\n\n\nSingle image super-resolution. (Photo-realistic single image super-resolution using a generative adversarial network. \npaper\n)\n\n\nCreate art.\n\n\nImage to image translation.\n\n\n\n\n\n\n\n\nHow does Generative Models Work?\n\n\nMaximum likelihood\n\n\n\n\nMaximum likelihood estimation: choose the parameters for the model that maximize the likelihood of the training data.\n\n\nOrigin: \n\\theta^* = \\underset{\\theta}{\\arg\\max}\\prod_{i=1}^mp_{model}(x^{(i)}; \\theta)\n\n\n\n\nLog: \n\\theta^* = \\underset{\\theta}{\\arg\\max}\\sum_{i=1}^m\\log p_{model}(x^{(i)}; \\theta)\n\n\n\n\nKL divergence: \n\\theta^* = \\underset{\\theta}{\\arg\\min}D_{KL}(p_{data}(x)\\|p_{model}(x; \\theta))\n\n\n\n\n\n\n\n\n\n\nDeep generative models\n\n\n\n\nA taxonomy of deep generative models\n\n\n\n\n\n\n\n\n\n\nExplicit density models\n: directly define \np_{model}(x;\\theta)\n\n\n\n\n\n\nTractable explicit models\n: careful construction of models whose structure guarantees their tractability.\n\n\nFully visible belief networks (FVBN)\n\n\nUse chain rule of probability to decompose n-D distribution to 1-D\n\n\n\n\np_{model}(x) = \\prod_{i=1}^np_{model}(x_i|x_1,\\dots,x_{i-1})\n\n\n\n\nOne of the three most popular\n\n\nBasis of WaveNet\n\n\nCannot be parallelized, too slow\n\n\n\n\n\n\nNonlinear independent components analysis \n\n\nDefining continuous, nonlinear transformations between two different spaces\n\n\n\n\np_x(x) = p_z(g^{\u22121}(x))|\\det(\\frac{\\partial g^{\u22121}(x)}{\n\\partial x})|\n\n\n\n\nLatent variable \nz\n should have the same dimension as \nx\n.\n\n\n\n\n\n\n\n\n\n\nExplicit models requiring approximation\n: using intractable density function and use approximations to maximize the likelihood.\n\n\nVariational approximations\n\n\nDefines a lower bound\n\n\n\n\nL(x;\\theta) \\leq \\log p_{model}(x;\\theta).\n\n\n\n\nA learning algorithm that maximizes L is guaranteed to obtain at least as high a value of the log-likelihood as it does of \nL\n.\n\n\nVariational autoencoder\n\n\n\n\n\n\nMarkov chain approximations\n\n\n\n\nx' \u223c q(x'| x)\n.\n\n\nBy repeatedly updating \nx\n according to the transition operator \nq\n, Markov chain methods can sometimes guarantee that x will eventually converge to a sample from \np_{model}(x)\n.\n\n\nConvergence can be very slow\n\n\nBoltzmann machines\n\n\n\n\n\n\n\n\n\n\n\n\nImplicit density models\n: only sample for \np_{model}(x;\\theta)\n\n\n\n\n\n\nGAN is almost the only\n\n\nCompare GAN with others\n\n\nCan generate samples in parallel\n\n\nThe design of generator function has very few restrictions\n\n\nNo Markov chains are needed\n\n\nNo variational bound is needed\n\n\nSubjectively better\n\n\n\n\n\n\n\n\nHow do GANs work?\n\n\nFramework\n\n\n\n\n\n\nGenerator and discriminator\n\n\nGenerator create samples intended to come from the same distribution as the training data.\n\n\nDiscriminator examines samples to determine whether they are real or fake.\n\n\nGenerator function: \nx = G(z; \\theta^{(G)})\n, discriminator function: \nD(x; \\theta^{(D)})\n. Both are differentiable wrt input (\nz\n or \nx\n) and parameter (\n\\theta^{(G)}\n or \n\\theta^{(D)}\n).\n\n\nGenerator function \nG(z)\n input \nz\n can be provided at any layer and do not need to be the same dimension with \nx\n.\n\n\n\n\nTraining\n\n\n\n\nCost function for discriminator\n\n\n\n\nJ^{(D)}(\\theta^{(D)}, \\theta^{(G)})=-\\frac12 \\mathbb{E}_{x\\sim p_{data}}\\log D(x) -\\\\ \\frac12 \\mathbb{E}_z\\log(1 - D(G(z)))\n\n\n\n\nCross entropy, training sample from both real data and generator.\n\n\n\n\n\n\nGANs make approximations based on using supervised learning to estimate a ratio of two densities: \n\\frac{p_{data}(x)}{p_{model}(x)}\n\n\n\n\nCost function for generator: minmax game version\n\n\n\n\nJ^{(G)} = -J^{(D)}\n\n\n\n\nProblem: when the discriminator successfully rejects generator samples with high confidence, the generator's gradient vanishes.\n\n\n\n\n\n\nCost function for generator: non zeros-sum\n\n\n\n\nJ^{(G)} = -\\frac12 \\mathbb{E}_z\\log D(G(z))\n\n\n\n\n\n\n\n\nCost function for generator: max likelyhood game\n\n\n\n\nJ^{(G)}=-\\frac12\\mathbb{E}_z\\exp\\big(\\sigma^{-1}(D(G(z)))\\big)", 
+            "title": "NIPS 2016 Tutorial Generative Adversarial Networks"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#nips-2016-tutorial-generative-adversarial-networks", 
+            "text": "paper  slide", 
+            "title": "NIPS 2016 Tutorial: Generative Adversarial Networks"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#why-studying-generative-modeling", 
+            "text": "Represent and manipulate high dimensional probability distribution  Incorporated with reinforcement learning  A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models.  paper    Can be trained with missing data,  semi-supervised leaning  Enable machine learning to work with multi-modal outputs  Many tasks intrinsically require realistic generation of samples  Single image super-resolution. (Photo-realistic single image super-resolution using a generative adversarial network.  paper )  Create art.  Image to image translation.", 
+            "title": "Why studying Generative Modeling?"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#how-does-generative-models-work", 
+            "text": "", 
+            "title": "How does Generative Models Work?"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#maximum-likelihood", 
+            "text": "Maximum likelihood estimation: choose the parameters for the model that maximize the likelihood of the training data.  Origin:  \\theta^* = \\underset{\\theta}{\\arg\\max}\\prod_{i=1}^mp_{model}(x^{(i)}; \\theta)   Log:  \\theta^* = \\underset{\\theta}{\\arg\\max}\\sum_{i=1}^m\\log p_{model}(x^{(i)}; \\theta)   KL divergence:  \\theta^* = \\underset{\\theta}{\\arg\\min}D_{KL}(p_{data}(x)\\|p_{model}(x; \\theta))", 
+            "title": "Maximum likelihood"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#deep-generative-models", 
+            "text": "A taxonomy of deep generative models", 
+            "title": "Deep generative models"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#explicit-density-models-directly-define-p_modelxtheta", 
+            "text": "Tractable explicit models : careful construction of models whose structure guarantees their tractability.  Fully visible belief networks (FVBN)  Use chain rule of probability to decompose n-D distribution to 1-D   p_{model}(x) = \\prod_{i=1}^np_{model}(x_i|x_1,\\dots,x_{i-1})   One of the three most popular  Basis of WaveNet  Cannot be parallelized, too slow    Nonlinear independent components analysis   Defining continuous, nonlinear transformations between two different spaces   p_x(x) = p_z(g^{\u22121}(x))|\\det(\\frac{\\partial g^{\u22121}(x)}{\n\\partial x})|   Latent variable  z  should have the same dimension as  x .      Explicit models requiring approximation : using intractable density function and use approximations to maximize the likelihood.  Variational approximations  Defines a lower bound   L(x;\\theta) \\leq \\log p_{model}(x;\\theta).   A learning algorithm that maximizes L is guaranteed to obtain at least as high a value of the log-likelihood as it does of  L .  Variational autoencoder    Markov chain approximations   x' \u223c q(x'| x) .  By repeatedly updating  x  according to the transition operator  q , Markov chain methods can sometimes guarantee that x will eventually converge to a sample from  p_{model}(x) .  Convergence can be very slow  Boltzmann machines", 
+            "title": "Explicit density models: directly define p_{model}(x;\\theta)"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#implicit-density-models-only-sample-for-p_modelxtheta", 
+            "text": "GAN is almost the only  Compare GAN with others  Can generate samples in parallel  The design of generator function has very few restrictions  No Markov chains are needed  No variational bound is needed  Subjectively better", 
+            "title": "Implicit density models: only sample for p_{model}(x;\\theta)"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#how-do-gans-work", 
+            "text": "", 
+            "title": "How do GANs work?"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#framework", 
+            "text": "Generator and discriminator  Generator create samples intended to come from the same distribution as the training data.  Discriminator examines samples to determine whether they are real or fake.  Generator function:  x = G(z; \\theta^{(G)}) , discriminator function:  D(x; \\theta^{(D)}) . Both are differentiable wrt input ( z  or  x ) and parameter ( \\theta^{(G)}  or  \\theta^{(D)} ).  Generator function  G(z)  input  z  can be provided at any layer and do not need to be the same dimension with  x .", 
+            "title": "Framework"
+        }, 
+        {
+            "location": "/201702/nips-2016-tutorial-gan/#training", 
+            "text": "Cost function for discriminator   J^{(D)}(\\theta^{(D)}, \\theta^{(G)})=-\\frac12 \\mathbb{E}_{x\\sim p_{data}}\\log D(x) -\\\\ \\frac12 \\mathbb{E}_z\\log(1 - D(G(z)))   Cross entropy, training sample from both real data and generator.    GANs make approximations based on using supervised learning to estimate a ratio of two densities:  \\frac{p_{data}(x)}{p_{model}(x)}   Cost function for generator: minmax game version   J^{(G)} = -J^{(D)}   Problem: when the discriminator successfully rejects generator samples with high confidence, the generator's gradient vanishes.    Cost function for generator: non zeros-sum   J^{(G)} = -\\frac12 \\mathbb{E}_z\\log D(G(z))     Cost function for generator: max likelyhood game   J^{(G)}=-\\frac12\\mathbb{E}_z\\exp\\big(\\sigma^{-1}(D(G(z)))\\big)", 
+            "title": "Training"
+        }, 
+        {
+            "location": "/201612/aggregated-residual-transformations-for-deep-neural-networks/", 
+            "text": "Aggregated Residual Transformations for Deep Neural Networks\n\n\n\n\npaper\n\n\nAuthor: \nSaining Xie\n, \nRoss Girshick\n, Piotr Dollar\u00b4, \nZhuowen Tu\n, \nKaiming He\n\n\n\n\nModel\n\n\n\n\nSolution space of Inception architecture is a strict subspace of the solution space of a single large layer (e.g., 5\u00d75) operating on a high-dimensional embedding.\n\n\nThe transformations to be aggregated are all of the same topology.\n\n\nEquivalent forms:\n    \n\n\nThis strategy exposes a new dimension, which we call \u201ccardinality\u201d (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.\n\n\n\n\nExperiemnt\n\n\n\n\nSee original paper for training details.\n\n\nIncreasing cardinality is more efficient than increasing depth/width.\n\n\nImageNet\n\n\n224x224: 20.4% top-1, 5.3% top-5\n\n\n320x320/crop-to-299x299: 19.1% top-1, 4.4 top-5\n\n\n\n\n\n\nImageNet 5K (5000 class)\n\n\nCIFAR\n\n\n-10 3.58%\n\n\n-100 17.31%\n\n\n\n\n\n\nCOCO detection\n\n\n51.9 AP@0.5\n\n\n30.0 AP", 
+            "title": "Aggregated Residual Transformations for Deep Neural Networks (ResNeXt)"
+        }, 
+        {
+            "location": "/201612/aggregated-residual-transformations-for-deep-neural-networks/#aggregated-residual-transformations-for-deep-neural-networks", 
+            "text": "paper  Author:  Saining Xie ,  Ross Girshick , Piotr Dollar\u00b4,  Zhuowen Tu ,  Kaiming He", 
+            "title": "Aggregated Residual Transformations for Deep Neural Networks"
+        }, 
+        {
+            "location": "/201612/aggregated-residual-transformations-for-deep-neural-networks/#model", 
+            "text": "Solution space of Inception architecture is a strict subspace of the solution space of a single large layer (e.g., 5\u00d75) operating on a high-dimensional embedding.  The transformations to be aggregated are all of the same topology.  Equivalent forms:\n      This strategy exposes a new dimension, which we call \u201ccardinality\u201d (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width.", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/aggregated-residual-transformations-for-deep-neural-networks/#experiemnt", 
+            "text": "See original paper for training details.  Increasing cardinality is more efficient than increasing depth/width.  ImageNet  224x224: 20.4% top-1, 5.3% top-5  320x320/crop-to-299x299: 19.1% top-1, 4.4 top-5    ImageNet 5K (5000 class)  CIFAR  -10 3.58%  -100 17.31%    COCO detection  51.9 AP@0.5  30.0 AP", 
+            "title": "Experiemnt"
+        }, 
+        {
+            "location": "/201612/xception-deep-learning-with-depthwise-separable-convolutions/", 
+            "text": "Xception: Deep Learning with Depthwise Separable Convolutions\n\n\n\n\npaper\n\n\n\n\nIntuition\n\n\n\n\nInception series\n\n\nConv maps cross-channel correlation and spatial correlation at the same time.\n\n\nInception module makes this process easier and more efficient by explicitly factoring it into a series of operations that would independently look at cross-channel correlations and at spatial correlations.\n\n\n1x1 Conv -\n cross-channel correlation; 3x3 \n 5x5 Conv -\n spatial correlation.\n    \n\n\nAn extreme version of this separation is to entirely decouple the cross-channel and spatial operations, naming \nXception\n.\n\n\n\n\nXception\n\n\n\n\nXception module:\n    \n\n\nFirst use 1x1 Conv\n\n\nConduct depthwise separable convolution (DSC): each feature-map have different 3x3 Conv, then concatenate the result of each Conv.\n\n\nAdvantages: Efficient parameter usage\n\n\nWhole model\n    \n\n\n\n\nExperiment\n\n\n\n\nDataset: JET (internal Google dataset), ImageNet, FastEval14k.\n\n\nResult\n\n\nXception converges faster than Inception V3 and gets higher accuracy.\n\n\n21.0% top-1, 5.5% top-5 error on ImageNet.\n\n\nBetter with residual connection.\n\n\nWorse with non-linear in between the 1x1 and DSC.", 
+            "title": "Xception Deep Learning with Depthwise Separable Convolutions"
+        }, 
+        {
+            "location": "/201612/xception-deep-learning-with-depthwise-separable-convolutions/#xception-deep-learning-with-depthwise-separable-convolutions", 
+            "text": "paper", 
+            "title": "Xception: Deep Learning with Depthwise Separable Convolutions"
+        }, 
+        {
+            "location": "/201612/xception-deep-learning-with-depthwise-separable-convolutions/#intuition", 
+            "text": "Inception series  Conv maps cross-channel correlation and spatial correlation at the same time.  Inception module makes this process easier and more efficient by explicitly factoring it into a series of operations that would independently look at cross-channel correlations and at spatial correlations.  1x1 Conv -  cross-channel correlation; 3x3   5x5 Conv -  spatial correlation.\n      An extreme version of this separation is to entirely decouple the cross-channel and spatial operations, naming  Xception .", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201612/xception-deep-learning-with-depthwise-separable-convolutions/#xception", 
+            "text": "Xception module:\n      First use 1x1 Conv  Conduct depthwise separable convolution (DSC): each feature-map have different 3x3 Conv, then concatenate the result of each Conv.  Advantages: Efficient parameter usage  Whole model", 
+            "title": "Xception"
+        }, 
+        {
+            "location": "/201612/xception-deep-learning-with-depthwise-separable-convolutions/#experiment", 
+            "text": "Dataset: JET (internal Google dataset), ImageNet, FastEval14k.  Result  Xception converges faster than Inception V3 and gets higher accuracy.  21.0% top-1, 5.5% top-5 error on ImageNet.  Better with residual connection.  Worse with non-linear in between the 1x1 and DSC.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/", 
+            "text": "Densely Connected Convolutional Networks\n\n\n\n\nCode\n\n\npaper\n\n\nA dense block with 5 layers and growth rate 4:\n\n\n\n\n\nIntuition\n\n\n\n\nCurrent trend of CNN architecture: create short paths from early layers to later layers.\n\n\nResNet\n\n\nHighway network: The first network with more than 100 layers, bypassing paths\n\n\nStochastic depth: Improves the training of deep residual networks by dropping layers randomly during training, which manages to train a 1202-layer ResNet\n\n\nFractalNets\n\n\n\n\n\n\nWide filter is helpful.\n\n\nConnect all layers with each other.\n\n\nCombine features by concatenating them (ResNet combines by summation).\n\n\nDenseNet layers are very narrow (12 feature-maps per layer), resulting in less parameters\n\n\n\n\nModel\n\n\n\n\n\n\nDense connectivity: concatenate all the preceding layers:\n    \n\n\nComposite function:\n    \nH_l\n is defined as \nBN + ReLU + 3x3 Conv\n\n\nPooling and dense block\n\n\nSee figure above\n\n\nTransition layer\n between dense blocks, consist of \nBN + 1x1 Conv + 2x2 AveragePooing\n\n\n\n\n\n\nGrowth rate \nk\n:\n\n\nThe number of output feature-maps.\n\n\nThe \nl\n-th layer will have \nk x (l-1) + k_0\n input feature-maps (\nk_0\n:input image channels)\n\n\n\n\n\n\nBottleneck layers\n\n\nIntroduce 1x1 Conv before 3x3 Conv to reduce number of feature-maps will improve computation efficiency.\n\n\nH_l\n is changed to \nBN + ReLU + 1x1 Conv + BN + ReLU + 3x3 Conv\n\n\n1x1 Conv\n reduce the input to \n4k\n feature-maps in the experiment.\n\n\n\n\n\n\nCompression\n\n\nReduce feature-maps number in transition layer by factor \n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nDatasets\n\n\nCIFAR-10/100, 32x32\n\n\nZero-padded with 4 pixels on each side\n\n\nRandomly cropped to again produce 32\u00d732 images\n\n\nHalf of the images are then horizontally mirrored\n\n\n\n\n\n\nSVHN (Street View House Numbers), 32x32\n\n\nImageNet, 224x224, 1.2m for training, 50000 for validation, 1000 classes\n\n\n\n\n\n\nSettings: weight decay 10e-4, Nesterov momentum of 0.9 w\\o dampening, learning rate 0.1 with decay scheme, dropout when no data augmentation\n\n\nAccuracy result:\n\n\n3.46% on CIFAR-10, L=190, k=40\n\n\n17.18% on CIFAR-100, L=190, k=40\n\n\n1.59% on SVHN, L=100, k=24\n\n\n\n\n\n\nCapacity: the performance continues improving when L, k increase, showing the DenseNet is less prone to overfitting (???)\n\n\nParameter efficiency.\n\n\n\n\nComment\n\n\n\n\nBy \nXiangyu Zhang\n.\n\n\nThe reason that DenseNet would work is very likely to be the Pyramidal design (i.e. increasing number of filters along the network flow). Dense connection may not be superior according to his previous experiment. Other papers has demonstrate the effect of Pyramidal design, like Deep Pyramidal Residual Networks, which brings about an obvious 1~2% decrease in error rate on CIFAR.", 
+            "title": "Densely Connected Convolutional Networks"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/#densely-connected-convolutional-networks", 
+            "text": "Code  paper  A dense block with 5 layers and growth rate 4:", 
+            "title": "Densely Connected Convolutional Networks"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/#intuition", 
+            "text": "Current trend of CNN architecture: create short paths from early layers to later layers.  ResNet  Highway network: The first network with more than 100 layers, bypassing paths  Stochastic depth: Improves the training of deep residual networks by dropping layers randomly during training, which manages to train a 1202-layer ResNet  FractalNets    Wide filter is helpful.  Connect all layers with each other.  Combine features by concatenating them (ResNet combines by summation).  DenseNet layers are very narrow (12 feature-maps per layer), resulting in less parameters", 
+            "title": "Intuition"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/#model", 
+            "text": "Dense connectivity: concatenate all the preceding layers:\n      Composite function:\n     H_l  is defined as  BN + ReLU + 3x3 Conv  Pooling and dense block  See figure above  Transition layer  between dense blocks, consist of  BN + 1x1 Conv + 2x2 AveragePooing    Growth rate  k :  The number of output feature-maps.  The  l -th layer will have  k x (l-1) + k_0  input feature-maps ( k_0 :input image channels)    Bottleneck layers  Introduce 1x1 Conv before 3x3 Conv to reduce number of feature-maps will improve computation efficiency.  H_l  is changed to  BN + ReLU + 1x1 Conv + BN + ReLU + 3x3 Conv  1x1 Conv  reduce the input to  4k  feature-maps in the experiment.    Compression  Reduce feature-maps number in transition layer by factor", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/#experiment", 
+            "text": "Datasets  CIFAR-10/100, 32x32  Zero-padded with 4 pixels on each side  Randomly cropped to again produce 32\u00d732 images  Half of the images are then horizontally mirrored    SVHN (Street View House Numbers), 32x32  ImageNet, 224x224, 1.2m for training, 50000 for validation, 1000 classes    Settings: weight decay 10e-4, Nesterov momentum of 0.9 w\\o dampening, learning rate 0.1 with decay scheme, dropout when no data augmentation  Accuracy result:  3.46% on CIFAR-10, L=190, k=40  17.18% on CIFAR-100, L=190, k=40  1.59% on SVHN, L=100, k=24    Capacity: the performance continues improving when L, k increase, showing the DenseNet is less prone to overfitting (???)  Parameter efficiency.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/densely-connected-convolutional-networks/#comment", 
+            "text": "By  Xiangyu Zhang .  The reason that DenseNet would work is very likely to be the Pyramidal design (i.e. increasing number of filters along the network flow). Dense connection may not be superior according to his previous experiment. Other papers has demonstrate the effect of Pyramidal design, like Deep Pyramidal Residual Networks, which brings about an obvious 1~2% decrease in error rate on CIFAR.", 
+            "title": "Comment"
+        }, 
+        {
+            "location": "/201608/visualizing-and-understanding-convolutional-networks/", 
+            "text": "Visualizing and Understanding Convolutional Networks\n\n\npaper link\n\n\n\n\nApproach\n\n\nDeconv net. Use a trained model, feed an image and deconv back to get feature map.\nFor different layers, method of deconv:\n\n\n\n\nPooling\n When forwarding the image, recording the locations of the maxima within each pooling region in a set of switch variables. Use switch for unpooling when backwarding.\n\n\nRelu\n Relu again (\nWhy?\n).\n\n\nConv\n Convolution operation with transposed version of the same filter (\nWhy?\n).\n\n\nContrast norm\n Do not use any contrast normalization operations when in this\nreconstruction path (this statement has been deleted in the newest version, \nwhy?\n)\n\n\n\n\nResult\n\n\n\n\nThe author improve the previous model and get better result on ImageNet, especially better features in 1st/2nd layers.\n\n\nExtract feature map after different epoches, find that higher level features need more epoch to learn.\n\n\n(Seems irrelevent to the visualization tool) Do geometric transformation and feed images to CNN, calculate Euclidean distance of features. Find that ConvNet has some invariance to translation (more invariance gained in higher layer) and scaling, but not on rotation, .", 
+            "title": "Visualizing and Understanding Convolutional Networks"
+        }, 
+        {
+            "location": "/201608/visualizing-and-understanding-convolutional-networks/#visualizing-and-understanding-convolutional-networks", 
+            "text": "paper link", 
+            "title": "Visualizing and Understanding Convolutional Networks"
+        }, 
+        {
+            "location": "/201608/visualizing-and-understanding-convolutional-networks/#approach", 
+            "text": "Deconv net. Use a trained model, feed an image and deconv back to get feature map.\nFor different layers, method of deconv:   Pooling  When forwarding the image, recording the locations of the maxima within each pooling region in a set of switch variables. Use switch for unpooling when backwarding.  Relu  Relu again ( Why? ).  Conv  Convolution operation with transposed version of the same filter ( Why? ).  Contrast norm  Do not use any contrast normalization operations when in this\nreconstruction path (this statement has been deleted in the newest version,  why? )", 
+            "title": "Approach"
+        }, 
+        {
+            "location": "/201608/visualizing-and-understanding-convolutional-networks/#result", 
+            "text": "The author improve the previous model and get better result on ImageNet, especially better features in 1st/2nd layers.  Extract feature map after different epoches, find that higher level features need more epoch to learn.  (Seems irrelevent to the visualization tool) Do geometric transformation and feed images to CNN, calculate Euclidean distance of features. Find that ConvNet has some invariance to translation (more invariance gained in higher layer) and scaling, but not on rotation, .", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/", 
+            "text": "Going deeper with convolutions\n\n\npaper link\n\n\n\n\nFamous paper of \nGoogLeNet\n. Partly inspired by \nNetwork In Network\n. Related blog post \nhere\n.\n\n\n\n\nMotivation\n\n\n\n\nImproving the performance by increasing the \ndepth\n (more layers) and \nsize\n (more filters per layer). But this has two drawbacks:\n\n\nMore prone to overfitting.\n\n\nDramatically increase computation.\n\n\n\n\n\n\nTo solve this, consider replacing fully connected with \nsparse\n ones (Based on \nProvable bounds for learning some deep representations\n).\n\n\nThis is still problematic because today's computing infrastructures are inefficient on non-uniform sparse data structures.\n\n\n\n\n\n\nShould use an architecture of \nfilter-level sparsity\n.\n\n\n\n\nInception module\n\n\n\n\n\n\n\n\nMake the feature to be processed at various scales and then aggregated. (Easy to understand)\n\n\nUse 1x1 convolutions to reduce dimensionality thus require less computation. (The paper said dense and compressded representation is hard to process. \nDoes this means reducing dimensionality will also improve the performance?\n)\n\n\nGuiding principles??? Still not clear why the structure works as suggested in the paper.\n\n\n\n\nNetwork architecture\n\n\nSee the picture in the paper.\n\n\n\n\nMove from fully connected to average pooling.\n\n\nUse dropout!!!\n\n\nAdd auxiliary classifiers in the middle\n\n\nMake the lower layer also discriminative.\n\n\nProvide regularization. (\nWhy?\n)\n\n\nThese loss are added to the total loss with a discount weight.\n\n\n\n\n\n\n\n\nTraining details on ILSVRC classification\n\n\n\n\n7 independent versions (only differ in sampling methodologies and the random order).\n\n\nCropping approach in \ntest stage\n:\n\n\n4 scales of origin image, with shorter dimension sized 256, 288, 320, 352 respectively;\n\n\nEach takes the top, center, bottom squares;\n\n\nEach square takes 4 corners and the center 224x224 crop as well as the square resized to 224x224;\n\n\nEach crop takes origin and mirror version.\n\n\nLeads to 4x3x6x2 = 144 crops per image.\n\n\n\n\n\n\nSoftmax averaged over multiple crops and all the individual classifiers (7 models, not different classifiers in the same network) in \ntest stage\n.\n\n\n\n\nResult\n\n\nWinner of 2015 ILSVRC. 6.67% error on test set.", 
+            "title": "Going deeper with convolutions (GoogleNet)"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#going-deeper-with-convolutions", 
+            "text": "paper link   Famous paper of  GoogLeNet . Partly inspired by  Network In Network . Related blog post  here .", 
+            "title": "Going deeper with convolutions"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#motivation", 
+            "text": "Improving the performance by increasing the  depth  (more layers) and  size  (more filters per layer). But this has two drawbacks:  More prone to overfitting.  Dramatically increase computation.    To solve this, consider replacing fully connected with  sparse  ones (Based on  Provable bounds for learning some deep representations ).  This is still problematic because today's computing infrastructures are inefficient on non-uniform sparse data structures.    Should use an architecture of  filter-level sparsity .", 
+            "title": "Motivation"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#inception-module", 
+            "text": "Make the feature to be processed at various scales and then aggregated. (Easy to understand)  Use 1x1 convolutions to reduce dimensionality thus require less computation. (The paper said dense and compressded representation is hard to process.  Does this means reducing dimensionality will also improve the performance? )  Guiding principles??? Still not clear why the structure works as suggested in the paper.", 
+            "title": "Inception module"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#network-architecture", 
+            "text": "See the picture in the paper.   Move from fully connected to average pooling.  Use dropout!!!  Add auxiliary classifiers in the middle  Make the lower layer also discriminative.  Provide regularization. ( Why? )  These loss are added to the total loss with a discount weight.", 
+            "title": "Network architecture"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#training-details-on-ilsvrc-classification", 
+            "text": "7 independent versions (only differ in sampling methodologies and the random order).  Cropping approach in  test stage :  4 scales of origin image, with shorter dimension sized 256, 288, 320, 352 respectively;  Each takes the top, center, bottom squares;  Each square takes 4 corners and the center 224x224 crop as well as the square resized to 224x224;  Each crop takes origin and mirror version.  Leads to 4x3x6x2 = 144 crops per image.    Softmax averaged over multiple crops and all the individual classifiers (7 models, not different classifiers in the same network) in  test stage .", 
+            "title": "Training details on ILSVRC classification"
+        }, 
+        {
+            "location": "/201608/going-deeper-with-convolutions/#result", 
+            "text": "Winner of 2015 ILSVRC. 6.67% error on test set.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201608/network-in-network/", 
+            "text": "Network in Network\n\n\npaper link\n\n\n\n\nHighlights\n\n\n\n\nPropose a model replacing conventional convolution operation with \nmultilayer perceptron (MLP)\n, to gain better abstraction for all levels of features.\n\n\nThe cross channel parametric pooling layer is  is equivalent to 1x1 convolution layer with 1x1 kernel.\n\n\n\n\n\n\nReplacing fully connected (+dropout) with \nglobal average pooling (GAP)\n.\n\n\nGenerate one feature map for each corresponding category of the classification task in the last mlpconv layer.\n\n\nMore native to the convolution structure (enforcing correspondence between feature maps and categories).\n\n\nNo parameter, avoid overfitting.\n\n\n\n\n\n\n\n\nMultilayer perceptron (MLP)\n\n\nTraditional convolutional layer:\n\n\n\n\nHere \n is the pixel in the feature map, \n stands for the input patch centered at location \n, and \n is used to index the channels of the feature map.\n\n\nmlpconv:\n\n\n\n\n\n\n\n\n is the number of layers in the multilayer perceptron.\n\n\nResult\n\n\n\n\nState-of-the-art on CIFAR-10.\n\n\nNo evidance to show that mlp really performs better than conventional convolution. Seems that the paper made no direct comparison on direct connect with dropout in every layer. So one can argue that the performance improvement is gained by using dropout in every layer.\n\n\nTo a small linear network, classification result on CIFAR-10 is worse with GAP than with fully connect + dropout.", 
+            "title": "Network in Network"
+        }, 
+        {
+            "location": "/201608/network-in-network/#network-in-network", 
+            "text": "paper link", 
+            "title": "Network in Network"
+        }, 
+        {
+            "location": "/201608/network-in-network/#highlights", 
+            "text": "Propose a model replacing conventional convolution operation with  multilayer perceptron (MLP) , to gain better abstraction for all levels of features.  The cross channel parametric pooling layer is  is equivalent to 1x1 convolution layer with 1x1 kernel.    Replacing fully connected (+dropout) with  global average pooling (GAP) .  Generate one feature map for each corresponding category of the classification task in the last mlpconv layer.  More native to the convolution structure (enforcing correspondence between feature maps and categories).  No parameter, avoid overfitting.", 
+            "title": "Highlights"
+        }, 
+        {
+            "location": "/201608/network-in-network/#multilayer-perceptron-mlp", 
+            "text": "Traditional convolutional layer:   Here   is the pixel in the feature map,   stands for the input patch centered at location  , and   is used to index the channels of the feature map.  mlpconv:      is the number of layers in the multilayer perceptron.", 
+            "title": "Multilayer perceptron (MLP)"
+        }, 
+        {
+            "location": "/201608/network-in-network/#result", 
+            "text": "State-of-the-art on CIFAR-10.  No evidance to show that mlp really performs better than conventional convolution. Seems that the paper made no direct comparison on direct connect with dropout in every layer. So one can argue that the performance improvement is gained by using dropout in every layer.  To a small linear network, classification result on CIFAR-10 is worse with GAP than with fully connect + dropout.", 
+            "title": "Result"
+        }, 
+        {
+            "location": "/201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/", 
+            "text": "Deep Relative Distance Learning: Tell the Difference Between Similar Vehicles\n\n\n\n\npaper\n\n\ndataset\n\n\n\n\nHighlight\n\n\n\n\nVGG, propose \ncoupled clusters loss\n\n\nMulti-loss (car model, car ID)\n\n\nNew dataset \nVehicleID\n\n\n\n\nModel\n\n\n\n\nProblem with triplet loss\n\n\nWhen margin constraint already satisfied, the training sample makes no contribution to gradient decent.\n\n\nAncor point sensitive (negative point is pushed away according to the selected ancor and positive point).\n\n\n\n\n\n\nCoupled clusters loss\n\n\nSamples belong to the same identity should locate around a common center point.\n\n\nCenter point\n\n\n\n\nc^p = \\frac{1}{N^p}\\sum^{N^p}_i f(x^p_i)\n\n\n\n\n\n\n\n\nCoupled cluster loss\n\n\n\n\nL(W, X^p, X^n)=\\sum^{N^p}_i\\frac12 \\max\\{0, \\|f(x_i^p) - c^p\\|_2^2+\\alpha-\\|f(x^n_*)-c^p\\|^2_2\\}\n\n\n\n\n\n\nx_*^n\n is the nearest negative sample\n\n\n\n\n\n\n\n\n\n\nTwo kinds of differences: same vehicle model \n same identity\n\n\n\n\n\n\n\n\n\n\nDataset\n\n\n\n\n\n\nVehicleID (newly proposed)\n| Image number    | Training | Testing | All    |\n|-----------------|----------|---------|--------|\n| w\\ model label  | 47558    |  42638  | 90196  |\n| w\\o model label | 67540    |  68947  | 136487 |\n| All             | 110178   |  111585 | 226683 |\n\n\n\n\n\n\nCompCars\n\n\n\n\ndataset\n\n\npaper\n\n\n\n\n\n\nTasks\n\n\nVehicle model verification\n\n\nVehicle retrieval\n\n\nVehicle re-id", 
+            "title": "Deep Relative Distance Learning Tell the Difference Between Similar Vehicles"
+        }, 
+        {
+            "location": "/201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/#deep-relative-distance-learning-tell-the-difference-between-similar-vehicles", 
+            "text": "paper  dataset", 
+            "title": "Deep Relative Distance Learning: Tell the Difference Between Similar Vehicles"
+        }, 
+        {
+            "location": "/201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/#highlight", 
+            "text": "VGG, propose  coupled clusters loss  Multi-loss (car model, car ID)  New dataset  VehicleID", 
+            "title": "Highlight"
+        }, 
+        {
+            "location": "/201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/#model", 
+            "text": "Problem with triplet loss  When margin constraint already satisfied, the training sample makes no contribution to gradient decent.  Ancor point sensitive (negative point is pushed away according to the selected ancor and positive point).    Coupled clusters loss  Samples belong to the same identity should locate around a common center point.  Center point   c^p = \\frac{1}{N^p}\\sum^{N^p}_i f(x^p_i)     Coupled cluster loss   L(W, X^p, X^n)=\\sum^{N^p}_i\\frac12 \\max\\{0, \\|f(x_i^p) - c^p\\|_2^2+\\alpha-\\|f(x^n_*)-c^p\\|^2_2\\}    x_*^n  is the nearest negative sample      Two kinds of differences: same vehicle model   same identity", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/#dataset", 
+            "text": "VehicleID (newly proposed)\n| Image number    | Training | Testing | All    |\n|-----------------|----------|---------|--------|\n| w\\ model label  | 47558    |  42638  | 90196  |\n| w\\o model label | 67540    |  68947  | 136487 |\n| All             | 110178   |  111585 | 226683 |    CompCars   dataset  paper    Tasks  Vehicle model verification  Vehicle retrieval  Vehicle re-id", 
+            "title": "Dataset"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/", 
+            "text": "Vehicle Re-Identification for Automatic Video Traffic Surveillance\n\n\n\n\npaper\n\n\ndataset\n\n\nTasks: vehicle re-identification\n\n\n\n\nApproach\n\n\n\n\n3D bounding box\n\n\nLinear regression with color histogram and/or HOG feature\n\n\nCar image is projected (3D box -\n plane) and split into a grid, features are computed in each grid\n\n\nOnly the right and front sides are used to project\n\n\n\n\n\n\n\n\nDataset\n\n\n\n\nStatistics\n\n\n5 video shots from different angles, at roughly the same spot, each has A and B folder\n\n\nOver 800 vehicles\n\n\nTraining images are projected images\n\n\n\n\n\n\nPositive pairs generation\n\n\nEach car has a \nrepresentative\n image and serval \ncombined\n images\n\n\nEach camera has a ground truth cvs file, matching the same car (\nrepresentative\n image) in xA and xB (x=1,2,3,4,5)\n\n\nPositive pairs are randomly choosed (in the paper, around 12,000-16,000 of them are generated in total)\n\n\n\n\n\n\nNegative pairs are randomly selected within the same camera (xA and xB) rather than cross-camera pairs\n\n\nTest set\n\n\nContaining 1,232 pairs crowd-sourced by about 500 people\n\n\nUse threshold to judge if a pair is the same car and plot ROC curve", 
+            "title": "Vehicle Re-Identification for Automatic Video Traffic Surveillance"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#vehicle-re-identification-for-automatic-video-traffic-surveillance", 
+            "text": "paper  dataset  Tasks: vehicle re-identification", 
+            "title": "Vehicle Re-Identification for Automatic Video Traffic Surveillance"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#approach", 
+            "text": "3D bounding box  Linear regression with color histogram and/or HOG feature  Car image is projected (3D box -  plane) and split into a grid, features are computed in each grid  Only the right and front sides are used to project", 
+            "title": "Approach"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#dataset", 
+            "text": "Statistics  5 video shots from different angles, at roughly the same spot, each has A and B folder  Over 800 vehicles  Training images are projected images    Positive pairs generation  Each car has a  representative  image and serval  combined  images  Each camera has a ground truth cvs file, matching the same car ( representative  image) in xA and xB (x=1,2,3,4,5)  Positive pairs are randomly choosed (in the paper, around 12,000-16,000 of them are generated in total)    Negative pairs are randomly selected within the same camera (xA and xB) rather than cross-camera pairs  Test set  Containing 1,232 pairs crowd-sourced by about 500 people  Use threshold to judge if a pair is the same car and plot ROC curve", 
+            "title": "Dataset"
+        }, 
+        {
+            "location": "/201701/lstm-a-search-space-odyssey/", 
+            "text": "LSTM: A Search Space Odyssey\n\n\n\n\npaper\n\n\n\n\nLSTM overview\n\n\n\n\nThis\n is an awfully great explanation of the idea behind LSTM and its variations.\n\n\n\n\nExperiment\n\n\n\n\nVanilla LSTM\n\n\n\n\n\n\n\n\n\n\nTested modifications:\n\n\nNo Input Gate (NIG)\n\n\nNo Forget Gate (NFG)\n\n\nNo Output Gate (NOG)\n\n\nNo Input Activation Function (NIAF)\n\n\nNo Output Activation Function (NOAF)\n\n\nNo Peepholes (NP)\n\n\nCoupled Input and Forget Gate (CIFG)\n\n\nFull Gate Recurrence (FGR)\n\n\n\n\n\n\nHyperparameter Search\n\n\nnumber of LSTM blocks per hidden layer: log-uniform\nsamples from [20, 200];\n\n\nlearning rate: log-uniform samples from [10\u22126, 10\u22122];\n\n\nmomentum: 1 \u2212 log-uniform samples from [0.01, 1.0];\n\n\nstandard deviation of Gaussian input noise: uniform samples from [0, 1].\n\n\n\n\n\n\nTested datasets\n\n\nTIMIT Speech corpus (speech recognition)\n\n\nIAM Online Handwriting Database (OCR)\n\n\nJSB Chorales (music modeling)\n\n\n\n\n\n\nConclusions\n\n\nVanilla LSTM is good. Combine input/forget gate and remove peephole connections are worth trying.\n\n\nDo not remove output gate or forget gate.\n\n\nLearning rate is the most important parameter. Momentum is unimportant for LSTM. Gaussian noise on input may hurt.\n\n\nHyperparameters can be tuned independently.", 
+            "title": "LSTM A Search Space Odyssey"
+        }, 
+        {
+            "location": "/201701/lstm-a-search-space-odyssey/#lstm-a-search-space-odyssey", 
+            "text": "paper", 
+            "title": "LSTM: A Search Space Odyssey"
+        }, 
+        {
+            "location": "/201701/lstm-a-search-space-odyssey/#lstm-overview", 
+            "text": "This  is an awfully great explanation of the idea behind LSTM and its variations.", 
+            "title": "LSTM overview"
+        }, 
+        {
+            "location": "/201701/lstm-a-search-space-odyssey/#experiment", 
+            "text": "Vanilla LSTM      Tested modifications:  No Input Gate (NIG)  No Forget Gate (NFG)  No Output Gate (NOG)  No Input Activation Function (NIAF)  No Output Activation Function (NOAF)  No Peepholes (NP)  Coupled Input and Forget Gate (CIFG)  Full Gate Recurrence (FGR)    Hyperparameter Search  number of LSTM blocks per hidden layer: log-uniform\nsamples from [20, 200];  learning rate: log-uniform samples from [10\u22126, 10\u22122];  momentum: 1 \u2212 log-uniform samples from [0.01, 1.0];  standard deviation of Gaussian input noise: uniform samples from [0, 1].    Tested datasets  TIMIT Speech corpus (speech recognition)  IAM Online Handwriting Database (OCR)  JSB Chorales (music modeling)    Conclusions  Vanilla LSTM is good. Combine input/forget gate and remove peephole connections are worth trying.  Do not remove output gate or forget gate.  Learning rate is the most important parameter. Momentum is unimportant for LSTM. Gaussian noise on input may hurt.  Hyperparameters can be tuned independently.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/language-modeling-with-gated-convolutional-networks/", 
+            "text": "Language Modeling with Gated Convolutional Networks\n\n\n\n\npaper\n\n\nCNN beats LSTM in language model?\n\n\n\n\nModel\n\n\n\n\n\n\nWord embedding\n\n\nHidden layers: \nh_l(X)=(X*W+b) \\bigotimes \\sigma(X*V+c)\n\n\n\n\n\n\n\\bigotimes\n: element-wise product\n\n\n\n\nW,V \\in \\mathbb{R}^{k\\times m\\times n}\n\n\n\n\nNote that the begin of the sequence is zero-padded by \nk/2\n\n\nThe linear gate can alleviate vanishing gradient problem (can be seen as a multiplicative skip connection)\n\n\n\n\n\n\nAdaptive softmax\n\n\n\n\nExperiment\n\n\n\n\nDatasets: Google Billion Word (GBW), WikiText-103\n\n\nOptimization: Nesterov's momentum, gradient clipping (to 0.1), weight normalization\n\n\nCan gain stable and fast convergence with large learning rate such as 1\n\n\n\n\n\n\nHyper-parameter search\n\n\nResult\n\n\nSpeed: GCNN-22 compared with LSTM-2048 (units), better throughput and responsiveness\n\n\nComplexity: GCNN-22 compared with LSTM-2048 (units), less parameter and FLOPs/token\n\n\nGating mechanism: GLU \n (GTU (LSTM unit) \n=\n ReLU) \n Tanh\n\n\nNon-linear modeling: GLU \n Linear \n Bilinear\n\n\nNetwork depth: the deep the better\n\n\nContext: large context size brings lower test perplexity but returns diminish.", 
+            "title": "Language Modeling with Gated Convolutional Networks"
+        }, 
+        {
+            "location": "/201612/language-modeling-with-gated-convolutional-networks/#language-modeling-with-gated-convolutional-networks", 
+            "text": "paper  CNN beats LSTM in language model?", 
+            "title": "Language Modeling with Gated Convolutional Networks"
+        }, 
+        {
+            "location": "/201612/language-modeling-with-gated-convolutional-networks/#model", 
+            "text": "Word embedding  Hidden layers:  h_l(X)=(X*W+b) \\bigotimes \\sigma(X*V+c)    \\bigotimes : element-wise product   W,V \\in \\mathbb{R}^{k\\times m\\times n}   Note that the begin of the sequence is zero-padded by  k/2  The linear gate can alleviate vanishing gradient problem (can be seen as a multiplicative skip connection)    Adaptive softmax", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/language-modeling-with-gated-convolutional-networks/#experiment", 
+            "text": "Datasets: Google Billion Word (GBW), WikiText-103  Optimization: Nesterov's momentum, gradient clipping (to 0.1), weight normalization  Can gain stable and fast convergence with large learning rate such as 1    Hyper-parameter search  Result  Speed: GCNN-22 compared with LSTM-2048 (units), better throughput and responsiveness  Complexity: GCNN-22 compared with LSTM-2048 (units), less parameter and FLOPs/token  Gating mechanism: GLU   (GTU (LSTM unit)  =  ReLU)   Tanh  Non-linear modeling: GLU   Linear   Bilinear  Network depth: the deep the better  Context: large context size brings lower test perplexity but returns diminish.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201609/memory-networks/", 
+            "text": "Memory Networks\n\n\n\n\npaper link\n\n\n\n\nStructure\n\n\n\n\nI(input feature map)\n\n\nStandard pre-processing, e.g., parsing, co reference and entity resolution for text inputs\n\n\n\n\n\n\nG(generalization)\n\n\nSimplest form: \n store \n to a slot of memory.\n\n\nMore sophisticated form: update all \n based on \nx\n\n\n\n\n\n\nO(output feature map)\n\n\nFind relevant memories\n\n\n\n\n\n\nR(response)\n\n\nProcedure the final response given \no\n\n\n\n\n\n\n\n\nProcedure\n\n\n\n\nConvert \nx\n to an internal feature representation \nI(x)\n\n\nUpdate memories \n given the new input: \n for all \ni\n\n\nCompute output features \no\n given the new input and the memory: \n\n\nFinally, decode output features \no\n to give the final response: \n\n\n\n\nUse MemNN on Q\nA task\n\n\nBasic model\n\n\n\n\nI\n = input text (sentence or word-based)\n\n\nG\n = store new text into the next memory (\n)\n\n\nO\n = finding \n relevant memories (they try \n)\n\n\n\n\n\nR\n = produce a textual response \nr\n\n\nReturn \n (the last retrieved sentence)\n\n\nUse RNN to generate text\n\n\nReturn single word by ranking them:\n\n\n\n\n\n\n\nScore function in \nO\n and \nR\n (\n)\n\n\nwhere \n map original text to the D-dimensional feature space and \n is the embedding matrix, \n\n\nTraining\n\n\nloss function\n\n\n\nIntuition: make \n larger than all \n for at least \n.", 
+            "title": "Memory Networks"
+        }, 
+        {
+            "location": "/201609/memory-networks/#memory-networks", 
+            "text": "paper link", 
+            "title": "Memory Networks"
+        }, 
+        {
+            "location": "/201609/memory-networks/#structure", 
+            "text": "I(input feature map)  Standard pre-processing, e.g., parsing, co reference and entity resolution for text inputs    G(generalization)  Simplest form:   store   to a slot of memory.  More sophisticated form: update all   based on  x    O(output feature map)  Find relevant memories    R(response)  Procedure the final response given  o", 
+            "title": "Structure"
+        }, 
+        {
+            "location": "/201609/memory-networks/#procedure", 
+            "text": "Convert  x  to an internal feature representation  I(x)  Update memories   given the new input:   for all  i  Compute output features  o  given the new input and the memory:   Finally, decode output features  o  to give the final response:", 
+            "title": "Procedure"
+        }, 
+        {
+            "location": "/201609/memory-networks/#use-memnn-on-qa-task", 
+            "text": "", 
+            "title": "Use MemNN on Q&amp;A task"
+        }, 
+        {
+            "location": "/201609/memory-networks/#basic-model", 
+            "text": "I  = input text (sentence or word-based)  G  = store new text into the next memory ( )  O  = finding   relevant memories (they try  )   R  = produce a textual response  r  Return   (the last retrieved sentence)  Use RNN to generate text  Return single word by ranking them:    Score function in  O  and  R  ( ) \nwhere   map original text to the D-dimensional feature space and   is the embedding matrix,   Training  loss function  Intuition: make   larger than all   for at least  .", 
+            "title": "Basic model"
+        }, 
+        {
+            "location": "/201701/mars-a-video-benchmark-for-large-scale-person-re-identification/", 
+            "text": "MARS: A Video Benchmark for Large-Scale Person Re-identification\n\n\n\n\npaper\n\n\ndataset\n\n\ncode\n for evaluation in Matlab\n\n\nAuthors: \nZheng, Liang\n and Bie, Zhi and Sun, Yifan and Wang, Jingdong and Su, Chi and \nWang, Shengjin\n and \nTian, Qi\n\n\nSu, Chi and Liang, Zhang have worked on re-identification problem quite a time.\n\n\n\n\nProperties\n\n\n\n\nTracklets: automatically generated by DPM pedestrain detector and GMMCP tracker.\n\n\nOne identity in probe has multiple (averagely about 10 for test set) GT in gallery, mAP is more reasonable evaluation metric.\n\n\n1261 identities, around 20,000 video sequences.\n\n\nStatistics\n\n\n\n\n\n\n\n\nTrain/test set\n\n\n631/630 train/test identities.\n\n\nTest set has 2009 queries?? (1980 in the provided query_info.mat file)\n\n\n\n\n\n\n\n\nBenchmark methods\n\n\n\n\nTraditional features: HOG3D, GEI\n\n\nMetric learning: XQDA, Kissme\n\n\nCNN: CaffeNet + ImageNet pre-training\n\n\nFor CNN, metric learning is also applied\n\n\n\n\nExperiment\n\n\n\n\nOther datasets: PRID-2011, iLIDS-VID\n\n\nNetwork is trained on MARS and fine-tuned on these datasets\n\n\n\n\n\n\nFour modes: v-v, v-i, i-v, i-i (i-\nimage, v-\nvideo), v-v yields best result\n\n\nEvaluation of motion feature: all really low\n\n\nEvaluation of CNN features\n\n\nTrain from scratch or pre-training on ImageNet: pre-training brings +9.5% improvement\n\n\nUse metric learning or not\n\n\nTrained on MARS and directly transfer without training on other datasets, Euclidean is low, metric learning improves performances a lot\n\n\nCNN trained model can still benefit from metric learning\n\n\n\n\n\n\nTransfer from MARS\n\n\nTransfer from MARS \n only pre-training on ImageNet on PRID-2011\n\n\nTransfer from MARS \n only pre-training on ImageNet on iLIDS!!!\n\n\niLIDS-VID has different scene compared with MARS and PRID\n\n\n\n\n\n\nMax pooing or mean pooling\n\n\nMax pooling is generally better on MARS and PRID, while average pooling is better on iLIDS-VID (but from numeric result, average pooling is better when using Euclidean distance)\n\n\n\n\n\n\nMultiple queries: max pooling different tracklets within the same camera, further improve the performance (why???)\n\n\n\n\n\n\nNew state-of-the-art\n\n\nPRID-2011: 77.3% rank-1 with CNN MARS transfered and XQDA\n\n\niLIDS-VID: 53.0% with ImageNet transfered and XQDA\n\n\nMARS: 68.3%, 82.6%, 89.4% rank 1, 5, 20 respectively, 49.3% mAP with CNN + Kissme + MultipleQueries", 
+            "title": "MARS A Video Benchmark for Large-Scale Person Re-identification"
+        }, 
+        {
+            "location": "/201701/mars-a-video-benchmark-for-large-scale-person-re-identification/#mars-a-video-benchmark-for-large-scale-person-re-identification", 
+            "text": "paper  dataset  code  for evaluation in Matlab  Authors:  Zheng, Liang  and Bie, Zhi and Sun, Yifan and Wang, Jingdong and Su, Chi and  Wang, Shengjin  and  Tian, Qi  Su, Chi and Liang, Zhang have worked on re-identification problem quite a time.", 
+            "title": "MARS: A Video Benchmark for Large-Scale Person Re-identification"
+        }, 
+        {
+            "location": "/201701/mars-a-video-benchmark-for-large-scale-person-re-identification/#properties", 
+            "text": "Tracklets: automatically generated by DPM pedestrain detector and GMMCP tracker.  One identity in probe has multiple (averagely about 10 for test set) GT in gallery, mAP is more reasonable evaluation metric.  1261 identities, around 20,000 video sequences.  Statistics     Train/test set  631/630 train/test identities.  Test set has 2009 queries?? (1980 in the provided query_info.mat file)", 
+            "title": "Properties"
+        }, 
+        {
+            "location": "/201701/mars-a-video-benchmark-for-large-scale-person-re-identification/#benchmark-methods", 
+            "text": "Traditional features: HOG3D, GEI  Metric learning: XQDA, Kissme  CNN: CaffeNet + ImageNet pre-training  For CNN, metric learning is also applied", 
+            "title": "Benchmark methods"
+        }, 
+        {
+            "location": "/201701/mars-a-video-benchmark-for-large-scale-person-re-identification/#experiment", 
+            "text": "Other datasets: PRID-2011, iLIDS-VID  Network is trained on MARS and fine-tuned on these datasets    Four modes: v-v, v-i, i-v, i-i (i- image, v- video), v-v yields best result  Evaluation of motion feature: all really low  Evaluation of CNN features  Train from scratch or pre-training on ImageNet: pre-training brings +9.5% improvement  Use metric learning or not  Trained on MARS and directly transfer without training on other datasets, Euclidean is low, metric learning improves performances a lot  CNN trained model can still benefit from metric learning    Transfer from MARS  Transfer from MARS   only pre-training on ImageNet on PRID-2011  Transfer from MARS   only pre-training on ImageNet on iLIDS!!!  iLIDS-VID has different scene compared with MARS and PRID    Max pooing or mean pooling  Max pooling is generally better on MARS and PRID, while average pooling is better on iLIDS-VID (but from numeric result, average pooling is better when using Euclidean distance)    Multiple queries: max pooling different tracklets within the same camera, further improve the performance (why???)    New state-of-the-art  PRID-2011: 77.3% rank-1 with CNN MARS transfered and XQDA  iLIDS-VID: 53.0% with ImageNet transfered and XQDA  MARS: 68.3%, 82.6%, 89.4% rank 1, 5, 20 respectively, 49.3% mAP with CNN + Kissme + MultipleQueries", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201612/human-attribute-recognition-by-deep-hierarchical-contexts/", 
+            "text": "Human Attribute Recognition by Deep Hierarchical Contexts\n\n\n\n\nECCV 2016\n\n\npaper\n\n\nposter\n\n\nAuthor: Yining Li, \nChen Huang\n, \nChen Change Loy\n, and \nXiaoou Tang\n\n\nCUHK multimedia lab\n\n\n\n\nModel\n\n\n\n\nUse VGG-16.\n\n\nInput whole image and conduct ROI pooling to get features for different parts.\n\n\nFour different VGGs:\n\n\nWhole image;\n\n\nPerson bbox;\n\n\nPart-based bbox;\n\n\nSimilar bbox from other persons.\n\n\n\n\n\n\nAttribute cross entropy loss.\n\n\nDetails:\n\n\nUse ground truth person bbox\n\n\nUse \nPoselet\n to generate part bbox\n\n\n\n\n\n\n\n\nDatasets\n\n\n\n\nPropose \nWIDER attribute\n.\n\n\nBerkeley Person Attribute\n.\n\n\nHAT\n.\n\n\n\n\nExperiment\n\n\n\n\nCurrent state-of-the-art on BPA, HAT and WIDER.", 
+            "title": "Human Attribute Recognition by Deep Hierarchical Contexts (WIDER)"
+        }, 
+        {
+            "location": "/201612/human-attribute-recognition-by-deep-hierarchical-contexts/#human-attribute-recognition-by-deep-hierarchical-contexts", 
+            "text": "ECCV 2016  paper  poster  Author: Yining Li,  Chen Huang ,  Chen Change Loy , and  Xiaoou Tang  CUHK multimedia lab", 
+            "title": "Human Attribute Recognition by Deep Hierarchical Contexts"
+        }, 
+        {
+            "location": "/201612/human-attribute-recognition-by-deep-hierarchical-contexts/#model", 
+            "text": "Use VGG-16.  Input whole image and conduct ROI pooling to get features for different parts.  Four different VGGs:  Whole image;  Person bbox;  Part-based bbox;  Similar bbox from other persons.    Attribute cross entropy loss.  Details:  Use ground truth person bbox  Use  Poselet  to generate part bbox", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201612/human-attribute-recognition-by-deep-hierarchical-contexts/#datasets", 
+            "text": "Propose  WIDER attribute .  Berkeley Person Attribute .  HAT .", 
+            "title": "Datasets"
+        }, 
+        {
+            "location": "/201612/human-attribute-recognition-by-deep-hierarchical-contexts/#experiment", 
+            "text": "Current state-of-the-art on BPA, HAT and WIDER.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201609/market-1501/", 
+            "text": "Market-1501\n\n\n\n\ndataset link\n\n\ndataset paper link\n\n\n\n\nComparison of Re-id datasets\n\n\n\n\nFeatures\n\n\n\n\nLargest\n\n\nMultiple ground truth\n\n\nDis-tractor dataset\n\n\nPropose mAP evaluation metric", 
+            "title": "Market-1501"
+        }, 
+        {
+            "location": "/201609/market-1501/#market-1501", 
+            "text": "dataset link  dataset paper link", 
+            "title": "Market-1501"
+        }, 
+        {
+            "location": "/201609/market-1501/#comparison-of-re-id-datasets", 
+            "text": "", 
+            "title": "Comparison of Re-id datasets"
+        }, 
+        {
+            "location": "/201609/market-1501/#features", 
+            "text": "Largest  Multiple ground truth  Dis-tractor dataset  Propose mAP evaluation metric", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/", 
+            "text": "Microsoft Video Description Corpus (MSVD)\n\n\n\n\ndataset link\n\n\ndataset paper link\n\n\n\n\nDescription\n\n\nThis data consists of about 120K sentences collected during the summer of 2010. Workers on Mechanical Turk were paid to watch a short video snippet and then summarize the action in a single sentence. The result is a set of roughly parallel descriptions of more than 2,000 video snippets. Because the workers were urged to complete the task in the language of their choice, both paraphrase and bilingual alternations are captured in the data. We expect this data to be useful for training and testing translation and paraphrase algorithms. A paper describing how the data was created and used is in progress.\n\n\nScale\n\n\n1970 clips (train/validate/test:1200/100/670), 80k clip-description pairs (\nmulti-language\n), have \naudio\n.\n\n\nDuration\n\n\nUsually less than 10 seconds.\n\n\nExamples\n\n\n\n\n\n\n\n\nGround truth:\n\n\n\n\nA bird in a sink keeps getting under the running water from a faucet.\n\n\nA bird is bathing in a sink.\n\n\nA bird is splashing around under a running faucet.\n\n\nA bird is bathing in a sink.\n\n\nA bird is standing in a sink drinking water that is pouring out of the facet.\n\n\nA faucet is running while a bird stands in the sink below.\n\n\n......(many others)\n\n\n\n\n\n\n\n\nSome other video:\n\n\n\n\nA man is riding a motorcycle.\n\n\nThe man jumped on the wall.\n\n\nA man is playing pat-a-cake with a small black dog.\n\n\n\n\n\n\n\n\nPapers using the dataset\n\n\n\n\nHierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning\n\n\nDescribing Videos by Exploiting Temporal Structure", 
+            "title": "Microsoft Video Description Corpus (MSVD) (Youtube2Text)"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#microsoft-video-description-corpus-msvd", 
+            "text": "dataset link  dataset paper link", 
+            "title": "Microsoft Video Description Corpus (MSVD)"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#description", 
+            "text": "This data consists of about 120K sentences collected during the summer of 2010. Workers on Mechanical Turk were paid to watch a short video snippet and then summarize the action in a single sentence. The result is a set of roughly parallel descriptions of more than 2,000 video snippets. Because the workers were urged to complete the task in the language of their choice, both paraphrase and bilingual alternations are captured in the data. We expect this data to be useful for training and testing translation and paraphrase algorithms. A paper describing how the data was created and used is in progress.", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#scale", 
+            "text": "1970 clips (train/validate/test:1200/100/670), 80k clip-description pairs ( multi-language ), have  audio .", 
+            "title": "Scale"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#duration", 
+            "text": "Usually less than 10 seconds.", 
+            "title": "Duration"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#examples", 
+            "text": "Ground truth:   A bird in a sink keeps getting under the running water from a faucet.  A bird is bathing in a sink.  A bird is splashing around under a running faucet.  A bird is bathing in a sink.  A bird is standing in a sink drinking water that is pouring out of the facet.  A faucet is running while a bird stands in the sink below.  ......(many others)     Some other video:   A man is riding a motorcycle.  The man jumped on the wall.  A man is playing pat-a-cake with a small black dog.", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/201609/microsoft-video-description-corpus-msvd/#papers-using-the-dataset", 
+            "text": "Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning  Describing Videos by Exploiting Temporal Structure", 
+            "title": "Papers using the dataset"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/", 
+            "text": "Tumblr GIF (TGIF)\n\n\n\n\ndataset link\n\n\ndataset paper link\n\n\nweb page\n\n\n\n\nDescription\n\n\nThe Tumblr GIF (TGIF) dataset contains 100K animated GIFs and 120K sentences describing visual content of the animated GIFs. The animated GIFs have been collected from Tumblr, from randomly selected posts published between May and June of 2015. We provide the URLs of animated GIFs in this release. The sentences are collected via crowdsourcing, with a carefully designed annotation interface that ensures high quality dataset. We provide one sentence per animated GIF for the training and validation splits, and three sentences per GIF for the test split. The dataset shall be used to evaluate animated GIF/video description techniques.\n\n\nScale\n\n\n102,068 clips (train/validate/test: 80000/10780/11360). 1 caption/clip in train \n validate; 3 in test.\n\n\nDuration\n\n\nOverall 103 h, 3.65 s/clip.\n\n\nExamples\n\n\n\na boy and a girl are walking down hand in hand.\n\n\n\na young woman is speaking to another lady and she looks off to the side.\n\n\n\na man strums a guitar with his mouth wide open.\n\n\nPapers using the dataset", 
+            "title": "Tumblr GIF (TGIF)"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#tumblr-gif-tgif", 
+            "text": "dataset link  dataset paper link  web page", 
+            "title": "Tumblr GIF (TGIF)"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#description", 
+            "text": "The Tumblr GIF (TGIF) dataset contains 100K animated GIFs and 120K sentences describing visual content of the animated GIFs. The animated GIFs have been collected from Tumblr, from randomly selected posts published between May and June of 2015. We provide the URLs of animated GIFs in this release. The sentences are collected via crowdsourcing, with a carefully designed annotation interface that ensures high quality dataset. We provide one sentence per animated GIF for the training and validation splits, and three sentences per GIF for the test split. The dataset shall be used to evaluate animated GIF/video description techniques.", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#scale", 
+            "text": "102,068 clips (train/validate/test: 80000/10780/11360). 1 caption/clip in train   validate; 3 in test.", 
+            "title": "Scale"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#duration", 
+            "text": "Overall 103 h, 3.65 s/clip.", 
+            "title": "Duration"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#examples", 
+            "text": "a boy and a girl are walking down hand in hand.  \na young woman is speaking to another lady and she looks off to the side.  \na man strums a guitar with his mouth wide open.", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/201609/tumblr-gif-tgif/#papers-using-the-dataset", 
+            "text": "", 
+            "title": "Papers using the dataset"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/", 
+            "text": "Microsoft Research - Video to Text (MSR-VTT)\n\n\n\n\ndataset link\n\n\ndataset link 2 (both can download)\n\n\ndataset paper link\n\n\nvideo to language challenge link\n\n\n\n\n\n\nDescription\n\n\nMSR-VTT provides 10K web video clips with 41.2 hours and 200K clip-sentence pairs in total, covering the most comprehensive categories and diverse visual content, and representing the largest dataset in terms of sentence and vocabulary. Each clip is annotated with about 20 natural sentences by 1,327 AMT workers.\n\n\nScale\n\n\nTotal 7180 (train/validate/test: 6513/497/170 ?), in train/validate each has 20 GT sentences. We haven't got the test set sentences yet.\n\n\nDuration\n\n\nTotal 41.2 h. The duration of each clip is between 10 and 30 seconds. Yet when I see those in validation set, they are less than 10 s?\n\n\nExamples\n\n\nsee here", 
+            "title": "Microsoft Research - Video to Text (MSR-VTT)"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/#microsoft-research-video-to-text-msr-vtt", 
+            "text": "dataset link  dataset link 2 (both can download)  dataset paper link  video to language challenge link", 
+            "title": "Microsoft Research - Video to Text (MSR-VTT)"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/#description", 
+            "text": "MSR-VTT provides 10K web video clips with 41.2 hours and 200K clip-sentence pairs in total, covering the most comprehensive categories and diverse visual content, and representing the largest dataset in terms of sentence and vocabulary. Each clip is annotated with about 20 natural sentences by 1,327 AMT workers.", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/#scale", 
+            "text": "Total 7180 (train/validate/test: 6513/497/170 ?), in train/validate each has 20 GT sentences. We haven't got the test set sentences yet.", 
+            "title": "Scale"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/#duration", 
+            "text": "Total 41.2 h. The duration of each clip is between 10 and 30 seconds. Yet when I see those in validation set, they are less than 10 s?", 
+            "title": "Duration"
+        }, 
+        {
+            "location": "/201609/microsoft-research-video-to-text-msr-vtt/#examples", 
+            "text": "see here", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/", 
+            "text": "Vehicle Re-Identification for Automatic Video Traffic Surveillance\n\n\n\n\npaper\n\n\ndataset\n\n\nTasks: vehicle re-identification\n\n\n\n\nApproach\n\n\n\n\n3D bounding box\n\n\nLinear regression with color histogram and/or HOG feature\n\n\nCar image is projected (3D box -\n plane) and split into a grid, features are computed in each grid\n\n\nOnly the right and front sides are used to project\n\n\n\n\n\n\n\n\nDataset\n\n\n\n\nStatistics\n\n\n5 video shots from different angles, at roughly the same spot, each has A and B folder\n\n\nOver 800 vehicles\n\n\nTraining images are projected images\n\n\n\n\n\n\nPositive pairs generation\n\n\nEach car has a \nrepresentative\n image and serval \ncombined\n images\n\n\nEach camera has a ground truth cvs file, matching the same car (\nrepresentative\n image) in xA and xB (x=1,2,3,4,5)\n\n\nPositive pairs are randomly choosed (in the paper, around 12,000-16,000 of them are generated in total)\n\n\n\n\n\n\nNegative pairs are randomly selected within the same camera (xA and xB) rather than cross-camera pairs\n\n\nTest set\n\n\nContaining 1,232 pairs crowd-sourced by about 500 people\n\n\nUse threshold to judge if a pair is the same car and plot ROC curve", 
+            "title": "VehReID"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#vehicle-re-identification-for-automatic-video-traffic-surveillance", 
+            "text": "paper  dataset  Tasks: vehicle re-identification", 
+            "title": "Vehicle Re-Identification for Automatic Video Traffic Surveillance"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#approach", 
+            "text": "3D bounding box  Linear regression with color histogram and/or HOG feature  Car image is projected (3D box -  plane) and split into a grid, features are computed in each grid  Only the right and front sides are used to project", 
+            "title": "Approach"
+        }, 
+        {
+            "location": "/201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/#dataset", 
+            "text": "Statistics  5 video shots from different angles, at roughly the same spot, each has A and B folder  Over 800 vehicles  Training images are projected images    Positive pairs generation  Each car has a  representative  image and serval  combined  images  Each camera has a ground truth cvs file, matching the same car ( representative  image) in xA and xB (x=1,2,3,4,5)  Positive pairs are randomly choosed (in the paper, around 12,000-16,000 of them are generated in total)    Negative pairs are randomly selected within the same camera (xA and xB) rather than cross-camera pairs  Test set  Containing 1,232 pairs crowd-sourced by about 500 people  Use threshold to judge if a pair is the same car and plot ROC curve", 
+            "title": "Dataset"
+        }, 
+        {
+            "location": "/201701/action-recognition-overview/", 
+            "text": "Action Recognition Overview\n\n\nDatasets\n\n\n\n\nHuman activity dataset list\n\n\nUCF101\n\n\nHMDB51\n\n\nTHUMOS15 Challenge\n\n\nUCF Sports\n\n\nOlympic Sports\n\n\n\n\n\n\n\n\n\n\nDataset\n\n\nYear\n\n\n#Action\n\n\n#Clip\n\n\n\n\n\n\n\n\n\n\nKTH\n\n\n2004\n\n\n6\n\n\n10\n\n\n\n\n\n\nWeizmann\n\n\n2005\n\n\n9\n\n\n9\n\n\n\n\n\n\nIXMAS\n\n\n2006\n\n\n11\n\n\n33\n\n\n\n\n\n\nHollywood\n\n\n2008\n\n\n8\n\n\n30-140\n\n\n\n\n\n\nUCF Sports\n\n\n2009\n\n\n9\n\n\n14-35\n\n\n\n\n\n\nHollywood2\n\n\n2009\n\n\n12\n\n\n61-278\n\n\n\n\n\n\nUCF YouTube\n\n\n2009\n\n\n11\n\n\n100\n\n\n\n\n\n\nMSR\n\n\n2009\n\n\n3\n\n\n14-25\n\n\n\n\n\n\nOlympic\n\n\n2010\n\n\n16\n\n\n50\n\n\n\n\n\n\nUCF50\n\n\n2010\n\n\n50\n\n\nmin. 100\n\n\n\n\n\n\nHMDB51\n\n\n2011\n\n\n51\n\n\nmin. 101\n\n\n\n\n\n\nUCF101\n\n\n2013\n\n\n101\n\n\nabout 100-200\n\n\n\n\n\n\n\n\nPaper list\n\n\n\n\nAction Recognition with Improved Trajectories\n\n\nConvolutional Two-Stream Network Fusion for Video Action Recognition\n\n\n\n\nOther resources\n\n\n\n\nTHUMOS15 classification summary", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/201701/action-recognition-overview/#action-recognition-overview", 
+            "text": "", 
+            "title": "Action Recognition Overview"
+        }, 
+        {
+            "location": "/201701/action-recognition-overview/#datasets", 
+            "text": "Human activity dataset list  UCF101  HMDB51  THUMOS15 Challenge  UCF Sports  Olympic Sports      Dataset  Year  #Action  #Clip      KTH  2004  6  10    Weizmann  2005  9  9    IXMAS  2006  11  33    Hollywood  2008  8  30-140    UCF Sports  2009  9  14-35    Hollywood2  2009  12  61-278    UCF YouTube  2009  11  100    MSR  2009  3  14-25    Olympic  2010  16  50    UCF50  2010  50  min. 100    HMDB51  2011  51  min. 101    UCF101  2013  101  about 100-200", 
+            "title": "Datasets"
+        }, 
+        {
+            "location": "/201701/action-recognition-overview/#paper-list", 
+            "text": "Action Recognition with Improved Trajectories  Convolutional Two-Stream Network Fusion for Video Action Recognition", 
+            "title": "Paper list"
+        }, 
+        {
+            "location": "/201701/action-recognition-overview/#other-resources", 
+            "text": "THUMOS15 classification summary", 
+            "title": "Other resources"
+        }, 
+        {
+            "location": "/201701/UCF101/", 
+            "text": "UCF101\n\n\n\n\ndataset link\n\n\npaper link\n\n\npre-extracted optical flow\n\n\n\n\nStatistics\n\n\n\n\n13320 videos from 101 action categories.\n\n\nTime distribution per class\n\n\n\n\n\n\n\n\n\n\n\n\nLeader board\n\n\n\n\nConvolutional Two-Stream Network Fusion for Video Action Recognition\n\n\n93.5% accuracy", 
+            "title": "UCF101"
+        }, 
+        {
+            "location": "/201701/UCF101/#ucf101", 
+            "text": "dataset link  paper link  pre-extracted optical flow", 
+            "title": "UCF101"
+        }, 
+        {
+            "location": "/201701/UCF101/#statistics", 
+            "text": "13320 videos from 101 action categories.  Time distribution per class", 
+            "title": "Statistics"
+        }, 
+        {
+            "location": "/201701/UCF101/#leader-board", 
+            "text": "Convolutional Two-Stream Network Fusion for Video Action Recognition  93.5% accuracy", 
+            "title": "Leader board"
+        }, 
+        {
+            "location": "/201701/olympic-sports/", 
+            "text": "Olympic Sports\n\n\n\n\ndataset link\n\n\npaper link\n\n\n\n\nStatistics\n\n\n\n\n16 classes\n\n\nEach class contains 40 sequences for training and 10 for testing", 
+            "title": "Olympic Sports"
+        }, 
+        {
+            "location": "/201701/olympic-sports/#olympic-sports", 
+            "text": "dataset link  paper link", 
+            "title": "Olympic Sports"
+        }, 
+        {
+            "location": "/201701/olympic-sports/#statistics", 
+            "text": "16 classes  Each class contains 40 sequences for training and 10 for testing", 
+            "title": "Statistics"
+        }, 
+        {
+            "location": "/201701/HMDB/", 
+            "text": "HMDB51\n\n\n\n\ndataset link\n\n\n\n\nStatistics\n\n\n\n\n51 classes, 7000 clips\n\n\nClasses and number of clips\n    \n\n\nDuration distribution", 
+            "title": "HMDB51"
+        }, 
+        {
+            "location": "/201701/HMDB/#hmdb51", 
+            "text": "dataset link", 
+            "title": "HMDB51"
+        }, 
+        {
+            "location": "/201701/HMDB/#statistics", 
+            "text": "51 classes, 7000 clips  Classes and number of clips\n      Duration distribution", 
+            "title": "Statistics"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/", 
+            "text": "Learning from Simulated and Unsupervised Images through Adversarial Training\n\n\n\n\npaper\n\n\nThis is (probably?) the first paper from Apple in ML/CV field\n\n\n\n\nContribution\n\n\n\n\nPropose Simulate + Unsupervised training, using real world images to refine the synthetic images, with GAN\n\n\nTraining GAN using adversarial loss and a self-regularization loss\n\n\nKey modifications to stabilize GAN training and prevent artifacts\n\n\n\n\nFramework\n\n\n\n\nRefiner (Generator): \n\\tilde{x}:=R_\\theta(x)\n\n\n\n\nRefiner loss (general formular): \n\\mathcal{L}_R(\\theta)=\\sum_i l_{real}(\\theta; \\tilde{x}_i, \\mathcal{Y})+\\lambda l_{reg}(\\theta; \\tilde{x}_i, x_i)\n\n\n\n\n\n\nl_{reg}\n minimizing the difference between the synthetic and the refined images\n\n\n\n\n\n\nDiscriminator Loss: \n\\mathcal{L}_D(\\phi) = -\\sum_i \\log(D_{\\phi} (\\tilde{x}_i)) - \\sum_j \\log(1-D_{\\phi}(y_j))\n\n\n\n\nx~_i, y_j\n are randomly sampled from refined images and real images sets\n\n\n\n\n\n\nAlgorithm:\n\n\n\n\n\n\n\n\nL_R\n loss in the implementation of this paper: \n\\mathcal{L}_R(\\theta)=\\sum_i \\log(1-D_{\\phi}(R_{\\theta}(x_i)))+\\lambda||R_{\\theta}(x_i)-x_i||_1\n\n\n\n\n\n\nStabilize GAN training\n\n\n\n\nLocal adversarial loss: divide the refined image and real image into \nw x h\n regions and use separate discriminators to judge each region\n\n\n\n\nFinal loss is the sum of loss on each region\n\n\n\n\n\n\nUsing history of refined images\n\n\nTwo issues when only use the latest refined images\n\n\nDiverging of adversarial training\n\n\nThe refiner network re-introducing the artifacts that the discriminator had forgotten about\n\n\n\n\n\n\nBuffer history images, use \nb/2\n history images and \nb/2\n newly refined images in each iter\n\n\nUpdate \nb/2\n of the buffered images in each iter\n\n\n\n\n\n\n\n\nExperiments\n\n\n\n\nGaze estimation\n\n\nDataset: MPIIGaze dataset\n\n\nSynthesizer: UnityEyes\n\n\nVisual Turing test: human cannot tell the difference between refined and real images\n\n\nQuantitative result: 22.3% percentage of improvement\n\n\n\n\n\n\nHand pose estimation\n\n\nDataset: NYU hand pose dataset\n\n\nTraining CNN: Hour glass network", 
+            "title": "Learning from Simulated and Unsupervised Images through Adversarial Training"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/#learning-from-simulated-and-unsupervised-images-through-adversarial-training", 
+            "text": "paper  This is (probably?) the first paper from Apple in ML/CV field", 
+            "title": "Learning from Simulated and Unsupervised Images through Adversarial Training"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/#contribution", 
+            "text": "Propose Simulate + Unsupervised training, using real world images to refine the synthetic images, with GAN  Training GAN using adversarial loss and a self-regularization loss  Key modifications to stabilize GAN training and prevent artifacts", 
+            "title": "Contribution"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/#framework", 
+            "text": "Refiner (Generator):  \\tilde{x}:=R_\\theta(x)   Refiner loss (general formular):  \\mathcal{L}_R(\\theta)=\\sum_i l_{real}(\\theta; \\tilde{x}_i, \\mathcal{Y})+\\lambda l_{reg}(\\theta; \\tilde{x}_i, x_i)    l_{reg}  minimizing the difference between the synthetic and the refined images    Discriminator Loss:  \\mathcal{L}_D(\\phi) = -\\sum_i \\log(D_{\\phi} (\\tilde{x}_i)) - \\sum_j \\log(1-D_{\\phi}(y_j))   x~_i, y_j  are randomly sampled from refined images and real images sets    Algorithm:     L_R  loss in the implementation of this paper:  \\mathcal{L}_R(\\theta)=\\sum_i \\log(1-D_{\\phi}(R_{\\theta}(x_i)))+\\lambda||R_{\\theta}(x_i)-x_i||_1", 
+            "title": "Framework"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/#stabilize-gan-training", 
+            "text": "Local adversarial loss: divide the refined image and real image into  w x h  regions and use separate discriminators to judge each region   Final loss is the sum of loss on each region    Using history of refined images  Two issues when only use the latest refined images  Diverging of adversarial training  The refiner network re-introducing the artifacts that the discriminator had forgotten about    Buffer history images, use  b/2  history images and  b/2  newly refined images in each iter  Update  b/2  of the buffered images in each iter", 
+            "title": "Stabilize GAN training"
+        }, 
+        {
+            "location": "/201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/#experiments", 
+            "text": "Gaze estimation  Dataset: MPIIGaze dataset  Synthesizer: UnityEyes  Visual Turing test: human cannot tell the difference between refined and real images  Quantitative result: 22.3% percentage of improvement    Hand pose estimation  Dataset: NYU hand pose dataset  Training CNN: Hour glass network", 
+            "title": "Experiments"
+        }, 
+        {
+            "location": "/201701/flownet-learning-optical-flow-with-convolutional-networks/", 
+            "text": "FlowNet: Learning Optical Flow with Convolutional Networks\n\n\n\n\npaper\n\n\ncode\n\n\n\n\nHighlight\n\n\n\n\nFirst paper to use trained CNN for optical flow estimation\n\n\nIntroduce novel correlation layer\n\n\nRefine network by upsampling\n\n\n\n\nModel\n\n\n\n\n\n\nFlowNetSimple: concatenate two consecutive images.\n\n\nFlowNetCorr: use correlation layer\n\n\nCorrelation layer\n\n\nCalculated between two feature maps\n\n\n\n\nc(x_1, x_2) = \\sum_{o \\in [-k, k]\\times [-k, k]}<f_1(x_1+o), f_2(x_2+o)>\n\n\n\n\nSee model picture for an illustration\n\n\n\n\n\n\nRefinement\n\n\n\n\nConcatenate the upsampled flow prediction and conv feature map\n\n\n\n\n\n\n\n\nExperiment\n\n\n\n\nDatasets:\n\n\nMiddlebury\n\n\nKITTI\n\n\nSintel\n\n\nFlying Chairs (proposed, auto generated)\n\n\n\n\n\n\nLoss function: endpoint error -- Euclidean distance between the predicted flow vector and GT.\n\n\nConclusion\n\n\nFlowNet performs a little worse than other OF algorithm, but obviously faster.\n\n\nNetwork trained on Flying Chairs (auto generated) data has good generalization ability on natural scenes.", 
+            "title": "FlowNet Learning Optical Flow with Convolutional Networks"
+        }, 
+        {
+            "location": "/201701/flownet-learning-optical-flow-with-convolutional-networks/#flownet-learning-optical-flow-with-convolutional-networks", 
+            "text": "paper  code", 
+            "title": "FlowNet: Learning Optical Flow with Convolutional Networks"
+        }, 
+        {
+            "location": "/201701/flownet-learning-optical-flow-with-convolutional-networks/#highlight", 
+            "text": "First paper to use trained CNN for optical flow estimation  Introduce novel correlation layer  Refine network by upsampling", 
+            "title": "Highlight"
+        }, 
+        {
+            "location": "/201701/flownet-learning-optical-flow-with-convolutional-networks/#model", 
+            "text": "FlowNetSimple: concatenate two consecutive images.  FlowNetCorr: use correlation layer  Correlation layer  Calculated between two feature maps   c(x_1, x_2) = \\sum_{o \\in [-k, k]\\times [-k, k]}<f_1(x_1+o), f_2(x_2+o)>   See model picture for an illustration    Refinement   Concatenate the upsampled flow prediction and conv feature map", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201701/flownet-learning-optical-flow-with-convolutional-networks/#experiment", 
+            "text": "Datasets:  Middlebury  KITTI  Sintel  Flying Chairs (proposed, auto generated)    Loss function: endpoint error -- Euclidean distance between the predicted flow vector and GT.  Conclusion  FlowNet performs a little worse than other OF algorithm, but obviously faster.  Network trained on Flying Chairs (auto generated) data has good generalization ability on natural scenes.", 
+            "title": "Experiment"
+        }, 
+        {
+            "location": "/201609/temporal-segment-networks-towards-good-practices-for-deep-action-recognition/", 
+            "text": "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition\n\n\n\n\npaper link\n\n\n\n\nModel\n\n\n\n\nBased on \ntwo-stream\n\n\nEqually divide into \nK\n segments\n\n\nThis is like independently evaluate on three videos and combine their possibilities together via aggregation function (below).\n\n\n\n\n\n\nAggregation function \ng\n (averaging, maximum, and weighted averaging)\n\n\nModalities\n\n\nRGB (static info)\n\n\nRGB difference between two consecutive frames (appearance change)\n\n\nOptical flow\n\n\nWrapped OF (estimating homography matrix and compensating camera motion)\n\n\n\n\n\n\nCross-modality pre-training (utilize RGB models to initialize the temporal networks)\n\n\nBatch-normalization\n\n\nData augmentation\n\n\nCorner cropping (choose corner or center, not only center)\n\n\nMulti-scale cropping (select cropping scale {256, 224, 192, 168}), finally resized to 224 * 224\n\n\n\n\n\n\n\n\nExperiments\n\n\n\n\nDatasets: HMDB51, UCF101\n\n\nSettings (Sec 4.1)\n\n\nNumber of segments \nK = 3\n\n\n\n\n\n\nDifferent training strategy\n\n\nFrom scratch\n\n\nPre-train spatial stream\n\n\nCross-modality pre-training\n\n\n(Best) Combination of cross modality pre-training and partial BN with dropout\n\n\n\n\n\n\nDifferent aggregation function (max, average, weighted average pooling)\n\n\nDifferent modalities (RGB, RGB diff, optical flow, warped optical flow)\n\n\nWith RGB+of+wof performs best (RGB diff harm performance)\n\n\n\n\n\n\nDifferent CNN (BN-Inception, VGG-16, GoogLeNet)\n\n\nCompare with state-of-the-art\n\n\n(Interesting) Using \nDeepDraw\n to do class level visualization", 
+            "title": "Temporal Segment Networks Towards Good Practices for Deep Action Recognition"
+        }, 
+        {
+            "location": "/201609/temporal-segment-networks-towards-good-practices-for-deep-action-recognition/#temporal-segment-networks-towards-good-practices-for-deep-action-recognition", 
+            "text": "paper link", 
+            "title": "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition"
+        }, 
+        {
+            "location": "/201609/temporal-segment-networks-towards-good-practices-for-deep-action-recognition/#model", 
+            "text": "Based on  two-stream  Equally divide into  K  segments  This is like independently evaluate on three videos and combine their possibilities together via aggregation function (below).    Aggregation function  g  (averaging, maximum, and weighted averaging)  Modalities  RGB (static info)  RGB difference between two consecutive frames (appearance change)  Optical flow  Wrapped OF (estimating homography matrix and compensating camera motion)    Cross-modality pre-training (utilize RGB models to initialize the temporal networks)  Batch-normalization  Data augmentation  Corner cropping (choose corner or center, not only center)  Multi-scale cropping (select cropping scale {256, 224, 192, 168}), finally resized to 224 * 224", 
+            "title": "Model"
+        }, 
+        {
+            "location": "/201609/temporal-segment-networks-towards-good-practices-for-deep-action-recognition/#experiments", 
+            "text": "Datasets: HMDB51, UCF101  Settings (Sec 4.1)  Number of segments  K = 3    Different training strategy  From scratch  Pre-train spatial stream  Cross-modality pre-training  (Best) Combination of cross modality pre-training and partial BN with dropout    Different aggregation function (max, average, weighted average pooling)  Different modalities (RGB, RGB diff, optical flow, warped optical flow)  With RGB+of+wof performs best (RGB diff harm performance)    Different CNN (BN-Inception, VGG-16, GoogLeNet)  Compare with state-of-the-art  (Interesting) Using  DeepDraw  to do class level visualization", 
+            "title": "Experiments"
+        }, 
+        {
+            "location": "/201608/recurrent-models-of-visual-attention/", 
+            "text": "Recurrent Models of Visual Attention\n\n\npaper link\n\n\n\n\nTutorial and torch implementation \nhere\n.\n\n\n\n\n\n\nHighlights\n\n\n\n\nThey use \nreinforcement learning\n on part of the network.\n\n\nTheir visual attention is to extract a series of bandlimited sub-images, concretely, use the same center and different sizes to get sub-images and scale them to the same size.\n\n\n\n\nReinforce training method\n\n\nIn their model, they generate location for glimpse in each time step. They are assuming that the location is sampled from a normal distribution parameterized by \n and \n. They make \n to be fixed (thus hold a fixed attention band width), and try to learn propriate \n, which is the average glimpse location (detailed formulations are shown in the blog post above). Only the last time step and the predicted class is correct will give R=1. In other cases, R=0.\n\n\nNot finished\n\n\n\n\nHaven't seen the experiment result yet.", 
+            "title": "Recurrent Models of Visual Attention"
+        }, 
+        {
+            "location": "/201608/recurrent-models-of-visual-attention/#recurrent-models-of-visual-attention", 
+            "text": "paper link   Tutorial and torch implementation  here .", 
+            "title": "Recurrent Models of Visual Attention"
+        }, 
+        {
+            "location": "/201608/recurrent-models-of-visual-attention/#highlights", 
+            "text": "They use  reinforcement learning  on part of the network.  Their visual attention is to extract a series of bandlimited sub-images, concretely, use the same center and different sizes to get sub-images and scale them to the same size.", 
+            "title": "Highlights"
+        }, 
+        {
+            "location": "/201608/recurrent-models-of-visual-attention/#reinforce-training-method", 
+            "text": "In their model, they generate location for glimpse in each time step. They are assuming that the location is sampled from a normal distribution parameterized by   and  . They make   to be fixed (thus hold a fixed attention band width), and try to learn propriate  , which is the average glimpse location (detailed formulations are shown in the blog post above). Only the last time step and the predicted class is correct will give R=1. In other cases, R=0.", 
+            "title": "Reinforce training method"
+        }, 
+        {
+            "location": "/201608/recurrent-models-of-visual-attention/#not-finished", 
+            "text": "Haven't seen the experiment result yet.", 
+            "title": "Not finished"
+        }
+    ]
+}

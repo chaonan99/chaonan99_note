@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Embedding Deep Metric for Person Re-identification A Study Against Large Variation - Paper Notes</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Paper Notes</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CV <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+  <li class="dropdown-submenu">
+    <a href="#">ReID</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201701/video-based-person-re-identification-withaccumulative-motion-context/">Video-based Person Re-identification with Accumulative Motion Context</a>
+</li>
+            
+<li >
+    <a href="../deep-attributes-driven-person-re-identification/">Deep Attributes Driven Person Re-identification</a>
+</li>
+            
+<li >
+    <a href="../human-in-the-loop-person-re-identification/">Human-In-The-Loop Person Re-Identification</a>
+</li>
+            
+<li class="active">
+    <a href="./">Embedding Deep Metric for Person Re-identification A Study Against Large Variation</a>
+</li>
+            
+<li >
+    <a href="../gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/">Gated Siamese Convolutional Neural Network Architecture for Human Re-Identification</a>
+</li>
+            
+<li >
+    <a href="../joint-learning-of-single-image-and-cross-image-representations-for-person-re-identification/">Joint Learning of Single-image and Cross-image Representations for Person Re-identification</a>
+</li>
+            
+<li >
+    <a href="../../201609/end-to-end-comparative-attention-networks-for-person-re-identification/">End-to-End Comparative Attention Networks for Person Re-identification</a>
+</li>
+            
+<li >
+    <a href="../../201609/recurrent-convolutional-network-for-video-based-person-re-identification/">Recurrent Convolutional Network for Video-based Person Re-Identification</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Parsing/Segmentation</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201612/refinenet-multi-path-refinement-networks-for-high-resolution-semantic-segmentation/">RefineNet Multi-Path Refinement Networks for High-Resolution Semantic Segmentation</a>
+</li>
+            
+<li >
+    <a href="../../201612/pyramid-scene-parsing-network/">Pyramid Scene Parsing Network</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Detection</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201612/feature-pyramid-networks-for-object-detection/">Feature Pyramid Networks for Object Detection</a>
+</li>
+            
+<li >
+    <a href="../../201612/pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection/">PVANET Deep but Lightweight Neural Networks for Real-time Object Detection</a>
+</li>
+            
+<li >
+    <a href="../../201609/faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks/">Faster R-CNN Towards Real-Time Object Detection with Region Proposal Networks</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Captioning</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201609/hierarchical-recurrent-neural-encoder-for-video-representation-with-application-to-captioning/">Hierarchical Recurrent Neural Encoder for Video Representation with Application to Captioning</a>
+</li>
+            
+<li >
+    <a href="../../201609/describing-videos-by-exploiting-temporal-structure/">Describing Videos by Exploiting Temporal Structure</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">GAN</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201702/nips-2016-tutorial-gan/">NIPS 2016 Tutorial Generative Adversarial Networks</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">CNN</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201612/aggregated-residual-transformations-for-deep-neural-networks/">Aggregated Residual Transformations for Deep Neural Networks (ResNeXt)</a>
+</li>
+            
+<li >
+    <a href="../../201612/xception-deep-learning-with-depthwise-separable-convolutions/">Xception Deep Learning with Depthwise Separable Convolutions</a>
+</li>
+            
+<li >
+    <a href="../../201612/densely-connected-convolutional-networks/">Densely Connected Convolutional Networks</a>
+</li>
+            
+<li >
+    <a href="../../201608/visualizing-and-understanding-convolutional-networks/">Visualizing and Understanding Convolutional Networks</a>
+</li>
+            
+<li >
+    <a href="../../201608/going-deeper-with-convolutions/">Going deeper with convolutions (GoogleNet)</a>
+</li>
+            
+<li >
+    <a href="../../201608/network-in-network/">Network in Network</a>
+</li>
+    </ul>
+  </li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Vehicle</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201702/deep-relative-distance-learning-tell-the-difference-between-similar-vehicles/">Deep Relative Distance Learning Tell the Difference Between Similar Vehicles</a>
+</li>
+            
+<li >
+    <a href="../../201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/">Vehicle Re-Identification for Automatic Video Traffic Surveillance</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../201701/lstm-a-search-space-odyssey/">LSTM A Search Space Odyssey</a>
+</li>
+                            
+<li >
+    <a href="../../201612/language-modeling-with-gated-convolutional-networks/">Language Modeling with Gated Convolutional Networks</a>
+</li>
+                            
+<li >
+    <a href="../../201609/memory-networks/">Memory Networks</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bench <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../201701/mars-a-video-benchmark-for-large-scale-person-re-identification/">MARS A Video Benchmark for Large-Scale Person Re-identification</a>
+</li>
+                            
+<li >
+    <a href="../../201612/human-attribute-recognition-by-deep-hierarchical-contexts/">Human Attribute Recognition by Deep Hierarchical Contexts (WIDER)</a>
+</li>
+                            
+<li >
+    <a href="../../201609/market-1501/">Market-1501</a>
+</li>
+                            
+<li >
+    <a href="../../201609/microsoft-video-description-corpus-msvd/">Microsoft Video Description Corpus (MSVD) (Youtube2Text)</a>
+</li>
+                            
+<li >
+    <a href="../../201609/tumblr-gif-tgif/">Tumblr GIF (TGIF)</a>
+</li>
+                            
+<li >
+    <a href="../../201609/microsoft-research-video-to-text-msr-vtt/">Microsoft Research - Video to Text (MSR-VTT)</a>
+</li>
+                            
+<li >
+    <a href="../../201702/vehicle-re-identification-for-automatic-video-traffic-surveillance/">VehReID</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">Action Recognition</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../201701/action-recognition-overview/">Overview</a>
+</li>
+            
+<li >
+    <a href="../../201701/UCF101/">UCF101</a>
+</li>
+            
+<li >
+    <a href="../../201701/olympic-sports/">Olympic Sports</a>
+</li>
+            
+<li >
+    <a href="../../201701/HMDB/">HMDB51</a>
+</li>
+    </ul>
+  </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../201612/learning-from-simulated-and-unsupervised-images-through-adversarial-training/">Learning from Simulated and Unsupervised Images through Adversarial Training</a>
+</li>
+                            
+<li >
+    <a href="../../201701/flownet-learning-optical-flow-with-convolutional-networks/">FlowNet Learning Optical Flow with Convolutional Networks</a>
+</li>
+                            
+<li >
+    <a href="../../201609/temporal-segment-networks-towards-good-practices-for-deep-action-recognition/">Temporal Segment Networks Towards Good Practices for Deep Action Recognition</a>
+</li>
+                            
+<li >
+    <a href="../../201608/recurrent-models-of-visual-attention/">Recurrent Models of Visual Attention</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../human-in-the-loop-person-re-identification/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../gated-siamese-convolutional-neural-network-architecture-for-human-re-identification/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/chaonan99/chaonan99_note/tree/master/paper">
+                                <i class="fa fa-github"></i>GitHub
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#embedding-deep-metric-for-person-re-identification-a-study-against-large-variation">Embedding Deep Metric for Person Re-identification: A Study Against Large Variation</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#moderate-positive-mining">Moderate positive mining</a></li>
+            <li><a href="#metric-weight-constraint">Metric weight constraint</a></li>
+            <li><a href="#cnn-architecture">CNN architecture</a></li>
+            <li><a href="#experiments">Experiments</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="embedding-deep-metric-for-person-re-identification-a-study-against-large-variation">Embedding Deep Metric for Person Re-identification: A Study Against Large Variation</h2>
+<ul>
+<li>ECCV 2016</li>
+<li>Author: <a href="http://www.cbsr.ia.ac.cn/users/hailinshi/">Hailin Shi</a>, Yang Yang, Xiangyu Zhu, Shengcai Liao, Zhen Lei, Weishi Zheng, <a href="http://www.cbsr.ia.ac.cn/users/szli/">Stan Z. Li</a></li>
+</ul>
+<h3 id="overview">Overview</h3>
+<ul>
+<li>Re-id research topics:<ul>
+<li>Improving discriminative features.</li>
+<li>Good metric for comparison.</li>
+<li>This paper mainly focus on learning good metrics.</li>
+</ul>
+</li>
+<li>Influenced by face recognition method (the author also works on face recognition).</li>
+<li>Contributions:<ul>
+<li><strong>Moderate Positive Mining</strong>, a novel positive sample selection strategy for training CNN while the data has large intra-class variations.</li>
+<li><strong>Metric weight constraint</strong> (combine Euclidean distance with Mahalanobis distance).</li>
+</ul>
+</li>
+</ul>
+<h3 id="moderate-positive-mining">Moderate positive mining</h3>
+<ul>
+<li>Intuitions<ul>
+<li>Positive samples with large distance is harmful.</li>
+<li>Positive samples with too little distance have little contribution to convergance.</li>
+<li>What to do: reduce the intra-class variance while preserving the intrinsic graphical structure of pedestrian data via mining the moderate positive pairs in the local range (picture).
+<img alt="&lt;picture here&gt;" src="http://img.blog.csdn.net/20161025124254314" /></li>
+</ul>
+</li>
+<li>Algorithm of choosing moderate positive sample (picture)<ul>
+<li>Compute the distances of 1-all positive&amp;negative samples</li>
+<li>Mine the hardest negative sample (min distance negative), <img alt="equation" src="http://latex.codecogs.com/svg.latex?distance%20%3D%20d%5E%2A" /></li>
+<li>Subset of positive samples where distance is larger than <img alt="equation" src="http://latex.codecogs.com/svg.latex?d%5E%2A" /></li>
+<li>In this subset, find positive pair with min distance -- moderate positive
+<img alt="&lt;picture here&gt;" src="http://img.blog.csdn.net/20161025124317408" /></li>
+</ul>
+</li>
+</ul>
+<h3 id="metric-weight-constraint">Metric weight constraint</h3>
+<ul>
+<li>Euclidean distance shortcomings:<ul>
+<li>Sensitive to the scale?</li>
+<li>Blind to the correlation across dimensions</li>
+<li>Using the Mahalanobis distance is a better choice for multivariate metric, argued by other work</li>
+</ul>
+</li>
+<li>Another FC after distance between features is calculated to gain Mahalanobis distance.<ul>
+<li>Get Mahalanobis distance<ul>
+<li><img alt="equation" src="http://latex.codecogs.com/svg.latex?d%28x_1%2C%20x_2%29%3D%5Csqrt%7B%28x_1-x_2%29%5E%5Cmathbf%7BT%7DM%28x_1-x_2%29%7D" /></li>
+<li><img alt="equation" src="http://latex.codecogs.com/svg.latex?M%3DWW%5E%5Cmathbf%7BT%7D" /> (ensure <img alt="equation" src="http://latex.codecogs.com/svg.latex?M" /> is semi-definate matrix)</li>
+<li><img alt="equation" src="http://latex.codecogs.com/svg.latex?d%28x_1%2C%20x_2%29%3D%7C%7CW%5E%5Cmathbf%7BT%7D%28x_1-x_2%29%7C%7C_2" /></li>
+</ul>
+</li>
+<li>This can be implemented by an FC layer
+    <img alt="equation" src="http://latex.codecogs.com/svg.latex?y%3Df%28W%5E%5Cmathbf%7BT%7Dx%29" /></li>
+</ul>
+</li>
+<li>Weight constraint<ul>
+<li>Euclidean better generalization ability, less discriminability.</li>
+<li>Balance between Euclidean and Mahalanobis distance.</li>
+<li><img alt="equation" src="http://latex.codecogs.com/svg.latex?M" /> should have large values at the diagonal (Euclidean) and small values elsewhere, by giving constraint:<ul>
+<li><img alt="equation" src="http://latex.codecogs.com/svg.latex?%7C%7CWW%5E%5Cmathbf%7BT%7D-I%7C%7C%5E2_F%5Cleq%20C" /></li>
+</ul>
+</li>
+<li>Further combine the constraint into the loss function as a regularization term:<ul>
+<li>Triplet loss: <img alt="equation" src="http://latex.codecogs.com/svg.latex?L%20%3D%20d%28x_1%2C%20x_2%5Ep%29%2B%5Bm-d%28x_1%2C%20x_2%5En%29%5D" /> (margin set to 2 in the experiment)</li>
+<li>Regularization: <img alt="equation" src="http://latex.codecogs.com/svg.latex?%5Chat%7BL%7D%3DL%2B%5Cfrac%5Clambda2%7C%7CWW%5E%5Cmathbf%7BT%7D-I%7C%7C%5E2_F" /> (tune <img alt="equation" src="http://latex.codecogs.com/svg.latex?%5Clambda" /> to get the best trade-off)</li>
+<li>Gradient w.r.t <img alt="equation" src="http://latex.codecogs.com/svg.latex?W" /> is computed by <img alt="equation" src="http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Cpartial%20%5Chat%7BL%7D%7D%7B%5Cpartial%20W%7D%3D%5Cfrac%7B%5Cpartial%20L%7D%7B%5Cpartial%20W%7D%2B%5Clambda%28WW%5E%5Cmathbf%7BT%7D-I%29W" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cnn-architecture">CNN architecture</h3>
+<p><img alt="&lt;picture here&gt;" src="http://img.blog.csdn.net/20161025124349065" /></p>
+<p><img alt="CNN structure" src="http://img.blog.csdn.net/20161025124443754" /></p>
+<ul>
+<li>3 branches CNN<ul>
+<li>Original image 128x64 =&gt; 3x64x64 (with overlap)</li>
+<li>Untied (unshared) filter between CNN branches to learn specific features from the different human body parts of pedestrian image.</li>
+</ul>
+</li>
+</ul>
+<h3 id="experiments">Experiments</h3>
+<ul>
+<li>Their baseline is very weak (worse than CUHK-03 baseline)</li>
+<li>Three parts are analyzed<ul>
+<li>Moderate positive and hard negative (improve 10%+)</li>
+<li>Weight constraint, tune on <img alt="equation" src="http://latex.codecogs.com/svg.latex?%5Clambda" /> (<img alt="equation" src="http://latex.codecogs.com/svg.latex?%5Clambda" /> around <img alt="equation" src="http://latex.codecogs.com/svg.latex?10%5E%7B-2%7D" /> gets good trade-off)</li>
+<li>Tied or untied filters between branches (Untied a little better)</li>
+</ul>
+</li>
+<li>Augmentation<ul>
+<li>Random translation</li>
+<li>Randomly cropped (0-5 pixels) in horizon and vertical, and stretched to recover the size</li>
+</ul>
+</li>
+<li>Datasets<ul>
+<li>CUHK03 (Rank-1: 61.32% with hand-crafted bbox, 52.09% with detected bbox)</li>
+<li>CUHK01 + Market-1501 in training (Rank-1: 86.59%)</li>
+<li>VIPeR (Rank-1: 43.39%)</li>
+</ul>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
