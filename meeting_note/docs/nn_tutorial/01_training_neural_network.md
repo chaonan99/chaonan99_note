@@ -12,7 +12,6 @@
 * Dissretized, gradient descent may not converge
 * Theoratically can be solved by Newton's method ($H^{-1}$)
 * Gauss-Newton algorithm
-    * $X_{t+1}=X_t - \frac{\e f(X)}{\e X}$
 
 ## Linear Regression
 * Gauss, $y=\hat{y}-WX$

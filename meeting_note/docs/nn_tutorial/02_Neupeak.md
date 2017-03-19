@@ -1,6 +1,5 @@
 # Neupeak Introduction
 
-<<<<<<< HEAD
 * `npk-model-manip some-model shell`
 * `load_dataset('dataset.py:train:remote')`
 * `O.grad`
@@ -31,12 +30,12 @@
 ## Debug
 * `reshape`
 * `callback_injector`
-    ```python
-    def cb(x, value):
-        print(value.eval())
-        embed()
-    x = O.callback_injector(x, cb)
-    ```
+```python
+def cb(x, value):
+    print(value.eval())
+    embed()
+x = O.callback_injector(x, cb)
+```
 
 ## Loop
 
