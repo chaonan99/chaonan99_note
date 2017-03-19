@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="./img/favicon.ico">
-        <title>My Docs</title>
+        <title>Everywhere Meeting</title>
         <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="./css/base.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=".">My Docs</a>
+            <a class="navbar-brand" href=".">Everywhere Meeting</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -183,30 +183,47 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#meeting-note-site">Meeting Note Site</a></li>
-            <li><a href="#commands">Commands</a></li>
-            <li><a href="#project-layout">Project layout</a></li>
-            <li><a href="#license">LICENSE</a></li>
+        <li class="main active"><a href="#welcome-to-my-note-for-meeting">Welcome to My Note for Meeting</a></li>
+            <li><a href="#to-install-and-build-this-note">To install and build this note</a></li>
+            <li><a href="#license">License</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="meeting-note-site">Meeting Note Site</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="welcome-to-my-note-for-meeting">Welcome to My Note for Meeting</h1>
+<p>Containing note for meeting, talks, weekly report, etc.</p>
+<p>This note is now build with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+<h2 id="to-install-and-build-this-note">To install and build this note</h2>
+<ul>
+<li>Install MkDocs</li>
+</ul>
+<pre><code class="shell">pip install mkdocs
+</code></pre>
+
+<ul>
+<li>Python-Markdown is needed for correct rendering math equation. Please consider installing <a href="https://github.com/chaonan99/python-markdown-math">my fork</a> of this extension (I am used to <code>$XXX$</code> for inline math and <code>$$XXX$$</code> for stand alone).</li>
+</ul>
+<pre><code class="shell">git clone https://github.com/chaonan99/python-markdown-math.git
+cd python-markdown-math
+python setup.py build
+python setup.py install
+</code></pre>
+
+<ul>
+<li>Use mkdocs' server to view the note (in paper dir)</li>
+</ul>
+<pre><code class="shell">mkdocs serve
+</code></pre>
+
+<p>Here are some useful mkdocs command.</p>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-<h2 id="license">LICENSE</h2></div>
+<h2 id="license">License</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">chaonan99's note</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://chaonan99.github.io" property="cc:attributionName" rel="cc:attributionURL">Haonan Chen</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -246,5 +263,5 @@ docs/
 
 <!--
 MkDocs version : 0.16.1
-Build Date UTC : 2017-03-19 10:02:28
+Build Date UTC : 2017-03-19 11:57:21
 -->
