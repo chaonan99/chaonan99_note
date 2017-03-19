@@ -487,7 +487,7 @@
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/", 
-            "text": "Training Neural Network\n\n\nMachine Learing as Optimization\n\n\n\n\nSupervised learning\n\n\n$\\min_\\theta d(y,\\hat{y})$\n\n\n\n\n\n\nRegularized sypervised learning\n\n\n$\\min_\\theta d(y,\\hat{y}) + r(\\hat{y})$\n\n\n\n\n\n\nProbabilistic interpretation\n\n\n$\\log p(y|\\hat{y})$\n\n\n\n\n\n\nGradient descent\n    $\\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}$\n\n\nDissretized, gradient descent may not converge\n\n\nTheoratically can be solved by Newton's method ($H^{-1}$)\n\n\nGauss-Newton algorithm\n\n\n$X_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}$\n\n\n\n\n\n\n\n\nLinear Regression\n\n\n\n\nGauss, $y=\\hat{y}-WX$\n\n\nToo much channel, bottle neck use identity\n\n\n\n\nCNN\n\n\n\n\nConvolution is linear\n\n\nEquivalent to matrix multiply\n\n\nPossion matrix\n\n\n\n\n\n\nWhy not FC\n\n\nData is never enough\n\n\nTranslation invariance\n\n\nGlobal minimum cannot be realized\n\n\n\n\n\n\nConvolution as matrix product\n\n\nfeature map $\n$\n\n\nweights $\n$\n\n\nK: for efficience\n\n\nSteps\n\n\nImage to column\n\n\nKernel to matrix\n\n\nMatrix mul matrix\n\n\n\n\n\n\n\n\n\n\nLocally-connected\n\n\nChannl-wise convolution\n\n\n\n\nNonlinearity\n\n\n\n\nTanh: need exp (not recommended)\n\n\nMaxout\n\n\n\n\nBatch Normalization\n\n\n\n\nStill need augmentation?\n\n\n$\\alpha \\frac{X-mean(X)}{std(X)}+\\beta$\n\n\nStabilizer\n\n\nnpk-sanitize-batch-normalization\n\n\n\n\nLearning rate\n\n\n\n\nStep length\n\n\n\n\nLearning rule\n\n\n\n\nSGD + Momentum: $\\Delta w := -\\eta\\$\n\n\nAdaGrad\n\n\nADAM: may not get good converge point, but is stable\n\n\nADAMV8: accumulate gradient, update several batches in one shot\n\n\n\n\nDropout\n\n\nColumnwise FC\n\n\n\n\nFaster than RNN\n\n\nCan be implemented by reshape and conv\n\n\n\n\nParameter Sharing\n\n\n\n\nBy \nNetworkVisitor\n\n\niter_dep_opr\n\n\n\n\n\n\n\n\nCheck List\n\n\n\n\nData \nmust\n be shuffled (expectation of SGD must represent GD)\n\n\nRepeat data, label is harmful\n\n\n\n\n\n\nColor image are not in BGR\n\n\nHuman face should not be blue\n\n\n\n\n\n\nRead the work log if there is one\n\n\nCheck #OP and learnable params in your model\n\n\nDo not use too much learnable params\n\n\n\n\n\n\n\n\nModel Death\n\n\n\n\nTweak learning rate\n\n\nMay add BN\n\n\nMay try branch supervisions\n\n\nTry value range of parameters\n\n\nLower dropout\n\n\nTry wider \n deeper model\n\n\nChannel x2 /2\n\n\nIniting  from a working model\n\n\nCan steal some layers\n\n\n\n\n\n\nCurriculum learning\n\n\nInitiating a model o harder data with a model that works \non easier data\n\n\n\n\n\n\n\n\nGood practice\n\n\n\n\n100 class to 1000 class\n\n\nMultitask learning\n\n\nClass + heat map\n\n\n\n\n\n\nHard example mining\n\n\nFeature map should be gradually smaller", 
+            "text": "Training Neural Network\n\n\nMachine Learing as Optimization\n\n\n\n\nSupervised learning\n\n\n\n\n\\min_\\theta d(y,\\hat{y})\n\n\n\n\n\n\n\n\nRegularized sypervised learning\n\n\n\n\n\\min_\\theta d(y,\\hat{y}) + r(\\hat{y})\n\n\n\n\n\n\n\n\nProbabilistic interpretation\n\n\n\n\n\\log p(y|\\hat{y})\n\n\n\n\n\n\n\n\nGradient descent\n    \n\\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}\n\n\n\n\nDissretized, gradient descent may not converge\n\n\nTheoratically can be solved by Newton's method (\nH^{-1}\n)\n\n\nGauss-Newton algorithm\n\n\n\n\nX_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}\n\n\n\n\n\n\n\n\n\n\nLinear Regression\n\n\n\n\nGauss, \ny=\\hat{y}-WX\n\n\n\n\nToo much channel, bottle neck use identity\n\n\n\n\nCNN\n\n\n\n\nConvolution is linear\n\n\nEquivalent to matrix multiply\n\n\nPossion matrix\n\n\n\n\n\n\nWhy not FC\n\n\nData is never enough\n\n\nTranslation invariance\n\n\nGlobal minimum cannot be realized\n\n\n\n\n\n\nConvolution as matrix product\n\n\nfeature map \n<N, C, H', W'>\n\n\n\n\nweights \n<K, C, H, W>\n\n\n\n\nK: for efficience\n\n\nSteps\n\n\nImage to column\n\n\nKernel to matrix\n\n\nMatrix mul matrix\n\n\n\n\n\n\n\n\n\n\nLocally-connected\n\n\nChannl-wise convolution\n\n\n\n\nNonlinearity\n\n\n\n\nTanh: need exp (not recommended)\n\n\nMaxout\n\n\n\n\nBatch Normalization\n\n\n\n\nStill need augmentation?\n\n\n\n\n\\alpha \\frac{X-mean(X)}{std(X)}+\\beta\n\n\n\n\nStabilizer\n\n\nnpk-sanitize-batch-normalization\n\n\n\n\nLearning rate\n\n\n\n\nStep length\n\n\n\n\nLearning rule\n\n\n\n\nSGD + Momentum: \n\\Delta w := -\\eta\\\n\n\n\n\nAdaGrad\n\n\nADAM: may not get good converge point, but is stable\n\n\nADAMV8: accumulate gradient, update several batches in one shot\n\n\n\n\nDropout\n\n\nColumnwise FC\n\n\n\n\nFaster than RNN\n\n\nCan be implemented by reshape and conv\n\n\n\n\nParameter Sharing\n\n\n\n\nBy \nNetworkVisitor\n\n\niter_dep_opr\n\n\n\n\n\n\n\n\nCheck List\n\n\n\n\nData \nmust\n be shuffled (expectation of SGD must represent GD)\n\n\nRepeat data, label is harmful\n\n\n\n\n\n\nColor image are not in BGR\n\n\nHuman face should not be blue\n\n\n\n\n\n\nRead the work log if there is one\n\n\nCheck #OP and learnable params in your model\n\n\nDo not use too much learnable params\n\n\n\n\n\n\n\n\nModel Death\n\n\n\n\nTweak learning rate\n\n\nMay add BN\n\n\nMay try branch supervisions\n\n\nTry value range of parameters\n\n\nLower dropout\n\n\nTry wider \n deeper model\n\n\nChannel x2 /2\n\n\nIniting  from a working model\n\n\nCan steal some layers\n\n\n\n\n\n\nCurriculum learning\n\n\nInitiating a model o harder data with a model that works \non easier data\n\n\n\n\n\n\n\n\nGood practice\n\n\n\n\n100 class to 1000 class\n\n\nMultitask learning\n\n\nClass + heat map\n\n\n\n\n\n\nHard example mining\n\n\nFeature map should be gradually smaller", 
             "title": "01 training neural network"
         }, 
         {
@@ -497,17 +497,17 @@
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/#machine-learing-as-optimization", 
-            "text": "Supervised learning  $\\min_\\theta d(y,\\hat{y})$    Regularized sypervised learning  $\\min_\\theta d(y,\\hat{y}) + r(\\hat{y})$    Probabilistic interpretation  $\\log p(y|\\hat{y})$    Gradient descent\n    $\\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}$  Dissretized, gradient descent may not converge  Theoratically can be solved by Newton's method ($H^{-1}$)  Gauss-Newton algorithm  $X_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}$", 
+            "text": "Supervised learning   \\min_\\theta d(y,\\hat{y})     Regularized sypervised learning   \\min_\\theta d(y,\\hat{y}) + r(\\hat{y})     Probabilistic interpretation   \\log p(y|\\hat{y})     Gradient descent\n     \\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}   Dissretized, gradient descent may not converge  Theoratically can be solved by Newton's method ( H^{-1} )  Gauss-Newton algorithm   X_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}", 
             "title": "Machine Learing as Optimization"
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/#linear-regression", 
-            "text": "Gauss, $y=\\hat{y}-WX$  Too much channel, bottle neck use identity", 
+            "text": "Gauss,  y=\\hat{y}-WX   Too much channel, bottle neck use identity", 
             "title": "Linear Regression"
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/#cnn", 
-            "text": "Convolution is linear  Equivalent to matrix multiply  Possion matrix    Why not FC  Data is never enough  Translation invariance  Global minimum cannot be realized    Convolution as matrix product  feature map $ $  weights $ $  K: for efficience  Steps  Image to column  Kernel to matrix  Matrix mul matrix      Locally-connected  Channl-wise convolution", 
+            "text": "Convolution is linear  Equivalent to matrix multiply  Possion matrix    Why not FC  Data is never enough  Translation invariance  Global minimum cannot be realized    Convolution as matrix product  feature map  <N, C, H', W'>   weights  <K, C, H, W>   K: for efficience  Steps  Image to column  Kernel to matrix  Matrix mul matrix      Locally-connected  Channl-wise convolution", 
             "title": "CNN"
         }, 
         {
@@ -517,7 +517,7 @@
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/#batch-normalization", 
-            "text": "Still need augmentation?  $\\alpha \\frac{X-mean(X)}{std(X)}+\\beta$  Stabilizer  npk-sanitize-batch-normalization", 
+            "text": "Still need augmentation?   \\alpha \\frac{X-mean(X)}{std(X)}+\\beta   Stabilizer  npk-sanitize-batch-normalization", 
             "title": "Batch Normalization"
         }, 
         {
@@ -527,7 +527,7 @@
         }, 
         {
             "location": "/nn_tutorial/01_training_neural_network/#learning-rule", 
-            "text": "SGD + Momentum: $\\Delta w := -\\eta\\$  AdaGrad  ADAM: may not get good converge point, but is stable  ADAMV8: accumulate gradient, update several batches in one shot", 
+            "text": "SGD + Momentum:  \\Delta w := -\\eta\\   AdaGrad  ADAM: may not get good converge point, but is stable  ADAMV8: accumulate gradient, update several batches in one shot", 
             "title": "Learning rule"
         }, 
         {
