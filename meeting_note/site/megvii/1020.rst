@@ -1,0 +1,58 @@
+Meeting 1020
+=====
+
+Detection & Tracking
+-----
+* MegTracking
+	* Frame extraction scheme in the current model does not match with real application
+	* Before 15/11
+* 10min run all MOT16, 10fps
+* MOTA: 41.1% (public), previously NetFlow: 20+
+* Template Matching is too slow
+* SenseTime detection
+	* mAP: 0.78 (we are 0.72)
+	* Detection - FP: 7000, FN: 33000-34000
+	* MOTA: 61.4%
+	* Tracking - FP: 2000, FN: 33000-34000, ID-Switch: 500-700
+* SOT (xqq, zjh)
+	* ReID + regression, test on benchmark. PRW, OPG
+	* Attribute S1 useless
+	* xqq: target small box, big picture, both feed to VGG, feature map conv
+
+Attributes
+-----
+* 5k bags, 1w umbrella
+* Toolkit
+* Parsing + skeleton
+	* Better bag/backpack parsing
+	* Short sleeve: 80%, long sleeve: 90%
+	* Short/long cloth: nearly 100%
+	* Pants/skirt: 87% (9000 classification)
+
+ReID
+-----
+* Attention GRU
+	* CUHK: 72%
+	* VIPeR: 59%
+* Two image attention
+	* CUHK: 51%
+* Upsampling
+	* CUHK: 69%
+* In MegVideo
+	* Color crashed on parsing and re-id (color is better for small scale)
+	* Occlusion
+	* Multi person in one box
+
+MegVideo
+-----
+* MegVideo 2.6.9
+* Benchmark from PReIDS1
+	* AP: 0.29, precision: 0.95, recall: 0.21
+	* MOTA: 0.3 - 0.4
+	* Top 1: Top 10:
+* MegVideo 3.0
+	* Bazel ready
+	* Kill protobug, Core refactor
+	* Motion filter, detection, parsing, skeleton, attributes ready (waiting for tracking)
+	* llj: C API
+	* Windows (testing)

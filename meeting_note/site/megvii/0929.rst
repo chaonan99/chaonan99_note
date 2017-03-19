@@ -1,0 +1,40 @@
+Meeting 0922
+=====
+
+Detection & Tracking
+-----
+* One model using two sets of data
+* Single object tracking (zjh)
+	* CNN fusing model (zjh)
+	* Find benchmark and do tests (zjh)
+* Post process: Kalman + Template matching (full, upper)
+
+ReID (ckl)
+-----
+* LSTM paper (state-of-the-art) 65%
+* ResNet-50 + 2FC 51%
+* Attention conv + GRU 43%
+* Based on classification 35%
+	* Person classification Market1501, Prid2011, ILV, CrowdS2p1/2/3, PReidS1/2/3
+* Parsing
+
+Body Parsing (sjq)
+-----
+
+GAN
+-----
+* Discriminator classification
+* Try to classify gender with GAN
+* DRAW for attributes
+	* Add mask: pants/skirt improve from 70% to 80%
+
+MegVideo
+-----
+* LowLevelEngine
+* 1080 ready
+* Working on windows
+* gpu::Mat
+
+Next talk
+-----
+* MegVideo

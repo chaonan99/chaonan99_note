@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>01 training neural network - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">My Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Graduate <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../graduate/0222/">0222</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megvii <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../megvii/0104_talk/">0104 talk</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/0224_talk/">0224 talk</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/0310_talk/">0310 talk</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/0918/">0918</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/0922/">0922</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1117/">1117</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1124/">1124</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1208/">1208</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1215/">1215</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1222/">1222</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1223_talk/">1223 talk</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/1230_talk/">1230 talk</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/CVPR2017/">CVPR2017</a>
+</li>
+                            
+<li >
+    <a href="../../megvii/attendance/">Attendance</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nn tutorial <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">01 training neural network</a>
+</li>
+                            
+<li >
+    <a href="../02_Neupeak/">02 Neupeak</a>
+</li>
+                            
+<li >
+    <a href="../03_deep_model/">03 deep model</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Random <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../random/1222_shaoqing_ren/">1222 shaoqing ren</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xiangyang ji <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../xiangyang_ji/reinforcement_learning/">Reinforcement learning</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../../megvii/attendance/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../02_Neupeak/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#training-neural-network">Training Neural Network</a></li>
+            <li><a href="#machine-learing-as-optimization">Machine Learing as Optimization</a></li>
+            <li><a href="#linear-regression">Linear Regression</a></li>
+            <li><a href="#cnn">CNN</a></li>
+            <li><a href="#nonlinearity">Nonlinearity</a></li>
+            <li><a href="#batch-normalization">Batch Normalization</a></li>
+            <li><a href="#learning-rate">Learning rate</a></li>
+            <li><a href="#learning-rule">Learning rule</a></li>
+            <li><a href="#dropout">Dropout</a></li>
+            <li><a href="#columnwise-fc">Columnwise FC</a></li>
+            <li><a href="#parameter-sharing">Parameter Sharing</a></li>
+            <li><a href="#check-list">Check List</a></li>
+            <li><a href="#model-death">Model Death</a></li>
+            <li><a href="#good-practice">Good practice</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="training-neural-network">Training Neural Network</h1>
+<h2 id="machine-learing-as-optimization">Machine Learing as Optimization</h2>
+<ul>
+<li>Supervised learning<ul>
+<li>$\min_\theta d(y,\hat{y})$</li>
+</ul>
+</li>
+<li>Regularized sypervised learning<ul>
+<li>$\min_\theta d(y,\hat{y}) + r(\hat{y})$</li>
+</ul>
+</li>
+<li>Probabilistic interpretation<ul>
+<li>$\log p(y|\hat{y})$</li>
+</ul>
+</li>
+<li>Gradient descent
+    $\theta_{t+\lambda} = \theta_{t} - \frac{}{}$</li>
+<li>Dissretized, gradient descent may not converge</li>
+<li>Theoratically can be solved by Newton's method ($H^{-1}$)</li>
+<li>Gauss-Newton algorithm<ul>
+<li>$X_{t+1}=X_t - \frac{\e f(X)}{\e X}$</li>
+</ul>
+</li>
+</ul>
+<h2 id="linear-regression">Linear Regression</h2>
+<ul>
+<li>Gauss, $y=\hat{y}-WX$</li>
+<li>Too much channel, bottle neck use identity</li>
+</ul>
+<h2 id="cnn">CNN</h2>
+<ul>
+<li>Convolution is linear<ul>
+<li>Equivalent to matrix multiply</li>
+<li>Possion matrix</li>
+</ul>
+</li>
+<li>Why not FC<ul>
+<li>Data is never enough</li>
+<li>Translation invariance</li>
+<li>Global minimum cannot be realized</li>
+</ul>
+</li>
+<li>Convolution as matrix product<ul>
+<li>feature map $<N, C, H', W'>$</li>
+<li>weights $<K, C, H, W>$</li>
+<li>K: for efficience</li>
+<li>Steps<ul>
+<li>Image to column</li>
+<li>Kernel to matrix</li>
+<li>Matrix mul matrix</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Locally-connected</li>
+<li>Channl-wise convolution</li>
+</ul>
+<h2 id="nonlinearity">Nonlinearity</h2>
+<ul>
+<li>Tanh: need exp (not recommended)</li>
+<li>Maxout</li>
+</ul>
+<h2 id="batch-normalization">Batch Normalization</h2>
+<ul>
+<li>Still need augmentation?</li>
+<li>$\alpha \frac{X-mean(X)}{std(X)}+\beta$</li>
+<li>Stabilizer</li>
+<li>npk-sanitize-batch-normalization</li>
+</ul>
+<h2 id="learning-rate">Learning rate</h2>
+<ul>
+<li>Step length</li>
+</ul>
+<h2 id="learning-rule">Learning rule</h2>
+<ul>
+<li>SGD + Momentum: $\Delta w := -\eta\$</li>
+<li>AdaGrad</li>
+<li>ADAM: may not get good converge point, but is stable</li>
+<li>ADAMV8: accumulate gradient, update several batches in one shot</li>
+</ul>
+<h2 id="dropout">Dropout</h2>
+<h2 id="columnwise-fc">Columnwise FC</h2>
+<ul>
+<li>Faster than RNN</li>
+<li>Can be implemented by reshape and conv</li>
+</ul>
+<h2 id="parameter-sharing">Parameter Sharing</h2>
+<ul>
+<li>By <code>NetworkVisitor</code><ul>
+<li><code>iter_dep_opr</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="check-list">Check List</h2>
+<ul>
+<li>Data <strong>must</strong> be shuffled (expectation of SGD must represent GD)<ul>
+<li>Repeat data, label is harmful</li>
+</ul>
+</li>
+<li>Color image are not in BGR<ul>
+<li>Human face should not be blue</li>
+</ul>
+</li>
+<li>Read the work log if there is one</li>
+<li>Check #OP and learnable params in your model<ul>
+<li>Do not use too much learnable params</li>
+</ul>
+</li>
+</ul>
+<h2 id="model-death">Model Death</h2>
+<ul>
+<li>Tweak learning rate</li>
+<li>May add BN</li>
+<li>May try branch supervisions</li>
+<li>Try value range of parameters</li>
+<li>Lower dropout</li>
+<li>Try wider &amp; deeper model</li>
+<li>Channel x2 /2</li>
+<li>Initing  from a working model<ul>
+<li>Can steal some layers</li>
+</ul>
+</li>
+<li>Curriculum learning<ul>
+<li>Initiating a model o harder data with a model that works <strong>on easier data</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="good-practice">Good practice</h2>
+<ul>
+<li>100 class to 1000 class</li>
+<li>Multitask learning<ul>
+<li>Class + heat map</li>
+</ul>
+</li>
+<li>Hard example mining</li>
+<li>Feature map should be gradually smaller</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

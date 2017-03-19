@@ -1,0 +1,92 @@
+Meeting 1013
+=====
+
+Detection & Tracking
+-----
+* Replace different re-id model, finally use ckl's RNN model.
+* MOT, global tracking -> batch, online tracking.
+* Speed, still slow when extracting features for all proposal (2,3 fps, related to proposal number)
+	* MOT16-04 2-3 fps, 40-50 bbs in one frame
+	* MOT16-02 15fps, 20 bbs in one frame
+* MegTracking
+	* Frame extraction scheme in the current model does not match with real application
+	* Before 15/11
+
+Single Object Tracking
+-----
+* Object dataset. Have not found.
+
+Attributes
+-----
+* Framework setup.
+* Problem with dataset.
+* Current performance on VGG
+	* Child/Adult 87%
+* Add skeleton for attributes
+* AI:
+	* P0:
+		* (sjq:algorithm, zgy:data) Bag parsing, backpack parsing
+		* (sjq, zyw) Umbrella parsing
+	* P1:
+		* (zgy, zjh) Upper clothes style
+		* (zgy) Lower clothes style
+
+ReID
+-----
+* Attention GRU
+	* CUHK03: 72% (128 channel), 61% (32 channel)
+	* Replace concatenate with sum
+* ResNet50+2FC
+	* channel from 128 to 32 (51%->65%)
+* Harm performance on classification after adding parsing
+
+Body Parsing
+-----
+* Detection along with parsing
+
+MegVideo
+-----
+* Benchmark
+	* On PReID-S1
+* Begin to design MegVideo 3.0
+
+(zgy)
+-----
+
+Video structural
+-----
+Class | Content
+
+Sex | M/F
+Upwearing color | RGB
+Underwearing color | RGB
+Direction | As setting
+Umbrella | Y/N
+Bag | Y/N
+Bag color | RGB
+Backpack | Y/N
+Backpack color | RGB
+
+People | Child/Median/Old
+Clothes type | ...
+Pants type | ...
+Umbrella color | RGB
+
+Hold a child | Y/N
+Hat | White hat/Xinjiang hat/helmet/cap
+Carrier | Y/N
+Suit case | Y/N
+Suit case color | RGB
+Hair | Long/Short/No hair
+
+Patent
+-----
+* (wjn) Tracking by Re-id
+* (zjh) Generate a template from one image for SOT/ReID
+* (zgy) GAN to generate Re-id
+* (xqq) Infrared ReID
+* (zc ) Group tracking & group ReID
+* (yht) <need discussion> Video structuralization
+* (cyb) Skeleton/parsing for attributes * 2
+* (ckl, chn) Skeleton/parsing for ReID * 2
+* (sjq) Teacher - student framework
