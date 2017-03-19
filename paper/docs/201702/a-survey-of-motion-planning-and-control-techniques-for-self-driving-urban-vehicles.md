@@ -108,8 +108,6 @@
     - $\dot{\theta} = \frac{v_r}{l}\tan{\delta}$
     - 
 
-<!-- TODO -->
-
 ## Motion Planning
 * Goal configuration differs by context
     - On road: the center point of current lane a number of meters ahead
@@ -123,5 +121,3 @@
     - penalize hazardous motions or motions that cause passenger discomfort
 * Path planning and trajectory planning are different!
     - Path planning: $\sigma(\alpha): [0, 1] \rightarrow \mathcal{X}$
-    
-

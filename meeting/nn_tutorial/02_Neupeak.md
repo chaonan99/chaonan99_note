@@ -1,3 +1,0 @@
-# Neupeak Introduction
-
-## 

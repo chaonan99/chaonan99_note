@@ -1,0 +1,719 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Meeting Note Site\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nLICENSE", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#meeting-note-site", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Meeting Note Site"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/#license", 
+            "text": "", 
+            "title": "LICENSE"
+        }, 
+        {
+            "location": "/graduate/0222/", 
+            "text": "Graduation Project\n\n\nProposal\n\n\n\n\n\u5f00\u9898\u62a5\u544a\uff0c\u603b\u5171\u7ea620\u9875\n\n\n\u76ee\u5f55\u7ea62\u9875\n\n\n\u80cc\u666f2-3\u9875\n\n\n\u6587\u732e\u7efc\u8ff0\uff0c\u4e00\u534a\u7bc7\u5e45\n\n\n\u7814\u7a76\u5185\u5bb91\u9875\n\n\n\u65b9\u68485-6\u9875\n\n\n\u521b\u65b0\u70b9\u3001\u96be\u70b9\n\n\n\u53c2\u8003\u6587\u732e\u7ea62\u9875\n\n\n\n\n\n\n\u7ffb\u8bd1\u6216\u8c03\u7814\u62a5\u544a\uff08\u7efc\u8ff0\uff09\n\n\n20k character translation task\n\n\nOR\n 5k investigation report\uff08\u82f1\u6587\uff09\n\n\n\n\n\n\n2-3 weeks investigation\n\n\nTime: 3rd or 4th week (typically in 4th week, before 15 March)\n\n\n\u6bcf\u4e2a\u4eba\u9700\u8981\u6709\u7814\u7a76\u91cd\u70b9\uff0c\u9898\u76ee\u4e0d\u80fd\u592a\u63a5\u8fd1\n\n\n\n\nMidterm Inspection\n\n\n\n\nBefore 21th, April\n\n\n\n\nDefence\n\n\n\n\n\u6240\u6709\u5de5\u4f5c\u6700\u665a14\u5468\u505a\u5b8c\uff0c\u4e4b\u540e\u5199\u8bba\u6587\u3001\u6539\u8bba\u6587\n\n\n5-13th, June (13\u53f7\u662f17\u5468\u5468\u4e8c)\n\n\nPlagiarization checking (5%)\n\n\n\u67e5\u91cd\u91cd\u70b9\n\n\n\u6587\u732e\u7efc\u8ff0\uff0c\u80cc\u666f\n\n\n\u81f4\u8c22\n\n\n\u53c2\u8003\u6587\u732e\n\n\n\n\n\n\nMore than 80 pages\n\n\n\n\nRequirement\n\n\n\n\n\n\n\n\n=85 grade\n\n\n\n\n\n\nNo plagiarize\n\n\n\u7981\u6b62\n\u5b9e\u4e60\u3001\u5b66\u8f66\uff1f\n\n\n\u5e73\u65f6\u6ce8\u610f\u5de5\u4f5c\u7684\u8bb0\u5f55\uff0c\u968f\u65f6\u6574\u7406", 
+            "title": "0222"
+        }, 
+        {
+            "location": "/graduate/0222/#graduation-project", 
+            "text": "", 
+            "title": "Graduation Project"
+        }, 
+        {
+            "location": "/graduate/0222/#proposal", 
+            "text": "\u5f00\u9898\u62a5\u544a\uff0c\u603b\u5171\u7ea620\u9875  \u76ee\u5f55\u7ea62\u9875  \u80cc\u666f2-3\u9875  \u6587\u732e\u7efc\u8ff0\uff0c\u4e00\u534a\u7bc7\u5e45  \u7814\u7a76\u5185\u5bb91\u9875  \u65b9\u68485-6\u9875  \u521b\u65b0\u70b9\u3001\u96be\u70b9  \u53c2\u8003\u6587\u732e\u7ea62\u9875    \u7ffb\u8bd1\u6216\u8c03\u7814\u62a5\u544a\uff08\u7efc\u8ff0\uff09  20k character translation task  OR  5k investigation report\uff08\u82f1\u6587\uff09    2-3 weeks investigation  Time: 3rd or 4th week (typically in 4th week, before 15 March)  \u6bcf\u4e2a\u4eba\u9700\u8981\u6709\u7814\u7a76\u91cd\u70b9\uff0c\u9898\u76ee\u4e0d\u80fd\u592a\u63a5\u8fd1", 
+            "title": "Proposal"
+        }, 
+        {
+            "location": "/graduate/0222/#midterm-inspection", 
+            "text": "Before 21th, April", 
+            "title": "Midterm Inspection"
+        }, 
+        {
+            "location": "/graduate/0222/#defence", 
+            "text": "\u6240\u6709\u5de5\u4f5c\u6700\u665a14\u5468\u505a\u5b8c\uff0c\u4e4b\u540e\u5199\u8bba\u6587\u3001\u6539\u8bba\u6587  5-13th, June (13\u53f7\u662f17\u5468\u5468\u4e8c)  Plagiarization checking (5%)  \u67e5\u91cd\u91cd\u70b9  \u6587\u732e\u7efc\u8ff0\uff0c\u80cc\u666f  \u81f4\u8c22  \u53c2\u8003\u6587\u732e    More than 80 pages", 
+            "title": "Defence"
+        }, 
+        {
+            "location": "/graduate/0222/#requirement", 
+            "text": "=85 grade    No plagiarize  \u7981\u6b62 \u5b9e\u4e60\u3001\u5b66\u8f66\uff1f  \u5e73\u65f6\u6ce8\u610f\u5de5\u4f5c\u7684\u8bb0\u5f55\uff0c\u968f\u65f6\u6574\u7406", 
+            "title": "Requirement"
+        }, 
+        {
+            "location": "/graduate/0319/", 
+            "text": "\u7b2c\u56db\u5468\u5de5\u4f5c\u5468\u62a5\n\n\n\n\nAuthor: chaonan99\n\n\nDate: 2017/03/19\n\n\n\n\n\u5de5\u4f5c\u8fdb\u5c55\n\n\n\n\n\u5b8c\u6210\u4e86\u5f00\u9898\u62a5\u544a\n\n\n\u5b8c\u6210\u4e86\u5f00\u9898\u7b54\u8fa9\n\n\n\u5f00\u59cb\u8c03\u7814\u8f66\u8f86\u4ea4\u6c47\u53e3\u7684\u51b3\u7b56\u7b97\u6cd5\uff0c\u91cd\u70b9\u9605\u8bfb\u4e86\u4ee5\u4e0b\u8bba\u6587\n\n\nLane\u00a0Change and\u00a0Merge\u00a0Maneuvers for Connected and Automated Vehicles: A Survey\n\n\n\u4e3b\u8981\u4ece\u8bbe\u65bd\u5c42\u9762\uff0c\u53cd\u9988\u63a7\u5236\u5c42\u9762\u6982\u8ff0\u4e86\u652f\u6301\u667a\u80fd\u8f66\u5728\u4ea4\u6c47\u53e3\u51b3\u7b56\u7684\u6280\u672f\n\n\n\u7efc\u8ff0\u4e86\u5f71\u54cd\u667a\u80fd\u8f66\u8def\u53e3\u51b3\u7b56\u7684\u5404\u79cd\u56e0\u7d20\uff0c\u5305\u62ec\u884c\u4eba\u3001\u5929\u6c14\u7b49\n\n\n\u51b3\u7b56\u7b97\u6cd5\u63d0\u5230\u7684\u8f83\u5c11\uff0c\u53ef\u80fd\u56e0\u4e3a\u76f8\u5173\u7814\u7a76\u672c\u8eab\u5c31\u6bd4\u8f83\u5c11\u3002\u3002\u3002\n\n\n\n\n\n\nTraffic Coordination at Road Intersections: Autonomous Decision-Making Algorithms Using Model-Based Heuristics\n\n\n\u5341\u5b57\u8def\u53e3\u7684\u8f68\u8ff9\u51b3\u7b56\u7b97\u6cd5\uff0c\u6a21\u578b\u662f\u5728\u8f68\u8ff9\u786e\u5b9a\u7684\u60c5\u51b5\u4e0b\n\n\n\u4e3b\u8981\u521b\u65b0\u70b9\u5728\u4e8e\u5c06\u8f68\u8ff9\u89c4\u5212\u51b3\u7b56\u987a\u5e8f\u7684\u590d\u6742\u5ea6\u964d\u4f4e\uff0c\u4f7f\u7528\u201cModel-based Heuristics\u201d\uff0c\u4f46\u5176\u5b9e\u4e5f\u4e0d\u662f\u4ed6\u6700\u5148\u63d0\u51fa\u7684\n\n\n\u51b3\u7b56\u987a\u5e8f\u8003\u8651\u4e86\u8f66\u8f86\u672c\u8eab\u7684\u8fd0\u52a8\u7279\u6027\n\n\n\u5b9e\u9a8c\u5047\u60f3\u4e86\u4e00\u4e2a3\u8f86\u8f66\u7684naiive\u573a\u666f\uff0c\u611f\u89c9\u4e0d\u592a\u9760\u8c31\u3002\u3002\u3002\n\n\n\n\n\n\n\n\n\n\n\n\n\u9047\u5230\u7684\u95ee\u9898\n\n\n\n\n\u667a\u80fd\u8f66\u51b3\u7b56\u7b97\u6cd5\u7684\u8bc4\u5224\u6807\u51c6\u662f\u4ec0\u4e48\uff1f\n\n\n\n\n\u672a\u6765\u8ba1\u5212\n\n\n\n\n\n\n\n\n\u8ba8\u8bba\u5185\u5bb9\n\n\n\n\n\u667a\u80fd\u4ea4\u901a\u9886\u57df\u7684\u7814\u7a76\u8fc7\u7a0b\u5c1a\u4e0d\u6e05\u695a", 
+            "title": "0319"
+        }, 
+        {
+            "location": "/graduate/0319/#_1", 
+            "text": "Author: chaonan99  Date: 2017/03/19", 
+            "title": "\u7b2c\u56db\u5468\u5de5\u4f5c\u5468\u62a5"
+        }, 
+        {
+            "location": "/graduate/0319/#_2", 
+            "text": "\u5b8c\u6210\u4e86\u5f00\u9898\u62a5\u544a  \u5b8c\u6210\u4e86\u5f00\u9898\u7b54\u8fa9  \u5f00\u59cb\u8c03\u7814\u8f66\u8f86\u4ea4\u6c47\u53e3\u7684\u51b3\u7b56\u7b97\u6cd5\uff0c\u91cd\u70b9\u9605\u8bfb\u4e86\u4ee5\u4e0b\u8bba\u6587  Lane\u00a0Change and\u00a0Merge\u00a0Maneuvers for Connected and Automated Vehicles: A Survey  \u4e3b\u8981\u4ece\u8bbe\u65bd\u5c42\u9762\uff0c\u53cd\u9988\u63a7\u5236\u5c42\u9762\u6982\u8ff0\u4e86\u652f\u6301\u667a\u80fd\u8f66\u5728\u4ea4\u6c47\u53e3\u51b3\u7b56\u7684\u6280\u672f  \u7efc\u8ff0\u4e86\u5f71\u54cd\u667a\u80fd\u8f66\u8def\u53e3\u51b3\u7b56\u7684\u5404\u79cd\u56e0\u7d20\uff0c\u5305\u62ec\u884c\u4eba\u3001\u5929\u6c14\u7b49  \u51b3\u7b56\u7b97\u6cd5\u63d0\u5230\u7684\u8f83\u5c11\uff0c\u53ef\u80fd\u56e0\u4e3a\u76f8\u5173\u7814\u7a76\u672c\u8eab\u5c31\u6bd4\u8f83\u5c11\u3002\u3002\u3002    Traffic Coordination at Road Intersections: Autonomous Decision-Making Algorithms Using Model-Based Heuristics  \u5341\u5b57\u8def\u53e3\u7684\u8f68\u8ff9\u51b3\u7b56\u7b97\u6cd5\uff0c\u6a21\u578b\u662f\u5728\u8f68\u8ff9\u786e\u5b9a\u7684\u60c5\u51b5\u4e0b  \u4e3b\u8981\u521b\u65b0\u70b9\u5728\u4e8e\u5c06\u8f68\u8ff9\u89c4\u5212\u51b3\u7b56\u987a\u5e8f\u7684\u590d\u6742\u5ea6\u964d\u4f4e\uff0c\u4f7f\u7528\u201cModel-based Heuristics\u201d\uff0c\u4f46\u5176\u5b9e\u4e5f\u4e0d\u662f\u4ed6\u6700\u5148\u63d0\u51fa\u7684  \u51b3\u7b56\u987a\u5e8f\u8003\u8651\u4e86\u8f66\u8f86\u672c\u8eab\u7684\u8fd0\u52a8\u7279\u6027  \u5b9e\u9a8c\u5047\u60f3\u4e86\u4e00\u4e2a3\u8f86\u8f66\u7684naiive\u573a\u666f\uff0c\u611f\u89c9\u4e0d\u592a\u9760\u8c31\u3002\u3002\u3002", 
+            "title": "\u5de5\u4f5c\u8fdb\u5c55"
+        }, 
+        {
+            "location": "/graduate/0319/#_3", 
+            "text": "\u667a\u80fd\u8f66\u51b3\u7b56\u7b97\u6cd5\u7684\u8bc4\u5224\u6807\u51c6\u662f\u4ec0\u4e48\uff1f", 
+            "title": "\u9047\u5230\u7684\u95ee\u9898"
+        }, 
+        {
+            "location": "/graduate/0319/#_4", 
+            "text": "", 
+            "title": "\u672a\u6765\u8ba1\u5212"
+        }, 
+        {
+            "location": "/graduate/0319/#_5", 
+            "text": "\u667a\u80fd\u4ea4\u901a\u9886\u57df\u7684\u7814\u7a76\u8fc7\u7a0b\u5c1a\u4e0d\u6e05\u695a", 
+            "title": "\u8ba8\u8bba\u5185\u5bb9"
+        }, 
+        {
+            "location": "/megvii/0104_talk/", 
+            "text": "Jan 4th, 2017\n\n\n\n\nAnbang Yao, Intel\n\n\n\n\nLossless Efficient Deep Neural Network (Network Compression)\n\n\nRelated work\n\n\n\n\nModel compression\n\n\nSpeed up feed-forward\n\n\nLearning efficient DNNs for memory \n computation\n\n\nPruning with re-training [NIPS 2015, ICLR 2016]\n\n\n\n\n\n\n\n\nWorks\n\n\n\n\nDynamic Network Surgery (NIPS 2016)\n\n\nIncremental Network Quantization (ICLR 2017, submit)\n\n\n\n\n\n\n\n\nPruning: remove redundant parameter\n\n\nMetric: absolute value, the bigger, the more important\n\n\n\n\n\n\nRe-training: train again\n\n\nLoop these two operations\n\n\nDisadvantage\n\n\nToo much time\n\n\nMetric\n\n\nCannot recover pruned parameters\n\n\n\n\n\n\n\n\n\n\n\n\nDynamic:", 
+            "title": "0104 talk"
+        }, 
+        {
+            "location": "/megvii/0104_talk/#jan-4th-2017", 
+            "text": "Anbang Yao, Intel", 
+            "title": "Jan 4th, 2017"
+        }, 
+        {
+            "location": "/megvii/0104_talk/#lossless-efficient-deep-neural-network-network-compression", 
+            "text": "", 
+            "title": "Lossless Efficient Deep Neural Network (Network Compression)"
+        }, 
+        {
+            "location": "/megvii/0104_talk/#related-work", 
+            "text": "Model compression  Speed up feed-forward  Learning efficient DNNs for memory   computation  Pruning with re-training [NIPS 2015, ICLR 2016]", 
+            "title": "Related work"
+        }, 
+        {
+            "location": "/megvii/0104_talk/#works", 
+            "text": "Dynamic Network Surgery (NIPS 2016)  Incremental Network Quantization (ICLR 2017, submit)", 
+            "title": "Works"
+        }, 
+        {
+            "location": "/megvii/0224_talk/", 
+            "text": "Chenguang Zhang: \u4f60\u6240\u4e0d\u77e5\u9053\u7684 Megvii \u9ed1\u79d1\u6280\n\n\nHistory of Research\n\n\n\n\n4 stage of a research product\n\n\nDemo\n\n\nBusiness problem\n\n\nLarge scale application\n\n\nRepeat influence\n\n\n\n\n\n\nTech lifesyscle\n\n\nStart\n\n\nFast improvement\n\n\nBottle neck\n\n\n\n\n\n\n\n\nFace detection history\n\n\n\n\nDemo of raw face detection\n\n\nFace detection chip on camera -\n turn into business use, 2005\n\n\nFace detection \n tracking on iPhone\n\n\nTwo games: crows coming \n free skate xtreme\n\n\nCan do face detection on phone\n\n\n\n\n\n\nFace detection \n tracking \n recognition on mobile\n\n\nAli pay, smile to pay demo\n\n\n\n\n\n\nFace detection \n tracking \n recognition \n liveness on mobile\n\n\nFaceID\n\n\nAttack and defence with \u9ed1\u4ea7\n\n\n\n\n\n\nFuture: AI solution for customers\n\n\n\n\nResearch cycle\n\n\n\n\nFoundation of deep learning\n\n\nMore data\n\n\nComputation cost\n\n\nBase models \n tuning\n\n\n\n\n\n\nMegvii R\nD Team\n\n\nData: Label++ team, data managers, everyone (can provide data)\n\n\nComputation: Brain++, MegBrain/MegDNN\n\n\nBase model: Researchers, sdk team\n\n\n\n\n\n\n\n\nData\n\n\n\n\nCycles: algorithm -\n product -\n data -\n algorithm -\n ...\n\n\nTraining data, validation data and test data\n\n\nBetter data\n\n\nClose to real world\n\n\nNo bias\n\n\nNever overlaps\n\n\n\n\n\n\n\n\nComputation cost\n\n\n\n\nMoney x Time = Const\n\n\nMore GPU, more machines\n\n\nBetter plan for the future\n\n\n\n\nBase Model \n Tuning\n\n\n\n\nGrow our research team\n\n\nCatch up with new trend\n\n\nTuning details\n\n\n\n\n\n\n\n\nDeep learning roadmap\n\n\n\n\nKernel function\n\n\nAutomatically find kernel -- early neural network\n\n\nDeeper", 
+            "title": "0224 talk"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#chenguang-zhang-megvii", 
+            "text": "", 
+            "title": "Chenguang Zhang: \u4f60\u6240\u4e0d\u77e5\u9053\u7684 Megvii \u9ed1\u79d1\u6280"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#history-of-research", 
+            "text": "4 stage of a research product  Demo  Business problem  Large scale application  Repeat influence    Tech lifesyscle  Start  Fast improvement  Bottle neck", 
+            "title": "History of Research"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#face-detection-history", 
+            "text": "Demo of raw face detection  Face detection chip on camera -  turn into business use, 2005  Face detection   tracking on iPhone  Two games: crows coming   free skate xtreme  Can do face detection on phone    Face detection   tracking   recognition on mobile  Ali pay, smile to pay demo    Face detection   tracking   recognition   liveness on mobile  FaceID  Attack and defence with \u9ed1\u4ea7    Future: AI solution for customers", 
+            "title": "Face detection history"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#research-cycle", 
+            "text": "Foundation of deep learning  More data  Computation cost  Base models   tuning    Megvii R D Team  Data: Label++ team, data managers, everyone (can provide data)  Computation: Brain++, MegBrain/MegDNN  Base model: Researchers, sdk team", 
+            "title": "Research cycle"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#data", 
+            "text": "Cycles: algorithm -  product -  data -  algorithm -  ...  Training data, validation data and test data  Better data  Close to real world  No bias  Never overlaps", 
+            "title": "Data"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#computation-cost", 
+            "text": "Money x Time = Const  More GPU, more machines  Better plan for the future", 
+            "title": "Computation cost"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#base-model-tuning", 
+            "text": "Grow our research team  Catch up with new trend  Tuning details", 
+            "title": "Base Model &amp; Tuning"
+        }, 
+        {
+            "location": "/megvii/0224_talk/#deep-learning-roadmap", 
+            "text": "Kernel function  Automatically find kernel -- early neural network  Deeper", 
+            "title": "Deep learning roadmap"
+        }, 
+        {
+            "location": "/megvii/0310_talk/", 
+            "text": "3D Face Model\n\n\n\n\nShape, expression, pose\n\n\n\u8868\u60c5\u6620\u5c04\n\n\n\u4eba\u8138\u589e\u5f3a\uff1a\u865a\u62df\u7a7f\u6234\uff0c\u7f8e\u56fe\n\n\n\u8f85\u52a9\u4eba\u8138\u8bc6\u522b\uff0c\u751f\u6210\u5355\u4e2a\u4eba\u8138\u5728\u5176\u4ed6\u59ff\u6001\u4e0b\u7684\u6a21\u578b\n\n\n\n\nTopics\n\n\n\n\nImage -\n Pose, shape, expression estimation\n\n\n\n\nWorks\n\n\nHigh-Fidelity Pose and Expression Normalization\n\n\n\n\n\u4eba\u8138\u6b63\u9762\u5316\uff1a\u4ece\u591a\u79cd\u89d2\u5ea6\u56fe\u7247\u751f\u6210\u6b63\u9762\u65e0\u8868\u60c5\u56fe\u7247\n\n\n\u6d41\u7a0b\uff1a\u4eba\u8138\u56fe\u7247-\n\u62df\u5408\u4e09\u7ef4\u6a21\u578b-\n\u6620\u5c04\u5230\n\n\n\u521b\u65b0\u70b9\n\n\nLandmark marching\n\n\n3D landmark and 2D landmark match\n\n\n\u8fed\u4ee3\u4f18\u5316\n\n\n\n\n\n\nImage meshing\n\n\n\n\n\n\n\n\nFace Alignment Across Large Poses\n\n\n\n\nCNN", 
+            "title": "0310 talk"
+        }, 
+        {
+            "location": "/megvii/0310_talk/#3d-face-model", 
+            "text": "Shape, expression, pose  \u8868\u60c5\u6620\u5c04  \u4eba\u8138\u589e\u5f3a\uff1a\u865a\u62df\u7a7f\u6234\uff0c\u7f8e\u56fe  \u8f85\u52a9\u4eba\u8138\u8bc6\u522b\uff0c\u751f\u6210\u5355\u4e2a\u4eba\u8138\u5728\u5176\u4ed6\u59ff\u6001\u4e0b\u7684\u6a21\u578b", 
+            "title": "3D Face Model"
+        }, 
+        {
+            "location": "/megvii/0310_talk/#topics", 
+            "text": "Image -  Pose, shape, expression estimation", 
+            "title": "Topics"
+        }, 
+        {
+            "location": "/megvii/0310_talk/#works", 
+            "text": "", 
+            "title": "Works"
+        }, 
+        {
+            "location": "/megvii/0310_talk/#high-fidelity-pose-and-expression-normalization", 
+            "text": "\u4eba\u8138\u6b63\u9762\u5316\uff1a\u4ece\u591a\u79cd\u89d2\u5ea6\u56fe\u7247\u751f\u6210\u6b63\u9762\u65e0\u8868\u60c5\u56fe\u7247  \u6d41\u7a0b\uff1a\u4eba\u8138\u56fe\u7247- \u62df\u5408\u4e09\u7ef4\u6a21\u578b- \u6620\u5c04\u5230  \u521b\u65b0\u70b9  Landmark marching  3D landmark and 2D landmark match  \u8fed\u4ee3\u4f18\u5316    Image meshing", 
+            "title": "High-Fidelity Pose and Expression Normalization"
+        }, 
+        {
+            "location": "/megvii/0310_talk/#face-alignment-across-large-poses", 
+            "text": "CNN", 
+            "title": "Face Alignment Across Large Poses"
+        }, 
+        {
+            "location": "/megvii/0918/", 
+            "text": "Meeting 0918\n\n\nReID\n\n\n\n\n\n\nGAN(pfy)\n\n\nP_1-\nG-\nP_1^'\n\n\nDifferent people seems similar?\n\n\ntriplet?\n\n\nL2 loss is better than cos\n\n\n\n\n\n\nAttributes(non)\n\n\nAdd into loss function\n\n\n\n\n\n\nBootstrap(ckl)\n\n\nRNN(LSTM/GRU/Attention)(chn)\n\n\nParsing\n\n\nMulti-path detection, parse mask\n\n\n\n\n\n\nClassification on external dataset(ckl)\n\n\nMax gap + normalize(wjn)", 
+            "title": "0918"
+        }, 
+        {
+            "location": "/megvii/0918/#meeting-0918", 
+            "text": "", 
+            "title": "Meeting 0918"
+        }, 
+        {
+            "location": "/megvii/0918/#reid", 
+            "text": "", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/0922/", 
+            "text": "Meeting 0922\n\n\nUpdates\n\n\n\n\nMOTA16 tracking\n\n\nSubscribe brain users email\n\n\nAttributes\n\n\nGender (Resnet 79%, Vgg 81%)\n\n\nChild and adult (Resnet \n Vgg)\n\n\n\n\n\n\nReID (ckl)\n\n\n9400 people train classifier\n\n\nMarket1501, Prid2011, iLV\n\n\nCrowdS2p1, CrowdS2p2, CrowdS3, PReidS1/S2/S3\n\n\n\n\n\n\nBody parsing (sjq, zjh)\n\n\n1:3 model, 95%\n\n\n1:2 sharp mask, faster than previous model, 94.9%\n\n\nDeconv \n- upsampling + conv\n\n\nEdge loss harm performance\n\n\n\n\n\n\nGAN (pfy)\n\n\nGAN to generate man and women\n\n\nDRAW for attributes\n\n\nAdd mask\n\n\nPants/skirt \n 75% (state-of-the-art 85%)\n\n\n\n\n\n\n\n\n\n\nMegVideo (llj, zyw)\n\n\nTemplateEngine\n\n\nWorking on Windows", 
+            "title": "0922"
+        }, 
+        {
+            "location": "/megvii/0922/#meeting-0922", 
+            "text": "", 
+            "title": "Meeting 0922"
+        }, 
+        {
+            "location": "/megvii/0922/#updates", 
+            "text": "MOTA16 tracking  Subscribe brain users email  Attributes  Gender (Resnet 79%, Vgg 81%)  Child and adult (Resnet   Vgg)    ReID (ckl)  9400 people train classifier  Market1501, Prid2011, iLV  CrowdS2p1, CrowdS2p2, CrowdS3, PReidS1/S2/S3    Body parsing (sjq, zjh)  1:3 model, 95%  1:2 sharp mask, faster than previous model, 94.9%  Deconv  - upsampling + conv  Edge loss harm performance    GAN (pfy)  GAN to generate man and women  DRAW for attributes  Add mask  Pants/skirt   75% (state-of-the-art 85%)      MegVideo (llj, zyw)  TemplateEngine  Working on Windows", 
+            "title": "Updates"
+        }, 
+        {
+            "location": "/megvii/1117/", 
+            "text": "Nov. 17, 2016\n\n\nMegVideo\n\n\n\n\nMegVideo 3.1.2\n\n\nUpdate demo to 3.1.1 (SkyEye)\n\n\nSkeleton defination is not consistant with the model\n\n\nImplement interpolation from Tracking\n\n\nWindows\n\n\nUnder development\n\n\n\n\n\n\nPython interface for test\n\n\n\n\n\n\nBenchmark\n\n\nDetection\n\n\nTracking\n\n\nAttributes\n\n\nReID\n\n\n\n\n\n\n\n\nGAN\n\n\n\n\nCloth-GAN\n\n\nLOGO, stripe, pattern generated\n\n\n\n\n\n\n\n\nReID\n\n\n\n\nResNet50 stage 4 + FC: Top-1 75%\n\n\nRNN time steps\n\n\n1,2,4,8,16: same performance\n\n\n\n\n\n\nAttention\n\n\nMARS: into Nori\n\n\nCUHK-SYSU\n\n\nTop-1: 85% (on GT) vs 67%\n\n\nAdd detection to test from end2end\n\n\n\n\n\n\n\n\nAttribute\n\n\n\n\nFront, back Nov. 20\n\n\nRNN\n\n\nCrowdS2,S3; ReIDS1,S2,S3\n\n\nResNet different level to train attribute\n\n\nFrom head to feet RNN combined with CTC\n\n\nCTC\n\n\n\n\n\n\n\n\nParsing\n\n\n\n\nUmbrella parsing\n\n\nColor\n\n\nHistrogram", 
+            "title": "1117"
+        }, 
+        {
+            "location": "/megvii/1117/#nov-17-2016", 
+            "text": "", 
+            "title": "Nov. 17, 2016"
+        }, 
+        {
+            "location": "/megvii/1117/#megvideo", 
+            "text": "MegVideo 3.1.2  Update demo to 3.1.1 (SkyEye)  Skeleton defination is not consistant with the model  Implement interpolation from Tracking  Windows  Under development    Python interface for test    Benchmark  Detection  Tracking  Attributes  ReID", 
+            "title": "MegVideo"
+        }, 
+        {
+            "location": "/megvii/1117/#gan", 
+            "text": "Cloth-GAN  LOGO, stripe, pattern generated", 
+            "title": "GAN"
+        }, 
+        {
+            "location": "/megvii/1117/#reid", 
+            "text": "ResNet50 stage 4 + FC: Top-1 75%  RNN time steps  1,2,4,8,16: same performance    Attention  MARS: into Nori  CUHK-SYSU  Top-1: 85% (on GT) vs 67%  Add detection to test from end2end", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/1117/#attribute", 
+            "text": "Front, back Nov. 20  RNN  CrowdS2,S3; ReIDS1,S2,S3  ResNet different level to train attribute  From head to feet RNN combined with CTC  CTC", 
+            "title": "Attribute"
+        }, 
+        {
+            "location": "/megvii/1117/#parsing", 
+            "text": "Umbrella parsing  Color  Histrogram", 
+            "title": "Parsing"
+        }, 
+        {
+            "location": "/megvii/1124/", 
+            "text": "Nov. 24, 2016\n\n\nAttribute\n\n\n\n\nCTC loss\n\n\n\n\nParsing and skeleton\n\n\n\n\nSkeleton currently no help\n\n\nClassification helicopter sharp decrease\n\n\n\n\nParsing\n\n\n\n\nUmbrella is training\n\n\nNew annotated 2000+, old data 1000-2000 train + validation\n\n\n\n\n\n\nSpeedup body parsing\n\n\nVGG16, half channel, remove conv5_x\n\n\n\n\n\n\nMRF get\n\n\n\n\nReID\n\n\n\n\nResNet50 extend, 1500 classification (chn): top 1 79%\n\n\nLong pooling increase\n\n\nRNN is useful\n\n\nDetection\n\n\n\n\nMegVideo\n\n\n\n\nSDK 3.2.6\n\n\nDocument ready for Linux and Windows\n\n\nNN for motion filter\n\n\nDemo\n\n\n\n\nData\n\n\n\n\nCrowdS5, CrowdS7, CrowdS16, CrowdS18\n\n\n\n\nDetection paper\n\n\n\n\nInstance-sensitive FCN\n\n\nR-FCN object detection", 
+            "title": "1124"
+        }, 
+        {
+            "location": "/megvii/1124/#nov-24-2016", 
+            "text": "", 
+            "title": "Nov. 24, 2016"
+        }, 
+        {
+            "location": "/megvii/1124/#attribute", 
+            "text": "CTC loss", 
+            "title": "Attribute"
+        }, 
+        {
+            "location": "/megvii/1124/#parsing-and-skeleton", 
+            "text": "Skeleton currently no help  Classification helicopter sharp decrease", 
+            "title": "Parsing and skeleton"
+        }, 
+        {
+            "location": "/megvii/1124/#parsing", 
+            "text": "Umbrella is training  New annotated 2000+, old data 1000-2000 train + validation    Speedup body parsing  VGG16, half channel, remove conv5_x    MRF get", 
+            "title": "Parsing"
+        }, 
+        {
+            "location": "/megvii/1124/#reid", 
+            "text": "ResNet50 extend, 1500 classification (chn): top 1 79%  Long pooling increase  RNN is useful  Detection", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/1124/#megvideo", 
+            "text": "SDK 3.2.6  Document ready for Linux and Windows  NN for motion filter  Demo", 
+            "title": "MegVideo"
+        }, 
+        {
+            "location": "/megvii/1124/#data", 
+            "text": "CrowdS5, CrowdS7, CrowdS16, CrowdS18", 
+            "title": "Data"
+        }, 
+        {
+            "location": "/megvii/1124/#detection-paper", 
+            "text": "Instance-sensitive FCN  R-FCN object detection", 
+            "title": "Detection paper"
+        }, 
+        {
+            "location": "/megvii/1208/", 
+            "text": "Dec. 8, 2016\n\n\nAttribute\n\n\n\n\nTwo direction\n\n\nCTC loss\n\n\n\n\nParsing and skeleton\n\n\n\n\nSkeleton currently no help\n\n\nClassification helicopter sharp decrease\n\n\n\n\nParsing\n\n\n\n\nUmbrella is training\n\n\nNew annotated 2000+, old data 1000-2000 train + validation\n\n\n\n\n\n\nSpeedup body parsing\n\n\nVGG16, half channel, remove conv5_x\n\n\n\n\n\n\nMRF get\n\n\n\n\nReID\n\n\n\n\nCUHK-SYSU training with xqq's model\n\n\n\n\nMegVideo\n\n\n\n\n3.3.0, with error code\n\n\nReID benchmark, CUHK-SYSU\n\n\nDatasets, benchmark website\n\n\nDetection benchmark\n\n\n\n\nData\n\n\n\n\nCrowdS5, CrowdS7, CrowdS16, CrowdS18\n\n\n\n\nDetection paper\n\n\n\n\nInstance-sensitive FCN\n\n\nR-FCN object detection", 
+            "title": "1208"
+        }, 
+        {
+            "location": "/megvii/1208/#dec-8-2016", 
+            "text": "", 
+            "title": "Dec. 8, 2016"
+        }, 
+        {
+            "location": "/megvii/1208/#attribute", 
+            "text": "Two direction  CTC loss", 
+            "title": "Attribute"
+        }, 
+        {
+            "location": "/megvii/1208/#parsing-and-skeleton", 
+            "text": "Skeleton currently no help  Classification helicopter sharp decrease", 
+            "title": "Parsing and skeleton"
+        }, 
+        {
+            "location": "/megvii/1208/#parsing", 
+            "text": "Umbrella is training  New annotated 2000+, old data 1000-2000 train + validation    Speedup body parsing  VGG16, half channel, remove conv5_x    MRF get", 
+            "title": "Parsing"
+        }, 
+        {
+            "location": "/megvii/1208/#reid", 
+            "text": "CUHK-SYSU training with xqq's model", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/1208/#megvideo", 
+            "text": "3.3.0, with error code  ReID benchmark, CUHK-SYSU  Datasets, benchmark website  Detection benchmark", 
+            "title": "MegVideo"
+        }, 
+        {
+            "location": "/megvii/1208/#data", 
+            "text": "CrowdS5, CrowdS7, CrowdS16, CrowdS18", 
+            "title": "Data"
+        }, 
+        {
+            "location": "/megvii/1208/#detection-paper", 
+            "text": "Instance-sensitive FCN  R-FCN object detection", 
+            "title": "Detection paper"
+        }, 
+        {
+            "location": "/megvii/1215/", 
+            "text": "Dec. 15, 2016\n\n\nAttribute\n\n\n\n\nAttribute use direction may be useful\n*\n\n\n\n\nMegVideo\n\n\n\n\n3.4.0, with new attributes model\n\n\nReID\n\n\n79%, trained on CUHK-SYSU\n\n\n\n\n\n\nMegBlue\n\n\nYahoo NSFW in MegBrain\n\n\n(AI) Speed test (QoS)\n\n\n\n\n\n\nS1: Downloaded 20W images from tumblr\n\n\n\n\n\n\n\n\nReID\n\n\n\n\nCUHK03\n\n\n1-length LSTM, 82.9% top-1\n\n\nBlock FC replace LSTM, 70+\n\n\n\n\n\n\nUse private dataset, test on CUHK03\n\n\nNothing learned\n\n\n\n\n\n\nMARS (chn, ckl)\n\n\nCUHK-SYSU\n\n\n\n\nTalk\n\n\n\n\nFangyue Peng\n\n\nTitle: multi-label human attributes detection\n\n\nDatasets\n\n\nBAP, WIDER\n\n\nWIDER trick: crop black-boundary\n\n\nCrowd\\ReID dataset\n\n\n\n\n\n\nEvaluation: AP from precision-recall curve\n\n\nHelicopter from person clasification\n\n\nModel\n\n\nResNet + RNN + attention + weighted average RNN output\n\n\nCLSTM\n\n\n\n\n\n\nCTC", 
+            "title": "1215"
+        }, 
+        {
+            "location": "/megvii/1215/#dec-15-2016", 
+            "text": "", 
+            "title": "Dec. 15, 2016"
+        }, 
+        {
+            "location": "/megvii/1215/#attribute", 
+            "text": "Attribute use direction may be useful\n*", 
+            "title": "Attribute"
+        }, 
+        {
+            "location": "/megvii/1215/#megvideo", 
+            "text": "3.4.0, with new attributes model  ReID  79%, trained on CUHK-SYSU    MegBlue  Yahoo NSFW in MegBrain  (AI) Speed test (QoS)    S1: Downloaded 20W images from tumblr", 
+            "title": "MegVideo"
+        }, 
+        {
+            "location": "/megvii/1215/#reid", 
+            "text": "CUHK03  1-length LSTM, 82.9% top-1  Block FC replace LSTM, 70+    Use private dataset, test on CUHK03  Nothing learned    MARS (chn, ckl)  CUHK-SYSU", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/1215/#talk", 
+            "text": "Fangyue Peng  Title: multi-label human attributes detection  Datasets  BAP, WIDER  WIDER trick: crop black-boundary  Crowd\\ReID dataset    Evaluation: AP from precision-recall curve  Helicopter from person clasification  Model  ResNet + RNN + attention + weighted average RNN output  CLSTM    CTC", 
+            "title": "Talk"
+        }, 
+        {
+            "location": "/megvii/1222/", 
+            "text": "Dec. 22, 2016\n\n\nMegVideo\n\n\n\n\n3.4.0\n\n\nUmbrella parsing\n\n\n\n\n\n\nSkyeye demo\n\n\nAI(yht): Show attributes on demo\n\n\n\n\n\n\nDetection benchmark\n\n\nAI(zyw, wjn): mAP\n\n\n\n\n\n\n\n\nMegBlue\n\n\n\n\nDataset\n\n\nTrain\n\n\n110,000 training data\n\n\n40,000 validation data\n\n\n\n\n\n\nLabel\n\n\nYahoo model, Youtu service check if conflict\n\n\n\n\n\n\nAI(zhangchi): Develop label tools\n\n\n\n\nReID\n\n\n\n\nPVANet for ckl state-of-the-art\n\n\n70% on CUHK-03\n\n\n\n\n\n\nWCW LSTM ReID\n\n\n75% on CUHK-SYSU\n\n\n\n\n\n\n\n\nVehicle classification\n\n\n\n\nAI: TuSimple vehicle classification\n\n\nData: \u6c7d\u8f66\u4e4b\u5bb6\n\n\n251 classes\n\n\n93.8% accuracy\n\n\n\n\n\n\n\n\nModel reduce \n speedup\n\n\n\n\nParsing\n\n\nBody, bag, umbrella\n\n\n\n\n\n\nParsing and skeleton\n\n\nDetection and attributes\n\n\nAttribute and ReID\n\n\nDetection and parsing (mask)", 
+            "title": "1222"
+        }, 
+        {
+            "location": "/megvii/1222/#dec-22-2016", 
+            "text": "", 
+            "title": "Dec. 22, 2016"
+        }, 
+        {
+            "location": "/megvii/1222/#megvideo", 
+            "text": "3.4.0  Umbrella parsing    Skyeye demo  AI(yht): Show attributes on demo    Detection benchmark  AI(zyw, wjn): mAP", 
+            "title": "MegVideo"
+        }, 
+        {
+            "location": "/megvii/1222/#megblue", 
+            "text": "Dataset  Train  110,000 training data  40,000 validation data    Label  Yahoo model, Youtu service check if conflict    AI(zhangchi): Develop label tools", 
+            "title": "MegBlue"
+        }, 
+        {
+            "location": "/megvii/1222/#reid", 
+            "text": "PVANet for ckl state-of-the-art  70% on CUHK-03    WCW LSTM ReID  75% on CUHK-SYSU", 
+            "title": "ReID"
+        }, 
+        {
+            "location": "/megvii/1222/#vehicle-classification", 
+            "text": "AI: TuSimple vehicle classification  Data: \u6c7d\u8f66\u4e4b\u5bb6  251 classes  93.8% accuracy", 
+            "title": "Vehicle classification"
+        }, 
+        {
+            "location": "/megvii/1222/#model-reduce-speedup", 
+            "text": "Parsing  Body, bag, umbrella    Parsing and skeleton  Detection and attributes  Attribute and ReID  Detection and parsing (mask)", 
+            "title": "Model reduce &amp; speedup"
+        }, 
+        {
+            "location": "/megvii/1223_talk/", 
+            "text": "Dec. 23\n\n\nFaceID \u8fd0\u8425\n\n\n\n\nTraditional finance\n\n\nInternet based finance\n\n\nShared transportation\n\n\nOthers\n\n\nLive \u5927\u667a\u6167(\u89c6\u5427)\n\n\n\u4e2d\u667a\u4eba\u624d\n\n\n\u732a\u516b\u6212\n\n\n\n\n\n\n\n\nProduction\n\n\n\n\nThree dimensions: Depth, width and thickness\n\n\nThickness: robust\n\n\nData source (\u516c\u5b89\u5c40) \u4e2d\u65ad\n\n\nCloud service (ali cloud) \u4e2d\u65ad\n\n\n\u53cb\u5546\u6301\u7eed\u503e\u9500\n\n\n\u4eba\u8138\u8bc6\u522b\u906d\u9047\u5371\u673a\n\n\n\u4e92\u8054\u7f51\u8427\u6761\n\n\nHow to fight against these disaster\n\n\nQuality\n\n\nLower cost\n\n\n\n\n\n\n\n\n\n\n\n\nDepth: trust-able\n\n\n\u53cb\u5546\u5728\u4eba\u8138\u8bc6\u522b\u4e0a\u90fd\u80fd\u8d85\u8d8a\u4eba\n\n\n\u6bd4\u5bf9\u5e94\u8be5\u662f\u53ef\u4fe1\u7684\n\n\nChallenge\n\n\nAttack from hacker\n\n\n\u7ec4\u56e2\u5237\u5355\n\n\n\n\n\n\nHow to be trust-able\n\n\n\u6d3b\u4f53\u6280\u672f\n\n\n\u653b\u51fb\u8fd0\u8425\n\n\n\u9ed1\u540d\u5355\n\n\n\u6bd4\u5bf9\u53ef\u9760\u6027\n\n\n\n\n\n\n\u5ba2\u6237\u76f8\u4fe1\u8fd9\u4e2a\u6a21\u578b\u5047\u5b9a\u8f93\u5165\u4e86\u4eba\u8138\n\n\n\n\n\n\nWidth\n\n\nWeChat \u516c\u4f17\u53f7\n\n\nMulti entries: PC H5, Mobile H5, SDK + Web API, \u79bb\u7ebf\u6bd4\u5bf9, ...\n\n\nMulti accesses: cloud, mobile, ...\n\n\nRelated value: \u6570\u636e\u589e\u503c\u670d\u52a1\uff0c\u5176\u4ed6\u8eab\u4efd\u8bc1\u4ef6\n\n\n\n\n\n\n\n\nFace++\n\n\n\n\nWhat: Face++ is an open platform providing service for multiple industry and intelligent devices based on computer vision technology, which can help client to improve their competitiveness of their production.\n\n\nFlow\n      \\\n       v\n    platform \n= compliance\n        ^\n        |\n    providing\n\n\n\n\nLive\n\n\n\n\n\u7f8e\u989c\uff0cAR\u89c6\u9891\u4ea4\u6d41\uff08\u865a\u62df\u6f14\u64ad\u5385\uff09", 
+            "title": "1223 talk"
+        }, 
+        {
+            "location": "/megvii/1223_talk/#dec-23", 
+            "text": "", 
+            "title": "Dec. 23"
+        }, 
+        {
+            "location": "/megvii/1223_talk/#faceid", 
+            "text": "Traditional finance  Internet based finance  Shared transportation  Others  Live \u5927\u667a\u6167(\u89c6\u5427)  \u4e2d\u667a\u4eba\u624d  \u732a\u516b\u6212", 
+            "title": "FaceID \u8fd0\u8425"
+        }, 
+        {
+            "location": "/megvii/1223_talk/#production", 
+            "text": "Three dimensions: Depth, width and thickness  Thickness: robust  Data source (\u516c\u5b89\u5c40) \u4e2d\u65ad  Cloud service (ali cloud) \u4e2d\u65ad  \u53cb\u5546\u6301\u7eed\u503e\u9500  \u4eba\u8138\u8bc6\u522b\u906d\u9047\u5371\u673a  \u4e92\u8054\u7f51\u8427\u6761  How to fight against these disaster  Quality  Lower cost       Depth: trust-able  \u53cb\u5546\u5728\u4eba\u8138\u8bc6\u522b\u4e0a\u90fd\u80fd\u8d85\u8d8a\u4eba  \u6bd4\u5bf9\u5e94\u8be5\u662f\u53ef\u4fe1\u7684  Challenge  Attack from hacker  \u7ec4\u56e2\u5237\u5355    How to be trust-able  \u6d3b\u4f53\u6280\u672f  \u653b\u51fb\u8fd0\u8425  \u9ed1\u540d\u5355  \u6bd4\u5bf9\u53ef\u9760\u6027    \u5ba2\u6237\u76f8\u4fe1\u8fd9\u4e2a\u6a21\u578b\u5047\u5b9a\u8f93\u5165\u4e86\u4eba\u8138    Width  WeChat \u516c\u4f17\u53f7  Multi entries: PC H5, Mobile H5, SDK + Web API, \u79bb\u7ebf\u6bd4\u5bf9, ...  Multi accesses: cloud, mobile, ...  Related value: \u6570\u636e\u589e\u503c\u670d\u52a1\uff0c\u5176\u4ed6\u8eab\u4efd\u8bc1\u4ef6", 
+            "title": "Production"
+        }, 
+        {
+            "location": "/megvii/1223_talk/#face", 
+            "text": "What: Face++ is an open platform providing service for multiple industry and intelligent devices based on computer vision technology, which can help client to improve their competitiveness of their production.  Flow\n      \\\n       v\n    platform  = compliance\n        ^\n        |\n    providing", 
+            "title": "Face++"
+        }, 
+        {
+            "location": "/megvii/1223_talk/#live", 
+            "text": "\u7f8e\u989c\uff0cAR\u89c6\u9891\u4ea4\u6d41\uff08\u865a\u62df\u6f14\u64ad\u5385\uff09", 
+            "title": "Live"
+        }, 
+        {
+            "location": "/megvii/1230_talk/", 
+            "text": "A Tour of MegBrain\n\n\n\n\n2014/11/20: MegBrain started\n\n\n2015/03/24: Alexnet/face recognition\n\n\n2015/07: Python wrapper\n\n\n2015/08: opr\n\n\n2015/09: MegSkull and MegHair started", 
+            "title": "1230 talk"
+        }, 
+        {
+            "location": "/megvii/1230_talk/#a-tour-of-megbrain", 
+            "text": "2014/11/20: MegBrain started  2015/03/24: Alexnet/face recognition  2015/07: Python wrapper  2015/08: opr  2015/09: MegSkull and MegHair started", 
+            "title": "A Tour of MegBrain"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/", 
+            "text": "3.3\n\n\nDeep Learning Goes 3D, Haoqiang Fan\n\n\n\n\nHuman can get 3D visual impact in 2D image\n\n\nHow to represent 3D shape\n\n\nDepth map? Does not work (obstacle)\n\n\nTriangle mesh? Too complicate for deep NN\n\n\n\n\n\n\nOur approach: Points\n\n\nShapeNet: generated\n\n\nImplementation details\n\n\nLoss function: EMD mean, CD mean\n\n\n\n\n\n\nHuman performance\n\n\n\n\nImage Semantic Segmentation, Chao Peng\n\n\n\n\nWhy segmentation?\n\n\nADAS\n\n\nMedical\n\n\nFront background\n\n\n\n\n\n\nCurrent methods\n\n\nFCN\n\n\nProblem: valid receptive field\n\n\n\n\n\n\nGlobal convolutional network\n\n\n\n\nDeep Text Detection without Bells and Whistles, Tim\n\n\n\n\nProblem in OCR\n\n\nTraditional, simple layout style and font\n\n\nIn the wild\n\n\nHierarchy\n\n\n\n\n\n\nOld school methods\n\n\nOur pipline\n\n\nScore map\n\n\nGeometry map\n\n\nNMS\n\n\n\n\n\n\n\n\nWhat Can Help Pedestrain Detection, Tete Xiao, Jiayuan Mao\n\n\n\n\nWhat can help? Segmentation, edge, heat map, optical flow, depth map\n\n\nSegmentation, edge contains fine-grained semantic information", 
+            "title": "CVPR2017"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/#33", 
+            "text": "", 
+            "title": "3.3"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/#deep-learning-goes-3d-haoqiang-fan", 
+            "text": "Human can get 3D visual impact in 2D image  How to represent 3D shape  Depth map? Does not work (obstacle)  Triangle mesh? Too complicate for deep NN    Our approach: Points  ShapeNet: generated  Implementation details  Loss function: EMD mean, CD mean    Human performance", 
+            "title": "Deep Learning Goes 3D, Haoqiang Fan"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/#image-semantic-segmentation-chao-peng", 
+            "text": "Why segmentation?  ADAS  Medical  Front background    Current methods  FCN  Problem: valid receptive field    Global convolutional network", 
+            "title": "Image Semantic Segmentation, Chao Peng"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/#deep-text-detection-without-bells-and-whistles-tim", 
+            "text": "Problem in OCR  Traditional, simple layout style and font  In the wild  Hierarchy    Old school methods  Our pipline  Score map  Geometry map  NMS", 
+            "title": "Deep Text Detection without Bells and Whistles, Tim"
+        }, 
+        {
+            "location": "/megvii/CVPR2017/#what-can-help-pedestrain-detection-tete-xiao-jiayuan-mao", 
+            "text": "What can help? Segmentation, edge, heat map, optical flow, depth map  Segmentation, edge contains fine-grained semantic information", 
+            "title": "What Can Help Pedestrain Detection, Tete Xiao, Jiayuan Mao"
+        }, 
+        {
+            "location": "/megvii/attendance/", 
+            "text": "Attendance\n\n\n\n\n\n\n\n\nDate\n\n\nWeek Number\n\n\nDuration\n\n\nHalf/Whole\n\n\n\n\n\n\n\n\n\n\nSept. 18th\n\n\nSunday\n\n\n10:00~19:30\n\n\nW\n\n\n\n\n\n\nSept. 20th\n\n\nTuesday\n\n\n8:30~19:30\n\n\nW\n\n\n\n\n\n\nSept. 21st\n\n\nWednesday\n\n\n8:00~15:00\n\n\nW\n\n\n\n\n\n\nSept. 22nd\n\n\nThursday\n\n\n8:00~16:30\n\n\nW\n\n\n\n\n\n\nSept. 23rd\n\n\nFriday\n\n\n9:00~18:40\n\n\nW\n\n\n\n\n\n\nSept. 27th\n\n\nTuesday\n\n\n8:15~17:40\n\n\nW\n\n\n\n\n\n\nSept. 28th\n\n\nWednesday\n\n\n9:00~14:40\n\n\nH\n\n\n\n\n\n\nSept. 29th\n\n\nThursday\n\n\n9:10~15:30\n\n\nH\n\n\n\n\n\n\nSept. 30th\n\n\nFriday\n\n\n9:30~18:30\n\n\nW\n\n\n\n\n\n\nOct. 08th\n\n\nSaturday\n\n\n8:30~18:30\n\n\nW\n\n\n\n\n\n\nOct. 09th\n\n\nSunday\n\n\n8:45~12:30\n\n\nH\n\n\n\n\n\n\nOct. 11th\n\n\nTuesday\n\n\n9:00~19:30\n\n\nW\n\n\n\n\n\n\nOct. 12th\n\n\nWednesday\n\n\n9:15~14:30\n\n\nH\n\n\n\n\n\n\nOct. 13th\n\n\nThursday\n\n\n8:40~16:00\n\n\nH\n\n\n\n\n\n\nOct. 14th\n\n\nFriday\n\n\n9:00~14:00\n\n\nH\n\n\n\n\n\n\nOct. 15th\n\n\nSaturday\n\n\n8:30~15:00\n\n\nH\n\n\n\n\n\n\nOct. 18th\n\n\nTuesday\n\n\n9:00~20:00\n\n\nW\n\n\n\n\n\n\nOct. 19th\n\n\nWednesday\n\n\n8:30~15:00\n\n\nW\n\n\n\n\n\n\nOct. 20th\n\n\nThursday\n\n\n9:00~15:30\n\n\nW\n\n\n\n\n\n\nOct. 21st\n\n\nFriday\n\n\n9:00~15:30\n\n\nW\n\n\n\n\n\n\nOct. 25th\n\n\nTuesday\n\n\n8:30~17:30\n\n\nW\n\n\n\n\n\n\nOct. 26th\n\n\nWednesday\n\n\n10:30~15:00\n\n\nH\n\n\n\n\n\n\nOct. 27th\n\n\nThursday\n\n\n9:30~16:00\n\n\nW\n\n\n\n\n\n\nOct. 28th\n\n\nFriday\n\n\n10:30~16:00\n\n\nW\n\n\n\n\n\n\nOct. 29th\n\n\nSaturday\n\n\n13:30~16:00\n\n\nH\n\n\n\n\n\n\nNov. 1st\n\n\nTuesday\n\n\n10:30~21:30\n\n\nW\n\n\n\n\n\n\nNov. 2nd\n\n\nWednesday\n\n\n9:30~15:00\n\n\nW\n\n\n\n\n\n\nNov. 3rd\n\n\nThursday\n\n\n10:30~16:30\n\n\nW\n\n\n\n\n\n\nNov. 4th\n\n\nFriday\n\n\n9:00~19:00\n\n\nW\n\n\n\n\n\n\nNov. 8th\n\n\nTuesday\n\n\n8:50~19:00\n\n\nW\n\n\n\n\n\n\nNov. 9th\n\n\nWednesday\n\n\n8:50~19:00\n\n\nW\n\n\n\n\n\n\nNov. 10th\n\n\nThursday\n\n\n8:50~19:00\n\n\nW", 
+            "title": "Attendance"
+        }, 
+        {
+            "location": "/megvii/attendance/#attendance", 
+            "text": "Date  Week Number  Duration  Half/Whole      Sept. 18th  Sunday  10:00~19:30  W    Sept. 20th  Tuesday  8:30~19:30  W    Sept. 21st  Wednesday  8:00~15:00  W    Sept. 22nd  Thursday  8:00~16:30  W    Sept. 23rd  Friday  9:00~18:40  W    Sept. 27th  Tuesday  8:15~17:40  W    Sept. 28th  Wednesday  9:00~14:40  H    Sept. 29th  Thursday  9:10~15:30  H    Sept. 30th  Friday  9:30~18:30  W    Oct. 08th  Saturday  8:30~18:30  W    Oct. 09th  Sunday  8:45~12:30  H    Oct. 11th  Tuesday  9:00~19:30  W    Oct. 12th  Wednesday  9:15~14:30  H    Oct. 13th  Thursday  8:40~16:00  H    Oct. 14th  Friday  9:00~14:00  H    Oct. 15th  Saturday  8:30~15:00  H    Oct. 18th  Tuesday  9:00~20:00  W    Oct. 19th  Wednesday  8:30~15:00  W    Oct. 20th  Thursday  9:00~15:30  W    Oct. 21st  Friday  9:00~15:30  W    Oct. 25th  Tuesday  8:30~17:30  W    Oct. 26th  Wednesday  10:30~15:00  H    Oct. 27th  Thursday  9:30~16:00  W    Oct. 28th  Friday  10:30~16:00  W    Oct. 29th  Saturday  13:30~16:00  H    Nov. 1st  Tuesday  10:30~21:30  W    Nov. 2nd  Wednesday  9:30~15:00  W    Nov. 3rd  Thursday  10:30~16:30  W    Nov. 4th  Friday  9:00~19:00  W    Nov. 8th  Tuesday  8:50~19:00  W    Nov. 9th  Wednesday  8:50~19:00  W    Nov. 10th  Thursday  8:50~19:00  W", 
+            "title": "Attendance"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/", 
+            "text": "Training Neural Network\n\n\nMachine Learing as Optimization\n\n\n\n\nSupervised learning\n\n\n\n\n\\min_\\theta d(y,\\hat{y})\n\n\n\n\n\n\n\n\nRegularized sypervised learning\n\n\n\n\n\\min_\\theta d(y,\\hat{y}) + r(\\hat{y})\n\n\n\n\n\n\n\n\nProbabilistic interpretation\n\n\n\n\n\\log p(y|\\hat{y})\n\n\n\n\n\n\n\n\nGradient descent\n    \n\\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}\n\n\n\n\nDissretized, gradient descent may not converge\n\n\nTheoratically can be solved by Newton's method (\nH^{-1}\n)\n\n\nGauss-Newton algorithm\n\n\n\n\nX_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}\n\n\n\n\n\n\n\n\n\n\nLinear Regression\n\n\n\n\nGauss, \ny=\\hat{y}-WX\n\n\n\n\nToo much channel, bottle neck use identity\n\n\n\n\nCNN\n\n\n\n\nConvolution is linear\n\n\nEquivalent to matrix multiply\n\n\nPossion matrix\n\n\n\n\n\n\nWhy not FC\n\n\nData is never enough\n\n\nTranslation invariance\n\n\nGlobal minimum cannot be realized\n\n\n\n\n\n\nConvolution as matrix product\n\n\nfeature map \n<N, C, H', W'>\n\n\n\n\nweights \n<K, C, H, W>\n\n\n\n\nK: for efficience\n\n\nSteps\n\n\nImage to column\n\n\nKernel to matrix\n\n\nMatrix mul matrix\n\n\n\n\n\n\n\n\n\n\nLocally-connected\n\n\nChannl-wise convolution\n\n\n\n\nNonlinearity\n\n\n\n\nTanh: need exp (not recommended)\n\n\nMaxout\n\n\n\n\nBatch Normalization\n\n\n\n\nStill need augmentation?\n\n\n\n\n\\alpha \\frac{X-mean(X)}{std(X)}+\\beta\n\n\n\n\nStabilizer\n\n\nnpk-sanitize-batch-normalization\n\n\n\n\nLearning rate\n\n\n\n\nStep length\n\n\n\n\nLearning rule\n\n\n\n\nSGD + Momentum: \n\\Delta w := -\\eta\\\n\n\n\n\nAdaGrad\n\n\nADAM: may not get good converge point, but is stable\n\n\nADAMV8: accumulate gradient, update several batches in one shot\n\n\n\n\nDropout\n\n\nColumnwise FC\n\n\n\n\nFaster than RNN\n\n\nCan be implemented by reshape and conv\n\n\n\n\nParameter Sharing\n\n\n\n\nBy \nNetworkVisitor\n\n\niter_dep_opr\n\n\n\n\n\n\n\n\nCheck List\n\n\n\n\nData \nmust\n be shuffled (expectation of SGD must represent GD)\n\n\nRepeat data, label is harmful\n\n\n\n\n\n\nColor image are not in BGR\n\n\nHuman face should not be blue\n\n\n\n\n\n\nRead the work log if there is one\n\n\nCheck #OP and learnable params in your model\n\n\nDo not use too much learnable params\n\n\n\n\n\n\n\n\nModel Death\n\n\n\n\nTweak learning rate\n\n\nMay add BN\n\n\nMay try branch supervisions\n\n\nTry value range of parameters\n\n\nLower dropout\n\n\nTry wider \n deeper model\n\n\nChannel x2 /2\n\n\nIniting  from a working model\n\n\nCan steal some layers\n\n\n\n\n\n\nCurriculum learning\n\n\nInitiating a model o harder data with a model that works \non easier data\n\n\n\n\n\n\n\n\nGood practice\n\n\n\n\n100 class to 1000 class\n\n\nMultitask learning\n\n\nClass + heat map\n\n\n\n\n\n\nHard example mining\n\n\nFeature map should be gradually smaller", 
+            "title": "01 training neural network"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#training-neural-network", 
+            "text": "", 
+            "title": "Training Neural Network"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#machine-learing-as-optimization", 
+            "text": "Supervised learning   \\min_\\theta d(y,\\hat{y})     Regularized sypervised learning   \\min_\\theta d(y,\\hat{y}) + r(\\hat{y})     Probabilistic interpretation   \\log p(y|\\hat{y})     Gradient descent\n     \\theta_{t+\\lambda} = \\theta_{t} - \\frac{}{}   Dissretized, gradient descent may not converge  Theoratically can be solved by Newton's method ( H^{-1} )  Gauss-Newton algorithm   X_{t+1}=X_t - \\frac{\\e f(X)}{\\e X}", 
+            "title": "Machine Learing as Optimization"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#linear-regression", 
+            "text": "Gauss,  y=\\hat{y}-WX   Too much channel, bottle neck use identity", 
+            "title": "Linear Regression"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#cnn", 
+            "text": "Convolution is linear  Equivalent to matrix multiply  Possion matrix    Why not FC  Data is never enough  Translation invariance  Global minimum cannot be realized    Convolution as matrix product  feature map  <N, C, H', W'>   weights  <K, C, H, W>   K: for efficience  Steps  Image to column  Kernel to matrix  Matrix mul matrix      Locally-connected  Channl-wise convolution", 
+            "title": "CNN"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#nonlinearity", 
+            "text": "Tanh: need exp (not recommended)  Maxout", 
+            "title": "Nonlinearity"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#batch-normalization", 
+            "text": "Still need augmentation?   \\alpha \\frac{X-mean(X)}{std(X)}+\\beta   Stabilizer  npk-sanitize-batch-normalization", 
+            "title": "Batch Normalization"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#learning-rate", 
+            "text": "Step length", 
+            "title": "Learning rate"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#learning-rule", 
+            "text": "SGD + Momentum:  \\Delta w := -\\eta\\   AdaGrad  ADAM: may not get good converge point, but is stable  ADAMV8: accumulate gradient, update several batches in one shot", 
+            "title": "Learning rule"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#dropout", 
+            "text": "", 
+            "title": "Dropout"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#columnwise-fc", 
+            "text": "Faster than RNN  Can be implemented by reshape and conv", 
+            "title": "Columnwise FC"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#parameter-sharing", 
+            "text": "By  NetworkVisitor  iter_dep_opr", 
+            "title": "Parameter Sharing"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#check-list", 
+            "text": "Data  must  be shuffled (expectation of SGD must represent GD)  Repeat data, label is harmful    Color image are not in BGR  Human face should not be blue    Read the work log if there is one  Check #OP and learnable params in your model  Do not use too much learnable params", 
+            "title": "Check List"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#model-death", 
+            "text": "Tweak learning rate  May add BN  May try branch supervisions  Try value range of parameters  Lower dropout  Try wider   deeper model  Channel x2 /2  Initing  from a working model  Can steal some layers    Curriculum learning  Initiating a model o harder data with a model that works  on easier data", 
+            "title": "Model Death"
+        }, 
+        {
+            "location": "/nn_tutorial/01_training_neural_network/#good-practice", 
+            "text": "100 class to 1000 class  Multitask learning  Class + heat map    Hard example mining  Feature map should be gradually smaller", 
+            "title": "Good practice"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/", 
+            "text": "Neupeak Introduction\n\n\n HEAD\n\n \nnpk-model-manip some-model shell\n\n\n \nload_dataset('dataset.py:train:remote')\n\n* \nO.grad\n\n\nWhy DPFlow\n\n\n\n\nMulti-thread is easy\n\n\nServe for multi-user (ImageNet)\n\n\nnpk-serve-dataset\n\n\n\n\nTrain.py\n\n\n\n\nenv\n\n\nopt\n \nclip_gradient_inplace(opt, 1)\n\n\n--fast-run\n do initial experiments to determain which implementation of convolution is fast\n\n\nIf the network shape is fixed, this may speed up 3 times in average\n\n\n\n\n\n\n-c\n continue training\n\n\n\n\nNetwork profile\n\n\nSpeed Test\n\n\n\n\nPROFILE=1 ITER=50 BATCH_SIZE=1 ARGS='--input-desc\n\n\n\n\nDistillation (Teacher- student framework)\n\n\n\n\nTeacher freeze parameter, do not train\n\n\nO.utils.add_name_prefix_to_subgraph\n\n\n\n\nDon't write your own layer!\n\n\nDebug\n\n\n\n\nreshape\n\n\ncallback_injector\n\n    \npython\n    def cb(x, value):\n        print(value.eval())\n        embed()\n    x = O.callback_injector(x, cb)\n\n\n\n\nLoop\n\n\nColumn FC/RNN co-training", 
+            "title": "02 Neupeak"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#neupeak-introduction", 
+            "text": "HEAD   npk-model-manip some-model shell    load_dataset('dataset.py:train:remote') \n*  O.grad", 
+            "title": "Neupeak Introduction"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#why-dpflow", 
+            "text": "Multi-thread is easy  Serve for multi-user (ImageNet)  npk-serve-dataset", 
+            "title": "Why DPFlow"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#trainpy", 
+            "text": "env  opt   clip_gradient_inplace(opt, 1)  --fast-run  do initial experiments to determain which implementation of convolution is fast  If the network shape is fixed, this may speed up 3 times in average    -c  continue training", 
+            "title": "Train.py"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#network-profile", 
+            "text": "", 
+            "title": "Network profile"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#speed-test", 
+            "text": "PROFILE=1 ITER=50 BATCH_SIZE=1 ARGS='--input-desc", 
+            "title": "Speed Test"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#distillation-teacher-student-framework", 
+            "text": "Teacher freeze parameter, do not train  O.utils.add_name_prefix_to_subgraph", 
+            "title": "Distillation (Teacher- student framework)"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#dont-write-your-own-layer", 
+            "text": "", 
+            "title": "Don't write your own layer!"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#debug", 
+            "text": "reshape  callback_injector \n     python\n    def cb(x, value):\n        print(value.eval())\n        embed()\n    x = O.callback_injector(x, cb)", 
+            "title": "Debug"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#loop", 
+            "text": "", 
+            "title": "Loop"
+        }, 
+        {
+            "location": "/nn_tutorial/02_Neupeak/#column-fcrnn-co-training", 
+            "text": "", 
+            "title": "Column FC/RNN co-training"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/", 
+            "text": "Model Design\n\n\nDesign rule\n\n\n\n\nFC can turn to conv\n\n\n\n\nGoogLeNet\n\n\n\n\nLess #OP, smaller size\n\n\nInception layer\n\n\nLayer structure is too complicated\n\n\nAverage pooling to decrease feature map size\n\n\nBad in character recognition\n\n\n\n\n\n\n\n\nWaterfall\n\n\n\n\nDeveloped by Xiangyu\n\n\n\n\nOCR\n\n\nTraditional\n\n\n\n\nNeed assumptions\n\n\nPlain layout\n\n\nGood light condition\n\n\n\n\n\n\nAlign well designed document (e.g. bills)\n\n\nProblem\n\n\nComplex layout\n\n\nHandwritten\n\n\nMultilingual\n\n\n\n\n\n\n\n\nNN\n\n\n\n\nMost time spend on build dataset\n\n\nHeat map is easy to train\n\n\nChinese character challenge\n\n\nLeft-right structure (\u840c\uff1a\u660e\uff0c\u6708)", 
+            "title": "03 deep model"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#model-design", 
+            "text": "", 
+            "title": "Model Design"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#design-rule", 
+            "text": "FC can turn to conv", 
+            "title": "Design rule"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#googlenet", 
+            "text": "Less #OP, smaller size  Inception layer  Layer structure is too complicated  Average pooling to decrease feature map size  Bad in character recognition", 
+            "title": "GoogLeNet"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#waterfall", 
+            "text": "Developed by Xiangyu", 
+            "title": "Waterfall"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#ocr", 
+            "text": "", 
+            "title": "OCR"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#traditional", 
+            "text": "Need assumptions  Plain layout  Good light condition    Align well designed document (e.g. bills)  Problem  Complex layout  Handwritten  Multilingual", 
+            "title": "Traditional"
+        }, 
+        {
+            "location": "/nn_tutorial/03_deep_model/#nn", 
+            "text": "Most time spend on build dataset  Heat map is easy to train  Chinese character challenge  Left-right structure (\u840c\uff1a\u660e\uff0c\u6708)", 
+            "title": "NN"
+        }, 
+        {
+            "location": "/random/1222_shaoqing_ren/", 
+            "text": "Dec. 22\n\n\nDetection\n\n\n\n\nRecognition by classification\n\n\nLocalization by sliding window\n\n\nChallenge\n\n\nDifficulties in recognition and localization\n\n\nHigh computational complexity\n\n\n\n\n\n\nTarget\n\n\nHigh precision\n\n\nHigh speed\n\n\n\n\n\n\n\n\nDevelopment time line\n\n\n\n\nDPM: HoG based object detection\n\n\nRegion proposal: selective search\n\n\nCut down the computational complexity of localization\n\n\n\n\n\n\nR-CNN\n\n\nSelective search to do region proposal, 2k proposal per image\n\n\nResize regions to square (fixed size for VGG-16)\n\n\nVGG-16 feature extraction\n\n\nPerformance\n\n\n\n\n\n\nSpatial pyramid network (Kaiming He, Xiangyu Zhang, Shaoqing Ren)\n\n\nRegion proposal on feature map\n\n\nLimitation: SPP layer can only forward\n\n\n\n\n\n\nFast R-CNN\n\n\nRedefine SPP layer that support back-propogation\n\n\nStill use selective search and VGG-16\n\n\nBottleneck: region proposal (two research line)\n\n\nSelective search\n\n\nEdge box\n\n\n\n\n\n\n\n\n\n\nFaster R-CNN\n\n\nSee \npaper note\n\n\nFaster RNN divide the whole CNN into region proposal part and classification part (101 = 91+10), 10 layer classifier need to run many times (number of proposals)\n\n\n\n\n\n\nR-FCN\n\n\nOther paper\n\n\nOverfeat\n\n\nScalable object detection\n\n\nYou only look once\n\n\nSSD\n\n\nFeature pyramid networks for object deteciton\n\n\n\n\n\n\n\n\nMomenta", 
+            "title": "1222 shaoqing ren"
+        }, 
+        {
+            "location": "/random/1222_shaoqing_ren/#dec-22", 
+            "text": "", 
+            "title": "Dec. 22"
+        }, 
+        {
+            "location": "/random/1222_shaoqing_ren/#detection", 
+            "text": "Recognition by classification  Localization by sliding window  Challenge  Difficulties in recognition and localization  High computational complexity    Target  High precision  High speed", 
+            "title": "Detection"
+        }, 
+        {
+            "location": "/random/1222_shaoqing_ren/#development-time-line", 
+            "text": "DPM: HoG based object detection  Region proposal: selective search  Cut down the computational complexity of localization    R-CNN  Selective search to do region proposal, 2k proposal per image  Resize regions to square (fixed size for VGG-16)  VGG-16 feature extraction  Performance    Spatial pyramid network (Kaiming He, Xiangyu Zhang, Shaoqing Ren)  Region proposal on feature map  Limitation: SPP layer can only forward    Fast R-CNN  Redefine SPP layer that support back-propogation  Still use selective search and VGG-16  Bottleneck: region proposal (two research line)  Selective search  Edge box      Faster R-CNN  See  paper note  Faster RNN divide the whole CNN into region proposal part and classification part (101 = 91+10), 10 layer classifier need to run many times (number of proposals)    R-FCN  Other paper  Overfeat  Scalable object detection  You only look once  SSD  Feature pyramid networks for object deteciton", 
+            "title": "Development time line"
+        }, 
+        {
+            "location": "/random/1222_shaoqing_ren/#momenta", 
+            "text": "", 
+            "title": "Momenta"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/", 
+            "text": "Reinforcement Learning\n\n\n\n\n3rd, November, Thursday\n\n\n\n\nApproaches to Reinforcement Learning\n\n\n\n\nValue-based\n\n\nPolicy-based\n\n\nModel-based\n\n\n\n\nDeep Reinforcement Learning\n\n\n\n\nUse deep network to describe value function/policy/model\n\n\nOptimize loss function by stochastic gradient descent\n\n\nNot stable\n\n\n\n\nDQN\n\n\n\n\nQ-learning: \nQ^*(s,a)=E_{a'}[r+\\gamma\\max_{a'}Q(s',a')|s,a]\n\n\nProblem of Q-learning with deep network\n\n\nData is sequential: successive samples are correlated, non-iid\n\n\nPolicy changes rapidly with slight changes to Q-values\n\n\nPolicy may oscillate\n\n\n\n\n\n\n\n\n\n\nHow DQN solve these problems\n\n\nDevelopment\n\n\nDouble DQN\n\n\nPrioritized replay\n\n\nDuelling network\n\n\nAsynchronous reinforcement learning (A3C)\n\n\n\n\n\n\n\n\nDrawbacks\n\n\n\n\nDAta inefficient\n\n\nLong time to train\n\n\nSafe\n\n\nLow level abstraction\n\n\nTransfer poorly\n\n\nHard to explain\n\n\n\n\nPrograssive research area\n\n\n\n\nPrograssive NN\n\n\nAttention\n\n\nGenerative model", 
+            "title": "Reinforcement learning"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#reinforcement-learning", 
+            "text": "3rd, November, Thursday", 
+            "title": "Reinforcement Learning"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#approaches-to-reinforcement-learning", 
+            "text": "Value-based  Policy-based  Model-based", 
+            "title": "Approaches to Reinforcement Learning"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#deep-reinforcement-learning", 
+            "text": "Use deep network to describe value function/policy/model  Optimize loss function by stochastic gradient descent  Not stable", 
+            "title": "Deep Reinforcement Learning"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#dqn", 
+            "text": "Q-learning:  Q^*(s,a)=E_{a'}[r+\\gamma\\max_{a'}Q(s',a')|s,a]  Problem of Q-learning with deep network  Data is sequential: successive samples are correlated, non-iid  Policy changes rapidly with slight changes to Q-values  Policy may oscillate      How DQN solve these problems  Development  Double DQN  Prioritized replay  Duelling network  Asynchronous reinforcement learning (A3C)", 
+            "title": "DQN"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#drawbacks", 
+            "text": "DAta inefficient  Long time to train  Safe  Low level abstraction  Transfer poorly  Hard to explain", 
+            "title": "Drawbacks"
+        }, 
+        {
+            "location": "/xiangyang_ji/reinforcement_learning/#prograssive-research-area", 
+            "text": "Prograssive NN  Attention  Generative model", 
+            "title": "Prograssive research area"
+        }
+    ]
+}
