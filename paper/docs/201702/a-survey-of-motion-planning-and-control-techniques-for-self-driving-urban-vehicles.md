@@ -86,12 +86,12 @@
 * Vehicle control
     - Feedback controller
 
-### Models of mobility of car-like vehicles
+## Models of Planning and Control
 * Begin: vehicle configuration (pose and position in the world)
     - Determain the coordinate system for the configuration space (e.g. the planar coordinate of a point on the car together with the car’s heading)
     - Planar rigid-body motions (represented by the Special Euclidean group in two dimensions, SE(2))
 
-#### The Kinematic Single-Track Model
+### The Kinematic Single-Track Model
 * ![kinematic single-track model](http://img.blog.csdn.net/20170225112044453?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2huMTM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 * Assumptions (nonholonomic constraint)
     - No slip between the wheels and the ground. Wheels can rotate freely.
@@ -107,3 +107,21 @@
     - $\dot{y_r} = v_r\sin \theta$
     - $\dot{\theta} = \frac{v_r}{l}\tan{\delta}$
     - 
+
+<!-- TODO -->
+
+## Motion Planning
+* Goal configuration differs by context
+    - On road: the center point of current lane a number of meters ahead
+    - Traffic light: the center of the stop line at the next intersection
+    - Parking: the next parking lot
+    - Etc.
+* Inputs: static and dynamic obstacles around the vehicle
+* Objective: generates a collision-free trajectory that satisfies dynamic and kinematic constraints on the motion of the vehicle.
+* Objective function
+    - Minimizing traval time
+    - penalize hazardous motions or motions that cause passenger discomfort
+* Path planning and trajectory planning are different!
+    - Path planning: $\sigma(\alpha): [0, 1] \rightarrow \mathcal{X}$
+    
+
