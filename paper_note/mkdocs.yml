@@ -1,7 +1,7 @@
 site_name: My Docs
-
+repo_url: https://github.com/chaonan99/chaonan99_note/tree/master/paper_note
+site_author: chaonan99
 extra_javascript:
     - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
 markdown_extensions:
     - mdx_math
