@@ -1,0 +1,89 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-mkdocs", 
+            "text": "For full documentation visit  mkdocs.org .", 
+            "title": "Welcome to MkDocs"
+        }, 
+        {
+            "location": "/#commands", 
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
+            "title": "Commands"
+        }, 
+        {
+            "location": "/#project-layout", 
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "title": "Project layout"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/", 
+            "text": "Automated and Cooperative Vehicle Merging at Highway On-Ramps\n\n\n\n\npaper\n\n\nAuthor: \nJackeline Rios-Torres\n, \nAndreas A. Malikopoulos\n\n\n\n\nSome New Concepts\n\n\n\n\nModel predictive control\n\n\nRamp metering: regulate the flow of vehicles merging into freeways to decrease traffic congestion\n\n\nDeceleration fuel cutoff (DFCO): terminates fuel injection at braking and the engine does not consume any fuel\n\n\n\n\nContribution\n\n\n\n\nHard constraint of collision aviodance and optimize fuel consumption\n\n\nCentralized, online closed-form\n\n\n\n\nFramework\n\n\n\n\nMerging zone \nS\n, control zone \nL\n.\n\n\nFIFO queue \ni=N(t)+1\n\n\n\n\nModel framework\n\n\nInitial state and state equation: \n\\dot{x}_i = f(t, x_i, u_i), \\quad x_i(t_i^0)=x_i^0\n\n\n\n\nState space and control input: \nu_i(t) = \\dot{v_i},\\quad x_i(t) = [p_i(t), v_i(t)]^\\mathrm{T}\n\n\n\n\n\n\n\n\nOptimization\n\n\nFuel consumption model: \n\\dot{f}_v = \\dot{f}_{\\mathrm{cruise}} + \\dot{f}_{\\mathrm{accel}}\n\n\n\n\nwhere: \n\\begin{aligned}\\dot{f}_{\\mathrm{cruise}}&=q_0 + q_1v(t)+q_2v^2(t)+q_3v^3(t)\\\\\\dot{f}_{\\mathrm{accel}}&=u(t)\\cdot(r_0 + r_1v(t) + r_2v^2(t))\\end{aligned}\n\n\n\n\nParameters are calculated from experimental data\n\n\nThe model does not yield fuel consumption for braking, i.e., when \nu(t)\n takes negative values\n\n\nFigure:\n\n\n\n\n\n\n\n\nParameters are given. See original paper.\n\n\nConstraints\n\n\n\n\nu_{\\min}\\leq u_i(t) \\leq u_{\\max}, 0\\leq v_{\\min}\\leq v_i(t)\\leq v_{\\max}\n\n\n\n\nSafe distance \n\\delta\n\n\n\n\nOnly one vehicle can be crossing the merging zone at a time\n\n\nAssumption\n: The vehicle speed inside merging zone is constant\n\n\n\n\n\n\nOptimize: \ncontrol input\n + \ngap between vehicles\n\n\n\n\n\n\n\n\nAnalysis\n\n\n\n\nHard constraint for collision aviodance, based on some assumptions\n\n\nHamiltonian Analysis (\nHamiltonian mechanics\n)\n\n\nAfter some deductions (do not understand)\n\n\nOptimal control strategy: \nu_i^* (t) = a_it + b_i\n\n\n\n\n\n\n\n\n\n\nExperiments\n\n\n\n\n4 cars, same initial speed\n\n\nController can avoid collision (merging zone occupy)\n\n\n\n\n\n\n30 cars, same initial speed, no limitation on speed\n\n\nSome car need to decelerate under road capacity constraint\n\n\n\n\n\n\n30 cars, 13.4m/s for main road and 11.2m/s for secondary road\n\n\nCar on main road has more chance to accelerate\n\n\n\n\n\n\nCompare with baseline: car on secondary road should stop and wait until main road is clean.\n\n\nFuel consumption lower\n\n\n\n\n\n\nHigh speed with speed limitation\n\n\nHard to find feasible solution", 
+            "title": "20170322 automated and cooperative merge on ramp highway"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#automated-and-cooperative-vehicle-merging-at-highway-on-ramps", 
+            "text": "paper  Author:  Jackeline Rios-Torres ,  Andreas A. Malikopoulos", 
+            "title": "Automated and Cooperative Vehicle Merging at Highway On-Ramps"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#some-new-concepts", 
+            "text": "Model predictive control  Ramp metering: regulate the flow of vehicles merging into freeways to decrease traffic congestion  Deceleration fuel cutoff (DFCO): terminates fuel injection at braking and the engine does not consume any fuel", 
+            "title": "Some New Concepts"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#contribution", 
+            "text": "Hard constraint of collision aviodance and optimize fuel consumption  Centralized, online closed-form", 
+            "title": "Contribution"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#framework", 
+            "text": "Merging zone  S , control zone  L .  FIFO queue  i=N(t)+1   Model framework  Initial state and state equation:  \\dot{x}_i = f(t, x_i, u_i), \\quad x_i(t_i^0)=x_i^0   State space and control input:  u_i(t) = \\dot{v_i},\\quad x_i(t) = [p_i(t), v_i(t)]^\\mathrm{T}     Optimization  Fuel consumption model:  \\dot{f}_v = \\dot{f}_{\\mathrm{cruise}} + \\dot{f}_{\\mathrm{accel}}   where:  \\begin{aligned}\\dot{f}_{\\mathrm{cruise}}&=q_0 + q_1v(t)+q_2v^2(t)+q_3v^3(t)\\\\\\dot{f}_{\\mathrm{accel}}&=u(t)\\cdot(r_0 + r_1v(t) + r_2v^2(t))\\end{aligned}   Parameters are calculated from experimental data  The model does not yield fuel consumption for braking, i.e., when  u(t)  takes negative values  Figure:     Parameters are given. See original paper.  Constraints   u_{\\min}\\leq u_i(t) \\leq u_{\\max}, 0\\leq v_{\\min}\\leq v_i(t)\\leq v_{\\max}   Safe distance  \\delta   Only one vehicle can be crossing the merging zone at a time  Assumption : The vehicle speed inside merging zone is constant    Optimize:  control input  +  gap between vehicles", 
+            "title": "Framework"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#analysis", 
+            "text": "Hard constraint for collision aviodance, based on some assumptions  Hamiltonian Analysis ( Hamiltonian mechanics )  After some deductions (do not understand)  Optimal control strategy:  u_i^* (t) = a_it + b_i", 
+            "title": "Analysis"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/#experiments", 
+            "text": "4 cars, same initial speed  Controller can avoid collision (merging zone occupy)    30 cars, same initial speed, no limitation on speed  Some car need to decelerate under road capacity constraint    30 cars, 13.4m/s for main road and 11.2m/s for secondary road  Car on main road has more chance to accelerate    Compare with baseline: car on secondary road should stop and wait until main road is clean.  Fuel consumption lower    High speed with speed limitation  Hard to find feasible solution", 
+            "title": "Experiments"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/", 
+            "text": "Merging lanes \u2014 fairness through communication", 
+            "title": "20170325 merging fairness"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#merging-lanes-fairness-through-communication", 
+            "text": "", 
+            "title": "Merging lanes \u2014 fairness through communication"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/", 
+            "text": "Control Concepts for Facilitating Motorway On-ramp Merging Using Intelligent Vehicles\n\n\n\n\npaper\n\n\n\n\nRelated topics\n\n\n\n\nRamp metering: aims to prevent congestion, w\\o faciliate the merging process\n\n\nAutomatic control of platoon formation\n\n\nAdaptive cruise control: aim to increase string stability\n\n\nInfrastructure-assisted merging (traffic lights)\n\n\n\n\nCategories\n\n\n\n\nControl over\n\n\nMain carriage\n\n\nOn-ramp\n\n\nBoth\n\n\n\n\n\n\nControl direction\n\n\nLongitudinal\n\n\nLateral\n\n\n\n\n\n\nControl vehicle grouped type\n\n\nIndividual\n\n\nString\n\n\nGroup\n\n\n\n\n\n\nMerging type\n\n\nSingle\n\n\nPlatoon\n\n\nBoth\n\n\n\n\n\n\nAlgorithm type\n\n\nCentralised\n\n\nDecentralised\n\n\n\n\n\n\nMonitor over ??\n\n\nMain carriage\n\n\nOn-ramp\n\n\nBoth\n\n\n\n\n\n\nTraffic type\n\n\nMixed\n\n\n100% auto\n\n\n\n\n\n\nIntelligent vehicle type\n\n\nCompletely auto\n\n\nCACC\n\n\nOn-board display\n\n\n\n\n\n\n\n\nEvaluation method ??\n\n\n\n\nMicroscopic similarity ??\n\n\nTest track ??\n\n\n\n\n\n\n\n\nCACC need further investigation", 
+            "title": "20170325 on ramp reivew"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/#control-concepts-for-facilitating-motorway-on-ramp-merging-using-intelligent-vehicles", 
+            "text": "paper", 
+            "title": "Control Concepts for Facilitating Motorway On-ramp Merging Using Intelligent Vehicles"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/#related-topics", 
+            "text": "Ramp metering: aims to prevent congestion, w\\o faciliate the merging process  Automatic control of platoon formation  Adaptive cruise control: aim to increase string stability  Infrastructure-assisted merging (traffic lights)", 
+            "title": "Related topics"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/#categories", 
+            "text": "Control over  Main carriage  On-ramp  Both    Control direction  Longitudinal  Lateral    Control vehicle grouped type  Individual  String  Group    Merging type  Single  Platoon  Both    Algorithm type  Centralised  Decentralised    Monitor over ??  Main carriage  On-ramp  Both    Traffic type  Mixed  100% auto    Intelligent vehicle type  Completely auto  CACC  On-board display     Evaluation method ??   Microscopic similarity ??  Test track ??     CACC need further investigation", 
+            "title": "Categories"
+        }
+    ]
+}
