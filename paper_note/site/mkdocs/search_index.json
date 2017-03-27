@@ -57,13 +57,33 @@
         }, 
         {
             "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/", 
-            "text": "Merging lanes \u2014 fairness through communication", 
+            "text": "Merging lanes \u2014 fairness through communication\n\n\n\n\npaper\n\n\n\n\nFairness Evaluation\n\n\n\n\nUsed to determine merge order.\n\n\nA car with longer wait time should be given preference.\n\n\nWait time starts from free-flow arrival time\n\n\nFree-flow arrival time: the time when the car would have arrived at the merge point if not hindered by other cars\n\n\nCalculation: with maximum acceleration to reach and hold the maximum speed until arriving the merging point.\n\n\n\n\n\n\n\n\nZipper Merge Fairness\n\n\n\n\nUnfairness is worse with higher income traffic flow and higher difference between two incoming flows.\n\n\nUnfairness grows without bounds even for slightly unbalanced inflows.\n\n\n\n\nAchieving fairness\n\n\n\n\nFairness is ensured when all cars are participants (IV running the algorithm)\n\n\nWith non-participants, expected unfairness is finite (proved).\n\n\nQuestion: under a realistic driver model, is the unfairness still finite?\n\n\n\n\nSimulation\n\n\n\n\nNS-3\n\n\nIntelligent Driver Model (IDM) for car following\n\n\n802.11p communication standard\n\n\n\n\n\n\nTwo scenario\n\n\nConstant permeability, increasing traffic flow\n\n\nConstant traffic flow, increasing permeability", 
             "title": "20170325 merging fairness"
         }, 
         {
             "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#merging-lanes-fairness-through-communication", 
-            "text": "", 
+            "text": "paper", 
             "title": "Merging lanes \u2014 fairness through communication"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#fairness-evaluation", 
+            "text": "Used to determine merge order.  A car with longer wait time should be given preference.  Wait time starts from free-flow arrival time  Free-flow arrival time: the time when the car would have arrived at the merge point if not hindered by other cars  Calculation: with maximum acceleration to reach and hold the maximum speed until arriving the merging point.", 
+            "title": "Fairness Evaluation"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#zipper-merge-fairness", 
+            "text": "Unfairness is worse with higher income traffic flow and higher difference between two incoming flows.  Unfairness grows without bounds even for slightly unbalanced inflows.", 
+            "title": "Zipper Merge Fairness"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#achieving-fairness", 
+            "text": "Fairness is ensured when all cars are participants (IV running the algorithm)  With non-participants, expected unfairness is finite (proved).  Question: under a realistic driver model, is the unfairness still finite?", 
+            "title": "Achieving fairness"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170325-merging-fairness/#simulation", 
+            "text": "NS-3  Intelligent Driver Model (IDM) for car following  802.11p communication standard    Two scenario  Constant permeability, increasing traffic flow  Constant traffic flow, increasing permeability", 
+            "title": "Simulation"
         }, 
         {
             "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/", 
@@ -84,6 +104,31 @@
             "location": "/ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/#categories", 
             "text": "Control over  Main carriage  On-ramp  Both    Control direction  Longitudinal  Lateral    Control vehicle grouped type  Individual  String  Group    Merging type  Single  Platoon  Both    Algorithm type  Centralised  Decentralised    Monitor over ??  Main carriage  On-ramp  Both    Traffic type  Mixed  100% auto    Intelligent vehicle type  Completely auto  CACC  On-board display     Evaluation method ??   Microscopic similarity ??  Test track ??     CACC need further investigation", 
             "title": "Categories"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/", 
+            "text": "A Survey on the Coordination of Connected and Automated Vehicles at Intersections and Merging at Highway On-Ramps\n\n\n\n\npaper\n\n\nAuthor: \nJackeline Rios-Torres\n, \nAndreas A. Malikopoulos\n\n\n\n\nCentralized Approach\n\n\n\n\nApproaches Based on Heuristic Rules\n\n\nReservation scheme: divide road into cells which can hold only one car at a time\n\n\nOther: some very early work\n\n\n\n\n\n\nOptimization and Control Approaches\n\n\nMinimize travel time\n\n\nMinimize vehicle overlap\n\n\nFuel consumption\n\n\nMulti-objective (may include the risk of collision)\n\n\n\n\n\n\n\n\nDecentralized Approach\n\n\n\n\nHeuristic control\n\n\nVirtual vehicle/platooning\n\n\nCritical/Invariant set\n\n\n\n\n\n\nOptimization and Control Approaches\n\n\nMulti-objective (commonly assume a desired configuration)\n\n\n\n\n\n\n\n\nFuture Directions\n\n\n\n\nOptimizing vehicle operation at a large scale, rapid learning\n\n\nCombine driver feedback system and connected vehicles to provide instructions to the drivers", 
+            "title": "20170326 a survey on the coordination of connected"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/#a-survey-on-the-coordination-of-connected-and-automated-vehicles-at-intersections-and-merging-at-highway-on-ramps", 
+            "text": "paper  Author:  Jackeline Rios-Torres ,  Andreas A. Malikopoulos", 
+            "title": "A Survey on the Coordination of Connected and Automated Vehicles at Intersections and Merging at Highway On-Ramps"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/#centralized-approach", 
+            "text": "Approaches Based on Heuristic Rules  Reservation scheme: divide road into cells which can hold only one car at a time  Other: some very early work    Optimization and Control Approaches  Minimize travel time  Minimize vehicle overlap  Fuel consumption  Multi-objective (may include the risk of collision)", 
+            "title": "Centralized Approach"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/#decentralized-approach", 
+            "text": "Heuristic control  Virtual vehicle/platooning  Critical/Invariant set    Optimization and Control Approaches  Multi-objective (commonly assume a desired configuration)", 
+            "title": "Decentralized Approach"
+        }, 
+        {
+            "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/#future-directions", 
+            "text": "Optimizing vehicle operation at a large scale, rapid learning  Combine driver feedback system and connected vehicles to provide instructions to the drivers", 
+            "title": "Future Directions"
         }
     ]
 }

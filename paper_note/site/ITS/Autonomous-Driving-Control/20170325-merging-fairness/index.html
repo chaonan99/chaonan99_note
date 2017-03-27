@@ -67,6 +67,10 @@
 <li >
     <a href="../20170325-on-ramp-reivew/">20170325 on ramp reivew</a>
 </li>
+            
+<li >
+    <a href="../20170326-a-survey-on-the-coordination-of-connected/">20170326 a survey on the coordination of connected</a>
+</li>
     </ul>
   </li>
                         </ul>
@@ -103,12 +107,52 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#merging-lanes-fairness-through-communication">Merging lanes — fairness through communication</a></li>
+            <li><a href="#fairness-evaluation">Fairness Evaluation</a></li>
+            <li><a href="#zipper-merge-fairness">Zipper Merge Fairness</a></li>
+            <li><a href="#achieving-fairness">Achieving fairness</a></li>
+            <li><a href="#simulation">Simulation</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="merging-lanes-fairness-through-communication">Merging lanes — fairness through communication</h1>
-<!-- * <a href="">paper</a> --></div>
+<ul>
+<li><a href="https://www.researchgate.net/publication/262922650">paper</a></li>
+</ul>
+<h2 id="fairness-evaluation">Fairness Evaluation</h2>
+<ul>
+<li>Used to determine merge order.</li>
+<li>A car with longer wait time should be given preference.</li>
+<li>Wait time starts from free-flow arrival time<ul>
+<li>Free-flow arrival time: the time when the car would have arrived at the merge point if not hindered by other cars</li>
+<li>Calculation: with maximum acceleration to reach and hold the maximum speed until arriving the merging point.</li>
+</ul>
+</li>
+</ul>
+<h2 id="zipper-merge-fairness">Zipper Merge Fairness</h2>
+<ul>
+<li>Unfairness is worse with higher income traffic flow and higher difference between two incoming flows.</li>
+<li>Unfairness grows without bounds even for slightly unbalanced inflows.</li>
+</ul>
+<h2 id="achieving-fairness">Achieving fairness</h2>
+<ul>
+<li>Fairness is ensured when all cars are participants (IV running the algorithm)</li>
+<li>With non-participants, expected unfairness is finite (proved).</li>
+<li>Question: under a realistic driver model, is the unfairness still finite?</li>
+</ul>
+<h2 id="simulation">Simulation</h2>
+<ul>
+<li>NS-3<ul>
+<li>Intelligent Driver Model (IDM) for car following</li>
+<li>802.11p communication standard</li>
+</ul>
+</li>
+<li>Two scenario<ul>
+<li>Constant permeability, increasing traffic flow</li>
+<li>Constant traffic flow, increasing permeability</li>
+</ul>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
@@ -118,8 +162,7 @@
         <script>var base_url = '../../..';</script>
         <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
         <script src="../../../js/base.js"></script>
-        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="../../../extra"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

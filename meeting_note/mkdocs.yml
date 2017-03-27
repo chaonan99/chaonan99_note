@@ -1,9 +1,7 @@
 site_name: Everywhere Meeting
 
 extra_javascript:
-    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    - extra
+    - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
     - mdx_math
-    - js/mathjaxhelper.js
