@@ -2,23 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to Paper Summary\n\n\nThis document is build with \nMkDocs\n, licensed under a \nCreative Commons Attribution-NonCommercial 4.0 International License\n.\n\n\n\n\nMkDocs quick commands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#welcome-to-paper-summary", 
+            "text": "This document is build with  MkDocs , licensed under a  Creative Commons Attribution-NonCommercial 4.0 International License .", 
+            "title": "Welcome to Paper Summary"
         }, 
         {
-            "location": "/#commands", 
+            "location": "/#mkdocs-quick-commands", 
             "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
-        }, 
-        {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "title": "MkDocs quick commands"
         }, 
         {
             "location": "/ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/", 
@@ -172,7 +167,7 @@
         }, 
         {
             "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/", 
-            "text": "A Natural Language Planner Interface for Mobile Manipulators\n\n\n\n\npaper\n\n\nAuthor: \nThomas M. Howard\n, Stefanie Tellex, \nNicholas Roy\n\n\n\n\nOutline\n\n\n\n\nTask: plan trajectory given natural language instruction in a plain ground with serval colored objects.\n\n\nThe environment is semantically labeled.\n\n\n\n\n\n\nProposed model: DCG, Distributed Correspondence Graph\n\n\n\n\nDCG\n\n\n\n\nA probabilistic graphical model composed of random variables that represent language \n\\lambda\n, groundings \n\\gamma\n and corrrespondence between language and groundings \n\\phi\n and factor \nf\n.\n\n\nEach factor  \nf_{i_j}\n  in the DCG model is influenced by the current phrase  \n\\lambda_i\n , correspondence variable  \n\\phi_{i_j}\n , grounding  \n\\gamma_{i_j}\n , and child phrase groundings \n\\gamma_{c_{i_j}}\n.\n\n\nThe parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model \n\\Upsilon\n (known).\n\n\n\n\n\n\n\\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
+            "text": "A Natural Language Planner Interface for Mobile Manipulators\n\n\n\n\npaper\n\n\nAuthor: \nThomas M. Howard\n, Stefanie Tellex, \nNicholas Roy\n\n\n\n\nOutline\n\n\n\n\nTask: plan trajectory given natural language instruction in a plain ground with several colored objects.\n\n\nThe environment is semantically labeled.\n\n\n\n\n\n\nProposed model: DCG, Distributed Correspondence Graph\n\n\n\n\nDCG\n\n\n\n\nA probabilistic graphical model composed of random variables that represent language \n\\lambda\n, groundings \n\\gamma\n and correspondence between language and groundings \n\\phi\n and factor \nf\n.\n\n\nEach factor  \nf_{i_j}\n  in the DCG model is influenced by the current phrase  \n\\lambda_i\n , correspondence variable  \n\\phi_{i_j}\n , grounding  \n\\gamma_{i_j}\n , and child phrase groundings \n\\gamma_{c_{i_j}}\n.\n\n\nThe parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model \n\\Upsilon\n (known).\n\n\n\n\n\n\n\\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
             "title": "20170907 a natural language planner interface"
         }, 
         {
@@ -182,12 +177,12 @@
         }, 
         {
             "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/#outline", 
-            "text": "Task: plan trajectory given natural language instruction in a plain ground with serval colored objects.  The environment is semantically labeled.    Proposed model: DCG, Distributed Correspondence Graph", 
+            "text": "Task: plan trajectory given natural language instruction in a plain ground with several colored objects.  The environment is semantically labeled.    Proposed model: DCG, Distributed Correspondence Graph", 
             "title": "Outline"
         }, 
         {
             "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/#dcg", 
-            "text": "A probabilistic graphical model composed of random variables that represent language  \\lambda , groundings  \\gamma  and corrrespondence between language and groundings  \\phi  and factor  f .  Each factor   f_{i_j}   in the DCG model is influenced by the current phrase   \\lambda_i  , correspondence variable   \\phi_{i_j}  , grounding   \\gamma_{i_j}  , and child phrase groundings  \\gamma_{c_{i_j}} .  The parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model  \\Upsilon  (known).    \\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
+            "text": "A probabilistic graphical model composed of random variables that represent language  \\lambda , groundings  \\gamma  and correspondence between language and groundings  \\phi  and factor  f .  Each factor   f_{i_j}   in the DCG model is influenced by the current phrase   \\lambda_i  , correspondence variable   \\phi_{i_j}  , grounding   \\gamma_{i_j}  , and child phrase groundings  \\gamma_{c_{i_j}} .  The parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model  \\Upsilon  (known).    \\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
             "title": "DCG"
         }, 
         {
@@ -204,6 +199,16 @@
             "location": "/RBT/+NLP/20170907-source-target-inference-models/#task", 
             "text": "Same as  Natural Language Communication with Robots", 
             "title": "Task"
+        }, 
+        {
+            "location": "/RBT/+NLP/", 
+            "text": "Papers about Robotics + NLP\n\n\nSee RBT -\n +NLP", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/RBT/+NLP/#papers-about-robotics-nlp", 
+            "text": "See RBT -  +NLP", 
+            "title": "Papers about Robotics + NLP"
         }
     ]
 }
