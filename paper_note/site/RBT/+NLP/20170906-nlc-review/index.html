@@ -8,7 +8,7 @@
         <meta name="author" content="chaonan99">
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>20170325 merging fairness - My Docs</title>
+        <title>20170906 nlc review - My Docs</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -48,7 +48,7 @@
                     <li >
                         <a href="../../..">Home</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">ITS <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -57,25 +57,25 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../20170322-automated-and-cooperative-merge-on-ramp-highway/">20170322 automated and cooperative merge on ramp highway</a>
-</li>
-            
-<li class="active">
-    <a href="./">20170325 merging fairness</a>
+    <a href="../../../ITS/Autonomous-Driving-Control/20170322-automated-and-cooperative-merge-on-ramp-highway/">20170322 automated and cooperative merge on ramp highway</a>
 </li>
             
 <li >
-    <a href="../20170325-on-ramp-reivew/">20170325 on ramp reivew</a>
+    <a href="../../../ITS/Autonomous-Driving-Control/20170325-merging-fairness/">20170325 merging fairness</a>
 </li>
             
 <li >
-    <a href="../20170326-a-survey-on-the-coordination-of-connected/">20170326 a survey on the coordination of connected</a>
+    <a href="../../../ITS/Autonomous-Driving-Control/20170325-on-ramp-reivew/">20170325 on ramp reivew</a>
+</li>
+            
+<li >
+    <a href="../../../ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/">20170326 a survey on the coordination of connected</a>
 </li>
     </ul>
   </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">RBT <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -84,19 +84,19 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../RBT/+NLP/20170905-efficient-grounding-of abstract-spatial-concepts/">20170905 efficient grounding of abstract spatial concepts</a>
+    <a href="../20170905-efficient-grounding-of abstract-spatial-concepts/">20170905 efficient grounding of abstract spatial concepts</a>
+</li>
+            
+<li class="active">
+    <a href="./">20170906 nlc review</a>
 </li>
             
 <li >
-    <a href="../../../RBT/+NLP/20170906-nlc-review/">20170906 nlc review</a>
+    <a href="../20170907-a-natural-language-planner-interface/">20170907 a natural language planner interface</a>
 </li>
             
 <li >
-    <a href="../../../RBT/+NLP/20170907-a-natural-language-planner-interface/">20170907 a natural language planner interface</a>
-</li>
-            
-<li >
-    <a href="../../../RBT/+NLP/20170907-source-target-inference-models/">20170907 source target inference models</a>
+    <a href="../20170907-source-target-inference-models/">20170907 source target inference models</a>
 </li>
     </ul>
   </li>
@@ -111,12 +111,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../20170322-automated-and-cooperative-merge-on-ramp-highway/">
+                        <a rel="next" href="../20170905-efficient-grounding-of abstract-spatial-concepts/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../20170325-on-ramp-reivew/">
+                        <a rel="prev" href="../20170907-a-natural-language-planner-interface/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -133,52 +133,49 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#merging-lanes-fairness-through-communication">Merging lanes — fairness through communication</a></li>
-            <li><a href="#fairness-evaluation">Fairness Evaluation</a></li>
-            <li><a href="#zipper-merge-fairness">Zipper Merge Fairness</a></li>
-            <li><a href="#achieving-fairness">Achieving fairness</a></li>
-            <li><a href="#simulation">Simulation</a></li>
+        <li class="main active"><a href="#a-review-of-methodologies-for-natural-language-facilitated-human-robot-cooperation">A Review of Methodologies for Natural-Language-Facilitated Human-Robot Cooperation</a></li>
+            <li><a href="#nl-instruction-understanding">NL Instruction Understanding</a></li>
+            <li><a href="#nl-based-execution-plan-generation">NL-Based Execution Plan Generation</a></li>
+            <li><a href="#knowledge-world-mapping">Knowledge-World Mapping</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="merging-lanes-fairness-through-communication">Merging lanes — fairness through communication</h1>
+<h1 id="a-review-of-methodologies-for-natural-language-facilitated-human-robot-cooperation">A Review of Methodologies for Natural-Language-Facilitated Human-Robot Cooperation</h1>
 <ul>
-<li><a href="https://www.researchgate.net/publication/262922650">paper</a></li>
+<li><a href="https://arxiv.org/pdf/1701.08756.pdf">paper</a></li>
+<li>Author: Rui Liu, Xiaoli Zhang (Colorado School of Mines)</li>
 </ul>
-<h2 id="fairness-evaluation">Fairness Evaluation</h2>
+<h2 id="nl-instruction-understanding">NL Instruction Understanding</h2>
 <ul>
-<li>Used to determine merge order.</li>
-<li>A car with longer wait time should be given preference.</li>
-<li>Wait time starts from free-flow arrival time<ul>
-<li>Free-flow arrival time: the time when the car would have arrived at the merge point if not hindered by other cars</li>
-<li>Calculation: with maximum acceleration to reach and hold the maximum speed until arriving the merging point.</li>
+<li>
+<p>See Table I in the paper.</p>
+</li>
+<li>
+<p>Literal models</p>
+<ul>
+<li>Grammer model: Exhaustive listing of NL instructions</li>
+<li>Association model: Find correlation between concrete concepts</li>
+</ul>
+</li>
+<li>Interpreted models<ul>
+<li>Multi-modalities</li>
+<li>Difficult to combine and extract feature, may have conflicts</li>
 </ul>
 </li>
 </ul>
-<h2 id="zipper-merge-fairness">Zipper Merge Fairness</h2>
+<h2 id="nl-based-execution-plan-generation">NL-Based Execution Plan Generation</h2>
 <ul>
-<li>Unfairness is worse with higher income traffic flow and higher difference between two incoming flows.</li>
-<li>Unfairness grows without bounds even for slightly unbalanced inflows.</li>
+<li>See Table II.</li>
 </ul>
-<h2 id="achieving-fairness">Achieving fairness</h2>
+<h2 id="knowledge-world-mapping">Knowledge-World Mapping</h2>
 <ul>
-<li>Fairness is ensured when all cars are participants (IV running the algorithm)</li>
-<li>With non-participants, expected unfairness is finite (proved).</li>
-<li>Question: under a realistic driver model, is the unfairness still finite?</li>
-</ul>
-<h2 id="simulation">Simulation</h2>
-<ul>
-<li>NS-3<ul>
-<li>Intelligent Driver Model (IDM) for car following</li>
-<li>802.11p communication standard</li>
+<li>Theoretical knowledge grounding: map learned knowledge info corresponding objects and relations in real-world scenarios.<ul>
+<li>Applications: Properities -&gt; real world entity, object searching</li>
+<li>Still need predefinitionss</li>
 </ul>
 </li>
-<li>Two scenario<ul>
-<li>Constant permeability, increasing traffic flow</li>
-<li>Constant traffic flow, increasing permeability</li>
-</ul>
-</li>
+<li>Knowledge gap filling: detect and recommand missing knowledge / inconsistent knowledge.</li>
 </ul></div>
         </div>
 

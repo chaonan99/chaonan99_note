@@ -129,6 +129,81 @@
             "location": "/ITS/Autonomous-Driving-Control/20170326-a-survey-on-the-coordination-of-connected/#future-directions", 
             "text": "Optimizing vehicle operation at a large scale, rapid learning  Combine driver feedback system and connected vehicles to provide instructions to the drivers", 
             "title": "Future Directions"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170905-efficient-grounding-of abstract-spatial-concepts/", 
+            "text": "Efficient Grounding of Abstract Spatial Concepts for Natural Language Interaction with Robot Manipulators\n\n\n\n\npaper\n\n\nAuthor: \nRohan Paul\n, \nJacob Arkin\n, \nNicholas Roy\n, \nThomas M. Howard\n.\n\n\nRobotics and Artificial Intelligence Laboratory in Rochester\n\n\nMIT CSAIL Group\n\n\n\n\nKnowledge\n\n\n\n\nAdaptive Distributed Correspondence Graph (ADCG)\n\n\nPhysical workspace (\n\\Upsilon\n).\n\n\nGroundings (\n\\Gamma\n): the set of groundings consists of symbols that correspond to semantic notions (objects, locations, regions, paths, actions the robot can take).\n\n\n\n\nInput instructions (\n\\Lambda\n): the set of phrases determined from a parse tree.\n\n\n\n\n\n\nGrounding natural language instructions\n\n\n\n\nConcrete groundings: object, semantic labels (e.g. red block), manipulation actions, spatial references, cardinality, ordinal.\n\n\nAbstract groundings: containers, attributes", 
+            "title": "20170905 efficient grounding of abstract spatial concepts"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170905-efficient-grounding-of abstract-spatial-concepts/#efficient-grounding-of-abstract-spatial-concepts-for-natural-language-interaction-with-robot-manipulators", 
+            "text": "paper  Author:  Rohan Paul ,  Jacob Arkin ,  Nicholas Roy ,  Thomas M. Howard .  Robotics and Artificial Intelligence Laboratory in Rochester  MIT CSAIL Group", 
+            "title": "Efficient Grounding of Abstract Spatial Concepts for Natural Language Interaction with Robot Manipulators"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170905-efficient-grounding-of abstract-spatial-concepts/#knowledge", 
+            "text": "Adaptive Distributed Correspondence Graph (ADCG)  Physical workspace ( \\Upsilon ).  Groundings ( \\Gamma ): the set of groundings consists of symbols that correspond to semantic notions (objects, locations, regions, paths, actions the robot can take).   Input instructions ( \\Lambda ): the set of phrases determined from a parse tree.    Grounding natural language instructions   Concrete groundings: object, semantic labels (e.g. red block), manipulation actions, spatial references, cardinality, ordinal.  Abstract groundings: containers, attributes", 
+            "title": "Knowledge"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170906-nlc-review/", 
+            "text": "A Review of Methodologies for Natural-Language-Facilitated Human-Robot Cooperation\n\n\n\n\npaper\n\n\nAuthor: Rui Liu, Xiaoli Zhang (Colorado School of Mines)\n\n\n\n\nNL Instruction Understanding\n\n\n\n\n\n\nSee Table I in the paper.\n\n\n\n\n\n\nLiteral models\n\n\n\n\nGrammer model: Exhaustive listing of NL instructions\n\n\nAssociation model: Find correlation between concrete concepts\n\n\n\n\n\n\nInterpreted models\n\n\nMulti-modalities\n\n\nDifficult to combine and extract feature, may have conflicts\n\n\n\n\n\n\n\n\nNL-Based Execution Plan Generation\n\n\n\n\nSee Table II.\n\n\n\n\nKnowledge-World Mapping\n\n\n\n\nTheoretical knowledge grounding: map learned knowledge info corresponding objects and relations in real-world scenarios.\n\n\nApplications: Properities -\n real world entity, object searching\n\n\nStill need predefinitionss\n\n\n\n\n\n\nKnowledge gap filling: detect and recommand missing knowledge / inconsistent knowledge.", 
+            "title": "20170906 nlc review"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170906-nlc-review/#a-review-of-methodologies-for-natural-language-facilitated-human-robot-cooperation", 
+            "text": "paper  Author: Rui Liu, Xiaoli Zhang (Colorado School of Mines)", 
+            "title": "A Review of Methodologies for Natural-Language-Facilitated Human-Robot Cooperation"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170906-nlc-review/#nl-instruction-understanding", 
+            "text": "See Table I in the paper.    Literal models   Grammer model: Exhaustive listing of NL instructions  Association model: Find correlation between concrete concepts    Interpreted models  Multi-modalities  Difficult to combine and extract feature, may have conflicts", 
+            "title": "NL Instruction Understanding"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170906-nlc-review/#nl-based-execution-plan-generation", 
+            "text": "See Table II.", 
+            "title": "NL-Based Execution Plan Generation"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170906-nlc-review/#knowledge-world-mapping", 
+            "text": "Theoretical knowledge grounding: map learned knowledge info corresponding objects and relations in real-world scenarios.  Applications: Properities -  real world entity, object searching  Still need predefinitionss    Knowledge gap filling: detect and recommand missing knowledge / inconsistent knowledge.", 
+            "title": "Knowledge-World Mapping"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/", 
+            "text": "A Natural Language Planner Interface for Mobile Manipulators\n\n\n\n\npaper\n\n\nAuthor: \nThomas M. Howard\n, Stefanie Tellex, \nNicholas Roy\n\n\n\n\nOutline\n\n\n\n\nTask: plan trajectory given natural language instruction in a plain ground with serval colored objects.\n\n\nThe environment is semantically labeled.\n\n\n\n\n\n\nProposed model: DCG, Distributed Correspondence Graph\n\n\n\n\nDCG\n\n\n\n\nA probabilistic graphical model composed of random variables that represent language \n\\lambda\n, groundings \n\\gamma\n and corrrespondence between language and groundings \n\\phi\n and factor \nf\n.\n\n\nEach factor  \nf_{i_j}\n  in the DCG model is influenced by the current phrase  \n\\lambda_i\n , correspondence variable  \n\\phi_{i_j}\n , grounding  \n\\gamma_{i_j}\n , and child phrase groundings \n\\gamma_{c_{i_j}}\n.\n\n\nThe parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model \n\\Upsilon\n (known).\n\n\n\n\n\n\n\\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
+            "title": "20170907 a natural language planner interface"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/#a-natural-language-planner-interface-for-mobile-manipulators", 
+            "text": "paper  Author:  Thomas M. Howard , Stefanie Tellex,  Nicholas Roy", 
+            "title": "A Natural Language Planner Interface for Mobile Manipulators"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/#outline", 
+            "text": "Task: plan trajectory given natural language instruction in a plain ground with serval colored objects.  The environment is semantically labeled.    Proposed model: DCG, Distributed Correspondence Graph", 
+            "title": "Outline"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-a-natural-language-planner-interface/#dcg", 
+            "text": "A probabilistic graphical model composed of random variables that represent language  \\lambda , groundings  \\gamma  and corrrespondence between language and groundings  \\phi  and factor  f .  Each factor   f_{i_j}   in the DCG model is influenced by the current phrase   \\lambda_i  , correspondence variable   \\phi_{i_j}  , grounding   \\gamma_{i_j}  , and child phrase groundings  \\gamma_{c_{i_j}} .  The parameters in each log-linear model  \u03c5\u03c5  are trained from a parallel corpus of labeled examples for annotations and behaviors in the context of a world model  \\Upsilon  (known).    \\underset{\\phi \\, \\in \\, \\varPhi }{\\arg \\, \\max }\\; \\prod _{i} \\prod _{j} f_{i_{j}} \\left( \\phi _{i_{j}}, \\gamma _{i_{j}}, \\gamma _{c_{i_{j}}}, \\lambda _{i}, \\varUpsilon , \\upsilon \\right) .", 
+            "title": "DCG"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-source-target-inference-models/", 
+            "text": "Source-Target Inference Models for Spatial Instruction Understanding\n\n\n\n\npaper\n\n\nAuthor: Hao Tan, Mohit Bansal\n\n\n\n\nTask\n\n\n\n\nSame as \nNatural Language Communication with Robots", 
+            "title": "20170907 source target inference models"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-source-target-inference-models/#source-target-inference-models-for-spatial-instruction-understanding", 
+            "text": "paper  Author: Hao Tan, Mohit Bansal", 
+            "title": "Source-Target Inference Models for Spatial Instruction Understanding"
+        }, 
+        {
+            "location": "/RBT/+NLP/20170907-source-target-inference-models/#task", 
+            "text": "Same as  Natural Language Communication with Robots", 
+            "title": "Task"
         }
     ]
 }
